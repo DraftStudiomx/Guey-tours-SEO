@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #c65e2b;
+  --orange-light: #e99f0c;
+  --orange-dark: #4E8E1F;
+  --dark: #141414;
+  --charcoal: #222222;
+  --mid: #444444;
+  --sand: #F5E6D3;
+  --cream: #FFF8F0;
+  --white: #FFFFFF;
+  --font-heading: var(--font-bebas), 'Impact', 'Arial Narrow', sans-serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;  /* prevent any horizontal scroll anywhere */
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--dark);
+  color: var(--white);
+}
+
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  width: 120px;
+  margin: 0 auto 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TOUR DETAIL PAGE — MOBILE FIRST
+   Default: single column, widget on top.
+   Desktop (≥1100px): two columns, widget on right.
+═══════════════════════════════════════════════════════════════════════════ */
+
+.tdp-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 16px 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tdp-booking {
+  background: #1c1c1c;
+  border: 1px solid rgba(107, 191, 46, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 680px;
+  align-self: center;   /* ← this centers a flex item in a column parent */
+}
+
+.tdp-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;  /* allow flex children to shrink below content size */
+}
+
+.tdp-gallery {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ─── Mobile carousel (default) ─── */
+.tdp-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 100%;
+}
+.tdp-carousel::-webkit-scrollbar { display: none; }
+
+.tdp-carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  aspect-ratio: 4/3;
+  background: #000;
+}
+.tdp-carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tdp-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0 0;
+}
+.tdp-carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tdp-carousel-dot.active {
+  background: var(--orange);
+  width: 22px;
+  border-radius: 3px;
+}
+
+/* ─── Desktop gallery (hidden on mobile, shown via media query) ─── */
+.tdp-desktop-gallery { display: none; }
+
+/* Section box shared style */
+.tdp-section {
+  background: #1c1c1c;
+  border: 1px solid rgba(107, 191, 46, 0.12);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DESKTOP LAYOUT — ≥1100px
+═══════════════════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1100px) {
+  .tdp-booking {
+    flex: 0 0 620px;
+    max-width: 620px;
+    margin: 50px 0 0;
+    align-self: flex-start;   /* ← pin to top of row on desktop */
+  }
+
+  .tdp-booking {
+    flex: 0 0 620px;
+    max-width: 620px;
+    margin: 50px 0 0;
+  }
+
+  .tdp-main {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  /* Swap gallery on desktop */
+  .tdp-carousel,
+  .tdp-carousel-dots { display: none; }
+
+  .tdp-desktop-gallery { display: block; }
+
+  .tdp-section {
+    padding: 1.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LEGACY / OTHER — unchanged
+═══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideRight { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+.tour-card { position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; }
+.tour-card img { transition: transform 0.5s ease; }
+.tour-card:hover img { transform: scale(1.05); }
+.tour-card .overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  transition: background 0.3s ease;
+}
+.tour-card:hover .overlay {
+  background: linear-gradient(to top, rgba(107,191,46,0.9) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+}
+
+.btn-orange {
+  background: var(--orange); color: white;
+  font-family: var(--font-heading);
+  font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.85rem 2.2rem; border: none; cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: inline-block; text-decoration: none;
+}
+.btn-orange:hover { background: var(--orange-light); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent; color: white;
+  font-family: var(--font-heading);
+  font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.85rem 2.2rem; border: 2px solid white; cursor: pointer;
+  transition: all 0.2s ease; display: inline-block; text-decoration: none;
+}
+.btn-outline:hover { background: white; color: var(--dark); transform: translateY(-2px); }
+
+.chat-bubble-user {
+  background: var(--orange); color: white;
+  border-radius: 18px 18px 4px 18px;
+  padding: 0.7rem 1rem; max-width: 80%;
+  align-self: flex-end;
+  font-size: 0.9rem; line-height: 1.4;
+}
+.chat-bubble-ai {
+  background: #2a2a2a; color: #eee;
+  border-radius: 18px 18px 18px 4px;
+  padding: 0.7rem 1rem; max-width: 85%;
+  align-self: flex-start;
+  font-size: 0.9rem; line-height: 1.5;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  letter-spacing: 0.04em; text-transform: uppercase; line-height: 1;
+}
+.section-subheading {
+  font-family: var(--font-body); font-weight: 300;
+  font-size: 1.1rem; color: #aaa; margin-top: 0.5rem;
+}
+
+[id] { scroll-margin-top: 250px; }
+
+/* Booking widget internal responsive grids */
+@media (max-width: 640px) {
+  .bw-tour-grid { grid-template-columns: 1fr !important; }
+  .bw-vehicle-grid { grid-template-columns: 1fr !important; }
+  .bw-time-slots { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* ─── HOMEPAGE TOUR CARDS ─────────────────────────────────────────────── */
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .tours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,95 @@
+export default {
+  name: 'tour',
+  title: 'Tours',
+  type: 'document',
+  orderings: [
+    {
+      title: 'Sort Order',
+      name: 'orderAsc',
+      by: [{ field: 'order', direction: 'asc' }],
+    },
+  ],
+  fields: [
+    {
+      name: 'order',
+      title: 'Sort Order',
+      type: 'number',
+      description: 'Lower numbers appear first',
+    },
+    {
+      name: 'name_en',
+      title: 'Tour Name (English)',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'name_es',
+      title: 'Tour Name (Spanish)',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'description_en',
+      title: 'Description (English)',
+      type: 'text',
+      rows: 3,
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'description_es',
+      title: 'Description (Spanish)',
+      type: 'text',
+      rows: 3,
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'duration_en',
+      title: 'Duration (English)',
+      type: 'string',
+      description: 'e.g. 2 Hours',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'duration_es',
+      title: 'Duration (Spanish)',
+      type: 'string',
+      description: 'e.g. 2 Horas',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+        name: 'price_en',
+        title: 'Price (English)',
+        type: 'string',
+        description: 'e.g. From $650 per person',
+        validation: (Rule: any) => Rule.required(),
+      },
+      {
+        name: 'price_es',
+        title: 'Price (Spanish)',
+        type: 'string',
+        description: 'e.g. Desde $650 por persona',
+        validation: (Rule: any) => Rule.required(),
+      },
+    {
+      name: 'image',
+      title: 'Tour Image',
+      type: 'image',
+      options: { hotspot: true },
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'active',
+      title: 'Active',
+      type: 'boolean',
+      description: 'Uncheck to hide this tour without deleting it',
+      initialValue: true,
+    },
+  ],
+  preview: {
+    select: {
+      title: 'name_en',
+      subtitle: 'price_en',
+      media: 'image',
+    },
+  },
+}

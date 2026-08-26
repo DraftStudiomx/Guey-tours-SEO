@@ -1,0 +1,111 @@
+export default {
+  name: 'vehicle',
+  title: 'Vehicles',
+  type: 'document',
+  orderings: [
+    {
+      title: 'Sort Order',
+      name: 'orderAsc',
+      by: [{ field: 'order', direction: 'asc' }],
+    },
+  ],
+  fields: [
+    {
+      name: 'order',
+      title: 'Sort Order',
+      type: 'number',
+      description: 'Lower numbers appear first',
+    },
+    {
+      name: 'name_en',
+      title: 'Vehicle Name (English)',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'name_es',
+      title: 'Vehicle Name (Spanish)',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'description_en',
+      title: 'Description (English) — Homepage',
+      type: 'text',
+      rows: 3,
+      description: 'Shown on the homepage vehicle cards',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'description_es',
+      title: 'Description (Spanish) — Homepage',
+      type: 'text',
+      rows: 3,
+      description: 'Shown on the homepage vehicle cards',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'tour_page_description_en',
+      title: 'Tour Page Description (English)',
+      type: 'text',
+      rows: 2,
+      description: 'Shorter description shown on tour detail pages. Falls back to homepage description if empty.',
+    },
+    {
+      name: 'tour_page_description_es',
+      title: 'Tour Page Description (Spanish)',
+      type: 'text',
+      rows: 2,
+      description: 'Shorter description shown on tour detail pages. Falls back to homepage description if empty.',
+    },
+    {
+      name: 'price',
+      title: 'Price',
+      type: 'string',
+      description: 'e.g. $650MXN per hour',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'video_url',
+      title: 'Video URL',
+      type: 'url',
+      description: 'Cloudflare video URL',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: { source: 'name_en', maxLength: 96 },
+      validation: (Rule: any) => Rule.required(),
+    },
+    // ─── Availability ───────────────────────────────────────────────
+    {
+      name: 'available_for_tours',
+      title: 'Available for Tours',
+      type: 'boolean',
+      description: 'Show this vehicle as a selectable option on tour detail pages',
+      initialValue: true,
+    },
+    {
+      name: 'available_for_rental',
+      title: 'Available for Rental',
+      type: 'boolean',
+      description: 'Show this vehicle in the homepage Rentals section and allow a rental detail page',
+      initialValue: false,
+    },
+    {
+      name: 'active',
+      title: 'Active',
+      type: 'boolean',
+      description: 'Master switch — uncheck to hide this vehicle everywhere without deleting it',
+      initialValue: true,
+    },
+  ],
+  preview: {
+    select: {
+      title: 'name_en',
+      subtitle: 'price',
+    },
+  },
+}
