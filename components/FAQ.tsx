@@ -14,7 +14,7 @@ interface FaqItem {
 const FAQS: FaqItem[] = [
    {
     q_en: 'Were can I rent an ATV or RZR in San Miguel de Allende?',
-    q_es: '¿Dónde puedo rentar una cuatrimoto o RZR en?',
+    q_es: '¿Dónde puedo rentar una cuatrimoto o RZR en SAN MIGUELLLLL?',
     a_en: 'At Guey Tours, we offer ATV and RZR rentals and guided tours in San Miguel de Allende. We provide off-road routes, scenic rides, and adventure experiences for couples, families, and groups.',
     a_es: 'En Guey Tours ofrecemos renta y tours guiados en cuatrimotos, ATV y RZR en San Miguel de Allende. Contamos con rutas off-road, recorridos panorámicos y experiencias para parejas, familias y grupos.',
   },
