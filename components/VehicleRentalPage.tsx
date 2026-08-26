@@ -360,7 +360,7 @@ export default function VehicleRentalPage({ data }: { data: VehicleRentalData })
           <div className="tdp-section">
             <SectionHeading>{lang === 'es' ? 'Sobre este vehículo' : 'About This Vehicle'}</SectionHeading>
             <div style={{ fontSize: '0.95rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.8)' }}>
-            {data.slug?.current === 'defender' ? (
+            {data.slug?.current?.toLowerCase() === 'defender' || name?.toLowerCase().includes('defender') ? (
                 <p>
                   {lang === 'es' 
                     ? 'En el paso 3 del proceso de reserva, podrás elegir nuestro emocionante y divertido vehículo RZR para 4 pasajeros. ¡Es muy divertido! Recibirás instrucciones completas para conducirlo antes de partir' 
