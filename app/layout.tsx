@@ -20,6 +20,8 @@ const bebasNeue = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.gueytours.com'),
+
   title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
 
   description:
@@ -27,6 +29,10 @@ export const metadata: Metadata = {
 
   keywords:
     'ATV tours, San Miguel de Allende, RZR tours, adventure tours, off-road, quad bikes, Mexico tours',
+
+  verification: {
+    google: 'SHLqffRHOg-mlbtvO3HBYcEyLm-vLI7cOXMLrRlKHhg',
+  },
 
   openGraph: {
     type: 'website',
@@ -36,10 +42,9 @@ export const metadata: Metadata = {
     title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
     description:
       'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours. Private experiences, bilingual guides and unforgettable adventures.',
-
     images: [
       {
-        url: 'https://www.gueytours.com/guey-logo.png',
+        url: '/guey-logo.png',
         width: 384,
         height: 384,
         alt: 'Guey Tours - ATV Tours in San Miguel de Allende',
@@ -52,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
     description:
       'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours.',
-    images: ['https://www.gueytours.com/guey-logo.png'],
+    images: ['/guey-logo.png'],
   },
 }
 
@@ -97,6 +102,7 @@ export default function RootLayout({
       className={`${inter.variable} ${bebasNeue.variable}`}
     >
       <head>
+        {/* Typekit */}
         <link
           rel="preconnect"
           href="https://use.typekit.net"
@@ -115,10 +121,7 @@ export default function RootLayout({
         />
 
         {/* Google Tag Manager */}
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-        >
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -163,10 +166,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
