@@ -20,11 +20,70 @@ const bebasNeue = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
-  title: 'Best ATV & RZR Tours in San Miguel de Allende | Guey Tours',
+  title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
+
   description:
-    'Explore San Miguel de Allende with thrilling ATV and RZR tours. Scenic off-road adventures, expert guides and unforgettable experiences. Book now.',
+    'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours. Private experiences, bilingual guides and unforgettable adventures.',
+
   keywords:
     'ATV tours, San Miguel de Allende, RZR tours, adventure tours, off-road, quad bikes, Mexico tours',
+
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.gueytours.com/',
+    siteName: 'Guey Tours',
+    title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
+    description:
+      'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours. Private experiences, bilingual guides and unforgettable adventures.',
+
+    images: [
+      {
+        url: 'https://www.gueytours.com/guey-logo.png',
+        width: 384,
+        height: 384,
+        alt: 'Guey Tours - ATV Tours in San Miguel de Allende',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
+    description:
+      'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours.',
+    images: ['https://www.gueytours.com/guey-logo.png'],
+  },
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+
+  '@id': 'https://www.gueytours.com/#business',
+
+  name: 'Guey Tours',
+
+  description:
+    'Guey Tours es una empresa de turismo de aventura ubicada en San Miguel de Allende, Guanajuato, especializada en recorridos guiados en ATV, RZR, Cuatrimotos y vehículos todoterreno. Ofrece experiencias privadas y personalizadas que combinan adrenalina, naturaleza, cultura e historia, permitiendo a los visitantes explorar tanto el centro histórico como los alrededores de la ciudad con altos estándares de seguridad, guías bilingües y atención personalizada.',
+
+  url: 'https://www.gueytours.com/',
+
+  logo: 'https://www.gueytours.com/guey-logo.png',
+
+  image: 'https://www.gueytours.com/guey-logo.png',
+
+  telephone: '+52 1 415 109 0021',
+
+  email: 'gueycuatritours@gmail.com',
+
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Calle Refugio Sur #52',
+    addressLocality: 'San Miguel de Allende',
+    addressRegion: 'Guanajuato',
+    addressCountry: 'MX',
+  },
 }
 
 export default function RootLayout({
@@ -33,25 +92,33 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${bebasNeue.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${bebasNeue.variable}`}
+    >
       <head>
         <link
           rel="preconnect"
           href="https://use.typekit.net"
           crossOrigin="anonymous"
         />
+
         <link
           rel="preconnect"
           href="https://p.typekit.net"
           crossOrigin="anonymous"
         />
+
         <link
           rel="stylesheet"
           href="https://use.typekit.net/aza7xhc.css"
         />
 
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+        >
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -60,6 +127,15 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-N3WM92GS');
           `}
         </Script>
+
+        {/* Local Business Schema */}
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
       </head>
 
       <body>
@@ -69,7 +145,10 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-N3WM92GS"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{
+              display: 'none',
+              visibility: 'hidden',
+            }}
           />
         </noscript>
 
@@ -84,7 +163,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
