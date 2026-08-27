@@ -1,0 +1,59 @@
+import type { MetadataRoute } from "next";
+
+const BASE_URL = "https://www.gueytours.com";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const staticRoutes: MetadataRoute.Sitemap = [
+    {
+      url: BASE_URL,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/gallery`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+
+    // Tours
+    {
+      url: `${BASE_URL}/tours/san-miguel-viejo`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/tours/tour-el-centro-san-miguel`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/tours/atotonilco`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    // Rentals
+    {
+      url: `${BASE_URL}/rentals/moto`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/rentals/atv`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/rentals/defender`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+  ];
+
+  return staticRoutes;
+}
