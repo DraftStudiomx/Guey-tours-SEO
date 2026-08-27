@@ -3,6 +3,7 @@ import { Inter, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import { LangProvider } from '@/lib/i18n'
 import ChatWidget from '@/components/ChatWidget'
+import WhatsAppButton from '@/components/WhatsAppButton'
 import Script from 'next/script'
 
 const inter = Inter({
@@ -39,9 +40,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.gueytours.com/',
     siteName: 'Guey Tours',
+
     title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
+
     description:
       'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours. Private experiences, bilingual guides and unforgettable adventures.',
+
     images: [
       {
         url: '/guey-logo.png',
@@ -54,9 +58,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
+
     title: 'Best ATV Tours in San Miguel de Allende | Guey Tours',
+
     description:
       'Explore San Miguel de Allende with thrilling ATV, RZR and off-road tours.',
+
     images: ['/guey-logo.png'],
   },
 }
@@ -121,7 +128,10 @@ export default function RootLayout({
         />
 
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+        >
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -157,7 +167,11 @@ export default function RootLayout({
 
         <LangProvider>
           {children}
+
           <ChatWidget />
+
+          {/* Floating WhatsApp Button */}
+          <WhatsAppButton />
         </LangProvider>
 
         {/* Google Analytics */}
@@ -166,7 +180,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
