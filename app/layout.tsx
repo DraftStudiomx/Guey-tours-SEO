@@ -3,6 +3,8 @@ import { Inter, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import { LangProvider } from '@/lib/i18n'
 import ChatWidget from '@/components/ChatWidget'
+import Script from "next/script";
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,11 +38,27 @@ export default function RootLayout({
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://use.typekit.net/aza7xhc.css" />
       </head>
+
       <body>
         <LangProvider>
           {children}
           <ChatWidget />
         </LangProvider>
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GFZNCW3QJV"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GFZNCW3QJV');
+          `}
+        </Script>
       </body>
     </html>
   )
