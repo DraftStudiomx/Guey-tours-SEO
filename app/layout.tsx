@@ -31,10 +31,20 @@ export const metadata: Metadata = {
   keywords:
     'ATV tours, San Miguel de Allende, RZR tours, adventure tours, off-road, quad bikes, Mexico tours',
 
+  // Google Search Console
   verification: {
     google: 'SHLqffRHOg-mlbtvO3HBYcEyLm-vLI7cOXMLrRlKHhg',
   },
 
+  // Geo Tags
+  other: {
+    'geo.region': 'MX-GUA',
+    'geo.placename': 'San Miguel de Allende',
+    'geo.position': '20.90743712046556, -100.75317439494255',
+    ICBM: '20.90743712046556, -100.75317439494255',
+  },
+
+  // Open Graph
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -56,6 +66,7 @@ export const metadata: Metadata = {
     ],
   },
 
+  // Twitter / X
   twitter: {
     card: 'summary_large_image',
 
@@ -68,6 +79,7 @@ export const metadata: Metadata = {
   },
 }
 
+// Local Business Schema
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -95,6 +107,13 @@ const localBusinessSchema = {
     addressLocality: 'San Miguel de Allende',
     addressRegion: 'Guanajuato',
     addressCountry: 'MX',
+  },
+
+  // Geographic coordinates
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 20.90743712046556,
+    longitude: -100.75317439494255,
   },
 }
 
