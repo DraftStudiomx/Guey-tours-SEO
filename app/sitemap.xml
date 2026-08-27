@@ -1,59 +1,33 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.gueytours.com";
-
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes: MetadataRoute.Sitemap = [
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
     {
-      url: BASE_URL,
-      changeFrequency: "weekly",
-      priority: 1,
+      url: "https://www.gueytours.com",
     },
     {
-      url: `${BASE_URL}/blog`,
-      changeFrequency: "weekly",
-      priority: 0.8,
+      url: "https://www.gueytours.com/blog",
     },
     {
-      url: `${BASE_URL}/gallery`,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-
-    // Tours
-    {
-      url: `${BASE_URL}/tours/san-miguel-viejo`,
-      changeFrequency: "monthly",
-      priority: 0.9,
+      url: "https://www.gueytours.com/gallery",
     },
     {
-      url: `${BASE_URL}/tours/tour-el-centro-san-miguel`,
-      changeFrequency: "monthly",
-      priority: 0.9,
+      url: "https://www.gueytours.com/tours/san-miguel-viejo",
     },
     {
-      url: `${BASE_URL}/tours/atotonilco`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-
-    // Rentals
-    {
-      url: `${BASE_URL}/rentals/moto`,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: "https://www.gueytours.com/tours/tour-el-centro-san-miguel",
     },
     {
-      url: `${BASE_URL}/rentals/atv`,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: "https://www.gueytours.com/tours/atotonilco",
     },
     {
-      url: `${BASE_URL}/rentals/defender`,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: "https://www.gueytours.com/rentals/moto",
+    },
+    {
+      url: "https://www.gueytours.com/rentals/atv",
+    },
+    {
+      url: "https://www.gueytours.com/rentals/defender",
     },
   ];
-
-  return staticRoutes;
 }
