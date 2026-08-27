@@ -3,8 +3,7 @@ import { Inter, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import { LangProvider } from '@/lib/i18n'
 import ChatWidget from '@/components/ChatWidget'
-import Script from "next/script";
-
+import Script from 'next/script'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,8 +21,10 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata: Metadata = {
   title: 'Best ATV & RZR Tours in San Miguel de Allende | Guey Tours',
-  description: 'Explore San Miguel de Allende with thrilling ATV and RZR tours. Scenic off-road adventures, expert guides and unforgettable experiences. Book now.',
-  keywords: 'ATV tours, San Miguel de Allende, RZR tours, adventure tours, off-road, quad bikes, Mexico tours',
+  description:
+    'Explore San Miguel de Allende with thrilling ATV and RZR tours. Scenic off-road adventures, expert guides and unforgettable experiences. Book now.',
+  keywords:
+    'ATV tours, San Miguel de Allende, RZR tours, adventure tours, off-road, quad bikes, Mexico tours',
 }
 
 export default function RootLayout({
@@ -34,12 +35,44 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${bebasNeue.variable}`}>
       <head>
-        <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://use.typekit.net/aza7xhc.css" />
+        <link
+          rel="preconnect"
+          href="https://use.typekit.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://p.typekit.net"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/aza7xhc.css"
+        />
+
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-N3WM92GS');
+          `}
+        </Script>
       </head>
 
       <body>
+        {/* Google Tag Manager - noscript */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N3WM92GS"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+
         <LangProvider>
           {children}
           <ChatWidget />
