@@ -118,7 +118,7 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
                     borderTop: '1px solid rgba(255,255,255,0.1)',
                     paddingTop: '0.5rem',
                   }}>
-                    {name.toLowerCase().includes('defender') ? '$2600 MXN' : priceLine?.[vehicle._id]}
+                    {name.toLowerCase().includes('defender') ? '$2900 MXN' : priceLine?.[vehicle._id]}
                   </div>
                 )}
               </div>
