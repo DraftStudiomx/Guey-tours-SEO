@@ -110,7 +110,7 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
                   {description}
                 </p>
 
-            {priceLine?.[vehicle._id] && (
+            {(name.toLowerCase().includes('defender') || priceLine?.[vehicle._id]) && (
                   <div style={{
                     marginTop: '0.5rem',
                     fontSize: '0.85rem',
@@ -118,7 +118,7 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
                     borderTop: '1px solid rgba(255,255,255,0.1)',
                     paddingTop: '0.5rem',
                   }}>
-                    {priceLine[vehicle._id]}
+                    {name.toLowerCase().includes('rzr') ? '$2900 MXN' : priceLine?.[vehicle._id]}
                   </div>
                 )}
               </div>
