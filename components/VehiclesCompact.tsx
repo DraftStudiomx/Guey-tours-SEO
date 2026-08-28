@@ -51,8 +51,8 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
           // MODIFICACIÓN ÚNICA PARA LA DEFENDER (Español e Inglés):
           if (name.toLowerCase().includes('defender')) {
             description = lang === 'es'
-              ? 'En el paso 3 del proceso de reserva podrás elegir tu vehículo. Elige nuestra Defender: tiene capacidad para 6 personas y es muy cómoda. Este vehículo es ideal para recorrer con todo el estilo y en familia.'
-              : 'In step 3 of the booking process you can choose your vehicle. Choose our Defender - it seats 6 and is very comfortable. This vehicle is perfect for the whole family to tour in style.'
+              ? 'En el paso 3 del proceso de reserva, podrás elegir nuestro emocionante y divertido vehículo RZR para 4 pasajeros. ¡Es muy divertido! Recibirás instrucciones completas para conducirlo antes de partir.'
+              : 'In step 3 of the booking process, you can choose our exciting and fun 4-passenger RZR vehicle. It’s a blast! You will receive full driving instructions before setting off.'
           }
 
           return (
