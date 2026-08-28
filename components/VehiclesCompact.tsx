@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { useLang } from '@/lib/i18n'
 
 type Vehicle = {
@@ -18,6 +19,95 @@ type Vehicle = {
 type Props = {
   vehicles: Vehicle[]
   priceLine?: Record<string, string>
+}
+
+// Tus imágenes ya listas y apuntando a public/images/
+const vehicleImages: Record<string, string[]> = {
+  default: [
+    '/images/derecha_rzr',
+    '/images/frente_rzr',
+    '/images/izquierda_rzr',
+    '/images/trasera_rzr',
+  ]
+}
+
+function AutoImageCarousel({ images, videoFallback }: { images: string[], videoFallback: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const hasImages = images && images.length > 0
+
+  useEffect(() => {
+    if (!hasImages || images.length <= 1) return
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [images, hasImages])
+
+  return (
+    <div style={{
+      width: '100%',
+      height: 160,
+      overflow: 'hidden',
+      flexShrink: 0,
+      background: '#000',
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
+      {hasImages ? (
+        <>
+          <img
+            src={images[currentIndex]}
+            alt="Vehicle slide"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+              transition: 'opacity 0.5s ease-in-out',
+            }}
+          />
+
+          <div style={{
+            position: 'absolute',
+            bottom: '8px',
+            display: 'flex',
+            gap: '5px',
+          }}>
+            {images.map((_, idx) => (
+              <span
+                key={idx}
+                style={{
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  background: idx === currentIndex ? '#fff' : 'rgba(255,255,255,0.4)',
+                  transition: 'background 0.3s',
+                }}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        <video
+          src={videoFallback}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '80%',
+            height: '80%',
+            objectFit: 'cover',
+            display: 'block',
+          }}
+        />
+      )}
+    </div>
+  )
 }
 
 export default function VehiclesCompact({ vehicles, priceLine }: Props) {
@@ -43,44 +133,21 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
         {vehicles.map((vehicle) => {
           const name = lang === 'es' ? vehicle.name_es : vehicle.name_en
 
-          // Use tour-page-specific description if set, otherwise fall back to homepage description
           let description = lang === 'es'
             ? (vehicle.tour_page_description_es || vehicle.description_es)
             : (vehicle.tour_page_description_en || vehicle.description_en)
 
-          // MODIFICACIÓN ÚNICA PARA EL RZR (Español e Inglés):
           if (name.toLowerCase().includes('rzr')) {
             description = lang === 'es'
               ? 'En el paso 3 del proceso de reserva, podrás elegir nuestro emocionante y divertido vehículo RZR para 4 pasajeros. ¡Es muy divertido! Recibirás instrucciones completas para conducirlo antes de partir.'
               : 'In step 3 of the booking process, you can choose our exciting and fun 4-passenger RZR vehicle. It’s a blast! You will receive full driving instructions before setting off.'
           }
 
+          const customImages = vehicleImages[vehicle._id] || vehicleImages.default
+
           return (
             <div key={vehicle._id} className="vc-card">
-              <div style={{
-                width: '100%',
-                height: 160,
-                overflow: 'hidden',
-                flexShrink: 0,
-                background: '#000',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <video
-                  src={vehicle.video_url}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  style={{
-                    width: '80%',
-                    height: '80%',
-                    objectFit: 'cover',
-                    display: 'block',
-                  }}
-                />
-              </div>
+              <AutoImageCarousel images={customImages} videoFallback={vehicle.video_url} />
 
               <div style={{
                 padding: '0.9rem 1rem 1rem',
@@ -110,7 +177,7 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
                   {description}
                 </p>
 
-            {(name.toLowerCase().includes('defender') || priceLine?.[vehicle._id]) && (
+                {(name.toLowerCase().includes('defender') || priceLine?.[vehicle._id]) && (
                   <div style={{
                     marginTop: '0.5rem',
                     fontSize: '0.85rem',
