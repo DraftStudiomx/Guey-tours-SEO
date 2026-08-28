@@ -21,7 +21,7 @@ type Props = {
   priceLine?: Record<string, string>
 }
 
-// Carrusel automático exclusivo para el RZR con extensión .webp
+// Carrusel automático para el RZR con el mismo tamaño y estilo limpio (contain) que los videos
 function RzrImageCarousel() {
   const images = [
     '/images/derecha_rzr.webp',
@@ -56,9 +56,9 @@ function RzrImageCarousel() {
         src={images[currentIndex]}
         alt="RZR slide"
         style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
+          width: '80%',
+          height: '80%',
+          objectFit: 'contain',
           display: 'block',
           transition: 'opacity 0.5s ease-in-out',
         }}
@@ -123,7 +123,6 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
 
           return (
             <div key={vehicle._id} className="vc-card">
-              {/* Si es RZR muestra el carrusel con .webp, si es ATV o Defender muestra su video original */}
               {isRzr ? (
                 <RzrImageCarousel />
               ) : (
