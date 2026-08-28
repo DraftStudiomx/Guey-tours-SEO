@@ -44,9 +44,16 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
           const name = lang === 'es' ? vehicle.name_es : vehicle.name_en
 
           // Use tour-page-specific description if set, otherwise fall back to homepage description
-          const description = lang === 'es'
+          let description = lang === 'es'
             ? (vehicle.tour_page_description_es || vehicle.description_es)
             : (vehicle.tour_page_description_en || vehicle.description_en)
+
+          // MODIFICACIÓN ÚNICA PARA LA DEFENDER (Español e Inglés):
+          if (name.toLowerCase().includes('defender')) {
+            description = lang === 'es'
+              ? 'En el paso 3 del proceso de reserva podrás elegir tu vehículo. Elige nuestra Defender: tiene capacidad para 6 personas y es muy cómoda. Este vehículo es ideal para recorrer con todo el estilo y en familia.'
+              : 'In step 3 of the booking process you can choose your vehicle. Choose our Defender - it seats 6 and is very comfortable. This vehicle is perfect for the whole family to tour in style.'
+          }
 
           return (
             <div key={vehicle._id} className="vc-card">
