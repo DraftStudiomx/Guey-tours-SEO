@@ -110,28 +110,17 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
                   {description}
                 </p>
 
-               {/* 1. Declaramos la variable de precio usando let */}
-                {(() => {
-                  let finalPrice = priceLine?.[vehicle._id]
-
-                  // 2. Si es la Defender, sobrescribimos el precio
-                  if (name.toLowerCase().includes('defender')) {
-                    finalPrice = '$2600 MXN'
-                  }
-
-                  // 3. Si hay precio, lo pintamos exactamente igual que antes
-                  return finalPrice ? (
-                    <div style={{
-                      marginTop: '0.5rem',
-                      fontSize: '0.85rem',
-                      color: 'rgba(255,255,255,0.75)',
-                      borderTop: '1px solid rgba(255,255,255,0.1)',
-                      paddingTop: '0.5rem',
-                    }}>
-                      {finalPrice}
-                    </div>
-                  ) : null
-                })()}
+              {displayPrice && (
+                  <div style={{
+                    marginTop: '0.5rem',
+                    fontSize: '0.85rem',
+                    color: 'rgba(255,255,255,0.75)',
+                    borderTop: '1px solid rgba(255,255,255,0.1)',
+                    paddingTop: '0.5rem',
+                  }}>
+                    {displayPrice}
+                  </div>
+                )}
         })}
       </div>
 
