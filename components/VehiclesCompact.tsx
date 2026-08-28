@@ -21,29 +21,24 @@ type Props = {
   priceLine?: Record<string, string>
 }
 
-// Tus imágenes ya listas y apuntando a public/images/
-const vehicleImages: Record<string, string[]> = {
-  default: [
-    '/images/derecha_rzr',
-    '/images/frente_rzr',
-    '/images/izquierda_rzr',
-    '/images/trasera_rzr',
+// Carrusel automático exclusivo para el RZR con extensión .webp
+function RzrImageCarousel() {
+  const images = [
+    '/images/derecha_rzr.webp',
+    '/images/frente_rzr.webp',
+    '/images/izquierda_rzr.webp',
+    '/images/trasera_rzr.webp',
   ]
-}
-
-function AutoImageCarousel({ images, videoFallback }: { images: string[], videoFallback: string }) {
+  
   const [currentIndex, setCurrentIndex] = useState(0)
-  const hasImages = images && images.length > 0
 
   useEffect(() => {
-    if (!hasImages || images.length <= 1) return
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
     }, 3000)
 
     return () => clearInterval(interval)
-  }, [images, hasImages])
+  }, [images.length])
 
   return (
     <div style={{
@@ -57,55 +52,37 @@ function AutoImageCarousel({ images, videoFallback }: { images: string[], videoF
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      {hasImages ? (
-        <>
-          <img
-            src={images[currentIndex]}
-            alt="Vehicle slide"
+      <img
+        src={images[currentIndex]}
+        alt="RZR slide"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          display: 'block',
+          transition: 'opacity 0.5s ease-in-out',
+        }}
+      />
+
+      <div style={{
+        position: 'absolute',
+        bottom: '8px',
+        display: 'flex',
+        gap: '5px',
+      }}>
+        {images.map((_, idx) => (
+          <span
+            key={idx}
             style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block',
-              transition: 'opacity 0.5s ease-in-out',
+              width: '6px',
+              height: '6px',
+              borderRadius: '50%',
+              background: idx === currentIndex ? '#fff' : 'rgba(255,255,255,0.4)',
+              transition: 'background 0.3s',
             }}
           />
-
-          <div style={{
-            position: 'absolute',
-            bottom: '8px',
-            display: 'flex',
-            gap: '5px',
-          }}>
-            {images.map((_, idx) => (
-              <span
-                key={idx}
-                style={{
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  background: idx === currentIndex ? '#fff' : 'rgba(255,255,255,0.4)',
-                  transition: 'background 0.3s',
-                }}
-              />
-            ))}
-          </div>
-        </>
-      ) : (
-        <video
-          src={videoFallback}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            width: '80%',
-            height: '80%',
-            objectFit: 'cover',
-            display: 'block',
-          }}
-        />
-      )}
+        ))}
+      </div>
     </div>
   )
 }
@@ -132,22 +109,49 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
       <div className="vc-grid">
         {vehicles.map((vehicle) => {
           const name = lang === 'es' ? vehicle.name_es : vehicle.name_en
+          const isRzr = name.toLowerCase().includes('rzr')
 
           let description = lang === 'es'
             ? (vehicle.tour_page_description_es || vehicle.description_es)
             : (vehicle.tour_page_description_en || vehicle.description_en)
 
-          if (name.toLowerCase().includes('rzr')) {
+          if (isRzr) {
             description = lang === 'es'
               ? 'En el paso 3 del proceso de reserva, podrás elegir nuestro emocionante y divertido vehículo RZR para 4 pasajeros. ¡Es muy divertido! Recibirás instrucciones completas para conducirlo antes de partir.'
               : 'In step 3 of the booking process, you can choose our exciting and fun 4-passenger RZR vehicle. It’s a blast! You will receive full driving instructions before setting off.'
           }
 
-          const customImages = vehicleImages[vehicle._id] || vehicleImages.default
-
           return (
             <div key={vehicle._id} className="vc-card">
-              <AutoImageCarousel images={customImages} videoFallback={vehicle.video_url} />
+              {/* Si es RZR muestra el carrusel con .webp, si es ATV o Defender muestra su video original */}
+              {isRzr ? (
+                <RzrImageCarousel />
+              ) : (
+                <div style={{
+                  width: '100%',
+                  height: 160,
+                  overflow: 'hidden',
+                  flexShrink: 0,
+                  background: '#000',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  <video
+                    src={vehicle.video_url}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{
+                      width: '80%',
+                      height: '80%',
+                      objectFit: 'cover',
+                      display: 'block',
+                    }}
+                  />
+                </div>
+              )}
 
               <div style={{
                 padding: '0.9rem 1rem 1rem',
@@ -185,7 +189,7 @@ export default function VehiclesCompact({ vehicles, priceLine }: Props) {
                     borderTop: '1px solid rgba(255,255,255,0.1)',
                     paddingTop: '0.5rem',
                   }}>
-                    {name.toLowerCase().includes('rzr') ? '$2900 MXN' : priceLine?.[vehicle._id]}
+                    {isRzr ? '$2900 MXN' : priceLine?.[vehicle._id]}
                   </div>
                 )}
               </div>
