@@ -15,7 +15,7 @@ export default function ContactPage() {
       <main style={{
         background: 'var(--dark, #0b0b0b)',
         minHeight: '100vh',
-        paddingTop: '7rem', // Espacio para que el Navbar fijo no tape el banner
+        paddingTop: '7rem',
         paddingBottom: '4rem'
       }}>
         {/* Banner de la página */}
@@ -43,7 +43,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Introducción y textos descriptivos completos */}
+        {/* Introducción y textos descriptivos con los enlaces solicitados */}
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
@@ -63,15 +63,15 @@ export default function ContactPage() {
             Contact Guey Tours
           </h1>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.6, fontSize: '1rem', color: 'rgba(255,255,255,0.8)', textAlign: 'left' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.6, fontSize: '1.0rem', color: 'rgba(255,255,255,0.8)', textAlign: 'left' }}>
             <p style={{ margin: 0 }}>
-              At Guey Tours, we create authentic adventure experiences for travelers looking to discover San Miguel de Allende and its surroundings in a different way.
+              At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Guey Tours</a>, we create authentic adventure experiences for travelers looking to discover San Miguel de Allende and its surroundings in a different way.
             </p>
             <p style={{ margin: 0 }}>
               Our team specializes in ATV and RZR tours, off-road adventures, and vehicle rentals, offering experiences for couples, families, friends, and groups. Whether you want to explore scenic landscapes, rural roads, historic sites, or hidden places beyond the city center, our local guides are ready to help you choose the right adventure for your trip.
             </p>
             <p style={{ margin: 0 }}>
-              Contact us today to learn more about our tours, rental options, availability, and experiences in San Miguel de Allende. 
+              <a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Contact us today</a> to learn more about our tours, rental options, availability, and experiences in San Miguel de Allende. 
             </p>
             <p style={{ margin: 0 }}>
               Discover why travelers choose Guey Tours for safe, exciting, and personalized outdoor experiences in San Miguel de Allende.
@@ -79,7 +79,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Componente original de contacto (con info y tu formulario completo) */}
+        {/* Componente original de contacto */}
         <ContactComponent />
       </main>
       <Footer />
