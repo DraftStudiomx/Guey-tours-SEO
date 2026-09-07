@@ -1,6 +1,7 @@
 'use client'
 
 import { useLang } from '@/lib/i18n'
+import Image from 'next/image'
 
 export default function ContactPage() {
   const { lang } = useLang()
@@ -13,6 +14,25 @@ export default function ContactPage() {
       color: '#fff',
       fontFamily: 'sans-serif'
     }}>
+      {/* Banner de la página */}
+      <div style={{ 
+        width: '100%', 
+        height: '320px', 
+        position: 'relative', 
+        borderRadius: '12px', 
+        overflow: 'hidden', 
+        marginBottom: '2.5rem',
+        border: '1px solid rgba(255,255,255,0.1)'
+      }}>
+        <Image
+          src="/images/atv-tour-magic-town-CONTACT-GUEY-TOURS.webp"
+          alt="Contact Guey Tours"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+      </div>
+
       {/* Título Principal */}
       <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
         <h1 style={{
