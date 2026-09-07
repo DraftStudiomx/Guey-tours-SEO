@@ -186,49 +186,86 @@ export default function AtvRentalsContent() {
           </div>
 
 
-          {/* --- TERCERA SECCIÓN: Bloque Destacado Visual (ATV Adventure) --- */}
+         {/* --- TERCERA SECCIÓN: Tarjeta Destacada Premium (ATV Adventure) --- */}
           <div style={{
-            marginTop: '4rem',
-            background: 'linear-gradient(135deg, rgba(217, 119, 54, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)',
-            borderLeft: '4px solid var(--orange, #d97736)',
-            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-            borderRight: '1px solid rgba(255, 255, 255, 0.08)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-            padding: '2.5rem 3rem',
-            borderRadius: '0 16px 16px 0',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
+            marginTop: '5rem',
+            background: 'linear-gradient(145deg, rgba(20, 20, 20, 0.9) 0%, rgba(35, 35, 35, 0.6) 100%)',
+            border: '1px solid rgba(217, 119, 54, 0.25)',
+            borderRadius: '20px',
+            padding: '3rem 3.5rem',
+            position: 'relative',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.6)',
           }}>
-            <h3 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.6rem',
-              color: 'var(--orange, #d97736)',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-              margin: '0 0 1rem 0'
-            }}>
-              {lang === 'es' ? 'Explora San Miguel de Allende en un ATV' : 'Explore San Miguel de Allende on an ATV'}
-            </h3>
+            {/* Elemento decorativo de fondo (resplandor sutil en la esquina) */}
+            <div style={{
+              position: 'absolute',
+              top: '-50px',
+              right: '-50px',
+              width: '180px',
+              height: '180px',
+              background: 'radial-gradient(circle, rgba(217,119,54,0.15) 0%, rgba(0,0,0,0) 70%)',
+              zIndex: '1',
+              pointerEvents: 'none'
+            }} />
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', lineHeight: 1.7, fontSize: '1.05rem', color: 'rgba(255,255,255,0.9)' }}>
-              <p style={{ margin: 0 }}>
-                {lang === 'es' 
-                  ? '¡Adiós a los autobuses turísticos abarrotados! Cuando rentas un ATV en San Miguel de Allende, descubres una cara totalmente nueva de la región.'
-                  : 'Ditch the crowded tour buses! When you rent an ATV in San Miguel de Allende, you unlock a whole new side of the region.'}
-              </p>
+            <div style={{ position: 'relative', zIndex: '2' }}>
+              {/* Pequeña etiqueta superior estilo "Badge" */}
+              <div style={{
+                display: 'inline-block',
+                background: 'rgba(217, 119, 54, 0.15)',
+                color: 'var(--orange, #d97736)',
+                fontFamily: 'var(--font-heading)',
+                fontSize: '0.75rem',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                padding: '0.4rem 1rem',
+                borderRadius: '50px',
+                marginBottom: '1.2rem',
+                border: '1px solid rgba(217, 119, 54, 0.3)'
+              }}>
+                {lang === 'es' ? '★ Experiencia Destacada' : '★ Featured Experience'}
+              </div>
 
-              <p style={{ margin: 0 }}>
-                {lang === 'es'
-                  ? 'Recorre caminos de terracería rústica, cruza campos rurales abiertos y disfruta de vistas panorámicas increíbles de las montañas a las afueras del centro histórico.'
-                  : 'Ride along rustic dirt paths, cross open rural fields, and take in scenic mountain backdrop views outside the historic downtown.'}
-              </p>
+              <h3 style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '2rem',
+                color: '#fff',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                margin: '0 0 1.5rem 0',
+                lineHeight: 1.2
+              }}>
+                {lang === 'es' ? 'Explora San Miguel de Allende en un ATV' : 'Explore San Miguel de Allende on an ATV'}
+              </h3>
 
-              <p style={{ margin: 0, fontWeight: '500', color: '#fff' }}>
-                {lang === 'es' ? (
-                  <>Es la alternativa dinámica perfecta frente a los estándar <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende Tours</a>, dándote absoluta libertad para detenerte, tomar fotos y trazar tu propia aventura.</>
-                ) : (
-                  <>It is the perfect dynamic alternative to standard <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende Tours</a>, giving you absolute freedom to stop, take photos, and craft your own journey.</>
-                )}
-              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.8, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
+                <p style={{ margin: 0 }}>
+                  {lang === 'es' 
+                    ? '¡Adiós a los autobuses turísticos abarrotados! Cuando rentas un ATV en San Miguel de Allende, descubres una cara totalmente nueva de la región.'
+                    : 'Ditch the crowded tour buses! When you rent an ATV in San Miguel de Allende, you unlock a whole new side of the region.'}
+                </p>
+
+                <p style={{ margin: 0 }}>
+                  {lang === 'es'
+                    ? 'Recorre caminos de terracería rústica, cruza campos rurales abiertos y disfruta de vistas panorámicas increíbles de las montañas a las afueras del centro histórico.'
+                    : 'Ride along rustic dirt paths, cross open rural fields, and take in scenic mountain backdrop views outside the historic downtown.'}
+                </p>
+
+                <div style={{
+                  marginTop: '0.5rem',
+                  paddingLeft: '1.5rem',
+                  borderLeft: '3px solid var(--orange, #d97736)',
+                  color: '#fff',
+                  fontWeight: '500'
+                }}>
+                  {lang === 'es' ? (
+                    <>Es la alternativa dinámica perfecta frente a los estándar <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende Tours</a>, dándote absoluta libertad para detenerte, tomar fotos y trazar tu propia aventura.</>
+                  ) : (
+                    <>It is the perfect dynamic alternative to standard <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende Tours</a>, giving you absolute freedom to stop, take photos, and craft your own journey.</>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
           {/* --- FIN DE LA TERCERA SECCIÓN --- */}
