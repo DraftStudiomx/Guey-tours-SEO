@@ -76,6 +76,7 @@ export default function Navbar() {
   //   - hovering the item or clicking the caret → opens dropdown
   const toursChildren = [
     { label: t('nav.blog'), href: '/blog' },
+    { label: lang === 'es' ? 'Renta de ATV' : 'ATV Rentals', href: '/atv-rentals' },
   ]
 
   const leftLinks = [
