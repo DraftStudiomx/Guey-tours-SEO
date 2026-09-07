@@ -69,9 +69,9 @@ export default function ContactPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.6, fontSize: '1.0rem', color: 'rgba(255,255,255,0.8)', textAlign: 'left' }}>
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, creamos experiencias de aventura auténticas para los viajeros que buscan descubrir San Miguel de Allende y sus alrededores de una manera diferente.</>
+                <>En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, creamos experiencias de aventura auténticas para los viajeros que buscan descubrir San Miguel de Allende y sus alrededores de una manera diferente.</>
               ) : (
-                <>At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, we create authentic adventure experiences for travelers looking to discover San Miguel de Allende and its surroundings in a different way.</>
+                <>At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, we create authentic adventure experiences for travelers looking to discover San Miguel de Allende and its surroundings in a different way.</>
               )}
             </p>
 
@@ -85,9 +85,9 @@ export default function ContactPage() {
 
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <><a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Contáctanos hoy</a> para conocer más sobre nuestros tours, opciones de renta, disponibilidad y experiencias en San Miguel de Allende.</>
+                <><a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Contáctanos hoy</a> para conocer más sobre nuestros tours, opciones de renta, disponibilidad y experiencias en San Miguel de Allende.</>
               ) : (
-                <><a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Contact us today</a> to learn more about our tours, rental options, availability, and experiences in San Miguel de Allende.</>
+                <><a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Contact us today</a> to learn more about our tours, rental options, availability, and experiences in San Miguel de Allende.</>
               )}
             </p>
 
