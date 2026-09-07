@@ -43,7 +43,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Introducción y textos descriptivos con los enlaces solicitados */}
+        {/* Textos descriptivos con soporte bilingüe, manteniendo tus textos originales y enlaces */}
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
@@ -60,21 +60,40 @@ export default function ContactPage() {
             color: 'var(--orange)',
             marginBottom: '1.5rem',
           }}>
-            Contact Guey Tours
+            {lang === 'es' ? 'Contacta a Guey Tours' : 'Contact Guey Tours'}
           </h1>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.6, fontSize: '1.0rem', color: 'rgba(255,255,255,0.8)', textAlign: 'left' }}>
             <p style={{ margin: 0 }}>
-              At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Guey Tours</a>, we create authentic adventure experiences for travelers looking to discover San Miguel de Allende and its surroundings in a different way.
+              {lang === 'es' ? (
+                <>En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Guey Tours</a>, creamos experiencias de aventura auténticas para los viajeros que buscan descubrir San Miguel de Allende y sus alrededores de una manera diferente.</>
+              ) : (
+                <>At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Guey Tours</a>, we create authentic adventure experiences for travelers looking to discover San Miguel de Allende and its surroundings in a different way.</>
+              )}
             </p>
+
             <p style={{ margin: 0 }}>
-              Our team specializes in ATV and RZR tours, off-road adventures, and vehicle rentals, offering experiences for couples, families, friends, and groups. Whether you want to explore scenic landscapes, rural roads, historic sites, or hidden places beyond the city center, our local guides are ready to help you choose the right adventure for your trip.
+              {lang === 'es' ? (
+                <>Nuestro equipo se especializa en tours en ATV y RZR, aventuras todoterreno y renta de vehículos, ofreciendo experiencias para parejas, familias, amigos y grupos. Ya sea que quieras explorar paisajes pintorescos, caminos rurales, sitios históricos o lugares ocultos más allá del centro de la ciudad, nuestros guías locales están listos para ayudarte a elegir la aventura adecuada para tu viaje.</>
+              ) : (
+                <>Our team specializes in ATV and RZR tours, off-road adventures, and vehicle rentals, offering experiences for couples, families, friends, and groups. Whether you want to explore scenic landscapes, rural roads, historic sites, or hidden places beyond the city center, our local guides are ready to help you choose the right adventure for your trip.</>
+              )}
             </p>
+
             <p style={{ margin: 0 }}>
-              <a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Contact us today</a> to learn more about our tours, rental options, availability, and experiences in San Miguel de Allende. 
+              {lang === 'es' ? (
+                <><a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Contáctanos hoy</a> para conocer más sobre nuestros tours, opciones de renta, disponibilidad y experiencias en San Miguel de Allende.</>
+              ) : (
+                <><a href="https://www.gueytours.com/contact/" style={{ color: 'var(--orange)', textDecoration: 'underline' }}>Contact us today</a> to learn more about our tours, rental options, availability, and experiences in San Miguel de Allende.</>
+              )}
             </p>
+
             <p style={{ margin: 0 }}>
-              Discover why travelers choose Guey Tours for safe, exciting, and personalized outdoor experiences in San Miguel de Allende.
+              {lang === 'es' ? (
+                <>Descubre por qué los viajeros eligen a Guey Tours para vivir experiencias al aire libre seguras, emocionantes y personalizadas en San Miguel de Allende.</>
+              ) : (
+                <>Discover why travelers choose Guey Tours for safe, exciting, and personalized outdoor experiences in San Miguel de Allende.</>
+              )}
             </p>
           </div>
         </div>
