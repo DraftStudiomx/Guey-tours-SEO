@@ -277,6 +277,162 @@ export default function AtvRentalsContent() {
           </div>
           {/* --- FIN DE LA TERCERA SECCIÓN --- */}
 
+
+          {/* --- CUARTA SECCIÓN: Tarjetas de Modelos / Flota Específica --- */}
+          <div style={{ marginTop: '6rem', width: '100%' }}>
+            {/* Encabezado principal de la sección (H2) */}
+            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '2.5rem',
+                color: 'var(--orange, #d97736)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                margin: '0 0 0.8rem 0',
+              }}>
+                {lang === 'es' ? 'Nuestras Opciones de Renta de ATV' : 'Our ATV Rental Options'}
+              </h2>
+              <div style={{
+                width: '100px',
+                height: '2px',
+                background: 'var(--orange, #d97736)',
+                margin: '0 auto',
+                boxShadow: '0 0 10px var(--orange, #d97736)'
+              }} />
+            </div>
+
+            {/* Contenedor de Tarjetas */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gap: '2rem',
+              justifyContent: 'center'
+            }}>
+              {/* Tarjeta 1: Honda 150 Motorbike */}
+              <div style={{
+                background: '#000',
+                border: '1px solid rgba(217, 119, 54, 0.25)',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                transition: 'transform 0.3s ease',
+              }}>
+                {/* Contenedor del Video con la ruta SEO correcta */}
+                <div style={{
+                  width: '100%',
+                  height: '200px',
+                  overflow: 'hidden',
+                  background: '#000',
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  <video
+                    src="/images/SEO/ATV Rentals Red Dirt Honda 150 Motorbike Ready for Adventure.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    title="ATV Rentals Red Dirt Honda 150 Motorbike Ready for Adventure"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                    }}
+                  />
+                </div>
+
+                {/* Contenido de la Tarjeta */}
+                <div style={{
+                  padding: '2rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  flex: 1,
+                  gap: '1.2rem'
+                }}>
+                  {/* Título de la tarjeta (H3) */}
+                  <h3 style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.4rem',
+                    color: '#fff',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    margin: 0
+                  }}>
+                    {lang === 'es' ? 'Honda 150 Motocicleta' : 'Honda 150 Motorbike'}
+                  </h3>
+
+                  {/* Viñetas de información */}
+                  <ul style={{
+                    listStyleType: 'disc',
+                    paddingLeft: '1.2rem',
+                    margin: 0,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.6rem',
+                    color: 'rgba(255,255,255,0.85)',
+                    fontSize: '0.95rem',
+                    lineHeight: 1.5
+                  }}>
+                    <li>
+                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Características Principales:' : 'Main Features:'}</strong>{' '}
+                      {lang === 'es' ? 'Ágil, ligera, fácil de manejar y perfecta para manejo individual o en pareja.' : 'Agile, lightweight, easy to handle, and perfect for solo or double riding.'}
+                    </li>
+                    <li>
+                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Capacidad:' : 'Capacity:'}</strong>{' '}
+                      {lang === 'es' ? 'Hasta 2 personas.' : 'Up to 2 people.'}
+                    </li>
+                    <li>
+                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Terreno Recomendado:' : 'Recommended Terrain:'}</strong>{' '}
+                      {lang === 'es' ? 'Caminos ligeros, terracería y rutas urbanas pavimentadas.' : 'Light trails, dirt roads, and paved urban routes.'}
+                    </li>
+                    <li>
+                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Tarifa:' : 'Rate:'}</strong>{' '}
+                      $500 MXN {lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).'}
+                    </li>
+                  </ul>
+
+                  {/* Botón con efecto invertido (Inicia lleno, al pasar el ratón se vuelve transparente con borde) */}
+                  <div style={{ marginTop: 'auto', paddingTop: '1.5rem', textAlign: 'center' }}>
+                    <a 
+                      href="https://www.gueytours.com/contact" 
+                      style={{
+                        display: 'inline-block',
+                        background: 'var(--orange, #d97736)',
+                        color: '#fff',
+                        border: '2px solid var(--orange, #d97736)',
+                        padding: '0.75rem 2rem',
+                        borderRadius: '50px',
+                        fontWeight: 'bold',
+                        fontFamily: 'var(--font-heading)',
+                        textDecoration: 'none !important',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        transition: 'all 0.3s ease',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = 'transparent';
+                        e.currentTarget.style.color = 'var(--orange, #d97736)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = 'var(--orange, #d97736)';
+                        e.currentTarget.style.color = '#fff';
+                      }}
+                    >
+                      {lang === 'es' ? 'Contáctanos para solicitar nuestra Motocicleta' : 'Contact us to request our Motorbike'}
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          {/* --- FIN DE LA CUARTA SECCIÓN --- */}
+
           
         </div>
       </main>
