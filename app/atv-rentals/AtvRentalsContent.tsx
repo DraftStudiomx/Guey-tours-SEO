@@ -301,7 +301,7 @@ export default function AtvRentalsContent() {
               }} />
             </div>
 
-            {/* Contenedor de Tarjetas */}
+            {/* Contenedor de Tarjetas (Diseñado para 3 columnas) */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -311,24 +311,26 @@ export default function AtvRentalsContent() {
               {/* Tarjeta 1: Honda 150 Motorbike */}
               <div style={{
                 background: '#000',
-                border: '1px solid rgba(217, 119, 54, 0.25)',
+                border: '1px solid rgba(217, 119, 54, 0.3)',
                 borderRadius: '16px',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
                 transition: 'transform 0.3s ease',
               }}>
-                {/* Contenedor del Video con la ruta SEO correcta */}
+                {/* Contenedor del Video (Ajustado con objectFit contain) */}
                 <div style={{
                   width: '100%',
-                  height: '200px',
+                  height: '220px',
                   overflow: 'hidden',
                   background: '#000',
                   position: 'relative',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  padding: '10px',
+                  borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
                 }}>
                   <video
                     src="/images/SEO/ATV Rentals Red Dirt Honda 150 Motorbike Ready for Adventure.mp4"
@@ -340,7 +342,7 @@ export default function AtvRentalsContent() {
                     style={{
                       width: '100%',
                       height: '100%',
-                      objectFit: 'cover',
+                      objectFit: 'contain',
                       display: 'block',
                     }}
                   />
@@ -352,12 +354,12 @@ export default function AtvRentalsContent() {
                   display: 'flex',
                   flexDirection: 'column',
                   flex: 1,
-                  gap: '1.2rem'
+                  gap: '1.5rem'
                 }}>
                   {/* Título de la tarjeta (H3) */}
                   <h3 style={{
                     fontFamily: 'var(--font-heading)',
-                    fontSize: '1.4rem',
+                    fontSize: '1.5rem',
                     color: '#fff',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
@@ -366,38 +368,103 @@ export default function AtvRentalsContent() {
                     {lang === 'es' ? 'Honda 150 Motocicleta' : 'Honda 150 Motorbike'}
                   </h3>
 
-                  {/* Viñetas de información */}
-                  <ul style={{
-                    listStyleType: 'disc',
-                    paddingLeft: '1.2rem',
-                    margin: 0,
+                  {/* Viñetas con diseño de mini-cápsulas / bloques estilizados */}
+                  <div style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '0.6rem',
-                    color: 'rgba(255,255,255,0.85)',
-                    fontSize: '0.95rem',
-                    lineHeight: 1.5
+                    gap: '0.75rem'
                   }}>
-                    <li>
-                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Características Principales:' : 'Main Features:'}</strong>{' '}
-                      {lang === 'es' ? 'Ágil, ligera, fácil de manejar y perfecta para manejo individual o en pareja.' : 'Agile, lightweight, easy to handle, and perfect for solo or double riding.'}
-                    </li>
-                    <li>
-                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Capacidad:' : 'Capacity:'}</strong>{' '}
-                      {lang === 'es' ? 'Hasta 2 personas.' : 'Up to 2 people.'}
-                    </li>
-                    <li>
-                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Terreno Recomendado:' : 'Recommended Terrain:'}</strong>{' '}
-                      {lang === 'es' ? 'Caminos ligeros, terracería y rutas urbanas pavimentadas.' : 'Light trails, dirt roads, and paved urban routes.'}
-                    </li>
-                    <li>
-                      <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Tarifa:' : 'Rate:'}</strong>{' '}
-                      $500 MXN {lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).'}
-                    </li>
-                  </ul>
+                    {/* Item 1 */}
+                    <div style={{
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      borderRadius: '10px',
+                      padding: '0.8rem 1rem',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '0.75rem',
+                      fontSize: '0.9rem',
+                      color: 'rgba(255,255,255,0.85)',
+                      lineHeight: 1.4
+                    }}>
+                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
+                      <div>
+                        <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                          {lang === 'es' ? 'Características' : 'Features'}
+                        </strong>
+                        {lang === 'es' ? 'Ágil, ligera, fácil de manejar y perfecta para manejo individual o en pareja.' : 'Agile, lightweight, easy to handle, and perfect for solo or double riding.'}
+                      </div>
+                    </div>
+
+                    {/* Item 2 */}
+                    <div style={{
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      borderRadius: '10px',
+                      padding: '0.8rem 1rem',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '0.75rem',
+                      fontSize: '0.9rem',
+                      color: 'rgba(255,255,255,0.85)',
+                      lineHeight: 1.4
+                    }}>
+                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
+                      <div>
+                        <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                          {lang === 'es' ? 'Capacidad' : 'Capacity'}
+                        </strong>
+                        {lang === 'es' ? 'Hasta 2 personas.' : 'Up to 2 people.'}
+                      </div>
+                    </div>
+
+                    {/* Item 3 */}
+                    <div style={{
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      borderRadius: '10px',
+                      padding: '0.8rem 1rem',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '0.75rem',
+                      fontSize: '0.9rem',
+                      color: 'rgba(255,255,255,0.85)',
+                      lineHeight: 1.4
+                    }}>
+                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
+                      <div>
+                        <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                          {lang === 'es' ? 'Terreno Recomendado' : 'Recommended Terrain'}
+                        </strong>
+                        {lang === 'es' ? 'Caminos ligeros, terracería y rutas urbanas pavimentadas.' : 'Light trails, dirt roads, and paved urban routes.'}
+                      </div>
+                    </div>
+
+                    {/* Item 4 (Tarifa con un acento especial en naranja) */}
+                    <div style={{
+                      background: 'rgba(217, 119, 54, 0.06)',
+                      border: '1px solid rgba(217, 119, 54, 0.25)',
+                      borderRadius: '10px',
+                      padding: '0.8rem 1rem',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '0.75rem',
+                      fontSize: '0.9rem',
+                      color: 'rgba(255,255,255,0.95)',
+                      lineHeight: 1.4
+                    }}>
+                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
+                      <div>
+                        <strong style={{ color: 'var(--orange, #d97736)', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                          {lang === 'es' ? 'Tarifa' : 'Rate'}
+                        </strong>
+                        $500 MXN {lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).'}
+                      </div>
+                    </div>
+                  </div>
 
                   {/* Botón con efecto invertido (Inicia lleno, al pasar el ratón se vuelve transparente con borde) */}
-                  <div style={{ marginTop: 'auto', paddingTop: '1.5rem', textAlign: 'center' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '1rem', textAlign: 'center' }}>
                     <a 
                       href="https://www.gueytours.com/contact" 
                       style={{
@@ -405,12 +472,13 @@ export default function AtvRentalsContent() {
                         background: 'var(--orange, #d97736)',
                         color: '#fff',
                         border: '2px solid var(--orange, #d97736)',
-                        padding: '0.75rem 2rem',
+                        padding: '0.8rem 1.5rem',
                         borderRadius: '50px',
                         fontWeight: 'bold',
                         fontFamily: 'var(--font-heading)',
                         textDecoration: 'none !important',
                         textTransform: 'uppercase',
+                        fontSize: '0.8rem',
                         letterSpacing: '0.08em',
                         transition: 'all 0.3s ease',
                       }}
@@ -423,9 +491,41 @@ export default function AtvRentalsContent() {
                         e.currentTarget.style.color = '#fff';
                       }}
                     >
-                      {lang === 'es' ? 'Contáctanos para solicitar nuestra Motocicleta' : 'Contact us to request our Motorbike'}
+                      {lang === 'es' ? 'Contáctanos para solicitar' : 'Contact us to request'}
                     </a>
                   </div>
+                </div>
+              </div>
+
+              {/* Tarjeta 2 (Espacio preparado) */}
+              <div style={{
+                background: '#000',
+                border: '1px solid rgba(217, 119, 54, 0.25)',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                opacity: 0.5
+              }}>
+                <div style={{ width: '100%', height: '220px', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
+                  {lang === 'es' ? 'Próximo Vehículo' : 'Next Vehicle'}
+                </div>
+              </div>
+
+              {/* Tarjeta 3 (Espacio preparado) */}
+              <div style={{
+                background: '#000',
+                border: '1px solid rgba(217, 119, 54, 0.25)',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+                opacity: 0.5
+              }}>
+                <div style={{ width: '100%', height: '220px', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
+                  {lang === 'es' ? 'Próximo Vehículo' : 'Next Vehicle'}
                 </div>
               </div>
 
