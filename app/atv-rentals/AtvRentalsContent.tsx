@@ -176,8 +176,9 @@ export default function AtvRentalsContent() {
                 boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
               }}>
                 <Image
-                  src="/images/atv-tour-magic-town-CONTACT-GUEY-TOURS.webp" 
-                  alt="ATV Rental San Miguel de Allende"
+                  src="/images/Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours.webp" 
+                  alt="A group driving ATVs on the cobblestone streets of San Miguel de Allende during an adventure with Guey Tours."
+                  title="Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours"
                   fill
                   style={{ objectFit: 'cover' }}
                 />
@@ -186,30 +187,32 @@ export default function AtvRentalsContent() {
           </div>
 
 
-         {/* --- TERCERA SECCIÓN: Tarjeta Destacada Premium (ATV Adventure) --- */}
+        {/* --- TERCERA SECCIÓN: Tarjeta Destacada Centrada y Estilizada (ATV Adventure) --- */}
           <div style={{
             marginTop: '5rem',
             background: 'linear-gradient(145deg, rgba(20, 20, 20, 0.9) 0%, rgba(35, 35, 35, 0.6) 100%)',
             border: '1px solid rgba(217, 119, 54, 0.25)',
             borderRadius: '20px',
-            padding: '3rem 3.5rem',
+            padding: '3.5rem 3rem',
             position: 'relative',
             overflow: 'hidden',
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.6)',
+            textAlign: 'center'
           }}>
-            {/* Elemento decorativo de fondo (resplandor sutil en la esquina) */}
+            {/* Elemento decorativo de fondo (resplandor sutil centrado) */}
             <div style={{
               position: 'absolute',
               top: '-50px',
-              right: '-50px',
-              width: '180px',
-              height: '180px',
-              background: 'radial-gradient(circle, rgba(217,119,54,0.15) 0%, rgba(0,0,0,0) 70%)',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '250px',
+              height: '150px',
+              background: 'radial-gradient(circle, rgba(217,119,54,0.12) 0%, rgba(0,0,0,0) 70%)',
               zIndex: '1',
               pointerEvents: 'none'
             }} />
 
-            <div style={{ position: 'relative', zIndex: '2' }}>
+            <div style={{ position: 'relative', zIndex: '2', maxWidth: '850px', margin: '0 auto' }}>
               {/* Pequeña etiqueta superior estilo "Badge" */}
               <div style={{
                 display: 'inline-block',
@@ -221,25 +224,26 @@ export default function AtvRentalsContent() {
                 textTransform: 'uppercase',
                 padding: '0.4rem 1rem',
                 borderRadius: '50px',
-                marginBottom: '1.2rem',
+                marginBottom: '1.5rem',
                 border: '1px solid rgba(217, 119, 54, 0.3)'
               }}>
                 {lang === 'es' ? '★ Experiencia Destacada' : '★ Featured Experience'}
               </div>
 
+              {/* Título en color naranja y tipografía de encabezado */}
               <h3 style={{
                 fontFamily: 'var(--font-heading)',
                 fontSize: '2rem',
-                color: '#fff',
+                color: 'var(--orange, #d97736)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em',
-                margin: '0 0 1.5rem 0',
+                margin: '0 0 1.8rem 0',
                 lineHeight: 1.2
               }}>
                 {lang === 'es' ? 'Explora San Miguel de Allende en un ATV' : 'Explore San Miguel de Allende on an ATV'}
               </h3>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.8, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
                 <p style={{ margin: 0 }}>
                   {lang === 'es' 
                     ? '¡Adiós a los autobuses turísticos abarrotados! Cuando rentas un ATV en San Miguel de Allende, descubres una cara totalmente nueva de la región.'
@@ -252,10 +256,13 @@ export default function AtvRentalsContent() {
                     : 'Ride along rustic dirt paths, cross open rural fields, and take in scenic mountain backdrop views outside the historic downtown.'}
                 </p>
 
+                {/* Nuevo diseño para el último párrafo: Bloque limpio flotante y centrado */}
                 <div style={{
-                  marginTop: '0.5rem',
-                  paddingLeft: '1.5rem',
-                  borderLeft: '3px solid var(--orange, #d97736)',
+                  marginTop: '1rem',
+                  padding: '1.5rem 2rem',
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  border: '1px dashed rgba(217, 119, 54, 0.4)',
+                  borderRadius: '12px',
                   color: '#fff',
                   fontWeight: '500'
                 }}>
