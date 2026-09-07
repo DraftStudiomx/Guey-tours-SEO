@@ -308,7 +308,8 @@ export default function AtvRentalsContent() {
               gap: '2rem',
               justifyContent: 'center'
             }}>
-              {/* Tarjeta 1: Honda 150 Motorbike */}
+              
+              {/* --- TARJETA 1: Honda 150 Motorbike --- */}
               <div style={{
                 background: '#000',
                 border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -317,12 +318,10 @@ export default function AtvRentalsContent() {
                 display: 'flex',
                 flexDirection: 'column',
                 boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
-                transition: 'transform 0.3s ease',
               }}>
-                {/* Contenedor del Video (Ajustado con objectFit contain) */}
                 <div style={{
                   width: '100%',
-                  height: '220px',
+                  height: '200px',
                   overflow: 'hidden',
                   background: '#000',
                   position: 'relative',
@@ -348,18 +347,16 @@ export default function AtvRentalsContent() {
                   />
                 </div>
 
-                {/* Contenido de la Tarjeta */}
                 <div style={{
-                  padding: '2rem',
+                  padding: '1.8rem',
                   display: 'flex',
                   flexDirection: 'column',
                   flex: 1,
-                  gap: '1.5rem'
+                  gap: '1.2rem'
                 }}>
-                  {/* Título de la tarjeta (H3) */}
                   <h3 style={{
                     fontFamily: 'var(--font-heading)',
-                    fontSize: '1.5rem',
+                    fontSize: '1.4rem',
                     color: '#fff',
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
@@ -368,111 +365,84 @@ export default function AtvRentalsContent() {
                     {lang === 'es' ? 'Honda 150 Motocicleta' : 'Honda 150 Motorbike'}
                   </h3>
 
-                  {/* Viñetas con diseño de mini-cápsulas / bloques estilizados */}
-                  <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '0.75rem'
-                  }}>
-                    {/* Item 1 */}
+                  {/* Panel de Pestañas (Honda) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} id="card-honda">
                     <div style={{
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.06)',
-                      borderRadius: '10px',
-                      padding: '0.8rem 1rem',
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '0.75rem',
-                      fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.85)',
-                      lineHeight: 1.4
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(4, 1fr)',
+                      gap: '4px',
+                      background: 'rgba(255,255,255,0.05)',
+                      padding: '4px',
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255,255,255,0.08)'
                     }}>
-                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
-                      <div>
-                        <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                          {lang === 'es' ? 'Características' : 'Features'}
-                        </strong>
-                        {lang === 'es' ? 'Ágil, ligera, fácil de manejar y perfecta para manejo individual o en pareja.' : 'Agile, lightweight, easy to handle, and perfect for solo or double riding.'}
-                      </div>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-honda');
+                          const content = container?.querySelector('.tab-content');
+                          if (content) content.textContent = lang === 'es' ? 'Ágil, ligera, fácil de manejar y perfecta para manejo individual o en pareja.' : 'Agile, lightweight, easy to handle, and perfect for solo or double riding.';
+                        }}
+                        style={{ background: 'var(--orange, #d97736)', color: '#fff', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Info' : 'Info'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-honda');
+                          const content = container?.querySelector('.tab-content');
+                          if (content) content.textContent = lang === 'es' ? 'Hasta 2 personas.' : 'Up to 2 people.';
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Cupo' : 'Cap'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-honda');
+                          const content = container?.querySelector('.tab-content');
+                          if (content) content.textContent = lang === 'es' ? 'Caminos ligeros, terracería y rutas urbanas pavimentadas.' : 'Light trails, dirt roads, and paved urban routes.';
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Terreno' : 'Terrain'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-honda');
+                          const content = container?.querySelector('.tab-content');
+                          if (content) content.textContent = '$500 MXN ' + (lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).');
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Precio' : 'Rate'}
+                      </button>
                     </div>
 
-                    {/* Item 2 */}
-                    <div style={{
+                    <div className="tab-content" style={{
                       background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(217, 119, 54, 0.2)',
                       borderRadius: '10px',
-                      padding: '0.8rem 1rem',
+                      padding: '1rem',
+                      minHeight: '85px',
                       display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '0.75rem',
+                      alignItems: 'center',
                       fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.85)',
-                      lineHeight: 1.4
+                      color: 'rgba(255,255,255,0.9)',
+                      lineHeight: 1.5
                     }}>
-                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
-                      <div>
-                        <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                          {lang === 'es' ? 'Capacidad' : 'Capacity'}
-                        </strong>
-                        {lang === 'es' ? 'Hasta 2 personas.' : 'Up to 2 people.'}
-                      </div>
-                    </div>
-
-                    {/* Item 3 */}
-                    <div style={{
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      border: '1px solid rgba(255, 255, 255, 0.06)',
-                      borderRadius: '10px',
-                      padding: '0.8rem 1rem',
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '0.75rem',
-                      fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.85)',
-                      lineHeight: 1.4
-                    }}>
-                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
-                      <div>
-                        <strong style={{ color: '#fff', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                          {lang === 'es' ? 'Terreno Recomendado' : 'Recommended Terrain'}
-                        </strong>
-                        {lang === 'es' ? 'Caminos ligeros, terracería y rutas urbanas pavimentadas.' : 'Light trails, dirt roads, and paved urban routes.'}
-                      </div>
-                    </div>
-
-                    {/* Item 4 (Tarifa con un acento especial en naranja) */}
-                    <div style={{
-                      background: 'rgba(217, 119, 54, 0.06)',
-                      border: '1px solid rgba(217, 119, 54, 0.25)',
-                      borderRadius: '10px',
-                      padding: '0.8rem 1rem',
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: '0.75rem',
-                      fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.95)',
-                      lineHeight: 1.4
-                    }}>
-                      <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold', fontSize: '1.1rem', lineHeight: 1 }}>✦</span>
-                      <div>
-                        <strong style={{ color: 'var(--orange, #d97736)', display: 'block', marginBottom: '0.2rem', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                          {lang === 'es' ? 'Tarifa' : 'Rate'}
-                        </strong>
-                        $500 MXN {lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).'}
-                      </div>
+                      {lang === 'es' ? 'Ágil, ligera, fácil de manejar y perfecta para manejo individual o en pareja.' : 'Agile, lightweight, easy to handle, and perfect for solo or double riding.'}
                     </div>
                   </div>
 
-                  {/* Botón con efecto invertido (Inicia lleno, al pasar el ratón se vuelve transparente con borde) */}
-                  <div style={{ marginTop: 'auto', paddingTop: '1rem', textAlign: 'center' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '0.5rem', textAlign: 'center' }}>
                     <a 
-                      href="https://www.gueytours.com/contact" 
+                      href="https://www.gueytours.com/contacto/" 
                       style={{
                         display: 'inline-block',
-                        background: 'var(--orange, #d97736)',
-                        color: '#fff',
+                        background: 'transparent',
+                        color: 'var(--orange, #d97736)',
                         border: '2px solid var(--orange, #d97736)',
-                        padding: '0.8rem 1.5rem',
+                        padding: '0.75rem 1.5rem',
                         borderRadius: '50px',
                         fontWeight: 'bold',
                         fontFamily: 'var(--font-heading)',
@@ -482,50 +452,316 @@ export default function AtvRentalsContent() {
                         letterSpacing: '0.08em',
                         transition: 'all 0.3s ease',
                       }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background = 'transparent';
-                        e.currentTarget.style.color = 'var(--orange, #d97736)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'var(--orange, #d97736)';
-                        e.currentTarget.style.color = '#fff';
-                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
                     >
-                      {lang === 'es' ? 'Contáctanos para solicitar' : 'Contact us to request'}
+                      Book your ATV
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Tarjeta 2 (Espacio preparado) */}
+              {/* --- TARJETA 2: ATV Quad --- */}
               <div style={{
                 background: '#000',
-                border: '1px solid rgba(217, 119, 54, 0.25)',
+                border: '1px solid rgba(217, 119, 54, 0.3)',
                 borderRadius: '16px',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-                opacity: 0.5
+                boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
               }}>
-                <div style={{ width: '100%', height: '220px', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
-                  {lang === 'es' ? 'Próximo Vehículo' : 'Next Vehicle'}
+                <div style={{
+                  width: '100%',
+                  height: '200px',
+                  overflow: 'hidden',
+                  background: '#000',
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '10px',
+                  borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
+                }}>
+                  <video
+                    src="/images/SEO/Guey Tours Reliable quad options for your ATV rentals.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    title="Guey Tours Reliable quad options for your ATV rentals"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain',
+                      display: 'block',
+                    }}
+                  />
+                </div>
+
+                <div style={{
+                  padding: '1.8rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  flex: 1,
+                  gap: '1.2rem'
+                }}>
+                  <h3 style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.4rem',
+                    color: '#fff',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    margin: 0
+                  }}>
+                    {lang === 'es' ? 'Cuatrimoto ATV' : 'ATV Quad'}
+                  </h3>
+
+                  {/* Panel de Pestañas (ATV Quad) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} id="card-quad">
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(4, 1fr)',
+                      gap: '4px',
+                      background: 'rgba(255,255,255,0.05)',
+                      padding: '4px',
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255,255,255,0.08)'
+                    }}>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-quad');
+                          const content = container?.querySelector('.tab-content-quad');
+                          if (content) content.textContent = lang === 'es' ? 'Robusta, potente cuatrimoto todoterreno construida para estabilidad y diversión.' : 'Sturdy, powerful all-terrain four wheeler rental built for stability and fun.';
+                        }}
+                        style={{ background: 'var(--orange, #d97736)', color: '#fff', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Info' : 'Info'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-quad');
+                          const content = container?.querySelector('.tab-content-quad');
+                          if (content) content.textContent = lang === 'es' ? 'Hasta 2 personas.' : 'Up to 2 people.';
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Cupo' : 'Cap'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-quad');
+                          const content = container?.querySelector('.tab-content-quad');
+                          if (content) content.textContent = lang === 'es' ? 'Pistas de terracería ásperas, caminos polvorientos y rutas abiertas off-road.' : 'Rough dirt tracks, dusty paths, and open off-road routes.';
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Terreno' : 'Terrain'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-quad');
+                          const content = container?.querySelector('.tab-content-quad');
+                          if (content) content.textContent = '$850 MXN ' + (lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).');
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Precio' : 'Rate'}
+                      </button>
+                    </div>
+
+                    <div className="tab-content-quad" style={{
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(217, 119, 54, 0.2)',
+                      borderRadius: '10px',
+                      padding: '1rem',
+                      minHeight: '85px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      fontSize: '0.9rem',
+                      color: 'rgba(255,255,255,0.9)',
+                      lineHeight: 1.5
+                    }}>
+                      {lang === 'es' ? 'Robusta, potente cuatrimoto todoterreno construida para estabilidad y diversión.' : 'Sturdy, powerful all-terrain four wheeler rental built for stability and fun.'}
+                    </div>
+                  </div>
+
+                  <div style={{ marginTop: 'auto', paddingTop: '0.5rem', textAlign: 'center' }}>
+                    <a 
+                      href="https://www.gueytours.com/contacto/" 
+                      style={{
+                        display: 'inline-block',
+                        background: 'transparent',
+                        color: 'var(--orange, #d97736)',
+                        border: '2px solid var(--orange, #d97736)',
+                        padding: '0.75rem 1.5rem',
+                        borderRadius: '50px',
+                        fontWeight: 'bold',
+                        fontFamily: 'var(--font-heading)',
+                        textDecoration: 'none !important',
+                        textTransform: 'uppercase',
+                        fontSize: '0.8rem',
+                        letterSpacing: '0.08em',
+                        transition: 'all 0.3s ease',
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
+                    >
+                      Book your ATV
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              {/* Tarjeta 3 (Espacio preparado) */}
+              {/* --- TARJETA 3: Defender --- */}
               <div style={{
                 background: '#000',
-                border: '1px solid rgba(217, 119, 54, 0.25)',
+                border: '1px solid rgba(217, 119, 54, 0.3)',
                 borderRadius: '16px',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-                opacity: 0.5
+                boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
               }}>
-                <div style={{ width: '100%', height: '220px', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666' }}>
-                  {lang === 'es' ? 'Próximo Vehículo' : 'Next Vehicle'}
+                <div style={{
+                  width: '100%',
+                  height: '200px',
+                  overflow: 'hidden',
+                  background: '#000',
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '10px',
+                  borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
+                }}>
+                  <video
+                    src="/images/SEO/Guey Tours Defender ATV rentals for off-road group adventures.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    title="Guey Tours Defender ATV rentals for off-road group adventures"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain',
+                      display: 'block',
+                    }}
+                  />
+                </div>
+
+                <div style={{
+                  padding: '1.8rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  flex: 1,
+                  gap: '1.2rem'
+                }}>
+                  <h3 style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.4rem',
+                    color: '#fff',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    margin: 0
+                  }}>
+                    {lang === 'es' ? 'Defender' : 'Defender'}
+                  </h3>
+
+                  {/* Panel de Pestañas (Defender) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} id="card-defender">
+                    <div style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(4, 1fr)',
+                      gap: '4px',
+                      background: 'rgba(255,255,255,0.05)',
+                      padding: '4px',
+                      borderRadius: '8px',
+                      border: '1px solid rgba(255,255,255,0.08)'
+                    }}>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-defender');
+                          const content = container?.querySelector('.tab-content-defender');
+                          if (content) content.textContent = lang === 'es' ? 'Vehículo todoterreno pesado tipo side-by-side con barra antivuelco y máxima potencia.' : 'Heavy-duty side-by-side off-road vehicle rental with roll-cage safety and maximum power.';
+                        }}
+                        style={{ background: 'var(--orange, #d97736)', color: '#fff', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Info' : 'Info'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-defender');
+                          const content = container?.querySelector('.tab-content-defender');
+                          if (content) content.textContent = lang === 'es' ? 'Hasta 6 personas.' : 'Up to 6 people.';
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Cupo' : 'Cap'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-defender');
+                          const content = container?.querySelector('.tab-content-defender');
+                          if (content) content.textContent = lang === 'es' ? 'Todos los terrenos off-road, campo agreste y excursiones en grupo.' : 'All off-road terrains, rugged countryside, and group excursions.';
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Terreno' : 'Terrain'}
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          const container = e.currentTarget.closest('#card-defender');
+                          const content = container?.querySelector('.tab-content-defender');
+                          if (content) content.textContent = '$1,900 MXN ' + (lang === 'es' ? 'por hora (Sujeto a disponibilidad).' : 'per hour (Request availability).');
+                        }}
+                        style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
+                      >
+                        {lang === 'es' ? 'Precio' : 'Rate'}
+                      </button>
+                    </div>
+
+                    <div className="tab-content-defender" style={{
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(217, 119, 54, 0.2)',
+                      borderRadius: '10px',
+                      padding: '1rem',
+                      minHeight: '85px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      fontSize: '0.9rem',
+                      color: 'rgba(255,255,255,0.9)',
+                      lineHeight: 1.5
+                    }}>
+                      {lang === 'es' ? 'Vehículo todoterreno pesado tipo side-by-side con barra antivuelco y máxima potencia.' : 'Heavy-duty side-by-side off-road vehicle rental with roll-cage safety and maximum power.'}
+                    </div>
+                  </div>
+
+                  <div style={{ marginTop: 'auto', paddingTop: '0.5rem', textAlign: 'center' }}>
+                    <a 
+                      href="https://www.gueytours.com/contacto/" 
+                      style={{
+                        display: 'inline-block',
+                        background: 'transparent',
+                        color: 'var(--orange, #d97736)',
+                        border: '2px solid var(--orange, #d97736)',
+                        padding: '0.75rem 1.5rem',
+                        borderRadius: '50px',
+                        fontWeight: 'bold',
+                        fontFamily: 'var(--font-heading)',
+                        textDecoration: 'none !important',
+                        textTransform: 'uppercase',
+                        fontSize: '0.8rem',
+                        letterSpacing: '0.08em',
+                        transition: 'all 0.3s ease',
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
+                    >
+                      Book your ATV
+                    </a>
+                  </div>
                 </div>
               </div>
 
