@@ -86,7 +86,7 @@ export default function Navbar() {
 
   const rightLinks = [
     { label: t('nav.gallery'), href: '/#gallery' },
-    { label: t('nav.contact'), href: '/#contact' },
+    { label: t('nav.contact'), href: '/contact' },
   ]
 
   // Flattened list for mobile — promote Tours children to top-level siblings
