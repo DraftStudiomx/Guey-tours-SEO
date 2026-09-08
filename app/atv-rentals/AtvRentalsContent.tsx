@@ -1918,7 +1918,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                 {[
                   {
                     icon: MapPin,
-                    label: lang === 'es' ? 'San Miguel de Allende, Gto.' : 'San Miguel de Allende, Gto.',
+                    label: lang === 'es' ? 'Calle Refugio Sur #52, Colonia San Antonio, San Miguel de Allende, Guanajuato, Mexico' : 'Calle Refugio Sur #52, Colonia San Antonio, San Miguel de Allende, Guanajuato, Mexico',
                   },
                   {
                     icon: Mail,
@@ -1974,6 +1974,28 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                     </div>
                   )
                 })}
+
+                <a
+                  href="https://goo.gl/maps/7suNDjfq9fHgryVM8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline"
+                  style={{ 
+                    marginTop: '1rem', 
+                    display: 'inline-flex', 
+                    alignItems: 'center', 
+                    gap: '0.5rem', 
+                    width: 'fit-content',
+                    padding: '0.75rem 1.5rem',
+                    color: '#fff',
+                    border: '1px solid var(--orange, #d97736)',
+                    borderRadius: '4px',
+                    textDecoration: 'none',
+                    fontFamily: 'var(--font-heading)'
+                  }}
+                >
+                  {lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps'} <ExternalLink size={14} />
+                </a>
               </div>
             </div>
 
