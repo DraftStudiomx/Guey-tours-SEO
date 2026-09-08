@@ -33,8 +33,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         paddingTop: '11rem',
         paddingBottom: '5rem'
       }}>
-         {/* PRIMERA sección: Dos columnas (Texto H2 + Imagen) */}
-        {/* Encabezado estilo galería */}
+        {/* Contenido principal con ancho equilibrado */}
+        <div style={{
+          maxWidth: '1100px',
+          margin: '0 auto',
+          padding: '0 2rem',
+          color: '#fff',
+          fontFamily: 'sans-serif',
+          textAlign: 'left'
+        }}>
+          {/* Encabezado estilo galería */}
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <div style={{
               color: 'var(--orange, #d97736)',
@@ -55,39 +63,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               color: '#fff',
               margin: '0 0 0.8rem 0',
             }}>
-              {lang === 'es' ? 'San Miguel de Allende Tours' : 'San Miguel de Allende Tours'}
+              {lang === 'es' ? 'Renta de ATV' : 'ATV Rentals'}
             </h1>
-
-            {/* Botón de contacto movido justo abajo del H1 */}
-            <div style={{ marginTop: '1.5rem', marginBottom: '1.5rem', textAlign: 'center' }}>
-              <a 
-                href="https://www.gueytours.com/contact" 
-                style={{
-                  display: 'inline-block',
-                  background: 'transparent',
-                  color: 'var(--orange, #d97736)',
-                  border: '2px solid var(--orange, #d97736)',
-                  padding: '0.75rem 2.5rem',
-                  borderRadius: '50px',
-                  fontWeight: 'bold',
-                  fontFamily: 'var(--font-heading)',
-                  textDecoration: 'none !important',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  transition: 'all 0.3s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'var(--orange, #d97736)';
-                  e.currentTarget.style.color = '#fff';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = 'var(--orange, #d97736)';
-                }}
-              >
-                {lang === 'es' ? 'Contáctanos' : 'Contact Us'}
-              </a>
-            </div>
 
             <div style={{
               width: '120px',
@@ -125,7 +102,36 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             </p>
           </div>
 
-         {/* PRIMERA sección: Dos columnas (Texto H2 + Imagen) */}
+          {/* Botón de contacto al final de la primera sección */}
+          <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+            <a 
+              href="https://www.gueytours.com/contact" 
+              style={{
+                display: 'inline-block',
+                background: 'transparent',
+                color: 'var(--orange, #d97736)',
+                border: '2px solid var(--orange, #d97736)',
+                padding: '0.75rem 2.5rem',
+                borderRadius: '50px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none !important',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--orange, #d97736)';
+                e.currentTarget.style.color = '#fff';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = 'var(--orange, #d97736)';
+              }}
+            >
+              {lang === 'es' ? 'Contáctanos' : 'Contact Us'}
+            </a>
+          </div>
 
           {/* Segunda sección: Dos columnas (Texto H2 + Imagen) */}
           <div style={{
