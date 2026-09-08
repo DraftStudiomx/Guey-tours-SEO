@@ -63,7 +63,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               color: '#fff',
               margin: '0 0 0.8rem 0',
             }}>
-              {lang === 'es' ? 'Renta de ATV' : 'ATV Rentals'}
+              {lang === 'es' ? 'San Miguel de Allende Tours' : 'San Miguel de Allende Tours'}
             </h1>
 
             <div style={{
@@ -79,25 +79,25 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>¿Buscas una forma emocionante de explorar más allá de las clásicas calles empedradas? En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, ofrecemos renta de ATVs premium para viajeros que buscan una experiencia al aire libre inolvidable.</>
+                <>Descubre San Miguel de Allende desde una perspectiva diferente con Guey Tours. Ve más allá de la experiencia turística tradicional y explora paisajes naturales, caminos rurales, miradores panorámicos y aventuras al aire libre con guías locales que conocen el destino desde adentro.</>
               ) : (
-                <>Looking for an exciting way to explore beyond the classic cobblestone streets? At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, we offer premium ATV rentals for travelers seeking an unforgettable outdoor experience.</>
+                <>Discover San Miguel de Allende from a different perspective with Guey Tours. Go beyond the traditional sightseeing experience and explore natural landscapes, rural roads, scenic viewpoints and outdoor adventures with local guides who know the destination from the inside.</>
               )}
             </p>
 
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>Ya sea que quieras una rápida renta de cuatrimotos o una aventura en ATV de día completo, nuestra flota confiable está lista para ti.</>
+                <>San Miguel de Allende es uno de los destinos más cautivadores de México, conocido por su colorida arquitectura colonial, sus calles empedradas, su vibrante escena cultural y su encanto histórico. Pero hay mucho más por descubrir más allá del centro de la ciudad.</>
               ) : (
-                <>Whether you want a quick ATV rental or an all-day ATV adventure, our reliable fleet is ready for you.</>
+                <>San Miguel de Allende is one of Mexico’s most captivating destinations, known for its colorful colonial architecture, cobblestone streets, vibrant cultural scene and historic charm. But there is much more to discover beyond the city center.</>
               )}
             </p>
 
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>Como una de las mejores opciones para visitantes internacionales, hacemos que sea muy fácil reservar la renta de tu vehículo todoterreno y disfrutar de la belleza del campo local.</>
+                <>Con los tours en San Miguel de Allende de Guey Tours, los viajeros pueden combinar el turismo con la aventura, la naturaleza y experiencias locales auténticas.</>
               ) : (
-                <>As a top choice for international visitors, we make it effortless to book your off-road vehicle rental and experience the beauty of the local countryside.</>
+                <>With San Miguel de Allende tours from Guey Tours, travelers can combine sightseeing with adventure, nature and authentic local experiences.</>
               )}
             </p>
           </div>
