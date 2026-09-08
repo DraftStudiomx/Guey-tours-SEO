@@ -6,10 +6,21 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { useLang } from '@/lib/i18n'
+import { useEffect, useState } from 'react'
 
-// Componente interno para manejar el idioma reactivamente en el cliente
+// Componente interno seguro para el cliente
 function GalleryTextContent() {
   const { lang } = useLang()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Evita el parpadeo o error en SSR mientras carga el cliente
+  if (!mounted) {
+    return <div style={{ minHeight: '200px' }} />
+  }
 
   return (
     <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 3rem 2rem', textAlign: 'center' }}>
@@ -34,7 +45,7 @@ function GalleryTextContent() {
             Nuestra galería muestra momentos reales de nuestros tours, aventuras al aire libre, rutas todoterreno y experiencias inolvidables con viajeros de todo el mundo. Ya sea que estés planeando tu primera aventura o busques inspiración para tu próxima visita, estas imágenes y videos te darán una probadita de lo que te espera.
           </p>
 
-          <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
+          <Link href="https://www.gueytours.com/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
             Comienza a planear tu aventura <ArrowRight size={16} />
           </Link>
         </>
@@ -58,7 +69,7 @@ function GalleryTextContent() {
             Our gallery showcases real moments from our tours, outdoor adventures, off-road trails, and unforgettable experiences with travelers from around the world. Whether you are planning your first adventure or looking for inspiration for your next visit, these images and videos will give you a glimpse of what awaits.
           </p>
 
-          <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
+          <Link href="https://www.gueytours.com/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
             Start planning your adventure <ArrowRight size={16} />
           </Link>
         </>
