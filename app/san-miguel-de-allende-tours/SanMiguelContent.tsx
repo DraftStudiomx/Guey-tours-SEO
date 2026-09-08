@@ -43,8 +43,41 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           textAlign: 'left'
         }}>
 
-          <div style={{ position: 'relative', width: '100%', height: '350px', borderRadius: '16px', overflow: 'hidden', marginBottom: '3.5rem', border: '2px solid var(--orange, #d97736)', boxShadow: '0 10px 30px rgba(0,0,0,0.6)' }}>
-  <img src="tourist-group-atvs-san-miguel-de-allende-tours.webp" alt="Group of smiling visitors wearing safety gear and all-terrain vehicles ready to start San Miguel de allende tours" title="ATV adventure experience with San Miguel de allende tours" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{
+  position: 'relative',
+  width: '100vw',
+  left: '50%',
+  right: '50%',
+  marginLeft: '-50vw',
+  marginRight: '-50vw',
+  height: '75vh',
+  minHeight: '450px',
+  marginBottom: '4rem',
+  overflow: 'hidden'
+}}>
+  <img 
+    src="/images/SEO/tourist-group-atvs-san-miguel-de-allende-tours.webp" 
+    alt="Group of smiling visitors wearing safety gear and all-terrain vehicles ready to start San Miguel de allende tours" 
+    title="ATV adventure experience with San Miguel de allende tours"
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      display: 'block'
+    }}
+  />
+  <div style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%)',
+    zIndex: 1
+  }} />
 </div>
           {/* Encabezado estilo galería */}
           <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
