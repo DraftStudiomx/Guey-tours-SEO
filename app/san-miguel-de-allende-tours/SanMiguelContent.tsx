@@ -637,7 +637,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           : 'These experiences can offer a more personalized itinerary and the flexibility to focus on the activities and places that interest your group most.'}
       </p>
       <div style={{ paddingTop: '0.5rem' }}>
-        <a href="https://www.gueytours.com/contact" style={{
+        <a href="https://www.gueytours.com/rsz-rentals/" style={{
           display: 'inline-block',
           background: 'transparent',
           color: 'var(--orange, #d97736)',
