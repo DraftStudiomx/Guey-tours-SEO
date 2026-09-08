@@ -2,6 +2,7 @@
 
 import { useLang } from '@/lib/i18n'
 import { useState } from 'react'
+import { MapPin, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
