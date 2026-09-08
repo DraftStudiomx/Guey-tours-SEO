@@ -1778,6 +1778,90 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
         </div>
       </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA OCTAVA SECCIÓN */}
+
+          {/* --- NOVENA SECCIÓN: Call to Action (CTA) --- */}
+      <section
+        style={{
+          background: 'linear-gradient(180deg, #0b0b0b 0%, #141414 100%)',
+          padding: '6rem 0',
+          position: 'relative',
+          textAlign: 'center',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Elemento decorativo de fondo */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(217, 119, 54, 0.08) 0%, transparent 70%)',
+          pointerEvents: 'none',
+        }} />
+
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem', position: 'relative', zIndex: 1 }}>
+          
+          <div style={{
+            fontFamily: 'var(--font-heading)',
+            color: 'var(--orange, #d97736)',
+            fontSize: '0.85rem',
+            letterSpacing: '0.3em',
+            textTransform: 'uppercase',
+            marginBottom: '0.75rem',
+          }}>
+            ——— {lang === 'en' ? 'Ready for action?' : '¿Listo para la acción?'} ———
+          </div>
+
+          <h2 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: 'clamp(2rem, 4vw, 3rem)',
+            color: '#fff',
+            fontWeight: 800,
+            lineHeight: 1.2,
+            marginBottom: '1.5rem',
+            textTransform: 'uppercase',
+          }}>
+            {lang === 'en' ? 'Book your adventure today and live the experience' : 'Reserva tu aventura hoy y vive la experiencia'}
+          </h2>
+
+          <p style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '1.1rem',
+            color: 'rgba(255, 255, 255, 0.75)',
+            lineHeight: 1.6,
+            maxWidth: '650px',
+            margin: '0 auto 2.5rem auto',
+          }}>
+            {lang === 'en' 
+              ? 'Secure your spot now and explore the best off-road trails with professional guides and top-tier equipment.' 
+              : 'Asegura tu lugar ahora y explora los mejores senderos todo terreno con guías profesionales y equipo de primera.'}
+          </p>
+
+          <a
+            href="#contacto"
+            style={{
+              display: 'inline-block',
+              background: 'var(--orange, #d97736)',
+              color: '#fff',
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1rem',
+              textTransform: 'uppercase',
+              padding: '1rem 2.5rem',
+              borderRadius: '50px',
+              textDecoration: 'none',
+              letterSpacing: '0.08em',
+              fontWeight: 'bold',
+              boxShadow: '0 0 25px rgba(217, 119, 54, 0.4)',
+              transition: 'transform 0.2s, background 0.2s',
+            }}
+          >
+            {lang === 'en' ? 'Reserve Now' : 'Reservar Ahora'}
+          </a>
+
+        </div>
+      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA NOVENA SECCIÓN */}
           
 
           
