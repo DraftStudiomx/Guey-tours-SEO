@@ -1382,6 +1382,245 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA SEXTA SECCIÓN --- */}
 
 
+          {/* --- SÉPTIMA SECCIÓN: Why Rent an ATV With Guey Tours? (Cierre de Alto Impacto) --- */}
+<div style={{ marginTop: '7rem', marginBottom: '5rem', width: '100%', padding: '0 1rem' }}>
+  
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    background: 'linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%)',
+    border: '1px solid rgba(217, 119, 54, 0.4)',
+    borderRadius: '24px',
+    boxShadow: '0 30px 60px rgba(0,0,0,0.8)',
+    padding: '3.5rem 2.5rem',
+    position: 'relative',
+    overflow: 'hidden'
+  }}>
+
+    {/* Línea de luz superior decorativa */}
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      height: '4px',
+      background: 'var(--orange, #d97736)',
+      boxShadow: '0 0 15px var(--orange, #d97736)'
+    }} />
+
+    {/* Encabezado y Descripción Principal */}
+    <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 3.5rem auto' }}>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '2.5rem',
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.08em',
+        margin: '0 0 1rem 0',
+        lineHeight: 1.2
+      }}>
+        {lang === 'es' ? '¿Por Qué Rentar un ATV Con Guey Tours?' : 'Why Rent an ATV With Guey Tours?'}
+      </h2>
+      <p style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.15rem',
+        color: '#fff',
+        marginBottom: '1rem',
+        lineHeight: 1.4
+      }}>
+        {lang === 'es' 
+          ? 'Elegir al compañero ideal para tu aventura todoterreno marca toda la diferencia al descubrir el corazón de Guanajuato.' 
+          : 'Choosing the right partner for your off-road journey makes all the difference when discovering the heart of Guanajuato.'}
+      </p>
+      <p style={{
+        fontFamily: 'var(--font-body, sans-serif)',
+        fontSize: '0.98rem',
+        color: 'rgba(255, 255, 255, 0.75)',
+        lineHeight: 1.6,
+        margin: 0
+      }}>
+        {lang === 'es' 
+          ? 'Nos enorgullece ofrecer una experiencia inigualable basada en conocimiento local genuino, estándares de seguridad sin concesiones y equipos de primera categoría. Cada detalle está diseñado para brindarte tranquilidad mientras exploras.' 
+          : 'We pride ourselves on delivering an unmatched experience built on genuine local insight, uncompromising safety standards, and top-tier equipment. Every detail of our service is designed to give you peace of mind while you explore.'}
+      </p>
+      <div style={{
+        width: '100px',
+        height: '2px',
+        background: 'var(--orange, #d97736)',
+        margin: '2rem auto 0 auto',
+        boxShadow: '0 0 10px var(--orange, #d97736)'
+      }} />
+    </div>
+
+    {/* Grid de 3 columnas para los 5 Beneficios */}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '1.5rem',
+      marginBottom: '3.5rem'
+    }}>
+      
+      {/* Beneficio 1 */}
+      <div style={{
+        background: 'rgba(15, 15, 15, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.25)',
+        borderRadius: '16px',
+        padding: '2rem 1.5rem',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+      }}>
+        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.5rem', fontWeight: 'bold', display: 'block', marginBottom: '0.8rem', fontFamily: 'var(--font-heading)' }}>01</span>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
+          {lang === 'es' ? 'Experiencia Local' : 'Local Experience'}
+        </h3>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+          {lang === 'es' ? 'Conocimiento profundo de los mejores senderos que rodean San Miguel de Allende.' : 'Deep knowledge of the best trails surrounding San Miguel de Allende.'}
+        </p>
+      </div>
+
+      {/* Beneficio 2 */}
+      <div style={{
+        background: 'rgba(15, 15, 15, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.25)',
+        borderRadius: '16px',
+        padding: '2rem 1.5rem',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+      }}>
+        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.5rem', fontWeight: 'bold', display: 'block', marginBottom: '0.8rem', fontFamily: 'var(--font-heading)' }}>02</span>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
+          {lang === 'es' ? 'Seguridad Primero' : 'Safety First'}
+        </h3>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+          {lang === 'es' ? 'Cascos certificados, seguro médico e inducciones completas antes de partir.' : 'Certified helmets, medical insurance, and complete briefings before departing.'}
+        </p>
+      </div>
+
+      {/* Beneficio 3 */}
+      <div style={{
+        background: 'rgba(15, 15, 15, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.25)',
+        borderRadius: '16px',
+        padding: '2rem 1.5rem',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+      }}>
+        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.5rem', fontWeight: 'bold', display: 'block', marginBottom: '0.8rem', fontFamily: 'var(--font-heading)' }}>03</span>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
+          {lang === 'es' ? 'Vehículos de Calidad' : 'Quality Vehicles'}
+        </h3>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+          {lang === 'es' ? 'Flotilla limpia, completamente inspeccionada y totalmente confiable.' : 'Clean, fully inspected, and reliable fleet.'}
+        </p>
+      </div>
+
+      {/* Beneficio 4 */}
+      <div style={{
+        background: 'rgba(15, 15, 15, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.25)',
+        borderRadius: '16px',
+        padding: '2rem 1.5rem',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+      }}>
+        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.5rem', fontWeight: 'bold', display: 'block', marginBottom: '0.8rem', fontFamily: 'var(--font-heading)' }}>04</span>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
+          {lang === 'es' ? 'Asistencia en Inglés' : 'English-Speaking Assistance'}
+        </h3>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+          {lang === 'es' ? 'Comunicación clara y amigable para turistas internacionales.' : 'Clear, friendly communication for international tourists.'}
+        </p>
+      </div>
+
+      {/* Beneficio 5 */}
+      <div style={{
+        background: 'rgba(15, 15, 15, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.25)',
+        borderRadius: '16px',
+        padding: '2rem 1.5rem',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+        gridColumn: 'auto'
+      }}>
+        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.5rem', fontWeight: 'bold', display: 'block', marginBottom: '0.8rem', fontFamily: 'var(--font-heading)' }}>05</span>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
+          {lang === 'es' ? 'Atención Personalizada' : 'Personalized Attention'}
+        </h3>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+          {lang === 'es' ? 'Adaptamos las recomendaciones directamente a tus planes de viaje.' : 'We tailor recommendations directly to your travel plans.'}
+        </p>
+      </div>
+
+    </div>
+
+    {/* Tarjeta de Llamado a la Acción (CTA) Final */}
+    <div style={{
+      background: 'rgba(217, 119, 54, 0.08)',
+      border: '1px solid rgba(217, 119, 54, 0.5)',
+      borderRadius: '16px',
+      padding: '2.5rem',
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '1.2rem'
+    }}>
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.6rem',
+        color: '#fff',
+        textTransform: 'uppercase',
+        margin: 0,
+        letterSpacing: '0.05em'
+      }}>
+        {lang === 'es' ? '¿Listo para recorrer los senderos?' : 'Ready to hit the trails?'}
+      </h3>
+      <p style={{
+        fontFamily: 'var(--font-body, sans-serif)',
+        fontSize: '1.05rem',
+        color: 'rgba(255, 255, 255, 0.85)',
+        maxWidth: '700px',
+        margin: 0,
+        lineHeight: 1.5
+      }}>
+        {lang === 'es' 
+          ? '¡Contáctanos hoy para reservar tu vehículo y comienza a planear tu aventura todoterreno definitiva!' 
+          : 'Contact us today to reserve your vehicle and start planning your ultimate off-road adventure!'}
+      </p>
+
+      {/* Botón de Contacto / Reserva */}
+      <a 
+        href="#contacto" 
+        style={{
+          display: 'inline-block',
+          background: 'var(--orange, #d97736)',
+          color: '#fff',
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1rem',
+          textTransform: 'uppercase',
+          padding: '0.9rem 2.2rem',
+          borderRadius: '50px',
+          textDecoration: 'none',
+          letterSpacing: '0.08em',
+          fontWeight: 'bold',
+          boxShadow: '0 0 20px rgba(217, 119, 54, 0.4)',
+          transition: 'all 0.3s ease',
+          marginTop: '0.5rem'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'scale(1.05)';
+          e.currentTarget.style.boxShadow = '0 0 25px rgba(217, 119, 54, 0.7)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 0 20px rgba(217, 119, 54, 0.4)';
+        }}
+      >
+        {lang === 'es' ? 'Reservar Ahora' : 'Book Now'}
+      </a>
+    </div>
+
+  </div>
+
+</div>
+{/* --- FIN DE LA SÉPTIMA SECCIÓN --- */}
+
+
           
 
           
