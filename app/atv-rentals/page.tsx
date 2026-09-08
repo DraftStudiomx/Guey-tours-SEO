@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import AtvRentalsContent from './AtvRentalsContent'
 
 export const metadata: Metadata = {
-  title: 'ATV Rentals in San Miguel de Allende | Guey Tours',
-  description: 'Rent top-quality ATVs in San Miguel de Allende. Explore scenic trails and historic surroundings safely and at your own pace with Guey Tours.',
-  keywords: 'atv rentals, rent an atv, san miguel de allende atv, off road rentals, guey tours',
+  title: 'ATV Rentals in San Miguel de Allende | Book with Guey Tours',
+  description: 'Explore San Miguel de Allende with top-rated ATV rentals! Premium quads, motorbikes & Defenders with English assistance. Reserve your adventure today!',
+  keywords: 'atv rentals',
 }
 
 export default function Page() {
