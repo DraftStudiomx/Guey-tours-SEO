@@ -83,33 +83,7 @@ export default async function GalleryPage() {
           {/* CONTACT BUTTON */}
           <a
             href="https://www.gueytours.com/contact"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minWidth: '195px',
-              padding: '16px 32px',
-              marginTop: '35px',
-              marginBottom: '45px',
-              border: '2px solid #e66a1f',
-              borderRadius: '999px',
-              backgroundColor: 'transparent',
-              color: '#e66a1f',
-              fontSize: '16px',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              textDecoration: 'none',
-              letterSpacing: '0.02em',
-              transition: 'all 0.3s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#e66a1f'
-              e.currentTarget.style.color = '#111111'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent'
-              e.currentTarget.style.color = '#e66a1f'
-            }}
+            className="gallery-contact-button"
           >
             Start Planning Your Adventure
           </a>
@@ -119,7 +93,35 @@ export default async function GalleryPage() {
         <Gallery images={images} showSeeAll={false} />
       </main>
 
+      {/* FOOTER - SE MANTIENE ABAJO */}
       <Footer />
+
+      <style>{`
+        .gallery-contact-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 195px;
+          padding: 16px 32px;
+          margin-top: 35px;
+          margin-bottom: 45px;
+          border: 2px solid #e66a1f;
+          border-radius: 999px;
+          background-color: transparent;
+          color: #e66a1f;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.02em;
+          transition: all 0.3s ease;
+        }
+
+        .gallery-contact-button:hover {
+          background-color: #e66a1f;
+          color: #111111;
+        }
+      `}</style>
     </>
   )
 }
