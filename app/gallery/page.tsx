@@ -63,7 +63,7 @@ export default async function GalleryPage() {
             marginBottom: '1.2rem',
             fontFamily: 'var(--font-body)',
           }}>
-            Get a closer look at the <Link href="https://www.gueytours.com/" style={{ color: 'white', fontWeight: 600, textDecoration: 'none !important' }}><span style={{ textDecoration: 'none' }}>Guey Tours</span></Link> experience through our gallery of photos and videos. Discover the excitement of ATV and RZR adventures, explore breathtaking landscapes, and see what it is like to experience <strong style={{ color: 'white' }}>San Miguel de Allende beyond the city center</strong>.
+            Get a closer look at the <Link href="https://www.gueytours.com/" style={{ color: 'var(--orange)', fontWeight: 600, textDecoration: 'none !important' }}><span style={{ textDecoration: 'none' }}>Guey Tours</span></Link> experience through our gallery of photos and videos. Discover the excitement of ATV and RZR adventures, explore breathtaking landscapes, and see what it is like to experience <strong style={{ color: 'white' }}>San Miguel de Allende beyond the city center</strong>.
           </p>
 
           <p style={{
@@ -142,7 +142,7 @@ export default async function GalleryPage() {
             marginBottom: '1.2rem',
             fontFamily: 'var(--font-body)',
           }}>
-            Echa un vistazo más de cerca a la experiencia de <Link href="https://www.gueytours.com/" style={{ color: 'white', fontWeight: 600, textDecoration: 'none !important' }}><span style={{ textDecoration: 'none' }}>Guey Tours</span></Link> a través de nuestra galería de fotos y videos. Descubre la emoción de los tours en cuatrimoto y RZR, explora paisajes impresionantes y vive la experiencia de <strong style={{ color: 'white' }}>San Miguel de Allende más allá del centro de la ciudad</strong>.
+            Echa un vistazo más de cerca a la experiencia de <Link href="https://www.gueytours.com/" style={{ color: 'var(--orange)', fontWeight: 600, textDecoration: 'none !important' }}><span style={{ textDecoration: 'none' }}>Guey Tours</span></Link> a través de nuestra galería de fotos y videos. Descubre la emoción de los tours en cuatrimoto y RZR, explora paisajes impresionantes y vive la experiencia de <strong style={{ color: 'white' }}>San Miguel de Allende más allá del centro de la ciudad</strong>.
           </p>
 
           <p style={{
