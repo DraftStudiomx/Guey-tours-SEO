@@ -991,7 +991,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     {/* Etiqueta img oculta con el nuevo Alt y Title */}
     <img 
-      src="/images/SEO/historic-streets-san-miguel-de-allende-tours.webp" 
+      src="images/SEO/historic-streets-san-miguel-de-allende-tours.webp" 
       alt="Vibrant colored colonial building facades and a cobblestone street during San Miguel de allende tours" 
       title="Walking through colonial alleyways with San Miguel de allende tours"
       style={{ display: 'none' }}
