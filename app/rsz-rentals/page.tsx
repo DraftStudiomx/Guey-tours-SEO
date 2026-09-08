@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import RzrRentalContenido from './rzrRentalContenido'
+import RzrRentalContenido from './RzrRentalContenido'
 
 export const metadata: Metadata = {
   title: 'RZR Rentals in San Miguel de Allende | Guey Tours',
