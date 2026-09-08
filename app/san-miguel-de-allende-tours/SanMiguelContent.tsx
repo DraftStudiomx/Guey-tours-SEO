@@ -759,6 +759,112 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     </p>
   </div>
 </div>
+          {/* Cuarta sección: Diseño apilado (Imagen arriba o banner lateral limpio con texto completo) */}
+
+
+
+          {/* Quinta sección: Textos largos en formato editorial sin tarjetas */}
+<div style={{
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  gap: '4rem',
+  marginTop: '6rem',
+  padding: '2rem 0',
+  borderTop: '1px solid rgba(255, 255, 255, 0.08)'
+}}>
+  {/* Columna Izquierda: Título y Contexto */}
+  <div style={{ flex: '1', minWidth: '280px', position: 'relative' }}>
+    <div style={{ position: 'sticky', top: '2rem' }}>
+      <span style={{
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.1em',
+        fontSize: '0.85rem',
+        fontWeight: 'bold',
+        display: 'block',
+        marginBottom: '0.5rem'
+      }}>
+        {lang === 'es' ? 'Sección 5' : 'Section 5'}
+      </span>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: 'clamp(1.8rem, 2.5vw, 2.2rem)',
+        color: '#ffffff',
+        lineHeight: 1.2,
+        margin: 0
+      }}>
+        {lang === 'es' ? 'Título principal de la quinta sección' : 'Main title of the fifth section'}
+      </h2>
+      <p style={{
+        color: 'rgba(255,255,255,0.6)',
+        fontSize: '0.95rem',
+        marginTop: '1rem',
+        lineHeight: 1.6
+      }}>
+        {lang === 'es' 
+          ? 'Breve introducción o contexto general para esta sección.' 
+          : 'Brief introduction or general context for this section.'}
+      </p>
+    </div>
+  </div>
+
+  {/* Columna Derecha: Los 3 H3 con sus párrafos largos */}
+  <div style={{ flex: '1.5', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+    
+    {/* Primer H3 y Párrafo */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', borderLeft: '2px solid var(--orange, #d97736)', paddingLeft: '1.5rem' }}>
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.3rem',
+        color: 'var(--orange, #d97736)',
+        margin: 0
+      }}>
+        {lang === 'es' ? 'Primer H3 en Español' : 'First H3 in English'}
+      </h3>
+      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+        {lang === 'es' 
+          ? 'Aquí va el texto largo completo de tu primer párrafo sin resumir nada.' 
+          : 'Here goes the full long text of your first paragraph without summarizing anything.'}
+      </p>
+    </div>
+
+    {/* Segundo H3 y Párrafo */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', borderLeft: '2px solid rgba(255,255,255,0.2)', paddingLeft: '1.5rem' }}>
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.3rem',
+        color: 'var(--orange, #d97736)',
+        margin: 0
+      }}>
+        {lang === 'es' ? 'Segundo H3 en Español' : 'Second H3 in English'}
+      </h3>
+      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+        {lang === 'es' 
+          ? 'Aquí va el texto largo completo de tu segundo párrafo.' 
+          : 'Here goes the full long text of your second paragraph.'}
+      </p>
+    </div>
+
+    {/* Tercer H3 y Párrafo */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', borderLeft: '2px solid rgba(255,255,255,0.2)', paddingLeft: '1.5rem' }}>
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.3rem',
+        color: 'var(--orange, #d97736)',
+        margin: 0
+      }}>
+        {lang === 'es' ? 'Tercer H3 en Español' : 'Third H3 in English'}
+      </h3>
+      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+        {lang === 'es' 
+          ? 'Aquí va el texto largo completo de tu tercer párrafo.' 
+          : 'Here goes the full long text of your third paragraph.'}
+      </p>
+    </div>
+
+  </div>
+</div>
 
           
 
