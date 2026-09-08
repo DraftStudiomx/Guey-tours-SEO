@@ -3,7 +3,7 @@ import { galleryAllQuery } from '@/lib/queries'
 import Gallery from '@/components/Gallery'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import GalleryHeroText from '@/components/GalleryHeroText'
+import GalleryContentLang from './GalleryContentLang'
 
 export const metadata = {
   title: 'Guey Tours Gallery. ATV & RZR Adventures in San Miguel',
@@ -22,10 +22,10 @@ export default async function GalleryPage() {
       <Navbar />
       <main style={{ paddingTop: '200px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* Componente que maneja los textos y el idioma */}
-        <GalleryHeroText />
+        {/* Componente con los textos y soporte de idioma */}
+        <GalleryContentLang />
 
-        {/* Galería de imágenes con los datos reales de Sanity */}
+        {/* Galería de imágenes limpia */}
         <Gallery images={images} showSeeAll={false} showHeader={false} />
       </main>
       <Footer />
