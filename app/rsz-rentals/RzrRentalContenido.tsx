@@ -640,99 +640,179 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           
 
-          {/* Cuarta sección: Diseño apilado (Imagen arriba o banner lateral limpio con texto completo) */}
-<div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '2.5rem',
-  marginTop: '5rem',
-  background: 'rgba(255, 255, 255, 0.02)',
-  padding: '3rem 2rem',
-  borderRadius: '16px',
-  border: '1px solid rgba(255, 255, 255, 0.08)',
-  maxWidth: '900px',
-  marginInline: 'auto'
+         {/* INICIO SECTION 5 */}
+<section style={{
+  padding: '6rem 2rem',
+  background: '#0b0b0b',
+  color: '#fff',
+  fontFamily: 'sans-serif',
+  position: 'relative'
 }}>
-  {/* Título H2 Centrado o Arriba */}
-  <div style={{ textAlign: 'center' }}>
-    <h2 style={{
-      fontFamily: 'var(--font-heading)',
-      fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
-      color: 'var(--orange, #d97736)',
-      textTransform: 'uppercase',
-      letterSpacing: '0.05em',
-      lineHeight: 1.3,
-      margin: 0
-    }}>
-      {lang === 'es' ? 'Descubre San Miguel más allá del centro histórico' : 'Discover San Miguel Beyond the City Center'}
-    </h2>
+  <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+    
+    {/* Título H2 y Párrafo Introductorio */}
+    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: '0 0 1rem 0',
+        lineHeight: 1.2
+      }}>
+        {lang === 'es' ? '¿Por qué elegir un RZR para tu aventura?' : 'Why Choose a RZR for Your Adventure?'}
+      </h2>
+      <div style={{
+        width: '80px',
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        margin: '0 auto 2rem auto',
+        boxShadow: '0 0 12px var(--orange, #d97736)'
+      }} />
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        maxWidth: '800px',
+        margin: '0 auto'
+      }}>
+        {lang === 'es'
+          ? 'Elegir entre un RZR y un ATV depende del tipo de aventura que buscas.'
+          : 'Choosing between a RZR and an ATV depends on the type of adventure you want.'}
+      </p>
+    </div>
+
+    {/* Contenedor de Comparación (Grid de 2 Columnas) */}
     <div style={{
-      width: '60px',
-      height: '3px',
-      background: 'var(--orange, #d97736)',
-      margin: '1rem auto 0 auto',
-      boxShadow: '0 0 10px var(--orange, #d97736)'
-    }} />
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '2rem',
+      justifyContent: 'center'
+    }}>
+      
+      {/* --- TARJETA RZR (Destacada) --- */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
+        border: '1px solid rgba(217, 119, 54, 0.4)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.5rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.6rem',
+          color: 'var(--orange, #d97736)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
+          paddingBottom: '1rem'
+        }}>
+          RZR
+        </h3>
+        <ul style={{
+          listStyleType: 'none',
+          padding: 0,
+          margin: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6
+        }}>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Mayor capacidad de pasajeros.' : 'Greater passenger capacity.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Diseñado para una experiencia lado a lado (side-by-side).' : 'Designed for a side-by-side experience.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Más adecuado para parejas, familias o grupos.' : 'More suitable for couples, families or groups.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Mayor estabilidad para aventuras todoterreno compartidas.' : 'Greater stability for shared off-road adventures.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Permite a los pasajeros disfrutar de la experiencia juntos.' : 'Allows passengers to enjoy the experience together.'}</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* --- TARJETA ATV --- */}
+      <div style={{
+        background: '#000',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.5rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.6rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          paddingBottom: '1rem'
+        }}>
+          ATV
+        </h3>
+        <ul style={{
+          listStyleType: 'none',
+          padding: 0,
+          margin: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6
+        }}>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Diseñado habitualmente para conducción individual.' : 'Usually designed for individual riding.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Conexión más directa entre el conductor y el vehículo.' : 'More direct connection between rider and vehicle.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Más ligero y compacto.' : 'Lighter and more compact.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Proporciona una experiencia de conducción más individual.' : 'Provides a more individual riding experience.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Ideal para viajeros que buscan un tipo diferente de aventura todoterreno.' : 'Ideal for travelers looking for a different type of off-road adventure.'}</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
-
-  {/* Imagen destacada en formato panorámico/horizontal para que luzca bien */}
-  <div style={{
-    width: '100%',
-    height: '350px',
-    position: 'relative',
-    borderRadius: '12px',
-    overflow: 'hidden',
-    border: '1px solid rgba(217, 119, 54, 0.3)',
-    boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
-  }}>
-    <Image
-      src="/images/Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours.webp" 
-      alt="A group driving ATVs on the cobblestone streets of San Miguel de Allende during an adventure with Guey Tours."
-      title="Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours"
-      fill
-      style={{ objectFit: 'cover' }}
-    />
-  </div>
-
-  {/* Contenedor de tus párrafos exactos con excelente legibilidad */}
-  <div style={{
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1.2rem',
-    color: 'rgba(255,255,255,0.85)',
-    fontSize: '1.05rem',
-    lineHeight: 1.8
-  }}>
-    <p style={{ margin: 0 }}>
-      {lang === 'es' 
-        ? 'El centro histórico de San Miguel de Allende es una parte esencial de cualquier visita, pero la región circundante ofrece una experiencia completamente diferente.'
-        : "San Miguel de Allende’s historic center is an essential part of any visit, but the surrounding region offers a completely different experience."}
-    </p>
-
-    <p style={{ margin: 0 }}>
-      {lang === 'es' 
-        ? (
-            <>Con <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, los viajeros pueden explorar áreas rurales, caminos todoterreno, miradores panorámicos y paisajes naturales que a menudo quedan fuera de los itinerarios turísticos convencionales.</>
-          ) 
-        : (
-            <>With <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, travelers can explore rural areas, off-road paths, scenic viewpoints and natural landscapes that are often outside conventional sightseeing itineraries.</>
-          )}
-    </p>
-
-    <p style={{ margin: 0 }}>
-      {lang === 'es'
-        ? 'Estas experiencias te permiten ver el destino desde una nueva perspectiva mientras disfrutas de la libertad al aire libre.'
-        : 'These experiences allow you to see the destination from a new perspective while enjoying the freedom of the outdoors.'}
-    </p>
-
-    <p style={{ margin: 0 }}>
-      {lang === 'es'
-        ? 'Para los visitantes internacionales, esta puede ser una excelente manera de combinar la cultura y la arquitectura de San Miguel de Allende con la belleza natural y las oportunidades de aventura de la región.'
-        : 'For international visitors, this can be an excellent way to combine the culture and architecture of San Miguel de Allende with the region’s natural beauty and adventure opportunities.'}
-    </p>
-  </div>
-</div>
-          {/* Cuarta sección: Diseño apilado (Imagen arriba o banner lateral limpio con texto completo) */}
+</section>
+{/* FIN SECTION 5 */}
 
 
 
