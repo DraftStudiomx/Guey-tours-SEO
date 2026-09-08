@@ -1186,6 +1186,160 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA QUINTA SECCIÓN --- */}
 
 
+          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Imagen Izquierda / Texto Derecha) --- */}
+<div style={{ marginTop: '7rem', width: '100%', padding: '0 1rem' }}>
+  
+  <div style={{
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '3rem',
+    alignItems: 'center'
+  }}>
+
+    {/* COLUMNA IZQUIERDA: Imagen nueva con diseño dinámico */}
+    <div style={{
+      position: 'relative',
+      borderRadius: '16px',
+      overflow: 'hidden',
+      border: '1px solid rgba(217, 119, 54, 0.3)',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.7)',
+      background: '#000'
+    }}>
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        boxShadow: '0 0 10px var(--orange, #d97736)',
+        zIndex: 2
+      }} />
+      <img 
+        src="images/ATV Rentals Sightseeing in San Miguel de Allende.webp" 
+        alt="A person in a helmet and goggles rides a blue Yamaha ATV in front of the Parroquia de San Miguel Arcángel." 
+        title="ATV Rentals Sightseeing in San Miguel de Allende"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          display: 'block',
+          transition: 'transform 0.5s ease',
+          minHeight: '380px'
+        }}
+        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
+        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+      />
+    </div>
+
+    {/* COLUMNA DERECHA: Contenido y Requisitos */}
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.5rem'
+    }}>
+      
+      {/* Encabezado */}
+      <div>
+        <h2 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '2.3rem',
+          color: 'var(--orange, #d97736)',
+          textTransform: 'uppercase',
+          letterSpacing: '0.08em',
+          margin: '0 0 0.8rem 0',
+          lineHeight: 1.2
+        }}>
+          {lang === 'es' ? '¿Quién Puede Rentar un ATV?' : 'Who Can Rent an ATV?'}
+        </h2>
+        <div style={{
+          width: '80px',
+          height: '2px',
+          background: 'var(--orange, #d97736)',
+          boxShadow: '0 0 10px var(--orange, #d97736)'
+        }} />
+      </div>
+
+      <p style={{
+        fontFamily: 'var(--font-body, sans-serif)',
+        fontSize: '1.05rem',
+        color: 'rgba(255, 255, 255, 0.9)',
+        lineHeight: 1.6,
+        margin: 0
+      }}>
+        {lang === 'es' 
+          ? 'Nos aseguramos de que todos disfruten de una experiencia segura y protegida:' 
+          : 'We make sure everyone enjoys a safe and secure experience:'}
+      </p>
+
+      {/* Lista de Requisitos */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.9rem'
+      }}>
+        
+        {/* Ítem 1 */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
+          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Edad Mínima:' : 'Minimum Age:'}</strong> {lang === 'es' ? 'Los conductores deben ser mayores de 18 años.' : 'Drivers must be over 18 years old.'}
+          </span>
+        </div>
+
+        {/* Ítem 2 */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
+          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Licencia de Conducir:' : "Driver's License:"}</strong> {lang === 'es' ? 'Se requiere una licencia de conducir vigente y válida.' : 'A valid and current driver\'s license is required.'}
+          </span>
+        </div>
+
+        {/* Ítem 3 */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
+          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Experiencia Previa:' : 'Prior Experience:'}</strong> {lang === 'es' ? '¡No se necesita experiencia previa! Proporcionamos instrucciones claras de manejo en el lugar.' : 'No previous experience needed! We provide clear driving instructions on-site.'}
+          </span>
+        </div>
+
+        {/* Ítem 4 */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
+          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Seguridad y Cobertura:' : 'Safety & Coverage:'}</strong> {lang === 'es' ? 'Incluye casco, tanque lleno de combustible, orientación de manejo y seguro básico de gastos médicos.' : 'Included helmet, full tank of fuel, driving orientation, and basic medical expenses insurance.'}
+          </span>
+        </div>
+
+        {/* Ítem 5 (Con enlace a RSZ rentals) */}
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
+          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Capacidad de Pasajeros:' : 'Passenger Capacities:'}</strong> {lang === 'es' ? 'Motos (2 pasajeros), Cuatrimotos (2 pasajeros) y Defender (6 pasajeros). Alineamos nuestros estándares de servicio con proveedores confiables como' : 'Motorbikes (2 passengers), Quads (2 passengers), and Defender (6 passengers). We align our service standards with trusted providers like'}{' '}
+            <a 
+              href="https://www.gueytours.com/rsz-rentals/" 
+              style={{ color: 'var(--orange, #d97736)', textDecoration: 'underline', fontWeight: 'bold' }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RSZ rentals
+            </a>{' '}
+            {lang === 'es' ? 'para garantizar la máxima seguridad.' : 'to guarantee top safety.'}
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{/* --- FIN DE LA SEXTA SECCIÓN --- */}
+
+
           
 
           
