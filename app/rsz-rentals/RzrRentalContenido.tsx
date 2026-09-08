@@ -56,9 +56,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/tourist-group-atvs-san-miguel-de-allende-tours.webp" 
-    alt="Group of smiling visitors wearing safety gear and all-terrain vehicles ready to start San Miguel de allende tours" 
-    title="ATV adventure experience with San Miguel de allende tours"
+    src="/images/SEO/rzr-rentals-mexico-colonial-street.webp" 
+    alt="Front view of a gray UTV Rzr rentals vehicle driving up a narrow cobblestone street flanked by colorful pastel colonial buildings in a historic Mexican town." 
+    title="Touring the historic cobblestone streets of Mexico with Rzr rentals."
     style={{
       position: 'absolute',
       top: 0,
