@@ -1976,7 +1976,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                 })}
 
                 <a
-                  href="https://goo.gl/maps/7suNDjfq9fHgryVM8"
+                  href="https://www.google.com/maps/place/Tours+en+cuatrimoto+ATV+San+Miguel+Allende+Guey+Tours/@20.9073889,-100.7531316,17z/data=!3m1!4b1!4m6!3m5!1s0x842b51bb20a11cff:0x815817733a05fa9b!8m2!3d20.9073889!4d-100.7531316!16s%2Fg%2F11lhjy63cg?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline"
@@ -2099,43 +2099,50 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </section>
       {/* --- FIN DE LA DÉCIMA SECCIÓN --- */}
 
-{/* --- DATOS ESTRUCTURADOS (SEO: LocalBusiness, FAQPage, Breadcrumb, etc.) --- */}
-
-          <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "¿Qué incluye el servicio de ATV rentals?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "El servicio de ATV rentals incluye el alquiler de vehículos todo terreno para disfrutar recorridos y aventuras al aire libre. En Guey Tours te ofrecemos una experiencia emocionante, con orientación para que aproveches al máximo tu recorrido."
-    }
-  },{
-    "@type": "Question",
-    "name": "¿Quién puede utilizar el servicio de ATV rentals?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "El servicio de ATV rentals está dirigido a personas que buscan explorar terrenos naturales y vivir una experiencia diferente. Los requisitos pueden variar según el recorrido. En Guey Tours te brindamos la información necesaria antes de comenzar."
-    }
-  },{
-    "@type": "Question",
-    "name": "¿Es necesario tener experiencia para contratar ATV rentals?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No necesariamente. Dependiendo del recorrido, el servicio de ATV rentals puede ser adecuado para personas con diferentes niveles de experiencia. En Guey Tours te proporcionamos indicaciones antes de iniciar para que disfrutes la aventura de forma responsable."
-    }
-  },{
-    "@type": "Question",
-    "name": "¿Por qué elegir Guey Tours para ATV rentals?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "En Guey Tours buscamos que tu experiencia de ATV rentals sea divertida, emocionante y memorable. Te acompañamos durante el recorrido y te orientamos sobre el uso del vehículo para que puedas disfrutar la aventura con mayor confianza."
-    }
-  }]
-}
-</script>
+{/* --- DATOS ESTRUCTURADOS (SEO: FAQPage) --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Qué incluye el servicio de ATV rentals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El servicio de ATV rentals incluye el alquiler de vehículos todo terreno para disfrutar recorridos y aventuras al aire libre. En Guey Tours te ofrecemos una experiencia emocionante, con orientación para que aproveches al máximo tu recorrido."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Quién puede utilizar el servicio de ATV rentals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El servicio de ATV rentals está dirigido a personas que buscan explorar terrenos naturales y vivir una experiencia diferente. Los requisitos pueden variar según el recorrido. En Guey Tours te brindamos la información necesaria antes de comenzar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Es necesario tener experiencia para contratar ATV rentals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No necesariamente. Dependiendo del recorrido, el servicio de ATV rentals puede ser adecuado para personas con diferentes niveles de experiencia. En Guey Tours te proporcionamos indicaciones antes de iniciar para que disfrutes la aventura de forma responsable."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Por qué elegir Guey Tours para ATV rentals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "En Guey Tours buscamos que tu experiencia de ATV rentals sea divertida, emocionante y memorable. Te acompañamos durante el recorrido y te orientamos sobre el uso del vehículo para que puedas disfrutar la aventura con mayor confianza."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
           
 
