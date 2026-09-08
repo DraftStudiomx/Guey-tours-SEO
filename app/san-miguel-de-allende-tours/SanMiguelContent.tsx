@@ -670,74 +670,85 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           
 
-          {/* Segunda sección: Dos columnas (Texto H2 + Imagen) */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            gap: '3rem',
-            marginTop: '5rem',
-            background: 'rgba(255, 255, 255, 0.02)',
-            padding: '3rem',
-            borderRadius: '16px',
-            border: '1px solid rgba(255, 255, 255, 0.08)'
-          }}>
-            {/* Columna de Texto H2 */}
-            <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-              <h2 style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '1.8rem',
-                color: 'var(--orange, #d97736)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                margin: 0
-              }}>
-                {lang === 'es' ? 'Renta de ATV en San Miguel de Allende' : 'ATV Rental in San Miguel de Allende'}
-              </h2>
+          {/* Cuarta sección: Dos columnas (Texto H2 + Imagen) */}
+<div style={{
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: '3rem',
+  marginTop: '5rem',
+  background: 'rgba(255, 255, 255, 0.02)',
+  padding: '3rem',
+  borderRadius: '16px',
+  border: '1px solid rgba(255, 255, 255, 0.08)'
+}}>
+  {/* Columna de Texto H2 */}
+  <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+    <h2 style={{
+      fontFamily: 'var(--font-heading)',
+      fontSize: '1.8rem',
+      color: 'var(--orange, #d97736)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      margin: 0
+    }}>
+      {lang === 'es' ? 'Descubre San Miguel más allá del centro histórico' : 'Discover San Miguel Beyond the City Center'}
+    </h2>
 
-              <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
-                {lang === 'es' 
-                  ? 'Nuestro servicio de renta de ATV te da total libertad de rodar en tu propio horario.'
-                  : 'Our ATV rental service gives you full freedom to ride on your own schedule.'}
-              </p>
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es' 
+        ? 'El centro histórico de San Miguel de Allende es una parte esencial de cualquier visita, pero la región circundante ofrece una experiencia completamente diferente.'
+        : "San Miguel de Allende’s historic center is an essential part of any visit, but the surrounding region offers a completely different experience."}
+    </p>
 
-              <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
-                {lang === 'es' ? (
-                  <>Convenientemente ubicado cerca del centro de la ciudad, <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a> ofrece vehículos en excelente estado, equipo de seguridad completo y una reserva sencilla. Ya sea que necesites una cuatrimoto por unas horas o un día entero, tenemos gran disponibilidad y duraciones flexibles.</>
-                ) : (
-                  <>Conveniently located near the city center, <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a> provides well-maintained vehicles, full safety gear, and smooth booking. Whether you need a four wheeler rental for a few hours or an entire day, we offer high vehicle availability and flexible rental durations.</>
-                )}
-              </p>
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es' 
+        ? (
+            <>Con <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, los viajeros pueden explorar áreas rurales, caminos todoterreno, miradores panorámicos y paisajes naturales que a menudo quedan fuera de los itinerarios turísticos convencionales.</>
+          ) 
+        : (
+            <>With <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, travelers can explore rural areas, off-road paths, scenic viewpoints and natural landscapes that are often outside conventional sightseeing itineraries.</>
+          )}
+    </p>
 
-              <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
-                {lang === 'es'
-                  ? 'Si has estado buscando en línea una renta de ATV cerca de mí, nuestro punto céntrico es tu lugar de partida ideal.'
-                  : 'If you have been searching online for an ATV rental near me, our central spot is your ideal starting point.'}
-              </p>
-            </div>
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es'
+        ? 'Estas experiencias te permiten ver el destino desde una nueva perspectiva mientras disfrutas de la libertad al aire libre.'
+        : 'These experiences allow you to see the destination from a new perspective while enjoying the freedom of the outdoors.'}
+    </p>
 
-            {/* Columna de la Imagen */}
-            <div style={{ flex: '1', minWidth: '300px' }}>
-              <div style={{
-                width: '100%',
-                height: '320px',
-                position: 'relative',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                border: '1px solid rgba(255,255,255,0.1)',
-                boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
-              }}>
-                <Image
-                  src="/images/Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours.webp" 
-                  alt="A group driving ATVs on the cobblestone streets of San Miguel de Allende during an adventure with Guey Tours."
-                  title="Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          </div>
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es'
+        ? 'Para los visitantes internacionales, esta puede ser una excelente manera de combinar la cultura y la arquitectura de San Miguel de Allende con la belleza natural y las oportunidades de aventura de la región.'
+        : 'For international visitors, this can be an excellent way to combine the culture and architecture of San Miguel de Allende with the region’s natural beauty and adventure opportunities.'}
+    </p>
+  </div>
+
+  {/* Columna de la Imagen */}
+  <div style={{ flex: '1', minWidth: '300px' }}>
+    <div style={{
+      width: '100%',
+      height: '320px',
+      position: 'relative',
+      borderRadius: '12px',
+      overflow: 'hidden',
+      border: '1px solid rgba(255,255,255,0.1)',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
+    }}>
+      <Image
+        src="/images/ATV Rentals Sightseeing in San Miguel de Allende.webp" 
+        alt=" A person in a helmet and goggles rides a blue Yamaha ATV in front of the Parroquia de San Miguel Arcángel."
+        title=" ATV Rentals Sightseeing in San Miguel de Allende"
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+    </div>
+  </div>
+</div>
+{/* Cuarta sección: Dos columnas (Texto H2 + Imagen) */}
+
+          
 
 
         {/* --- TERCERA SECCIÓN: Tarjeta Destacada Centrada y Estilizada (ATV Adventure) --- */}
