@@ -1,12 +1,13 @@
+
 import type { Metadata } from 'next'
-import RzrRentalsContent from './RzrRentalsContent' // Ajusta el nombre del componente según corresponda
+import SanMiguelContent from './rzrRentalContenido'
 
 export const metadata: Metadata = {
-  title: 'RZR Rentals in San Miguel de Allende | Book with Guey Tours',
-  description: 'Experience the thrill of off-road driving with our powerful RZR rentals in San Miguel de Allende. Premium UTVs, expert guides, and safe trails. Reserve today!',
-  keywords: 'rzr rentals, utv rentals san miguel de grande, off road tours san miguel de allende',
+  title: 'San Miguel de Allende Tours. ATV, RZR &  | Guey Tours',
+  description: 'Discover San Miguel de Allende tours with Guey Tours. Enjoy ATV, RZR, off-road and private adventures with local English-speaking guides. Book your experience here!',
+  keywords: ['San Miguel de allende tours'],
 }
 
 export default function Page() {
-  return <RzrRentalsContent />
+  return <SanMiguelContent />
 }
