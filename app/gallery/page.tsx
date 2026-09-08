@@ -5,28 +5,17 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { useLang } from '@/lib/i18n'
-import { useEffect, useState } from 'react'
 
-// Componente interno seguro para el cliente
-function GalleryTextContent() {
-  const { lang } = useLang()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  // Evita el parpadeo o error en SSR mientras carga el cliente
-  if (!mounted) {
-    return <div style={{ minHeight: '200px' }} />
-  }
+export default async function GalleryPage() {
+  const images = await client.fetch(galleryAllQuery)
 
   return (
-    <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 3rem 2rem', textAlign: 'center' }}>
-      
-      {lang === 'es' ? (
-        <>
+    <>
+      <Navbar />
+      <main style={{ paddingTop: '200px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
+        
+        {/* Contenedor en Español (se oculta si el idioma activo es inglés) */}
+        <div className="lang-es" style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 3rem 2rem', textAlign: 'center' }}>
           <div style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange)', fontSize: '0.85rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
             ——— EXPERIENCIA GUEY TOURS ———
           </div>
@@ -45,12 +34,13 @@ function GalleryTextContent() {
             Nuestra galería muestra momentos reales de nuestros tours, aventuras al aire libre, rutas todoterreno y experiencias inolvidables con viajeros de todo el mundo. Ya sea que estés planeando tu primera aventura o busques inspiración para tu próxima visita, estas imágenes y videos te darán una probadita de lo que te espera.
           </p>
 
-          <Link href="https://www.gueytours.com/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
+          <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
             Comienza a planear tu aventura <ArrowRight size={16} />
           </Link>
-        </>
-      ) : (
-        <>
+        </div>
+
+        {/* Contenedor en Inglés (se oculta si el idioma activo es español) */}
+        <div className="lang-en" style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 3rem 2rem', textAlign: 'center' }}>
           <div style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange)', fontSize: '0.85rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
             ——— GUEY TOURS EXPERIENCE ———
           </div>
@@ -69,24 +59,11 @@ function GalleryTextContent() {
             Our gallery showcases real moments from our tours, outdoor adventures, off-road trails, and unforgettable experiences with travelers from around the world. Whether you are planning your first adventure or looking for inspiration for your next visit, these images and videos will give you a glimpse of what awaits.
           </p>
 
-          <Link href="https://www.gueytours.com/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
+          <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--orange)', color: 'white', fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase', padding: '0.9rem 2rem', borderRadius: '999px', textDecoration: 'none' }}>
             Start planning your adventure <ArrowRight size={16} />
           </Link>
-        </>
-      )}
+        </div>
 
-    </div>
-  )
-}
-
-export default async function GalleryPage() {
-  const images = await client.fetch(galleryAllQuery)
-
-  return (
-    <>
-      <Navbar />
-      <main style={{ paddingTop: '200px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
-        <GalleryTextContent />
         <Gallery images={images} showSeeAll={false} showHeader={false} />
       </main>
       <Footer />
