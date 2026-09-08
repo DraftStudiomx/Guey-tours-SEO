@@ -7,8 +7,9 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
-  title: 'Gallery | Guey Tours San Miguel de Allende',
-  description: 'Explore our photo gallery featuring RZR rentals, ATV tours, and off-road adventures in San Miguel de Allende.',
+  title: 'Guey Tours Gallery. ATV & RZR Adventures in San Miguel',
+  description: 'Explore the Guey Tours gallery and discover photos and videos of ATV, RZR, off-road adventures and unforgettable experiences in San Miguel de Allende.',
+  keywords: ['ATV tours San Miguel de Allende', 'RZR rentals gallery', 'off-road adventures photo gallery', 'Guey Tours pictures'],
   alternates: {
     canonical: 'https://www.gueytours.com/gallery',
   },
@@ -98,7 +99,7 @@ export default async function GalleryPage() {
           </Link>
         </div>
 
-        {/* Separador elegante opcional entre idiomas */}
+        {/* Separador elegante entre idiomas */}
         <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255,255,255,0.15)', margin: '0 auto 4rem auto' }} />
 
         {/* Contenido en Español */}
