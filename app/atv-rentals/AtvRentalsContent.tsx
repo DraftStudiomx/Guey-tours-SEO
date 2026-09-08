@@ -862,7 +862,7 @@ export default function AtvRentalsContent() {
       onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
       onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
     >
-      Book your ATV
+      {lang === 'es' ? 'Reserva tu ATV' : 'Book Your ATV'}
     </a>
   </div>
 
