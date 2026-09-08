@@ -1585,7 +1585,7 @@ export default function AtvRentalsContent() {
 
       {/* Botón de Contacto / Reserva */}
       <a 
-        href="#contacto" 
+        href="https://www.gueytours.com/contact" 
         style={{
           display: 'inline-block',
           background: 'var(--orange, #d97736)',
