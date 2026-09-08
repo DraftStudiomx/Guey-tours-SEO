@@ -29,7 +29,7 @@ export default async function GalleryPage() {
           paddingBottom: '6rem',
         }}
       >
-        {/* ENCABEZADO DE LA PÁGINA */}
+        {/* ENCABEZADO */}
         <div
           style={{
             maxWidth: '860px',
@@ -52,7 +52,7 @@ export default async function GalleryPage() {
             ——— GUEY TOURS EXPERIENCE ———
           </div>
 
-          {/* NUEVO H1 */}
+          {/* TU NUEVO H1 */}
           <h1
             style={{
               fontFamily: 'var(--font-heading)',
@@ -115,7 +115,7 @@ export default async function GalleryPage() {
             these images and videos will give you a glimpse of what awaits.
           </p>
 
-          {/* CTA */}
+          {/* BOTÓN / CTA */}
           <Link
             href="/contact"
             style={{
@@ -133,9 +133,7 @@ export default async function GalleryPage() {
           </Link>
         </div>
 
-        {/* GALERÍA
-            showTitle={false} elimina el H1 predeterminado de Gallery
-        */}
+        {/* GALERÍA DE IMÁGENES */}
         <Gallery
           images={images}
           showSeeAll={false}
