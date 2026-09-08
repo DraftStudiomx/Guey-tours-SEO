@@ -665,88 +665,100 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 {/* FIN SECTION 3 */}
 
 
-
-
-
           
 
-          {/* Cuarta sección: Dos columnas (Texto H2 + Imagen) */}
+          {/* Cuarta sección: Diseño apilado (Imagen arriba o banner lateral limpio con texto completo) */}
 <div style={{
   display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-  gap: '3rem',
+  flexDirection: 'column',
+  gap: '2.5rem',
   marginTop: '5rem',
   background: 'rgba(255, 255, 255, 0.02)',
-  padding: '3rem',
+  padding: '3rem 2rem',
   borderRadius: '16px',
-  border: '1px solid rgba(255, 255, 255, 0.08)'
+  border: '1px solid rgba(255, 255, 255, 0.08)',
+  maxWidth: '900px',
+  marginInline: 'auto'
 }}>
-  {/* Columna de Texto H2 */}
-  <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+  {/* Título H2 Centrado o Arriba */}
+  <div style={{ textAlign: 'center' }}>
     <h2 style={{
       fontFamily: 'var(--font-heading)',
-      fontSize: '1.8rem',
+      fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
       color: 'var(--orange, #d97736)',
       textTransform: 'uppercase',
       letterSpacing: '0.05em',
+      lineHeight: 1.3,
       margin: 0
     }}>
       {lang === 'es' ? 'Descubre San Miguel más allá del centro histórico' : 'Discover San Miguel Beyond the City Center'}
     </h2>
+    <div style={{
+      width: '60px',
+      height: '3px',
+      background: 'var(--orange, #d97736)',
+      margin: '1rem auto 0 auto',
+      boxShadow: '0 0 10px var(--orange, #d97736)'
+    }} />
+  </div>
 
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+  {/* Imagen destacada en formato panorámico/horizontal para que luzca bien */}
+  <div style={{
+    width: '100%',
+    height: '350px',
+    position: 'relative',
+    borderRadius: '12px',
+    overflow: 'hidden',
+    border: '1px solid rgba(217, 119, 54, 0.3)',
+    boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
+  }}>
+    <Image
+      src="/images/Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours.webp" 
+      alt="A group driving ATVs on the cobblestone streets of San Miguel de Allende during an adventure with Guey Tours."
+      title="Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours"
+      fill
+      style={{ objectFit: 'cover' }}
+    />
+  </div>
+
+  {/* Contenedor de tus párrafos exactos con excelente legibilidad */}
+  <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1.2rem',
+    color: 'rgba(255,255,255,0.85)',
+    fontSize: '1.05rem',
+    lineHeight: 1.8
+  }}>
+    <p style={{ margin: 0 }}>
       {lang === 'es' 
         ? 'El centro histórico de San Miguel de Allende es una parte esencial de cualquier visita, pero la región circundante ofrece una experiencia completamente diferente.'
         : "San Miguel de Allende’s historic center is an essential part of any visit, but the surrounding region offers a completely different experience."}
     </p>
 
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+    <p style={{ margin: 0 }}>
       {lang === 'es' 
         ? (
-            <>Con <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, los viajeros pueden explorar áreas rurales, caminos todoterreno, miradores panorámicos y paisajes naturales que a menudo quedan fuera de los itinerarios turísticos convencionales.</>
+            <>Con <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, los viajeros pueden explorar áreas rurales, caminos todoterreno, miradores panorámicos y paisajes naturales que a menudo quedan fuera de los itinerarios turísticos convencionales.</>
           ) 
         : (
-            <>With <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>Guey Tours</a>, travelers can explore rural areas, off-road paths, scenic viewpoints and natural landscapes that are often outside conventional sightseeing itineraries.</>
+            <>With <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, travelers can explore rural areas, off-road paths, scenic viewpoints and natural landscapes that are often outside conventional sightseeing itineraries.</>
           )}
     </p>
 
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+    <p style={{ margin: 0 }}>
       {lang === 'es'
         ? 'Estas experiencias te permiten ver el destino desde una nueva perspectiva mientras disfrutas de la libertad al aire libre.'
         : 'These experiences allow you to see the destination from a new perspective while enjoying the freedom of the outdoors.'}
     </p>
 
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+    <p style={{ margin: 0 }}>
       {lang === 'es'
         ? 'Para los visitantes internacionales, esta puede ser una excelente manera de combinar la cultura y la arquitectura de San Miguel de Allende con la belleza natural y las oportunidades de aventura de la región.'
         : 'For international visitors, this can be an excellent way to combine the culture and architecture of San Miguel de Allende with the region’s natural beauty and adventure opportunities.'}
     </p>
   </div>
-
-  {/* Columna de la Imagen */}
-  <div style={{ flex: '1', minWidth: '300px' }}>
-    <div style={{
-      width: '100%',
-      height: '320px',
-      position: 'relative',
-      borderRadius: '12px',
-      overflow: 'hidden',
-      border: '1px solid rgba(255,255,255,0.1)',
-      boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
-    }}>
-      <Image
-        src="/images/ATV Rentals Sightseeing in San Miguel de Allende.webp" 
-        alt=" A person in a helmet and goggles rides a blue Yamaha ATV in front of the Parroquia de San Miguel Arcángel."
-        title=" ATV Rentals Sightseeing in San Miguel de Allende"
-        fill
-        style={{ objectFit: 'cover' }}
-      />
-    </div>
-  </div>
 </div>
-{/* Cuarta sección: Dos columnas (Texto H2 + Imagen) */}
 
           
 
