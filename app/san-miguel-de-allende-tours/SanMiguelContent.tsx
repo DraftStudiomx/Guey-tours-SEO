@@ -170,6 +170,156 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             </a>
           </div>
 
+
+          {/* Inicio de section dos */}
+<section style={{
+  padding: '5rem 2rem',
+  background: 'var(--dark, #0b0b0b)',
+  color: '#fff',
+  fontFamily: 'sans-serif'
+}}>
+  <div style={{
+    maxWidth: '1100px',
+    margin: '0 auto'
+  }}>
+    <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+      <span style={{
+        fontFamily: 'var(--font-heading)',
+        color: 'var(--orange, #d97736)',
+        fontSize: '0.9rem',
+        letterSpacing: '0.2em',
+        textTransform: 'uppercase',
+        display: 'block',
+        marginBottom: '0.8rem'
+      }}>
+        {lang === 'es' ? '★ Descubre Más Allá' : '★ Discover Beyond'}
+      </span>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '2.5rem',
+        color: '#fff',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: 0
+      }}>
+        Explore San Miguel de Allende With Guey Tours
+      </h2>
+    </div>
+
+    <p style={{
+      fontSize: '1.15rem',
+      lineHeight: 1.7,
+      color: 'rgba(255, 255, 255, 0.9)',
+      textAlign: 'center',
+      maxWidth: '850px',
+      margin: '0 auto 3.5rem auto'
+    }}>
+      A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.
+    </p>
+
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '2rem',
+      alignItems: 'center'
+    }}>
+      <div style={{
+        background: 'rgba(255, 255, 255, 0.03)',
+        border: '1px solid rgba(217, 119, 54, 0.3)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          color: 'var(--orange, #d97736)',
+          fontSize: '1.3rem',
+          textTransform: 'uppercase',
+          marginBottom: '1.5rem',
+          letterSpacing: '0.05em'
+        }}>
+          {lang === 'es' ? 'Rutas Fuera de lo Común' : 'Off-The-Beaten-Path'}
+        </h3>
+        <p style={{
+          color: 'rgba(255, 255, 255, 0.8)',
+          fontSize: '1rem',
+          marginBottom: '1.5rem',
+          lineHeight: 1.6
+        }}>
+          Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience:
+        </p>
+        <ul style={{
+          listStyle: 'none',
+          padding: 0,
+          margin: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0.8rem',
+          color: '#fff',
+          fontSize: '0.95rem'
+        }}>
+          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Nature and open landscapes
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Rural roads and off-road trails
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Scenic viewpoints
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Adventure activities
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Local communities and surrounding areas
+          </li>
+          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Unique perspectives of the region
+          </li>
+        </ul>
+      </div>
+
+      <div style={{
+        background: 'rgba(217, 119, 54, 0.05)',
+        border: '2px solid var(--orange, #d97736)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        height: '100%'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          color: '#fff',
+          fontSize: '1.5rem',
+          textTransform: 'uppercase',
+          marginBottom: '1.2rem',
+          letterSpacing: '0.05em'
+        }}>
+          {lang === 'es' ? 'Conocimiento Local Auténtico' : 'Authentic Local Knowledge'}
+        </h3>
+        <p style={{
+          color: 'rgba(255, 255, 255, 0.9)',
+          fontSize: '1.05rem',
+          lineHeight: 1.7,
+          margin: 0
+        }}>
+          The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{/* Fin de section dos */}
+
+
+
+
+
+          
+
           {/* Segunda sección: Dos columnas (Texto H2 + Imagen) */}
           <div style={{
             display: 'flex',
