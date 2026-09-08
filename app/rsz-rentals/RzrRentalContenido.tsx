@@ -233,10 +233,10 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     </div>
   </div>
 </div>
-          {/* Inicio de tercera section */}
+          {/* Inicio de segunda section */}
 
 
-         {/* Inicio de section dos */}
+        {/* Inicio de section tres */}
 <section style={{
   padding: '6rem 2rem 6rem 2rem',
   marginTop: '3rem',
@@ -262,8 +262,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         lineHeight: 1.2
       }}>
         {lang === 'es' 
-          ? 'Explora San Miguel de Allende con Guey Tours' 
-          : 'Explore San Miguel de Allende With Guey Tours'}
+          ? 'Explora los senderos todoterreno de San Miguel en RZR' 
+          : "Explore San Miguel's Off-Road Trails by RZR"}
       </h2>
       <div style={{
         width: '80px',
@@ -294,8 +294,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1.5rem 0'
       }}>
         {lang === 'es'
-          ? 'Un viaje a San Miguel de Allende puede ser mucho más que caminar por sus calles históricas. Guey Tours ofrece experiencias diseñadas para ayudar a viajeros internacionales a descubrir los paisajes y alrededores de San Miguel a través de la aventura y la exploración.'
-          : 'A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.'}
+          ? 'Una renta de RZR te da la oportunidad de dejar atrás las rutas turísticas tradicionales y explorar caminos rurales, paisajes naturales y terrenos todoterreno alrededor de San Miguel de Allende.'
+          : 'A RZR rental gives you the opportunity to leave the traditional tourist routes behind and explore rural roads, natural landscapes and off-road terrain around San Miguel de Allende.'}
       </p>
       <p style={{
         fontFamily: 'sans-serif',
@@ -307,12 +307,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: 0
       }}>
         {lang === 'es'
-          ? 'En lugar de seguir solo las rutas turísticas convencionales, estas experiencias guiadas te llevan a zonas donde puedes experimentar:'
-          : 'Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience:'}
+          ? 'En lugar de pasar todo tu viaje en la ciudad, puedes experimentar la región circundante desde el asiento del conductor.'
+          : 'Instead of spending your entire trip in the city, you can experience the surrounding region from behind the wheel.'}
       </p>
     </div>
 
-    {/* Cuadrícula de tarjetas con las 6 experiencias */}
+    {/* Cuadrícula de tarjetas con las 5 opciones */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -321,28 +321,24 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     }}>
       {[
         {
-          es: 'Naturaleza y paisajes abiertos',
-          en: 'Nature and open landscapes'
+          es: 'Parejas que buscan una experiencia al aire libre',
+          en: 'Couples looking for an outdoor experience.'
         },
         {
-          es: 'Caminos rurales y rutas off-road',
-          en: 'Rural roads and off-road trails'
+          es: 'Familias que quieren explorar juntas',
+          en: 'Families who want to explore together.'
         },
         {
-          es: 'Miradores panorámicos',
-          en: 'Scenic viewpoints'
+          es: 'Grupos de amigos que buscan aventura',
+          en: 'Groups of friends seeking adventure.'
         },
         {
-          es: 'Actividades de aventura',
-          en: 'Adventure activities'
+          es: 'Viajeros interesados en la conducción todoterreno',
+          en: 'Travelers interested in off-road driving.'
         },
         {
-          es: 'Comunidades locales y áreas circundantes',
-          en: 'Local communities and surrounding areas'
-        },
-        {
-          es: 'Perspectivas únicas de la región',
-          en: 'Unique perspectives of the region'
+          es: 'Visitantes que quieren descubrir paisajes más allá del centro histórico',
+          en: 'Visitors who want to discover landscapes beyond the historic center.'
         }
       ].map((item, index) => (
         <div key={index} style={{
@@ -379,13 +375,13 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             fontSize: '18px',
             lineHeight: 1.4
           }}>
-            {lang === 'es' ? item.es : item.en}
+            {lang === 'es' ? 'Las aventuras en RZR son ideales para: ' + item.es : 'RZR adventures are ideal for: ' + item.en}
           </span>
         </div>
       ))}
     </div>
 
-    {/* Tarjeta de cierre sobre los guías locales */}
+    {/* Tarjeta de cierre sobre la ventaja de Guey Tours */}
     <div style={{
       background: 'rgba(217, 119, 54, 0.07)',
       border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -411,17 +407,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           letterSpacing: '0.08em', 
           fontSize: '0.95rem' 
         }}>
-          {lang === 'es' ? 'La Diferencia Local' : 'The Local Difference'}
+          {lang === 'es' ? 'La Ventaja de Guey Tours' : 'The Guey Tours Advantage'}
         </strong>
         {lang === 'es'
-          ? 'La diferencia es el conocimiento local de los guías. Ellos conocen los caminos, paisajes y experiencias que pueden ayudar a los viajeros a descubrir otro lado del destino.'
-          : 'The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.'}
+          ? 'Una de las ventajas de elegir a Guey Tours es el conocimiento local de la zona. Comprender los caminos y los paisajes circundantes puede ayudar a que tu experiencia todoterreno sea más agradable y memorable.'
+          : 'One of the advantages of choosing Guey Tours is the local knowledge of the area. Understanding the roads and surrounding landscapes can help make your off-road experience more enjoyable and memorable.'}
       </p>
     </div>
 
   </div>
 </section>
-{/* Fin de section dos */}
+{/* Fin de section tres */}
 
 
           
