@@ -14,7 +14,7 @@ export default async function GalleryPage() {
       <Navbar />
       <main style={{ paddingTop: '200px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* Contenido en Inglés y Español embebido directamente */}
+        {/* Contenido en Inglés */}
         <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 3rem 2rem', textAlign: 'center' }}>
           
           <div style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange)', fontSize: '0.85rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
