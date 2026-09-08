@@ -407,7 +407,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Contenedor de las 2 tarjetas superiores con imagen/video */}
+    {/* Contenedor de las 2 tarjetas superiores con imagen */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -416,7 +416,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       justifyContent: 'center'
     }}>
       
-      {/* --- TARJETA 1 (Con Video/Imagen) --- */}
+      {/* --- TARJETA 1 (ATV Adventures) --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -439,11 +439,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
         }}>
           <img
-  src="/images/SEO/atv-driver-foreground-san-miguel-de-allende-tours.webp"
-  alt="A traveler driving a green quad bike at the front of a group caravan on San Miguel de allende tours"
-  title="Leading the ATV caravan with San Miguel de allende tours"
-  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-/>
+            src="/images/SEO/atv-driver-foreground-san-miguel-de-allende-tours.webp"
+            alt="A traveler driving a green quad bike at the front of a group caravan on San Miguel de allende tours"
+            title="Leading the ATV caravan with San Miguel de allende tours"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
         </div>
 
         <div style={{ padding: '1.8rem', display: 'flex', flexDirection: 'column', flex: 1, gap: '1.2rem' }}>
@@ -500,7 +500,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 2 (Con Video/Imagen) --- */}
+      {/* --- TARJETA 2 (RZR Adventures) --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -523,11 +523,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
         }}>
           <img
-  src="/images/SEO/RZR-adventure-ride-san-miguel-de-allende-tours.webp"
-  alt=" An all-terrain RZR vehicle driving down a cobblestone street lined with colorful colonial buildings during San Miguel de allende tours"
-  title="Riding an off-road RZR through historic streets with San Miguel de allende tours"
-  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-/>
+            src="/images/SEO/RZR-adventure-ride-san-miguel-de-allende-tours.webp"
+            alt="An all-terrain RZR vehicle driving down a cobblestone street lined with colorful colonial buildings during San Miguel de allende tours"
+            title="Riding an off-road RZR through historic streets with San Miguel de allende tours"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
         </div>
 
         <div style={{ padding: '1.8rem', display: 'flex', flexDirection: 'column', flex: 1, gap: '1.2rem' }}>
@@ -539,7 +539,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             letterSpacing: '0.05em',
             margin: 0
           }}>
-            {lang === 'es' ? 'RZR Adventures' : 'Aventuras en RZR''}
+            {lang === 'es' ? 'Aventuras en RZR' : 'RZR Adventures'}
           </h3>
           <p style={{
             fontFamily: 'sans-serif',
@@ -586,7 +586,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     </div>
 
-    {/* --- TARJETA 3 INFERIOR (Puro texto, sin imagen, centrada y estilizada) --- */}
+    {/* --- TARJETA 3 INFERIOR (Puro texto, dos párrafos, sin imagen, centrada y estilizada) --- */}
     <div style={{
       background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(217, 119, 54, 0.05) 100%)',
       border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -608,7 +608,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         letterSpacing: '0.05em',
         margin: 0
       }}>
-        {lang === 'es' ? 'Tours Privados y Personalizados' : 'Private & Custom Tours'}
+        {lang === 'es' ? 'Experiencias Privadas' : 'Private Experiences'}
       </h3>
       <p style={{
         fontFamily: 'sans-serif',
@@ -620,14 +620,22 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: 0
       }}>
         {lang === 'es'
-          ? '¿Buscas algo exclusivo? Diseñamos rutas y experiencias a la medida para familias, parejas o grupos privados que desean explorar los alrededores a su propio ritmo con un guía dedicado.'
-          : 'Looking for something exclusive? We design tailored routes and experiences for families, couples, or private groups who wish to explore the surroundings at their own pace with a dedicated guide.'}
+          ? '¿Buscas una aventura más personalizada? Los tours privados son una excelente opción para parejas, familias y grupos que desean disfrutar de San Miguel a su propio ritmo.'
+          : 'Looking for a more personalized adventure? Private tours are a great option for couples, families and groups who want to enjoy San Miguel at their own pace.'}
       </p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', fontSize: '14px', color: 'rgba(255,255,255,0.7)', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem', flexWrap: 'wrap' }}>
-        <div><strong>{lang === 'es' ? 'Duración:' : 'Duration:'}</strong> {lang === 'es' ? 'Flexible' : 'Flexible'}</div>
-        <div><strong>{lang === 'es' ? 'Experiencia:' : 'Experience:'}</strong> {lang === 'es' ? 'Exclusiva y privada' : 'Exclusive and private'}</div>
-        <div><strong>{lang === 'es' ? 'Destacados:' : 'Highlights:'}</strong> {lang === 'es' ? 'A tu medida' : 'Tailored to you'}</div>
-      </div>
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '16px',
+        lineHeight: 1.6,
+        margin: 0
+      }}>
+        {lang === 'es'
+          ? 'Estas experiencias ofrecen un itinerario más personalizado y la flexibilidad de enfocarse en las actividades y lugares que más le interesan a tu grupo.'
+          : 'These experiences can offer a more personalized itinerary and the flexibility to focus on the activities and places that interest your group most.'}
+      </p>
       <div style={{ paddingTop: '0.5rem' }}>
         <a href="https://www.gueytours.com/contact" style={{
           display: 'inline-block',
