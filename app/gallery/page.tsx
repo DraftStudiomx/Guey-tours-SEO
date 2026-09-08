@@ -21,7 +21,7 @@ export default async function GalleryPage() {
       <Navbar />
       <main style={{ paddingTop: '120px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* Tu sección de encabezado con tu nuevo H1 y textos */}
+        {/* Contenedor de tus textos y tu único H1 */}
         <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 4rem 2rem', textAlign: 'center' }}>
           
           <div style={{
@@ -35,7 +35,7 @@ export default async function GalleryPage() {
             ——— GUEY TOURS EXPERIENCE ———
           </div>
 
-          {/* Este es tu H1 principal y único */}
+          {/* Tu único H1 deseado */}
           <h1 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
@@ -69,30 +69,36 @@ export default async function GalleryPage() {
             color: 'rgba(255,255,255,0.7)',
             fontSize: '1rem',
             lineHeight: 1.75,
-            marginBottom: '2rem',
+            marginBottom: '2.5rem',
             fontFamily: 'var(--font-body)',
           }}>
             Our gallery showcases real moments from our tours, outdoor adventures, off-road trails, and unforgettable experiences with travelers from around the world. Whether you are planning your first adventure or looking for inspiration for your next visit, these images and videos will give you a glimpse of what awaits.
           </p>
 
+          {/* Botón de llamada a la acción estilizado */}
           <Link 
             href="/contact" 
             style={{
               display: 'inline-block',
               fontFamily: 'var(--font-heading)',
-              color: 'var(--orange)',
+              backgroundColor: 'var(--orange)',
+              color: '#1a1a1a',
               fontWeight: 700,
-              textDecoration: 'underline',
-              fontSize: '1rem',
+              padding: '0.8rem 2rem',
+              borderRadius: '4px',
+              textDecoration: 'none',
+              fontSize: '0.95rem',
               letterSpacing: '0.05em',
-              transition: 'opacity 0.3s',
+              textTransform: 'uppercase',
+              boxShadow: '0 4px 14px rgba(0,0,0,0.3)',
+              transition: 'background-color 0.3s, transform 0.2s',
             }}
           >
-            Start planning your adventure with Guey Tours.
+            Start planning your adventure
           </Link>
         </div>
 
-        {/* Las puras fotos de la galería abajo */}
+        {/* Galería de imágenes */}
         <Gallery images={images} showSeeAll={false} />
       </main>
       <Footer />
