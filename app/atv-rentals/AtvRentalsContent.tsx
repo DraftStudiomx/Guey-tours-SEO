@@ -1866,6 +1866,149 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA NOVENA SECCIÓN */}
 
 
+          {/* --- DÉCIMA SECCIÓN: Formulario de Contacto / Reservación Oficial --- */}
+      <section
+        id="contacto"
+        style={{
+          background: 'var(--dark, #0b0b0b)',
+          padding: '6rem 0 5rem 0',
+          position: 'relative',
+        }}
+      >
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
+
+          {/* Encabezado */}
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <div style={{
+              fontFamily: 'var(--font-heading)',
+              color: 'var(--orange, #d97736)',
+              fontSize: '0.85rem',
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              marginBottom: '0.5rem',
+            }}>
+              ——— {lang === 'es' ? 'Ponte en contacto' : 'Get in touch'} ———
+            </div>
+            <h2 className="section-heading" style={{ color: '#fff', fontFamily: 'var(--font-heading)' }}>
+              {lang === 'es' ? 'RESERVA TU AVENTURA' : 'BOOK YOUR ADVENTURE'}
+            </h2>
+            <div className="section-divider" style={{ marginTop: '1rem' }} />
+          </div>
+
+          {/* Contenedor del Formulario */}
+          <div style={{
+            background: 'rgba(15, 15, 15, 0.85)',
+            border: '1px solid rgba(217, 119, 54, 0.3)',
+            borderRadius: '20px',
+            padding: '3rem 2.5rem',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.6)',
+          }}>
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert(lang === 'es' ? '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.' : 'Message sent successfully! We will get in touch soon.');
+              }} 
+              style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+            >
+              {/* Nombre */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label style={{ color: '#fff', fontFamily: 'var(--font-heading)', fontSize: '0.9rem', textTransform: 'uppercase' }}>
+                  {lang === 'es' ? 'Nombre' : 'Name'}
+                </label>
+                <input 
+                  type="text" 
+                  name="name"
+                  required
+                  placeholder={lang === 'es' ? 'Tu nombre' : 'Your name'}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    borderRadius: '8px',
+                    padding: '0.9rem 1rem',
+                    color: '#fff',
+                    fontSize: '1rem',
+                    outline: 'none',
+                    fontFamily: 'var(--font-body)',
+                  }}
+                />
+              </div>
+
+              {/* Email */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label style={{ color: '#fff', fontFamily: 'var(--font-heading)', fontSize: '0.9rem', textTransform: 'uppercase' }}>
+                  {lang === 'es' ? 'Correo Electrónico' : 'Email'}
+                </label>
+                <input 
+                  type="email" 
+                  name="email"
+                  required
+                  placeholder={lang === 'es' ? 'tucorreo@email.com' : 'your@email.com'}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    borderRadius: '8px',
+                    padding: '0.9rem 1rem',
+                    color: '#fff',
+                    fontSize: '1rem',
+                    outline: 'none',
+                    fontFamily: 'var(--font-body)',
+                  }}
+                />
+              </div>
+
+              {/* Mensaje */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <label style={{ color: '#fff', fontFamily: 'var(--font-heading)', fontSize: '0.9rem', textTransform: 'uppercase' }}>
+                  {lang === 'es' ? 'Mensaje' : 'Message'}
+                </label>
+                <textarea 
+                  name="message"
+                  rows={4}
+                  required
+                  placeholder={lang === 'es' ? 'Escribe tu mensaje aquí...' : 'Write your message here...'}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    borderRadius: '8px',
+                    padding: '0.9rem 1rem',
+                    color: '#fff',
+                    fontSize: '1rem',
+                    outline: 'none',
+                    fontFamily: 'var(--font-body)',
+                    resize: 'vertical',
+                  }}
+                />
+              </div>
+
+              {/* Botón */}
+              <button 
+                type="submit"
+                style={{
+                  background: 'var(--orange, #d97736)',
+                  color: '#fff',
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '1rem',
+                  textTransform: 'uppercase',
+                  padding: '1rem 2rem',
+                  borderRadius: '50px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  letterSpacing: '0.08em',
+                  fontWeight: 'bold',
+                  boxShadow: '0 0 20px rgba(217, 119, 54, 0.4)',
+                  marginTop: '1rem',
+                }}
+              >
+                {lang === 'es' ? 'Enviar Mensaje' : 'Send Message'}
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+      {/* --- FIN DE LA DÉCIMA SECCIÓN --- */}
+
+
           
           
 
