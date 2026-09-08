@@ -1186,7 +1186,7 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA QUINTA SECCIÓN --- */}
 
 
-          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Grid 2x2 y Contenido Centrado) --- */}
+          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Grid Forzado 2x2) --- */}
 <div style={{ marginTop: '7rem', width: '100%', padding: '0 1rem' }}>
   
   <div style={{
@@ -1250,10 +1250,10 @@ export default function AtvRentalsContent() {
         }} />
       </div>
 
-      {/* Grid de Requisitos en formato 2x2 */}
+      {/* Grid de Requisitos forzado a 2 columnas */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gridTemplateColumns: 'repeat(2, 1fr)',
         gap: '1.5rem',
         maxWidth: '900px',
         margin: '0 auto'
