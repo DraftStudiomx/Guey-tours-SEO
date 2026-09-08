@@ -4,6 +4,7 @@ import Gallery from '@/components/Gallery'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
   title: 'Gallery | Guey Tours San Miguel de Allende',
@@ -19,9 +20,10 @@ export default async function GalleryPage() {
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: '120px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
+      {/* 200px de padding superior para asegurar que el menú no tape nada */}
+      <main style={{ paddingTop: '200px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* Contenedor de tus textos y tu único H1 */}
+        {/* Tu sección de encabezado con tu único H1 y textos */}
         <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 4rem 2rem', textAlign: 'center' }}>
           
           <div style={{
@@ -35,7 +37,7 @@ export default async function GalleryPage() {
             ——— GUEY TOURS EXPERIENCE ———
           </div>
 
-          {/* Tu único H1 deseado */}
+          {/* Tu único H1 limpio */}
           <h1 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
@@ -75,31 +77,32 @@ export default async function GalleryPage() {
             Our gallery showcases real moments from our tours, outdoor adventures, off-road trails, and unforgettable experiences with travelers from around the world. Whether you are planning your first adventure or looking for inspiration for your next visit, these images and videos will give you a glimpse of what awaits.
           </p>
 
-          {/* Botón de llamada a la acción estilizado */}
+          {/* Botón respetando exactamente tu diseño redondeado del sitio */}
           <Link 
             href="/contact" 
             style={{
-              display: 'inline-block',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'var(--orange)',
+              color: 'white',
               fontFamily: 'var(--font-heading)',
-              backgroundColor: 'var(--orange)',
-              color: '#1a1a1a',
-              fontWeight: 700,
-              padding: '0.8rem 2rem',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '0.95rem',
-              letterSpacing: '0.05em',
+              fontWeight: 800,
+              fontSize: '0.9rem',
+              letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              boxShadow: '0 4px 14px rgba(0,0,0,0.3)',
-              transition: 'background-color 0.3s, transform 0.2s',
+              padding: '0.9rem 2rem',
+              borderRadius: '999px',
+              textDecoration: 'none',
+              transition: 'opacity 0.2s',
             }}
           >
-            Start planning your adventure
+            Start planning your adventure <ArrowRight size={16} />
           </Link>
         </div>
 
-        {/* Galería de imágenes */}
-        <Gallery images={images} showSeeAll={false} />
+        {/* Galería limpia sin el título duplicado gracias a showHeader={false} */}
+        <Gallery images={images} showSeeAll={false} showHeader={false} />
       </main>
       <Footer />
     </>
