@@ -77,6 +77,7 @@ export default function Navbar() {
   const toursChildren = [
     { label: t('nav.blog'), href: '/blog' },
     { label: lang === 'es' ? 'Renta de ATV' : 'ATV Rentals', href: '/atv-rentals' },
+    { label: lang === 'es' ? 'San Miguel de Allende' : 'San Miguel de Allende', href: '/san-miguel-de-allende-tours' },
   ]
 
   const leftLinks = [
