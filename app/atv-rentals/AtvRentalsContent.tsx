@@ -1186,7 +1186,7 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA QUINTA SECCIÓN --- */}
 
 
-          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Diseño Inmersivo con Imagen de Fondo y Grid) --- */}
+          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Grid 2x2 y Contenido Centrado) --- */}
 <div style={{ marginTop: '7rem', width: '100%', padding: '0 1rem' }}>
   
   <div style={{
@@ -1217,7 +1217,7 @@ export default function AtvRentalsContent() {
     {/* Contenido en la parte superior del fondo */}
     <div style={{ position: 'relative', zIndex: 2 }}>
       
-      {/* Encabezado de la Sección */}
+      {/* Encabezado de la Sección (Centrado) */}
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 style={{
           fontFamily: 'var(--font-heading)',
@@ -1250,11 +1250,13 @@ export default function AtvRentalsContent() {
         }} />
       </div>
 
-      {/* Grid de Requisitos en Tarjetas Flotantes */}
+      {/* Grid de Requisitos en formato 2x2 */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '1.5rem'
+        gap: '1.5rem',
+        maxWidth: '900px',
+        margin: '0 auto'
       }}>
         
         {/* Tarjeta 1: Edad */}
@@ -1262,12 +1264,12 @@ export default function AtvRentalsContent() {
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
           borderRadius: '12px',
-          padding: '1.5rem',
+          padding: '1.8rem',
           backdropFilter: 'blur(6px)',
-          transition: 'all 0.3s ease'
+          textAlign: 'center'
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>01</span>
-          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
             {lang === 'es' ? 'Edad Mínima' : 'Minimum Age'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
@@ -1280,12 +1282,12 @@ export default function AtvRentalsContent() {
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
           borderRadius: '12px',
-          padding: '1.5rem',
+          padding: '1.8rem',
           backdropFilter: 'blur(6px)',
-          transition: 'all 0.3s ease'
+          textAlign: 'center'
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>02</span>
-          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
             {lang === 'es' ? 'Licencia de Conducir' : "Driver's License"}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
@@ -1298,12 +1300,12 @@ export default function AtvRentalsContent() {
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
           borderRadius: '12px',
-          padding: '1.5rem',
+          padding: '1.8rem',
           backdropFilter: 'blur(6px)',
-          transition: 'all 0.3s ease'
+          textAlign: 'center'
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>03</span>
-          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
             {lang === 'es' ? 'Experiencia Previa' : 'Prior Experience'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
@@ -1316,12 +1318,12 @@ export default function AtvRentalsContent() {
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
           borderRadius: '12px',
-          padding: '1.5rem',
+          padding: '1.8rem',
           backdropFilter: 'blur(6px)',
-          transition: 'all 0.3s ease'
+          textAlign: 'center'
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>04</span>
-          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
             {lang === 'es' ? 'Seguridad y Cobertura' : 'Safety & Coverage'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
@@ -1331,37 +1333,33 @@ export default function AtvRentalsContent() {
 
       </div>
 
-      {/* Tarjeta 5 Destacada: Capacidades y RSZ rentals (Con text-decoration none !important) */}
+      {/* Tarjeta Inferior: Capacidades y RSZ rentals (Centrada) */}
       <div style={{
-        marginTop: '1.5rem',
+        marginTop: '1.8rem',
         background: 'rgba(20, 20, 20, 0.85)',
         border: '1px solid rgba(217, 119, 54, 0.4)',
         borderRadius: '12px',
         padding: '1.8rem',
         backdropFilter: 'blur(8px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        gap: '1rem'
+        textAlign: 'center',
+        maxWidth: '900px',
+        marginInline: 'auto'
       }}>
-        <div style={{ flex: 1, minWidth: '280px' }}>
-          <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange, #d97736)', fontSize: '1.1rem', marginBottom: '0.4rem', textTransform: 'uppercase' }}>
-            {lang === 'es' ? 'Capacidad de Pasajeros y Estándares' : 'Passenger Capacities & Standards'}
-          </h3>
-          <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Motos (2 pax), Cuatrimotos (2 pax) y Defender (6 pax). Alineamos estándares con proveedores confiables como' : 'Motorbikes (2 pax), Quads (2 pax), and Defender (6 pax). We align standards with trusted providers like'}{' '}
-            <a 
-              href="https://www.gueytours.com/rsz-rentals/" 
-              style={{ color: 'var(--orange, #d97736)', textDecoration: 'none !important', fontWeight: 'bold', borderBottom: '1px dotted var(--orange, #d97736)' }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RSZ rentals
-            </a>{' '}
-            {lang === 'es' ? 'para garantizar la máxima seguridad.' : 'to guarantee top safety.'}
-          </p>
-        </div>
+        <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange, #d97736)', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+          {lang === 'es' ? 'Capacidad de Pasajeros y Estándares' : 'Passenger Capacities & Standards'}
+        </h3>
+        <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>
+          {lang === 'es' ? 'Motos (2 pax), Cuatrimotos (2 pax) y Defender (6 pax). Alineamos estándares con proveedores confiables como' : 'Motorbikes (2 pax), Quads (2 pax), and Defender (6 pax). We align standards with trusted providers like'}{' '}
+          <a 
+            href="https://www.gueytours.com/rsz-rentals/" 
+            style={{ color: 'var(--orange, #d97736)', textDecoration: 'none !important', fontWeight: 'bold', borderBottom: '1px dotted var(--orange, #d97736)' }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RSZ rentals
+          </a>{' '}
+          {lang === 'es' ? 'para garantizar la máxima seguridad.' : 'to guarantee top safety.'}
+        </p>
       </div>
 
     </div>
