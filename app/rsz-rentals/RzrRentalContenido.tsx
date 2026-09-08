@@ -163,6 +163,79 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
 
 
+
+
+         {/* Segunda sección: Dos columnas (Texto H2 + Imagen) */}
+<div style={{
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: '3rem',
+  marginTop: '5rem',
+  background: 'rgba(255, 255, 255, 0.02)',
+  padding: '3rem',
+  borderRadius: '16px',
+  border: '1px solid rgba(255, 255, 255, 0.08)'
+}}>
+  {/* Columna de Texto H2 */}
+  <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+    <h2 style={{
+      fontFamily: 'var(--font-heading)',
+      fontSize: '1.8rem',
+      color: 'var(--orange, #d97736)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      margin: 0
+    }}>
+      {lang === 'es' ? 'Renta de RZR en San Miguel de Allende' : 'RZR Rental in San Miguel de Allende'}
+    </h2>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es' 
+        ? 'Un RZR es un tipo de vehículo utilitario (UTV) diseñado para la conducción todoterreno. A diferencia de un auto tradicional, un RZR está construido para soportar terrenos irregulares, caminos de terracería y senderos al aire libre, ofreciendo una experiencia de manejo lado a lado.'
+        : 'A RZR is a type of UTV (Utility Terrain Vehicle) designed for off-road driving. Unlike a traditional car, a RZR is built to handle uneven terrain, dirt roads and outdoor trails while providing a side-by-side driving experience.'}
+    </p>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es' ? (
+        <>Guey Tours ofrece rentas de RZR para viajeros que quieren explorar los alrededores de <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende</a> a su propio ritmo.</>
+      ) : (
+        <>Guey Tours offers RZR rentals for travelers who want to explore the surroundings of <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende</a> at their own pace.</>
+      )}
+    </p>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es'
+        ? 'El proceso de renta está diseñado para que tu experiencia sea sencilla. Antes de conducir, puedes recibir información sobre el vehículo, instrucciones básicas de operación, recomendaciones de seguridad y las condiciones de renta.'
+        : 'The rental process is designed to make your experience simple. Before driving, you can receive information about the vehicle, basic operating instructions, safety recommendations and the rental conditions.'}
+    </p>
+  </div>
+
+  {/* Columna de la Imagen */}
+  <div style={{ flex: '1', minWidth: '300px' }}>
+    <div style={{
+      width: '100%',
+      height: '320px',
+      position: 'relative',
+      borderRadius: '12px',
+      overflow: 'hidden',
+      border: '1px solid rgba(255,255,255,0.1)',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
+    }}>
+      <Image
+        src="/images/atv-tour-magic-town-CONTACT-GUEY-TOURS.webp" 
+        alt="RZR tour adventure in the magic town of San Miguel de Allende with Guey Tours."
+        title="RZR Rentals in San Miguel de Allende - Guey Tours"
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+    </div>
+  </div>
+</div>
+          {/* Inicio de tercera section */}
+
+
          {/* Inicio de section dos */}
 <section style={{
   padding: '6rem 2rem 6rem 2rem',
