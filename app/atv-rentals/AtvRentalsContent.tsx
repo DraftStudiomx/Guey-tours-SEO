@@ -1866,145 +1866,203 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA NOVENA SECCIÓN */}
 
 
-          {/* --- DÉCIMA SECCIÓN: Formulario de Contacto / Reservación Oficial --- */}
+          {/* --- DÉCIMA SECCIÓN: Contacto y Formulario --- */}
       <section
-        id="contacto"
+        id="contact"
         style={{
           background: 'var(--dark, #0b0b0b)',
-          padding: '6rem 0 5rem 0',
+          padding: '6rem 0',
           position: 'relative',
         }}
       >
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
+        <div style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: '3px',
+          background: 'linear-gradient(90deg, transparent, var(--orange, #d97736), transparent)',
+        }} />
 
-          {/* Encabezado */}
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div style={{
-              fontFamily: 'var(--font-heading)',
-              color: 'var(--orange, #d97736)',
-              fontSize: '0.85rem',
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase',
-              marginBottom: '0.5rem',
-            }}>
-              ——— {lang === 'es' ? 'Ponte en contacto' : 'Get in touch'} ———
-            </div>
+        <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 2rem' }}>
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
             <h2 className="section-heading" style={{ color: '#fff', fontFamily: 'var(--font-heading)' }}>
-              {lang === 'es' ? 'RESERVA TU AVENTURA' : 'BOOK YOUR ADVENTURE'}
+              {t ? t('contact.title') : (lang === 'es' ? 'Contáctanos' : 'Get in touch')}
             </h2>
             <div className="section-divider" style={{ marginTop: '1rem' }} />
           </div>
 
-          {/* Contenedor del Formulario */}
           <div style={{
-            background: 'rgba(15, 15, 15, 0.85)',
-            border: '1px solid rgba(217, 119, 54, 0.3)',
-            borderRadius: '20px',
-            padding: '3rem 2.5rem',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.6)',
-          }}>
-            <form 
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert(lang === 'es' ? '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.' : 'Message sent successfully! We will get in touch soon.');
-              }} 
-              style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
-            >
-              {/* Nombre */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <label style={{ color: '#fff', fontFamily: 'var(--font-heading)', fontSize: '0.9rem', textTransform: 'uppercase' }}>
-                  {lang === 'es' ? 'Nombre' : 'Name'}
-                </label>
-                <input 
-                  type="text" 
-                  name="name"
-                  required
-                  placeholder={lang === 'es' ? 'Tu nombre' : 'Your name'}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.15)',
-                    borderRadius: '8px',
-                    padding: '0.9rem 1rem',
-                    color: '#fff',
-                    fontSize: '1rem',
-                    outline: 'none',
-                    fontFamily: 'var(--font-body)',
-                  }}
-                />
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '5rem',
+            alignItems: 'start',
+          }}
+          className="contact-grid"
+          >
+            {/* Info side */}
+            <div className="reveal-left">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.8rem' }}>
+                {[
+                  {
+                    icon: MapPin,
+                    label: t ? t('contact.address') : (lang === 'es' ? 'San Miguel de Allende, Gto.' : 'San Miguel de Allende, Gto.'),
+                  },
+                  {
+                    icon: Mail,
+                    label: 'gueycuatritours@gmail.com',
+                    href: 'mailto:gueycuatritours@gmail.com',
+                  },
+                  {
+                    icon: Phone,
+                    label: '+52 1 415 109 0021',
+                    href: 'tel:+5214151090021',
+                  },
+                ].map((item, i) => {
+                  const Icon = item.icon
+                  return (
+                    <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                      <div style={{
+                        width: '44px',
+                        height: '44px',
+                        background: 'var(--orange, #d97736)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        marginTop: '0.1rem',
+                        borderRadius: '4px',
+                      }}>
+                        <Icon size={18} color="white" />
+                      </div>
+                      {item.href ? (
+                        <a href={item.href} style={{
+                          color: 'rgba(255,255,255,0.75)',
+                          textDecoration: 'none',
+                          fontSize: '0.95rem',
+                          lineHeight: 1.5,
+                          paddingTop: '0.6rem',
+                          transition: 'color 0.2s',
+                        }}
+                        onMouseEnter={e => { (e.target as HTMLElement).style.color = 'var(--orange, #d97736)' }}
+                        onMouseLeave={e => { (e.target as HTMLElement).style.color = 'rgba(255,255,255,0.75)' }}
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <span style={{
+                          color: 'rgba(255,255,255,0.75)',
+                          fontSize: '0.95rem',
+                          lineHeight: 1.5,
+                          paddingTop: '0.6rem',
+                        }}>
+                          {item.label}
+                        </span>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
+            </div>
 
-              {/* Email */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <label style={{ color: '#fff', fontFamily: 'var(--font-heading)', fontSize: '0.9rem', textTransform: 'uppercase' }}>
-                  {lang === 'es' ? 'Correo Electrónico' : 'Email'}
-                </label>
-                <input 
-                  type="email" 
-                  name="email"
-                  required
-                  placeholder={lang === 'es' ? 'tucorreo@email.com' : 'your@email.com'}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.15)',
-                    borderRadius: '8px',
-                    padding: '0.9rem 1rem',
-                    color: '#fff',
-                    fontSize: '1rem',
-                    outline: 'none',
-                    fontFamily: 'var(--font-body)',
-                  }}
-                />
-              </div>
-
-              {/* Mensaje */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <label style={{ color: '#fff', fontFamily: 'var(--font-heading)', fontSize: '0.9rem', textTransform: 'uppercase' }}>
-                  {lang === 'es' ? 'Mensaje' : 'Message'}
-                </label>
-                <textarea 
-                  name="message"
-                  rows={4}
-                  required
-                  placeholder={lang === 'es' ? 'Escribe tu mensaje aquí...' : 'Write your message here...'}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.15)',
-                    borderRadius: '8px',
-                    padding: '0.9rem 1rem',
-                    color: '#fff',
-                    fontSize: '1rem',
-                    outline: 'none',
-                    fontFamily: 'var(--font-body)',
-                    resize: 'vertical',
-                  }}
-                />
-              </div>
-
-              {/* Botón */}
-              <button 
-                type="submit"
-                style={{
-                  background: 'var(--orange, #d97736)',
-                  color: '#fff',
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1rem',
-                  textTransform: 'uppercase',
-                  padding: '1rem 2rem',
-                  borderRadius: '50px',
-                  border: 'none',
-                  cursor: 'pointer',
-                  letterSpacing: '0.08em',
-                  fontWeight: 'bold',
-                  boxShadow: '0 0 20px rgba(217, 119, 54, 0.4)',
-                  marginTop: '1rem',
-                }}
-              >
-                {lang === 'es' ? 'Enviar Mensaje' : 'Send Message'}
-              </button>
-            </form>
+            {/* Form side */}
+            <div className="reveal-right">
+              {sent ? (
+                <div style={{
+                  background: 'rgba(232,84,26,0.1)',
+                  border: '1px solid var(--orange, #d97736)',
+                  padding: '2rem',
+                  textAlign: 'center',
+                  borderRadius: '8px',
+                }}>
+                  <div style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.5rem', marginBottom: '0.5rem' }}>
+                    ✓ {lang === 'es' ? '¡Mensaje enviado!' : 'Message sent!'}
+                  </div>
+                  <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>
+                    {lang === 'es' ? 'Nos pondremos en contacto contigo en menos de 24 horas.' : "We'll get back to you within 24 hours."}
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                  <input
+                    type="text"
+                    placeholder={t ? t('contact.name') : (lang === 'es' ? 'Tu nombre' : 'Your Name')}
+                    value={form.name}
+                    onChange={e => setForm({ ...form, name: e.target.value })}
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '0.9rem 1rem',
+                      background: 'rgba(255,255,255,0.05)',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      color: 'white',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.9rem',
+                      outline: 'none',
+                      borderRadius: '2px',
+                    }}
+                    onFocus={e => { (e.target as HTMLElement).style.borderColor = 'var(--orange, #d97736)' }}
+                    onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
+                  />
+                  <input
+                    type="email"
+                    placeholder={t ? t('contact.email') : (lang === 'es' ? 'Tu correo electrónico' : 'Your Email')}
+                    value={form.email}
+                    onChange={e => setForm({ ...form, email: e.target.value })}
+                    required
+                    style={{
+                      width: '100%',
+                      padding: '0.9rem 1rem',
+                      background: 'rgba(255,255,255,0.05)',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      color: 'white',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.9rem',
+                      outline: 'none',
+                      borderRadius: '2px',
+                    }}
+                    onFocus={e => { (e.target as HTMLElement).style.borderColor = 'var(--orange, #d97736)' }}
+                    onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
+                  />
+                  <textarea
+                    placeholder={t ? t('contact.message') : (lang === 'es' ? 'Tu mensaje' : 'Your Message')}
+                    value={form.message}
+                    onChange={e => setForm({ ...form, message: e.target.value })}
+                    required
+                    rows={5}
+                    style={{
+                      width: '100%',
+                      padding: '0.9rem 1rem',
+                      background: 'rgba(255,255,255,0.05)',
+                      border: '1px solid rgba(255,255,255,0.1)',
+                      color: 'white',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.9rem',
+                      outline: 'none',
+                      borderRadius: '2px',
+                      resize: 'vertical',
+                    }}
+                    onFocus={e => { (e.target as HTMLElement).style.borderColor = 'var(--orange, #d97736)' }}
+                    onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
+                  />
+                  <button type="submit" className="btn-orange" style={{ cursor: 'pointer', border: 'none', width: '100%', textAlign: 'center', padding: '1rem', borderRadius: '4px', fontWeight: 'bold' }}>
+                    {t ? t('contact.send') : (lang === 'es' ? 'Enviar Mensaje' : 'Send Message')}
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
-
         </div>
+
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .contact-grid {
+              grid-template-columns: 1fr !important;
+              gap: 3rem !important;
+            }
+          }
+        `}</style>
       </section>
       {/* --- FIN DE LA DÉCIMA SECCIÓN --- */}
 
