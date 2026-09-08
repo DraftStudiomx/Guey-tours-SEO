@@ -479,7 +479,7 @@ export default function AtvRentalsContent() {
             onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
           >
-            {lang === 'es' ? 'Contáctanos para solicitar' : 'Contact us to request'}
+            {lang === 'es' ? 'Contáctanos para solicitar nuestro Motorbike.' : 'Contact us to request our Motorbike.'}
           </a>
         </div>
       </div>
@@ -655,7 +655,7 @@ export default function AtvRentalsContent() {
             onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
           >
-            {lang === 'es' ? 'Contáctanos para solicitar' : 'Contact us to request'}
+            {lang === 'es' ? 'Contáctanos para solicitar nuestro ATV Quad.' : 'Contact us to request our ATV Quad.'}
           </a>
         </div>
       </div>
@@ -842,7 +842,7 @@ export default function AtvRentalsContent() {
   {/* --- BOTÓN MAESTRO AL FINAL DE LAS TARJETAS --- */}
   <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
     <a 
-      href="https://www.gueytours.com/contacto/" 
+      href="https://www.gueytours.com/contact" 
       style={{
         display: 'inline-block',
         background: 'transparent',
