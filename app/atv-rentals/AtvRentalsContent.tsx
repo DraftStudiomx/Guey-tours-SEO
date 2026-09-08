@@ -870,11 +870,11 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA CUARTA SECCIÓN --- */}
 
 
-          {/* --- QUINTA SECCIÓN: What Is Included With Your ATV Rental? --- */}
-<div style={{ marginTop: '6rem', width: '100%' }}>
+        {/* --- QUINTA SECCIÓN: Grid Dinámico de Inclusiones (Opción B) --- */}
+<div style={{ marginTop: '6rem', width: '100%', padding: '0 1rem' }}>
   
   {/* Encabezado principal de la sección */}
-  <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+  <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
     <h2 style={{
       fontFamily: 'var(--font-heading)',
       fontSize: '2.5rem',
@@ -894,104 +894,292 @@ export default function AtvRentalsContent() {
     }} />
   </div>
 
-  {/* Contenedor tipo tarjeta principal para la lista de inclusión */}
+  {/* Contenedor Grid de 4 columnas dinámicas */}
   <div style={{
-    background: '#000',
-    border: '1px solid rgba(217, 119, 54, 0.3)',
-    borderRadius: '16px',
-    padding: '2.5rem',
-    boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
-    maxWidth: '900px',
-    margin: '0 auto',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1.5rem'
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+    gap: '1.5rem',
+    maxWidth: '1200px',
+    margin: '0 auto'
   }}>
-    <p style={{
-      fontFamily: 'var(--font-body, sans-serif)',
-      fontSize: '1.05rem',
-      color: 'rgba(255, 255, 255, 0.9)',
-      lineHeight: 1.6,
-      textAlign: 'center',
-      margin: '0 0 1rem 0'
-    }}>
-      {lang === 'es' 
-        ? 'Cuando reservas una renta de ATV en San Miguel de Allende con nosotros, obtienes una experiencia completa y sin complicaciones:' 
-        : 'When you reserve an ATV rental in San Miguel de Allende with us, you receive a complete turnkey experience:'}
-    </p>
-
-    {/* Lista de elementos con estilo limpio */}
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-      gap: '1.2rem'
-    }}>
-      
-      {/* Elemento 1 */}
-      <div style={{
-        background: 'rgba(255, 255, 255, 0.03)',
+    
+    {/* Tarjeta 1 */}
+    <div 
+      style={{
+        background: 'rgba(20, 20, 20, 0.8)',
         border: '1px solid rgba(217, 119, 54, 0.2)',
-        borderRadius: '10px',
-        padding: '1.2rem',
+        borderRadius: '14px',
+        padding: '2rem 1.5rem',
+        position: 'relative',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
         display: 'flex',
-        alignItems: 'flex-start',
-        gap: '1rem'
-      }}>
-        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.2rem', fontWeight: 'bold' }}>✓</span>
-        <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-          {lang === 'es' ? 'Vehículo completamente preparado con combustible incluido.' : 'Fully prepared vehicle with fuel included.'}
-        </span>
-      </div>
-
-      {/* Elemento 2 */}
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-6px)';
+        e.currentTarget.style.borderColor = 'var(--orange, #d97736)';
+        e.currentTarget.style.boxShadow = '0 15px 35px rgba(217, 119, 54, 0.25)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.borderColor = 'rgba(217, 119, 54, 0.2)';
+        e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+      }}
+    >
+      {/* Línea de luz superior decorativa */}
       <div style={{
-        background: 'rgba(255, 255, 255, 0.03)',
-        border: '1px solid rgba(217, 119, 54, 0.2)',
-        borderRadius: '10px',
-        padding: '1.2rem',
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: '1rem'
-      }}>
-        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.2rem', fontWeight: 'bold' }}>✓</span>
-        <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-          {lang === 'es' ? 'Equipo de seguridad, incluyendo cascos protectores.' : 'Safety equipment, including protective helmets.'}
-        </span>
-      </div>
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        boxShadow: '0 0 10px var(--orange, #d97736)'
+      }} />
 
-      {/* Elemento 3 */}
-      <div style={{
-        background: 'rgba(255, 255, 255, 0.03)',
-        border: '1px solid rgba(217, 119, 54, 0.2)',
-        borderRadius: '10px',
-        padding: '1.2rem',
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: '1rem'
-      }}>
-        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.2rem', fontWeight: 'bold' }}>✓</span>
-        <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-          {lang === 'es' ? 'Instrucciones básicas de manejo antes de salir.' : 'Basic driving instructions before you head out.'}
+      <div>
+        <span style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.8rem',
+          color: 'var(--orange, #d97736)',
+          opacity: 0.8,
+          display: 'block',
+          marginBottom: '1rem'
+        }}>
+          01
         </span>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.1rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '0.8rem',
+          letterSpacing: '0.05em'
+        }}>
+          {lang === 'es' ? 'Combustible Incluido' : 'Fuel Included'}
+        </h3>
+        <p style={{
+          fontFamily: 'var(--font-body, sans-serif)',
+          fontSize: '0.9rem',
+          color: 'rgba(255, 255, 255, 0.75)',
+          lineHeight: 1.5,
+          margin: 0
+        }}>
+          {lang === 'es' ? 'Vehículo completamente preparado y con el tanque listo para la ruta.' : 'Fully prepared vehicle with a full tank ready for the trail.'}
+        </p>
       </div>
-
-      {/* Elemento 4 */}
-      <div style={{
-        background: 'rgba(255, 255, 255, 0.03)',
-        border: '1px solid rgba(217, 119, 54, 0.2)',
-        borderRadius: '10px',
-        padding: '1.2rem',
-        display: 'flex',
-        alignItems: 'flex-start',
-        gap: '1rem'
-      }}>
-        <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.2rem', fontWeight: 'bold' }}>✓</span>
-        <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-          {lang === 'es' ? 'Condiciones de renta claras para un recorrido sin contratiempos.' : 'Clear rental conditions for a hassle-free ride.'}
-        </span>
-      </div>
-
     </div>
+
+    {/* Tarjeta 2 */}
+    <div 
+      style={{
+        background: 'rgba(20, 20, 20, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.2)',
+        borderRadius: '14px',
+        padding: '2rem 1.5rem',
+        position: 'relative',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-6px)';
+        e.currentTarget.style.borderColor = 'var(--orange, #d97736)';
+        e.currentTarget.style.boxShadow = '0 15px 35px rgba(217, 119, 54, 0.25)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.borderColor = 'rgba(217, 119, 54, 0.2)';
+        e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+      }}
+    >
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        boxShadow: '0 0 10px var(--orange, #d97736)'
+      }} />
+
+      <div>
+        <span style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.8rem',
+          color: 'var(--orange, #d97736)',
+          opacity: 0.8,
+          display: 'block',
+          marginBottom: '1rem'
+        }}>
+          02
+        </span>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.1rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '0.8rem',
+          letterSpacing: '0.05em'
+        }}>
+          {lang === 'es' ? 'Equipo de Seguridad' : 'Safety Gear'}
+        </h3>
+        <p style={{
+          fontFamily: 'var(--font-body, sans-serif)',
+          fontSize: '0.9rem',
+          color: 'rgba(255, 255, 255, 0.75)',
+          lineHeight: 1.5,
+          margin: 0
+        }}>
+          {lang === 'es' ? 'Cascos protectores de alta calidad incluidos para todos los pasajeros.' : 'High-quality protective helmets included for all riders.'}
+        </p>
+      </div>
+    </div>
+
+    {/* Tarjeta 3 */}
+    <div 
+      style={{
+        background: 'rgba(20, 20, 20, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.2)',
+        borderRadius: '14px',
+        padding: '2rem 1.5rem',
+        position: 'relative',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-6px)';
+        e.currentTarget.style.borderColor = 'var(--orange, #d97736)';
+        e.currentTarget.style.boxShadow = '0 15px 35px rgba(217, 119, 54, 0.25)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.borderColor = 'rgba(217, 119, 54, 0.2)';
+        e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+      }}
+    >
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        boxShadow: '0 0 10px var(--orange, #d97736)'
+      }} />
+
+      <div>
+        <span style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.8rem',
+          color: 'var(--orange, #d97736)',
+          opacity: 0.8,
+          display: 'block',
+          marginBottom: '1rem'
+        }}>
+          03
+        </span>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.1rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '0.8rem',
+          letterSpacing: '0.05em'
+        }}>
+          {lang === 'es' ? 'Instrucción Básica' : 'Basic Briefing'}
+        </h3>
+        <p style={{
+          fontFamily: 'var(--font-body, sans-serif)',
+          fontSize: '0.9rem',
+          color: 'rgba(255, 255, 255, 0.75)',
+          lineHeight: 1.5,
+          margin: 0
+        }}>
+          {lang === 'es' ? 'Breve inducción de manejo y control antes de arrancar tu aventura.' : 'Quick handling and control instructions before you start.'}
+        </p>
+      </div>
+    </div>
+
+    {/* Tarjeta 4 */}
+    <div 
+      style={{
+        background: 'rgba(20, 20, 20, 0.8)',
+        border: '1px solid rgba(217, 119, 54, 0.2)',
+        borderRadius: '14px',
+        padding: '2rem 1.5rem',
+        position: 'relative',
+        overflow: 'hidden',
+        transition: 'all 0.3s ease',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-6px)';
+        e.currentTarget.style.borderColor = 'var(--orange, #d97736)';
+        e.currentTarget.style.boxShadow = '0 15px 35px rgba(217, 119, 54, 0.25)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.borderColor = 'rgba(217, 119, 54, 0.2)';
+        e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+      }}
+    >
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        boxShadow: '0 0 10px var(--orange, #d97736)'
+      }} />
+
+      <div>
+        <span style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.8rem',
+          color: 'var(--orange, #d97736)',
+          opacity: 0.8,
+          display: 'block',
+          marginBottom: '1rem'
+        }}>
+          04
+        </span>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.1rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '0.8rem',
+          letterSpacing: '0.05em'
+        }}>
+          {lang === 'es' ? 'Soporte y Rutas' : 'Routes & Support'}
+        </h3>
+        <p style={{
+          fontFamily: 'var(--font-body, sans-serif)',
+          fontSize: '0.9rem',
+          color: 'rgba(255, 255, 255, 0.75)',
+          lineHeight: 1.5,
+          margin: 0
+        }}>
+          {lang === 'es' ? 'Orientación sobre los mejores caminos y senderos en San Miguel.' : 'Guidance on the best trails and tracks around San Miguel.'}
+        </p>
+      </div>
+    </div>
+
   </div>
 
 </div>
