@@ -1744,48 +1744,48 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 {/* --- DATOS ESTRUCTURADOS (SEO: FAQPage) --- */}
       <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "¿Qué incluye el servicio de ATV rentals?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "El servicio de ATV rentals incluye el alquiler de vehículos todo terreno para disfrutar recorridos y aventuras al aire libre. En Guey Tours te ofrecemos una experiencia emocionante, con orientación para que aproveches al máximo tu recorrido."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Quién puede utilizar el servicio de ATV rentals?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "El servicio de ATV rentals está dirigido a personas que buscan explorar terrenos naturales y vivir una experiencia diferente. Los requisitos pueden variar según el recorrido. En Guey Tours te brindamos la información necesaria antes de comenzar."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Es necesario tener experiencia para contratar ATV rentals?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No necesariamente. Dependiendo del recorrido, el servicio de ATV rentals puede ser adecuado para personas con diferentes niveles de experiencia. En Guey Tours te proporcionamos indicaciones antes de iniciar para que disfrutes la aventura de forma responsable."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "¿Por qué elegir Guey Tours para ATV rentals?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "En Guey Tours buscamos que tu experiencia de ATV rentals sea divertida, emocionante y memorable. Te acompañamos durante el recorrido y te orientamos sobre el uso del vehículo para que puedas disfrutar la aventura con mayor confianza."
-                }
-              }
-            ]
-          })
-        }}
-      />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": lang === 'es' ? '¿Cuáles son los mejores tours para hacer en San Miguel de Allende?' : 'What are the best tours to take in San Miguel de Allende?',
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": lang === 'es' ? 'Algunos de los mejores tours en San Miguel de Allende incluyen experiencias culturales, aventuras en ATV, tours en RZR, experiencias todo terreno y tours privados. Guey Tours se enfoca en aventuras al aire libre que permiten a los viajeros explorar los alrededores de la ciudad más allá de las zonas turísticas tradicionales.' : 'Some of the best San Miguel de Allende tours include cultural experiences, ATV adventures, RZR tours, off-road experiences, and private tours. Guey Tours focuses on outdoor adventures that allow travelers to explore the city’s surroundings beyond the traditional tourist areas.'
+          }
+        },
+        {
+          "@type": "Question",
+          "name": lang === 'es' ? '¿Cuáles son los mejores tours en San Miguel de Allende para viajeros internacionales?' : 'What are the best San Miguel de Allende tours for international travelers?',
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": lang === 'es' ? 'El mejor tour depende de tus intereses. Para los viajeros internacionales que buscan aventura, naturaleza y actividades al aire libre, las experiencias en ATV y RZR son excelentes opciones. Los tours privados también son ideales para parejas, familias y grupos que buscan una experiencia personalizada.' : 'The best tour depends on your interests. For international travelers looking for adventure, nature, and outdoor activities, ATV and RZR experiences are great options. Private tours are also ideal for couples, families, and groups looking for a personalized experience.'
+          }
+        },
+        {
+          "@type": "Question",
+          "name": lang === 'es' ? '¿Puedo hacer un tour en ATV en San Miguel de Allende?' : 'Can I take an ATV tour in San Miguel de Allende?',
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": lang === 'es' ? 'Sí. Los tours en ATV son una forma emocionante de explorar los paisajes naturales, caminos rurales y senderos todo terreno alrededor de San Miguel de Allende. Guey Tours ofrece experiencias diseñadas para viajeros que desean combinar la aventura con la exploración local.' : 'Yes. ATV tours are an exciting way to explore the natural landscapes, rural roads, and off-road trails around San Miguel de Allende. Guey Tours offers experiences designed for travelers who want to combine adventure with local exploration.'
+          }
+        },
+        {
+          "@type": "Question",
+          "name": lang === 'es' ? '¿Cuál es la diferencia entre una renta de ATV y un tour en ATV?' : 'What is the difference between an ATV rental and an ATV tour?',
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": lang === 'es' ? 'Una renta de ATV te brinda mayor independencia para planear tu propia ruta, mientras que un tour en ATV generalmente incluye una experiencia guiada a lo largo de senderos seleccionados. Un tour guiado es una buena opción si deseas conocimiento local y una aventura estructurada.' : 'An ATV rental gives you more independence to plan your own route, while an ATV tour typically includes a guided experience along selected trails. A guided tour is a good option if you want local knowledge and a structured adventure.'
+          }
+        }
+      ]
+    })
+  }}
+/>
 
           
 
