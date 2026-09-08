@@ -1399,12 +1399,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: '0 auto 2.5rem auto',
           }}>
             {lang === 'en' 
-              ? 'Whether you are visiting San Miguel for the first time or returning to discover something new, San Miguel de Allende tours with Guey Tours can help you experience the destination beyond the expected.' 
-              : 'Ya sea que visites San Miguel por primera vez o regreses para descubrir algo nuevo, los tours por San Miguel de Allende con Guey Tours pueden ayudarte a experimentar el destino más allá de lo esperado.'}
+              ? 'If youre ready to explore beyond the historic center, reserve your RZR and discover a more adventurous side of San Miguel de Allende.' 
+              : 'Si estás listo para explorar más allá del centro histórico, reserva tu RZR y descubre un lado más aventurero de San Miguel de Allende.  '}
           </p>
 
           <a
-            href="https://www.gueytours.com/contact"
+            href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
             style={{
               display: 'inline-block',
               background: 'var(--orange, #d97736)',
@@ -1421,7 +1421,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               transition: 'transform 0.2s, background 0.2s',
             }}
           >
-            {lang === 'en' ? 'PLAN YOUR ADVENTURE' : 'PLANEA TU AVENTURA'}
+            {lang === 'en' ? 'CONTACT US' : 'CONTACTANOS'}
           </a>
 
         </div>
