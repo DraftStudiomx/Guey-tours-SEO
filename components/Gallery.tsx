@@ -18,9 +18,10 @@ type GalleryImage = {
 type Props = {
   images: GalleryImage[]
   showSeeAll?: boolean
+  showHeader?: boolean // <-- Nueva prop para controlar si se muestra el título interno
 }
 
-export default function Gallery({ images, showSeeAll = true }: Props) {
+export default function Gallery({ images, showSeeAll = true, showHeader = true }: Props) {
   const { lang, t } = useLang()
   const [lightbox, setLightbox] = useState<string | null>(null)
   useScrollReveal()
@@ -36,21 +37,24 @@ export default function Gallery({ images, showSeeAll = true }: Props) {
         }}
       >
         <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 2rem' }}>
-          {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
-            <div style={{
-              fontFamily: 'var(--font-heading)',
-              color: 'var(--orange)',
-              fontSize: '0.85rem',
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase',
-              marginBottom: '0.5rem',
-            }}>
-              ——— {t('gallery.subtitle')} ———
+          
+          {/* Header condicional: solo se muestra si showHeader es true */}
+          {showHeader && (
+            <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
+              <div style={{
+                fontFamily: 'var(--font-heading)',
+                color: 'var(--orange)',
+                fontSize: '0.85rem',
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                marginBottom: '0.5rem',
+              }}>
+                ——— {t('gallery.subtitle')} ———
+              </div>
+              <h2 className="section-heading">{t('gallery.title')}</h2>
+              <div className="section-divider" style={{ marginTop: '1rem' }} />
             </div>
-            <h2 className="section-heading">{t('gallery.title')}</h2>
-            <div className="section-divider" style={{ marginTop: '1rem' }} />
-          </div>
+          )}
 
           {/* Masonry-style grid */}
           <div style={{
