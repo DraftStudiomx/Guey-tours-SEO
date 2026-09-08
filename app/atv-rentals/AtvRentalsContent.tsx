@@ -1186,7 +1186,7 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA QUINTA SECCIÓN --- */}
 
 
-          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Grid Forzado 2x2) --- */}
+          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Completa y Corregida) --- */}
 <div style={{ marginTop: '7rem', width: '100%', padding: '0 1rem' }}>
   
   <div style={{
@@ -1201,7 +1201,7 @@ export default function AtvRentalsContent() {
     padding: '3rem 2rem'
   }}>
     
-    {/* Imagen de fondo con opacidad y efecto visual */}
+    {/* Imagen de fondo principal */}
     <div style={{
       position: 'absolute',
       top: 0,
@@ -1213,6 +1213,14 @@ export default function AtvRentalsContent() {
       backgroundPosition: 'center',
       zIndex: 1
     }} />
+
+    {/* Etiqueta img oculta para cumplir con Alt y Title requeridos */}
+    <img 
+      src="images/ATV Rentals Sightseeing in San Miguel de Allende.webp" 
+      alt="A person in a helmet and goggles rides a blue Yamaha ATV in front of the Parroquia de San Miguel Arcángel." 
+      title="ATV Rentals Sightseeing in San Miguel de Allende"
+      style={{ display: 'none' }}
+    />
 
     {/* Contenido en la parte superior del fondo */}
     <div style={{ position: 'relative', zIndex: 2 }}>
@@ -1250,7 +1258,7 @@ export default function AtvRentalsContent() {
         }} />
       </div>
 
-      {/* Grid de Requisitos forzado a 2 columnas */}
+      {/* Grid de Requisitos forzado a 2 columnas (2x2) */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
@@ -1333,7 +1341,7 @@ export default function AtvRentalsContent() {
 
       </div>
 
-      {/* Tarjeta Inferior: Capacidades y RSZ rentals (Centrada) */}
+      {/* Tarjeta Inferior: Capacidades y RSZ rentals (Centrada y sin subrayado en enlace) */}
       <div style={{
         marginTop: '1.8rem',
         background: 'rgba(20, 20, 20, 0.85)',
@@ -1352,7 +1360,11 @@ export default function AtvRentalsContent() {
           {lang === 'es' ? 'Motos (2 pax), Cuatrimotos (2 pax) y Defender (6 pax). Alineamos estándares con proveedores confiables como' : 'Motorbikes (2 pax), Quads (2 pax), and Defender (6 pax). We align standards with trusted providers like'}{' '}
           <a 
             href="https://www.gueytours.com/rsz-rentals/" 
-            style={{ color: 'var(--orange, #d97736)', textDecoration: 'none !important', fontWeight: 'bold', borderBottom: '1px dotted var(--orange, #d97736)' }}
+            style={{ 
+              color: 'var(--orange, #d97736)', 
+              textDecoration: 'none', 
+              fontWeight: 'bold' 
+            }}
             target="_blank"
             rel="noopener noreferrer"
           >
