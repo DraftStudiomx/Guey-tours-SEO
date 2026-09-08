@@ -173,7 +173,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
          {/* Inicio de section dos */}
 <section style={{
-  padding: '6rem 2rem',
+  padding: '6rem 2rem 6rem 2rem',
+  marginTop: '3rem',
   background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
   color: '#fff',
   fontFamily: 'sans-serif',
@@ -219,23 +220,26 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       backdropFilter: 'blur(10px)'
     }}>
       <p style={{
-        fontSize: '1.15rem',
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
         lineHeight: 1.8,
-        color: 'rgba(255, 255, 255, 0.95)',
-        margin: '0 0 1.5rem 0',
-        fontWeight: 300
+        margin: '0 0 1.5rem 0'
       }}>
         {lang === 'es'
           ? 'Un viaje a San Miguel de Allende puede ser mucho más que caminar por sus calles históricas. Guey Tours ofrece experiencias diseñadas para ayudar a viajeros internacionales a descubrir los paisajes y alrededores de San Miguel a través de la aventura y la exploración.'
           : 'A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.'}
       </p>
       <p style={{
-        fontSize: '1.1rem',
-        lineHeight: 1.8,
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
         color: 'rgba(255, 255, 255, 0.85)',
-        margin: 0,
-        fontWeight: 300,
-        fontStyle: 'italic'
+        fontSize: '18px',
+        lineHeight: 1.8,
+        margin: 0
       }}>
         {lang === 'es'
           ? 'En lugar de seguir solo las rutas turísticas convencionales, estas experiencias guiadas te llevan a zonas donde puedes experimentar:'
@@ -303,9 +307,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             0{index + 1}
           </div>
           <span style={{
-            fontSize: '1.05rem',
-            color: '#fff',
-            fontWeight: 500,
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '18px',
             lineHeight: 1.4
           }}>
             {lang === 'es' ? item.es : item.en}
@@ -324,19 +330,21 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       textAlign: 'center'
     }}>
       <p style={{
-        fontSize: '1.15rem',
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
         lineHeight: 1.8,
-        color: '#fff',
-        margin: 0,
-        fontWeight: 400
+        margin: 0
       }}>
         <strong style={{ 
           color: 'var(--orange, #d97736)', 
           textTransform: 'uppercase', 
           display: 'block', 
-          marginBottom: '0.5rem', 
+          marginBottom: '0.8rem', 
           letterSpacing: '0.08em', 
-          fontSize: '0.9rem' 
+          fontSize: '0.95rem' 
         }}>
           {lang === 'es' ? 'La Diferencia Local' : 'The Local Difference'}
         </strong>
