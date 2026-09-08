@@ -1897,7 +1897,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
         <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 2rem' }}>
           {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 className="section-heading" style={{ color: '#fff', fontFamily: 'var(--font-heading)' }}>
               {lang === 'es' ? 'Contáctanos' : 'Get in touch'}
             </h2>
@@ -1913,7 +1913,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           className="contact-grid"
           >
             {/* Info side */}
-            <div className="reveal-left">
+            <div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.8rem' }}>
                 {[
                   {
@@ -1978,7 +1978,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             </div>
 
             {/* Form side */}
-            <div className="reveal-right">
+            <div>
               {sent ? (
                 <div style={{
                   background: 'rgba(232,84,26,0.1)',
