@@ -9,6 +9,16 @@ import Footer from '@/components/Footer'
 export default function AtvRentalsContent() {
   const { lang } = useLang()
 
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [sent, setSent] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSent(true)
+    setForm({ name: '', email: '', message: '' })
+    setTimeout(() => setSent(false), 5000)
+  }
+
 const [openIndex, setOpenIndex] = useState<number | null>(null)
   const toggle = (i: number) => setOpenIndex(prev => prev === i ? null : i)
 
@@ -1888,7 +1898,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
             <h2 className="section-heading" style={{ color: '#fff', fontFamily: 'var(--font-heading)' }}>
-              {t ? t('contact.title') : (lang === 'es' ? 'Contáctanos' : 'Get in touch')}
+              {lang === 'es' ? 'Contáctanos' : 'Get in touch'}
             </h2>
             <div className="section-divider" style={{ marginTop: '1rem' }} />
           </div>
@@ -1907,7 +1917,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                 {[
                   {
                     icon: MapPin,
-                    label: t ? t('contact.address') : (lang === 'es' ? 'San Miguel de Allende, Gto.' : 'San Miguel de Allende, Gto.'),
+                    label: lang === 'es' ? 'San Miguel de Allende, Gto.' : 'San Miguel de Allende, Gto.',
                   },
                   {
                     icon: Mail,
@@ -1987,7 +1997,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                   <input
                     type="text"
-                    placeholder={t ? t('contact.name') : (lang === 'es' ? 'Tu nombre' : 'Your Name')}
+                    placeholder={lang === 'es' ? 'Tu nombre' : 'Your Name'}
                     value={form.name}
                     onChange={e => setForm({ ...form, name: e.target.value })}
                     required
@@ -2007,7 +2017,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                   />
                   <input
                     type="email"
-                    placeholder={t ? t('contact.email') : (lang === 'es' ? 'Tu correo electrónico' : 'Your Email')}
+                    placeholder={lang === 'es' ? 'Tu correo electrónico' : 'Your Email'}
                     value={form.email}
                     onChange={e => setForm({ ...form, email: e.target.value })}
                     required
@@ -2026,7 +2036,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                     onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
                   />
                   <textarea
-                    placeholder={t ? t('contact.message') : (lang === 'es' ? 'Tu mensaje' : 'Your Message')}
+                    placeholder={lang === 'es' ? 'Tu mensaje' : 'Your Message'}
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
                     required
@@ -2047,7 +2057,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                     onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
                   />
                   <button type="submit" className="btn-orange" style={{ cursor: 'pointer', border: 'none', width: '100%', textAlign: 'center', padding: '1rem', borderRadius: '4px', fontWeight: 'bold' }}>
-                    {t ? t('contact.send') : (lang === 'es' ? 'Enviar Mensaje' : 'Send Message')}
+                    {lang === 'es' ? 'Enviar Mensaje' : 'Send Message'}
                   </button>
                 </form>
               )}
