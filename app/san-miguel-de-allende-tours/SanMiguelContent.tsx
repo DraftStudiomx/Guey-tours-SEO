@@ -173,141 +173,178 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           {/* Inicio de section dos */}
 <section style={{
-  padding: '5rem 2rem',
-  background: 'var(--dark, #0b0b0b)',
+  padding: '6rem 2rem',
+  background: 'radial-gradient(circle at top right, rgba(217, 119, 54, 0.08), transparent 50%), var(--dark, #0b0b0b)',
   color: '#fff',
-  fontFamily: 'sans-serif'
+  fontFamily: 'sans-serif',
+  position: 'relative',
+  overflow: 'hidden'
 }}>
   <div style={{
     maxWidth: '1100px',
     margin: '0 auto'
   }}>
-    <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
       <span style={{
         fontFamily: 'var(--font-heading)',
         color: 'var(--orange, #d97736)',
-        fontSize: '0.9rem',
-        letterSpacing: '0.2em',
+        fontSize: '0.95rem',
+        letterSpacing: '0.25em',
         textTransform: 'uppercase',
-        display: 'block',
-        marginBottom: '0.8rem'
+        display: 'inline-block',
+        marginBottom: '0.8rem',
+        padding: '0.4rem 1rem',
+        background: 'rgba(217, 119, 54, 0.1)',
+        borderRadius: '50px',
+        border: '1px solid rgba(217, 119, 54, 0.2)'
       }}>
-        {lang === 'es' ? '★ Descubre Más Allá' : '★ Discover Beyond'}
+        {lang === 'es' ? '★ Experiencia Única' : '★ Unique Experience'}
       </span>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: '2.5rem',
+        fontSize: 'clamp(2rem, 4vw, 2.8rem)',
         color: '#fff',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
-        margin: 0
+        margin: 0,
+        textShadow: '0 2px 10px rgba(0,0,0,0.5)'
       }}>
         Explore San Miguel de Allende With Guey Tours
       </h2>
     </div>
 
     <p style={{
-      fontSize: '1.15rem',
-      lineHeight: 1.7,
+      fontSize: '1.2rem',
+      lineHeight: 1.8,
       color: 'rgba(255, 255, 255, 0.9)',
       textAlign: 'center',
-      maxWidth: '850px',
-      margin: '0 auto 3.5rem auto'
+      maxWidth: '900px',
+      margin: '0 auto 4rem auto',
+      fontWeight: 300
     }}>
       A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.
     </p>
 
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '2rem',
-      alignItems: 'center'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '2.5rem',
+      alignItems: 'stretch'
     }}>
+      {/* Tarjeta 1: Grid de elementos estilizados tipo badges modernos */}
       <div style={{
-        background: 'rgba(255, 255, 255, 0.03)',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        padding: '2.5rem',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01))',
+        border: '1px solid rgba(217, 119, 54, 0.25)',
+        borderRadius: '20px',
+        padding: '3rem 2.5rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
       }}>
-        <h3 style={{
-          fontFamily: 'var(--font-heading)',
-          color: 'var(--orange, #d97736)',
-          fontSize: '1.3rem',
-          textTransform: 'uppercase',
-          marginBottom: '1.5rem',
-          letterSpacing: '0.05em'
+        <div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            color: 'var(--orange, #d97736)',
+            fontSize: '1.4rem',
+            textTransform: 'uppercase',
+            marginBottom: '1.2rem',
+            letterSpacing: '0.05em'
+          }}>
+            {lang === 'es' ? 'Rutas Fuera de lo Común' : 'Off-The-Beaten-Path'}
+          </h3>
+          <p style={{
+            color: 'rgba(255, 255, 255, 0.75)',
+            fontSize: '1.05rem',
+            marginBottom: '2rem',
+            lineHeight: 1.6
+          }}>
+            Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience:
+          </p>
+        </div>
+        
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '0.8rem'
         }}>
-          {lang === 'es' ? 'Rutas Fuera de lo Común' : 'Off-The-Beaten-Path'}
-        </h3>
-        <p style={{
-          color: 'rgba(255, 255, 255, 0.8)',
-          fontSize: '1rem',
-          marginBottom: '1.5rem',
-          lineHeight: 1.6
-        }}>
-          Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience:
-        </p>
-        <ul style={{
-          listStyle: 'none',
-          padding: 0,
-          margin: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.8rem',
-          color: '#fff',
-          fontSize: '0.95rem'
-        }}>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Nature and open landscapes
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Rural roads and off-road trails
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Scenic viewpoints
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Adventure activities
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Local communities and surrounding areas
-          </li>
-          <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)' }}>✔</span> Unique perspectives of the region
-          </li>
-        </ul>
+          {[
+            'Nature and open landscapes',
+            'Rural roads and off-road trails',
+            'Scenic viewpoints',
+            'Adventure activities',
+            'Local communities and surrounding areas',
+            'Unique perspectives of the region'
+          ].map((item, index) => (
+            <div key={index} style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '1rem',
+              background: 'rgba(217, 119, 54, 0.06)',
+              padding: '0.9rem 1.2rem',
+              borderRadius: '12px',
+              border: '1px solid rgba(217, 119, 54, 0.15)',
+              transition: 'all 0.3s ease'
+            }}>
+              <span style={{ 
+                color: 'var(--orange, #d97736)', 
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                lineHeight: 1
+              }}>✦</span> 
+              <span style={{ color: '#fff', fontSize: '0.95rem', fontWeight: 500 }}>{item}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
+      {/* Tarjeta 2: Conocimiento local destacada */}
       <div style={{
-        background: 'rgba(217, 119, 54, 0.05)',
+        background: 'linear-gradient(145deg, rgba(217, 119, 54, 0.08), rgba(15, 15, 15, 0.8))',
         border: '2px solid var(--orange, #d97736)',
-        borderRadius: '16px',
-        padding: '2.5rem',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        borderRadius: '20px',
+        padding: '3rem 2.5rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6), inset 0 0 20px rgba(217, 119, 54, 0.05)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        height: '100%'
+        position: 'relative',
+        overflow: 'hidden'
       }}>
-        <h3 style={{
+        <div style={{
+          position: 'absolute',
+          top: '-20px',
+          right: '-20px',
+          fontSize: '8rem',
+          color: 'rgba(217, 119, 54, 0.03)',
           fontFamily: 'var(--font-heading)',
-          color: '#fff',
-          fontSize: '1.5rem',
-          textTransform: 'uppercase',
-          marginBottom: '1.2rem',
-          letterSpacing: '0.05em'
+          zIndex: 0,
+          pointerEvents: 'none'
         }}>
-          {lang === 'es' ? 'Conocimiento Local Auténtico' : 'Authentic Local Knowledge'}
-        </h3>
-        <p style={{
-          color: 'rgba(255, 255, 255, 0.9)',
-          fontSize: '1.05rem',
-          lineHeight: 1.7,
-          margin: 0
-        }}>
-          The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.
-        </p>
+          ★
+        </div>
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            color: '#fff',
+            fontSize: '1.6rem',
+            textTransform: 'uppercase',
+            marginBottom: '1.5rem',
+            letterSpacing: '0.05em',
+            lineHeight: 1.3
+          }}>
+            {lang === 'es' ? 'Conocimiento Local Auténtico' : 'Authentic Local Knowledge'}
+          </h3>
+          <p style={{
+            color: 'rgba(255, 255, 255, 0.95)',
+            fontSize: '1.15rem',
+            lineHeight: 1.8,
+            margin: 0,
+            fontWeight: 300
+          }}>
+            The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.
+          </p>
+        </div>
       </div>
     </div>
   </div>
