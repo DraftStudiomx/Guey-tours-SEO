@@ -1194,94 +1194,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 {/* --- FIN DE LA SEXTA SECCIÓN --- */}
           
 
-{/* --- SEPTIMA SECCIÓN: Call to Action (CTA) --- */}
-<section
-  style={{
-    background: 'linear-gradient(180deg, #0b0b0b 0%, #141414 100%)',
-    padding: '8rem 0 6rem 0',
-    position: 'relative',
-    textAlign: 'center',
-    overflow: 'hidden',
-  }}
->
-  {/* Elemento decorativo de fondo */}
-  <div style={{
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '500px',
-    height: '500px',
-    background: 'radial-gradient(circle, rgba(217, 119, 54, 0.08) 0%, transparent 70%)',
-    pointerEvents: 'none',
-  }} />
-
-  <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem', position: 'relative', zIndex: 1 }}>
-    
-    <div style={{
-      fontFamily: 'var(--font-heading)',
-      color: 'var(--orange, #d97736)',
-      fontSize: '0.85rem',
-      letterSpacing: '0.3em',
-      textTransform: 'uppercase',
-      marginBottom: '0.75rem',
-    }}>
-      ——— {lang === 'es' ? 'Planifica Tu Aventura' : 'Plan Your Adventure'} ———
-    </div>
-
-    <h2 style={{
-      fontFamily: 'var(--font-heading)',
-      fontSize: 'clamp(2rem, 4vw, 3rem)',
-      color: '#fff',
-      fontWeight: 800,
-      lineHeight: 1.2,
-      marginBottom: '1.5rem',
-      textTransform: 'uppercase',
-    }}>
-      {lang === 'es' ? 'Reserva tu aventura hoy y vive la experiencia' : 'Book your adventure today and live the experience'}
-    </h2>
-
-    <p style={{
-      fontFamily: 'var(--font-body)',
-      fontSize: '1.1rem',
-      color: 'rgba(255, 255, 255, 0.75)',
-      lineHeight: 1.6,
-      maxWidth: '650px',
-      margin: '0 auto 2.5rem auto',
-    }}>
-      {lang === 'es' 
-        ? 'Ya sea que visites San Miguel por primera vez o regreses para descubrir algo nuevo, los tours por San Miguel de Allende con Guey Tours pueden ayudarte a experimentar el destino más allá de lo esperado.' 
-        : 'Whether you are visiting San Miguel for the first time or returning to discover something new, San Miguel de Allende tours with Guey Tours can help you experience the destination beyond the expected.'}
-    </p>
-
-    <a
-      href="https://www.gueytours.com/contact"
-      style={{
-        display: 'inline-block',
-        background: 'var(--orange, #d97736)',
-        color: '#fff',
-        fontFamily: 'var(--font-heading)',
-        fontSize: '1rem',
-        textTransform: 'uppercase',
-        padding: '1rem 2.5rem',
-        borderRadius: '50px',
-        textDecoration: 'none',
-        letterSpacing: '0.08em',
-        fontWeight: 'bold',
-        boxShadow: '0 0 25px rgba(217, 119, 54, 0.4)',
-        transition: 'transform 0.2s, background 0.2s',
-      }}
-      onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }}
-      onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
-    >
-      {lang === 'es' ? 'PLANEA TU AVENTURA' : 'PLAN YOUR ADVENTURE'}
-    </a>
-
-  </div>
-</section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA SEPTIMA SECCIÓN */}
 
 
-          {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+          {/* --- SEPTIMA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
       <section
         id="faq"
         style={{
@@ -1433,9 +1348,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
 
         </div>
-      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA OCTAVA SECCIÓN */}
+      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA SEPTIMA SECCIÓN */}
 
-          {/* --- NOVENA SECCIÓN: Call to Action (CTA) --- */}
+          {/* --- OCTAVA SECCIÓN: Call to Action (CTA) --- */}
       <section
         style={{
           background: 'linear-gradient(180deg, #0b0b0b 0%, #141414 100%)',
@@ -1491,12 +1406,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: '0 auto 2.5rem auto',
           }}>
             {lang === 'en' 
-              ? 'Secure your spot now and explore the best off-road trails with professional guides and top-tier equipment.' 
-              : 'Asegura tu lugar ahora y explora los mejores senderos todo terreno con guías profesionales y equipo de primera.'}
+              ? 'Whether you are visiting San Miguel for the first time or returning to discover something new, San Miguel de Allende tours with Guey Tours can help you experience the destination beyond the expected.' 
+              : 'Ya sea que visites San Miguel por primera vez o regreses para descubrir algo nuevo, los tours por San Miguel de Allende con Guey Tours pueden ayudarte a experimentar el destino más allá de lo esperado.'}
           </p>
 
           <a
-            href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
+            href="https://www.gueytours.com/contact"
             style={{
               display: 'inline-block',
               background: 'var(--orange, #d97736)',
@@ -1513,11 +1428,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               transition: 'transform 0.2s, background 0.2s',
             }}
           >
-            {lang === 'en' ? 'Contact us on WhatsApp' : 'Contáctanos por WhatsApp'}
+            {lang === 'en' ? 'PLAN YOUR ADVENTURE' : 'PLANEA TU AVENTURA'}
           </a>
 
         </div>
-      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA NOVENA SECCIÓN */}
+      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA OCTAVA SECCIÓN */}
 
 
           {/* --- DÉCIMA SECCIÓN: Contacto y Formulario --- */}
