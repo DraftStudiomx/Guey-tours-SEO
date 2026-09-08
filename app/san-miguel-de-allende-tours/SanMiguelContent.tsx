@@ -763,93 +763,109 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
 
-         {/* Quinta sección: Adventure Experiences en formato editorial fluido */}
+         {/* Quinta sección: 3 columnas horizontales compactas (Cero scroll excesivo, sin tarjetas) */}
 <div style={{
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  gap: '4rem',
   marginTop: '6rem',
   padding: '2rem 0',
   borderTop: '1px solid rgba(255, 255, 255, 0.08)'
 }}>
-  {/* Columna Izquierda: Título Principal */}
-  <div style={{ flex: '1', minWidth: '280px', position: 'relative' }}>
-    <div style={{ position: 'sticky', top: '2rem' }}>
-      <h2 style={{
-        fontFamily: 'var(--font-heading)',
-        fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
-        color: 'var(--orange, #d97736)',
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-        lineHeight: 1.2,
-        margin: 0
-      }}>
-        {lang === 'es' ? 'Experiencias de Aventura en San Miguel de Allende' : 'Adventure Experiences in San Miguel de Allende'}
-      </h2>
-    </div>
+  {/* Título Principal Centrado Arriba */}
+  <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+    <h2 style={{
+      fontFamily: 'var(--font-heading)',
+      fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
+      color: 'var(--orange, #d97736)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      lineHeight: 1.2,
+      margin: 0
+    }}>
+      {lang === 'es' ? 'Experiencias de Aventura en San Miguel de Allende' : 'Adventure Experiences in San Miguel de Allende'}
+    </h2>
   </div>
 
-  {/* Columna Derecha: Los 3 bloques con H3 y párrafos largos (con su botón respectivo) */}
-  <div style={{ flex: '1.5', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+  {/* Contenedor de 3 Columnas */}
+  <div style={{
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: '2.5rem',
+    justifyContent: 'space-between'
+  }}>
     
-    {/* Bloque 1: ATV Adventures */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', borderLeft: '2px solid var(--orange, #d97736)', paddingLeft: '1.5rem' }}>
+    {/* Columna 1: ATV Adventures */}
+    <div style={{ 
+      flex: '1 1 30%', 
+      minWidth: '280px', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: '0.8rem', 
+      borderLeft: '2px solid var(--orange, #d97736)', 
+      paddingLeft: '1.2rem' 
+    }}>
       <h3 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: '1.3rem',
+        fontSize: '1.2rem',
         color: 'var(--orange, #d97736)',
         margin: 0
       }}>
         {lang === 'es' ? 'Aventuras en ATV' : 'ATV Adventures'}
       </h3>
-      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Las experiencias en ATV están diseñadas para viajeros que quieren explorar el aire libre mientras disfrutan de una emocionante aventura todoterreno.'
           : 'ATV experiences are designed for travelers who want to explore the outdoors while enjoying an exciting off-road adventure.'}
       </p>
-      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Si prefieres rentar una cuatrimoto y explorar según tus propios planes, también puedes conocer más sobre la renta de ATV en San Miguel de Allende.'
           : 'If you prefer to rent an ATV and explore according to your own plans, you can also learn more about ATV rentals in San Miguel de Allende.'}
       </p>
     </div>
 
-    {/* Bloque 2: RZR Adventures (Con su Botón de RZR Rentals) */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', borderLeft: '2px solid rgba(255,255,255,0.2)', paddingLeft: '1.5rem' }}>
+    {/* Columna 2: RZR Adventures */}
+    <div style={{ 
+      flex: '1 1 30%', 
+      minWidth: '280px', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: '0.8rem', 
+      borderLeft: '2px solid rgba(255,255,255,0.2)', 
+      paddingLeft: '1.2rem' 
+    }}>
       <h3 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: '1.3rem',
+        fontSize: '1.2rem',
         color: 'var(--orange, #d97736)',
         margin: 0
       }}>
         {lang === 'es' ? 'Aventuras en RZR' : 'RZR Adventures'}
       </h3>
-      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Las experiencias en RZR ofrecen otra forma emocionante de explorar la región. Con un vehículo todoterreno potente y rutas rodeadas de naturaleza, puedes experimentar los paisajes de San Miguel más allá de la ciudad.'
           : 'RZR experiences provide another exciting way to explore the region. With a powerful off-road vehicle and routes surrounded by nature, you can experience the landscapes of San Miguel beyond the city.'}
       </p>
-      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Si buscas específicamente opciones de renta de vehículos, explora las rentas de RZR disponibles en San Miguel de Allende.'
           : 'If you are specifically looking for vehicle rental options, explore the RZR rentals available in San Miguel de Allende.'}
       </p>
       
       {/* Botón de RZR Rentals */}
-      <div style={{ paddingTop: '0.5rem' }}>
+      <div style={{ paddingTop: '0.3rem' }}>
         <a href="https://www.gueytours.com/rsz-rentals" style={{
           display: 'inline-block',
           background: 'transparent',
           color: 'var(--orange, #d97736)',
           border: '2px solid var(--orange, #d97736)',
-          padding: '0.6rem 1.5rem',
+          padding: '0.5rem 1.2rem',
           borderRadius: '50px',
           fontWeight: 'bold',
           fontFamily: 'var(--font-heading)',
           textDecoration: 'none',
           textTransform: 'uppercase',
-          fontSize: '0.8rem',
+          fontSize: '0.75rem',
           letterSpacing: '0.08em',
           transition: 'all 0.3s ease'
         }}
@@ -861,22 +877,30 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </div>
     </div>
 
-    {/* Bloque 3: Private Experiences */}
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', borderLeft: '2px solid rgba(255,255,255,0.2)', paddingLeft: '1.5rem' }}>
+    {/* Columna 3: Private Experiences */}
+    <div style={{ 
+      flex: '1 1 30%', 
+      minWidth: '280px', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: '0.8rem', 
+      borderLeft: '2px solid rgba(255,255,255,0.2)', 
+      paddingLeft: '1.2rem' 
+    }}>
       <h3 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: '1.3rem',
+        fontSize: '1.2rem',
         color: 'var(--orange, #d97736)',
         margin: 0
       }}>
         {lang === 'es' ? 'Experiencias Privadas' : 'Private Experiences'}
       </h3>
-      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Las experiencias privadas son ideales cuando quieres disfrutar de una aventura con tu propio grupo. Parejas, familias, amigos y grupos privados pueden elegir una experiencia que se adapte mejor a sus intereses y horarios.'
           : 'Private experiences are ideal when you want to enjoy an adventure with your own group. Couples, families, friends and private groups can choose an experience that better fits their interests and schedule.'}
       </p>
-      <p style={{ margin: 0, lineHeight: 1.8, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Con un servicio personalizado y guías locales, tu aventura puede convertirse en una parte más memorable de tu viaje a San Miguel de Allende.'
           : 'With personalized service and local guides, your adventure can become a more memorable part of your trip to San Miguel de Allende.'}
