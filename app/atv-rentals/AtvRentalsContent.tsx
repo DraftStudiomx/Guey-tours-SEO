@@ -1649,7 +1649,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem' }}>
 
           {/* Encabezado */}
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{
               fontFamily: 'var(--font-heading)',
               color: 'var(--orange)',
@@ -1701,12 +1701,10 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               return (
                 <div
                   key={i}
-                  className="reveal"
                   style={{
                     background: isOpen ? 'rgba(232,84,26,0.06)' : 'rgba(255,255,255,0.03)',
                     border: `1px solid ${isOpen ? 'rgba(232,84,26,0.35)' : 'rgba(255,255,255,0.07)'}`,
                     transition: 'background 0.3s, border-color 0.3s',
-                    transitionDelay: `${i * 0.04}s`,
                   }}
                 >
                   <button
