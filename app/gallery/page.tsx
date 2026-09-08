@@ -21,7 +21,7 @@ export default async function GalleryPage() {
       <Navbar />
       <main style={{ paddingTop: '120px', background: 'var(--charcoal)', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* Encabezado y Textos descriptivos */}
+        {/* Tu sección de encabezado con tu nuevo H1 y textos */}
         <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 2rem 4rem 2rem', textAlign: 'center' }}>
           
           <div style={{
@@ -32,9 +32,10 @@ export default async function GalleryPage() {
             textTransform: 'uppercase',
             marginBottom: '0.5rem',
           }}>
-            ——— MOMENTS FROM THE TRAIL ———
+            ——— GUEY TOURS EXPERIENCE ———
           </div>
 
+          {/* Este es tu H1 principal y único */}
           <h1 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
@@ -91,7 +92,7 @@ export default async function GalleryPage() {
           </Link>
         </div>
 
-        {/* Galería de imágenes */}
+        {/* Las puras fotos de la galería abajo */}
         <Gallery images={images} showSeeAll={false} />
       </main>
       <Footer />
