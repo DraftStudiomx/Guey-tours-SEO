@@ -100,7 +100,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               color: '#fff',
               margin: '0 0 0.8rem 0',
             }}>
-              {lang === 'es' ? 'San Miguel de Allende Tours' : 'San Miguel de Allende Tours'}
+              {lang === 'es' ? 'Alquiler de RZR en San Miguel de Allende' : 'RZR Rentals in San Miguel de Allende'}
             </h1>
 
             <div style={{
@@ -116,25 +116,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>Descubre San Miguel de Allende desde una perspectiva diferente con Guey Tours. Ve más allá de la experiencia turística tradicional y explora paisajes naturales, caminos rurales, miradores panorámicos y aventuras al aire libre con guías locales que conocen el destino desde adentro.</>
+                <>Explora San Miguel de Allende más allá del centro de la ciudad con la renta de un RZR de Guey Tours. Disfruta de senderos todoterreno, caminos rurales y paisajes naturales mientras experimentas la libertad de conducir un potente vehículo utilitario (UTV).</>
               ) : (
-                <>Discover San Miguel de Allende from a different perspective with Guey Tours. Go beyond the traditional sightseeing experience and explore natural landscapes, rural roads, scenic viewpoints and outdoor adventures with local guides who know the destination from the inside.</>
+                <>Explore San Miguel de Allende beyond the city center with a RZR rental from Guey Tours. Experience off-road trails, rural roads and natural landscapes while enjoying the freedom of driving a powerful side-by-side vehicle.</>
               )}
             </p>
 
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>San Miguel de Allende es uno de los destinos más cautivadores de México, conocido por su colorida arquitectura colonial, sus calles empedradas, su vibrante escena cultural y su encanto histórico. Pero hay mucho más por descubrir más allá del centro de la ciudad.</>
+                <>San Miguel de Allende es famoso por su arquitectura colonial, sus calles históricas y su vibrante cultura, pero la región también ofrece emocionantes experiencias al aire libre. Con la renta de RZR en San Miguel de Allende, puedes descubrir una faceta diferente del destino y disfrutar de una aventura con tu pareja, familia o grupo de amigos.</>
               ) : (
-                <>San Miguel de Allende is one of Mexico’s most captivating destinations, known for its colorful colonial architecture, cobblestone streets, vibrant cultural scene and historic charm. But there is much more to discover beyond the city center.</>
-              )}
-            </p>
-
-            <p style={{ margin: 0 }}>
-              {lang === 'es' ? (
-                <>Con los tours en San Miguel de Allende de Guey Tours, los viajeros pueden combinar el turismo con la aventura, la naturaleza y experiencias locales auténticas.</>
-              ) : (
-                <>With San Miguel de Allende tours from Guey Tours, travelers can combine sightseeing with adventure, nature and authentic local experiences.</>
+                <>San Miguel de Allende is famous for its colonial architecture, historic streets and vibrant culture, but the region also offers exciting outdoor experiences. With RZR rentals in San Miguel de Allende, you can discover a different side of the destination and enjoy an adventure with your partner, family or group of friends.</>
               )}
             </p>
           </div>
@@ -142,7 +134,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           {/* Botón de contacto al final de la primera sección */}
           <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
             <a 
-              href="https://www.gueytours.com/contact" 
+              href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0" 
               style={{
                 display: 'inline-block',
                 background: 'transparent',
