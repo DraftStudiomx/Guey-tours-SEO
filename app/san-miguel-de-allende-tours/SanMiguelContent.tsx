@@ -174,82 +174,178 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
          {/* Inicio de section dos */}
 <section style={{
   padding: '6rem 2rem',
-  background: 'linear-gradient(180deg, var(--dark, #0b0b0b) 0%, rgba(217, 119, 54, 0.03) 100%)',
+  background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
   color: '#fff',
   fontFamily: 'sans-serif',
   position: 'relative'
 }}>
   <div style={{
-    maxWidth: '1000px',
+    maxWidth: '1100px',
     margin: '0 auto'
   }}>
-    {/* Título H2 en blanco puro */}
-    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+    
+    {/* Título H2 en color naranja cobrizo exacto */}
+    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
         fontSize: 'clamp(2.2rem, 4vw, 3rem)',
-        color: '#fff',
+        color: 'var(--orange, #d97736)',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
-        margin: 0,
+        margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        Explore San Miguel de Allende With Guey Tours
+        {lang === 'es' 
+          ? 'Explora San Miguel de Allende con Guey Tours' 
+          : 'Explore San Miguel de Allende With Guey Tours'}
       </h2>
+      <div style={{
+        width: '80px',
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        margin: '0 auto',
+        boxShadow: '0 0 12px var(--orange, #d97736)'
+      }} />
     </div>
 
-    {/* Contenedor principal con profundidad y borde izquierdo naranja */}
+    {/* Párrafo introductorio con bloque destacado */}
     <div style={{
-      position: 'relative',
       background: 'rgba(255, 255, 255, 0.02)',
-      borderRadius: '0 20px 20px 0',
-      borderLeft: '5px solid var(--orange, #d97736)',
-      padding: '3rem 3.5rem',
-      boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+      borderLeft: '4px solid var(--orange, #d97736)',
+      borderRadius: '0 16px 16px 0',
+      padding: '2.5rem 3rem',
+      marginBottom: '3.5rem',
+      boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
       backdropFilter: 'blur(10px)'
     }}>
-      {/* Primer párrafo introductorio */}
-      <p style={{
-        fontSize: '1.2rem',
-        lineHeight: 1.8,
-        color: 'rgba(255, 255, 255, 0.95)',
-        margin: '0 0 2rem 0',
-        fontWeight: 300
-      }}>
-        A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.
-      </p>
-
-      {/* Segundo bloque con los puntos integrados fluidamente pero con realce visual */}
       <p style={{
         fontSize: '1.15rem',
         lineHeight: 1.8,
-        color: 'rgba(255, 255, 255, 0.9)',
-        margin: '0 0 2.5rem 0',
+        color: 'rgba(255, 255, 255, 0.95)',
+        margin: '0 0 1.5rem 0',
         fontWeight: 300
       }}>
-        Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience <span style={{ color: '#fff', fontWeight: 500 }}>nature and open landscapes</span>, <span style={{ color: '#fff', fontWeight: 500 }}>rural roads and off-road trails</span>, <span style={{ color: '#fff', fontWeight: 500 }}>scenic viewpoints</span>, <span style={{ color: '#fff', fontWeight: 500 }}>adventure activities</span>, <span style={{ color: '#fff', fontWeight: 500 }}>local communities and surrounding areas</span>, and <span style={{ color: '#fff', fontWeight: 500 }}>unique perspectives of the region</span>.
+        {lang === 'es'
+          ? 'Un viaje a San Miguel de Allende puede ser mucho más que caminar por sus calles históricas. Guey Tours ofrece experiencias diseñadas para ayudar a viajeros internacionales a descubrir los paisajes y alrededores de San Miguel a través de la aventura y la exploración.'
+          : 'A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.'}
       </p>
-
-      {/* Bloque final destacado con fondo sutil */}
-      <div style={{
-        background: 'rgba(217, 119, 54, 0.08)',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '12px',
-        padding: '2rem 2.5rem',
-        marginTop: '2rem'
+      <p style={{
+        fontSize: '1.1rem',
+        lineHeight: 1.8,
+        color: 'rgba(255, 255, 255, 0.85)',
+        margin: 0,
+        fontWeight: 300,
+        fontStyle: 'italic'
       }}>
-        <p style={{
-          fontSize: '1.15rem',
-          lineHeight: 1.8,
-          color: '#fff',
-          margin: 0,
-          fontWeight: 400
-        }}>
-          <strong style={{ color: 'var(--orange, #d97736)', textTransform: 'uppercase', display: 'block', marginBottom: '0.5rem', letterSpacing: '0.05em', fontSize: '0.95rem' }}>The Local Difference:</strong>
-          The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.
-        </p>
-      </div>
+        {lang === 'es'
+          ? 'En lugar de seguir solo las rutas turísticas convencionales, estas experiencias guiadas te llevan a zonas donde puedes experimentar:'
+          : 'Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience:'}
+      </p>
     </div>
+
+    {/* Cuadrícula de tarjetas con las 6 experiencias */}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '1.5rem',
+      marginBottom: '3.5rem'
+    }}>
+      {[
+        {
+          es: 'Naturaleza y paisajes abiertos',
+          en: 'Nature and open landscapes'
+        },
+        {
+          es: 'Caminos rurales y rutas off-road',
+          en: 'Rural roads and off-road trails'
+        },
+        {
+          es: 'Miradores panorámicos',
+          en: 'Scenic viewpoints'
+        },
+        {
+          es: 'Actividades de aventura',
+          en: 'Adventure activities'
+        },
+        {
+          es: 'Comunidades locales y áreas circundantes',
+          en: 'Local communities and surrounding areas'
+        },
+        {
+          es: 'Perspectivas únicas de la región',
+          en: 'Unique perspectives of the region'
+        }
+      ].map((item, index) => (
+        <div key={index} style={{
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.03) 100%)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '14px',
+          padding: '2rem 1.8rem',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1.2rem',
+          transition: 'transform 0.3s ease, border-color 0.3s ease'
+        }}>
+          <div style={{
+            minWidth: '38px',
+            height: '38px',
+            borderRadius: '50%',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+            border: '1px solid rgba(217, 119, 54, 0.4)'
+          }}>
+            0{index + 1}
+          </div>
+          <span style={{
+            fontSize: '1.05rem',
+            color: '#fff',
+            fontWeight: 500,
+            lineHeight: 1.4
+          }}>
+            {lang === 'es' ? item.es : item.en}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    {/* Tarjeta de cierre sobre los guías locales */}
+    <div style={{
+      background: 'rgba(217, 119, 54, 0.07)',
+      border: '1px solid rgba(217, 119, 54, 0.4)',
+      borderRadius: '16px',
+      padding: '2.5rem 3rem',
+      boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
+      textAlign: 'center'
+    }}>
+      <p style={{
+        fontSize: '1.15rem',
+        lineHeight: 1.8,
+        color: '#fff',
+        margin: 0,
+        fontWeight: 400
+      }}>
+        <strong style={{ 
+          color: 'var(--orange, #d97736)', 
+          textTransform: 'uppercase', 
+          display: 'block', 
+          marginBottom: '0.5rem', 
+          letterSpacing: '0.08em', 
+          fontSize: '0.9rem' 
+        }}>
+          {lang === 'es' ? 'La Diferencia Local' : 'The Local Difference'}
+        </strong>
+        {lang === 'es'
+          ? 'La diferencia es el conocimiento local de los guías. Ellos conocen los caminos, paisajes y experiencias que pueden ayudar a los viajeros a descubrir otro lado del destino.'
+          : 'The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.'}
+      </p>
+    </div>
+
   </div>
 </section>
 {/* Fin de section dos */}
