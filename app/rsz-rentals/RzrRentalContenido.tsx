@@ -312,12 +312,26 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Cuadrícula de tarjetas con las 5 opciones */}
+    {/* Subtítulo para la sección de ideales */}
+    <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.4rem',
+        color: 'rgba(255, 255, 255, 0.9)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: 0
+      }}>
+        {lang === 'es' ? 'Las aventuras en RZR son ideales para:' : 'RZR adventures are ideal for:'}
+      </h3>
+    </div>
+
+    {/* Cuadrícula de tarjetas con las 5 opciones (primeras 3 en diseño normal) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
       gap: '1.5rem',
-      marginBottom: '3.5rem'
+      marginBottom: '1.5rem'
     }}>
       {[
         {
@@ -331,14 +345,6 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         {
           es: 'Grupos de amigos que buscan aventura',
           en: 'Groups of friends seeking adventure.'
-        },
-        {
-          es: 'Viajeros interesados en la conducción todoterreno',
-          en: 'Travelers interested in off-road driving.'
-        },
-        {
-          es: 'Visitantes que quieren descubrir paisajes más allá del centro histórico',
-          en: 'Visitors who want to discover landscapes beyond the historic center.'
         }
       ].map((item, index) => (
         <div key={index} style={{
@@ -375,7 +381,67 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             fontSize: '18px',
             lineHeight: 1.4
           }}>
-            {lang === 'es' ? 'Las aventuras en RZR son ideales para: ' + item.es : 'RZR adventures are ideal for: ' + item.en}
+            {lang === 'es' ? item.es : item.en}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    {/* Cuadrícula inferior para las últimas 2 tarjetas centradas automáticamente */}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '1.5rem',
+      marginBottom: '3.5rem',
+      justifyContent: 'center',
+      maxWidth: '750px',
+      marginInline: 'auto'
+    }}>
+      {[
+        {
+          es: 'Viajeros interesados en la conducción todoterreno',
+          en: 'Travelers interested in off-road driving.'
+        },
+        {
+          es: 'Visitantes que quieren descubrir paisajes más allá del centro histórico',
+          en: 'Visitors who want to discover landscapes beyond the historic center.'
+        }
+      ].map((item, index) => (
+        <div key={index + 3} style={{
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.03) 100%)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '14px',
+          padding: '2rem 1.8rem',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1.2rem',
+          transition: 'transform 0.3s ease, border-color 0.3s ease'
+        }}>
+          <div style={{
+            minWidth: '38px',
+            height: '38px',
+            borderRadius: '50%',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+            border: '1px solid rgba(217, 119, 54, 0.4)'
+          }}>
+            0{index + 4}
+          </div>
+          <span style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '18px',
+            lineHeight: 1.4
+          }}>
+            {lang === 'es' ? item.es : item.en}
           </span>
         </div>
       ))}
