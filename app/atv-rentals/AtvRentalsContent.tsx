@@ -1186,150 +1186,182 @@ export default function AtvRentalsContent() {
 {/* --- FIN DE LA QUINTA SECCIÓN --- */}
 
 
-          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Imagen Izquierda / Texto Derecha) --- */}
+          {/* --- SEXTA SECCIÓN: Who Can Rent an ATV? (Diseño Inmersivo con Imagen de Fondo y Grid) --- */}
 <div style={{ marginTop: '7rem', width: '100%', padding: '0 1rem' }}>
   
   <div style={{
     maxWidth: '1200px',
     margin: '0 auto',
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '3rem',
-    alignItems: 'center'
+    position: 'relative',
+    borderRadius: '20px',
+    overflow: 'hidden',
+    border: '1px solid rgba(217, 119, 54, 0.4)',
+    boxShadow: '0 25px 50px rgba(0,0,0,0.8)',
+    background: '#000',
+    padding: '3rem 2rem'
   }}>
-
-    {/* COLUMNA IZQUIERDA: Imagen nueva con diseño dinámico */}
+    
+    {/* Imagen de fondo con opacidad y efecto visual */}
     <div style={{
-      position: 'relative',
-      borderRadius: '16px',
-      overflow: 'hidden',
-      border: '1px solid rgba(217, 119, 54, 0.3)',
-      boxShadow: '0 20px 40px rgba(0,0,0,0.7)',
-      background: '#000'
-    }}>
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: '3px',
-        background: 'var(--orange, #d97736)',
-        boxShadow: '0 0 10px var(--orange, #d97736)',
-        zIndex: 2
-      }} />
-      <img 
-        src="images/ATV Rentals Sightseeing in San Miguel de Allende.webp" 
-        alt="A person in a helmet and goggles rides a blue Yamaha ATV in front of the Parroquia de San Miguel Arcángel." 
-        title="ATV Rentals Sightseeing in San Miguel de Allende"
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          display: 'block',
-          transition: 'transform 0.5s ease',
-          minHeight: '380px'
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.03)'}
-        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-      />
-    </div>
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("images/ATV Rentals Sightseeing in San Miguel de Allende.webp")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      zIndex: 1
+    }} />
 
-    {/* COLUMNA DERECHA: Contenido y Requisitos */}
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '1.5rem'
-    }}>
+    {/* Contenido en la parte superior del fondo */}
+    <div style={{ position: 'relative', zIndex: 2 }}>
       
-      {/* Encabezado */}
-      <div>
+      {/* Encabezado de la Sección */}
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 style={{
           fontFamily: 'var(--font-heading)',
-          fontSize: '2.3rem',
+          fontSize: '2.5rem',
           color: 'var(--orange, #d97736)',
           textTransform: 'uppercase',
           letterSpacing: '0.08em',
           margin: '0 0 0.8rem 0',
-          lineHeight: 1.2
         }}>
           {lang === 'es' ? '¿Quién Puede Rentar un ATV?' : 'Who Can Rent an ATV?'}
         </h2>
+        <p style={{
+          fontFamily: 'var(--font-body, sans-serif)',
+          fontSize: '1.05rem',
+          color: 'rgba(255, 255, 255, 0.85)',
+          maxWidth: '700px',
+          margin: '0 auto 1.5rem auto',
+          lineHeight: 1.6
+        }}>
+          {lang === 'es' 
+            ? 'Nos aseguramos de que todos disfruten de una experiencia segura, emocionante y protegida:' 
+            : 'We make sure everyone enjoys a safe, exciting, and secure experience:'}
+        </p>
         <div style={{
-          width: '80px',
+          width: '100px',
           height: '2px',
           background: 'var(--orange, #d97736)',
+          margin: '0 auto',
           boxShadow: '0 0 10px var(--orange, #d97736)'
         }} />
       </div>
 
-      <p style={{
-        fontFamily: 'var(--font-body, sans-serif)',
-        fontSize: '1.05rem',
-        color: 'rgba(255, 255, 255, 0.9)',
-        lineHeight: 1.6,
-        margin: 0
-      }}>
-        {lang === 'es' 
-          ? 'Nos aseguramos de que todos disfruten de una experiencia segura y protegida:' 
-          : 'We make sure everyone enjoys a safe and secure experience:'}
-      </p>
-
-      {/* Lista de Requisitos */}
+      {/* Grid de Requisitos en Tarjetas Flotantes */}
       <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '0.9rem'
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gap: '1.5rem'
       }}>
         
-        {/* Ítem 1 */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
-          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
-          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Edad Mínima:' : 'Minimum Age:'}</strong> {lang === 'es' ? 'Los conductores deben ser mayores de 18 años.' : 'Drivers must be over 18 years old.'}
-          </span>
+        {/* Tarjeta 1: Edad */}
+        <div style={{
+          background: 'rgba(15, 15, 15, 0.75)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '12px',
+          padding: '1.5rem',
+          backdropFilter: 'blur(6px)',
+          transition: 'all 0.3s ease'
+        }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>01</span>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+            {lang === 'es' ? 'Edad Mínima' : 'Minimum Age'}
+          </h3>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+            {lang === 'es' ? 'Los conductores deben ser mayores de 18 años.' : 'Drivers must be over 18 years old.'}
+          </p>
         </div>
 
-        {/* Ítem 2 */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
-          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
-          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Licencia de Conducir:' : "Driver's License:"}</strong> {lang === 'es' ? 'Se requiere una licencia de conducir vigente y válida.' : 'A valid and current driver\'s license is required.'}
-          </span>
+        {/* Tarjeta 2: Licencia */}
+        <div style={{
+          background: 'rgba(15, 15, 15, 0.75)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '12px',
+          padding: '1.5rem',
+          backdropFilter: 'blur(6px)',
+          transition: 'all 0.3s ease'
+        }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>02</span>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+            {lang === 'es' ? 'Licencia de Conducir' : "Driver's License"}
+          </h3>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+            {lang === 'es' ? 'Se requiere una licencia de conducir vigente y válida.' : 'A valid and current driver\'s license is required.'}
+          </p>
         </div>
 
-        {/* Ítem 3 */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
-          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
-          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Experiencia Previa:' : 'Prior Experience:'}</strong> {lang === 'es' ? '¡No se necesita experiencia previa! Proporcionamos instrucciones claras de manejo en el lugar.' : 'No previous experience needed! We provide clear driving instructions on-site.'}
-          </span>
+        {/* Tarjeta 3: Experiencia */}
+        <div style={{
+          background: 'rgba(15, 15, 15, 0.75)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '12px',
+          padding: '1.5rem',
+          backdropFilter: 'blur(6px)',
+          transition: 'all 0.3s ease'
+        }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>03</span>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+            {lang === 'es' ? 'Experiencia Previa' : 'Prior Experience'}
+          </h3>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+            {lang === 'es' ? '¡No se necesita experiencia previa! Instrucciones claras en el sitio.' : 'No previous experience needed! Clear driving instructions on-site.'}
+          </p>
         </div>
 
-        {/* Ítem 4 */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
-          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
-          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Seguridad y Cobertura:' : 'Safety & Coverage:'}</strong> {lang === 'es' ? 'Incluye casco, tanque lleno de combustible, orientación de manejo y seguro básico de gastos médicos.' : 'Included helmet, full tank of fuel, driving orientation, and basic medical expenses insurance.'}
-          </span>
+        {/* Tarjeta 4: Seguridad */}
+        <div style={{
+          background: 'rgba(15, 15, 15, 0.75)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '12px',
+          padding: '1.5rem',
+          backdropFilter: 'blur(6px)',
+          transition: 'all 0.3s ease'
+        }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>04</span>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+            {lang === 'es' ? 'Seguridad y Cobertura' : 'Safety & Coverage'}
+          </h3>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
+            {lang === 'es' ? 'Casco, tanque lleno, orientación y seguro médico básico incluidos.' : 'Helmet, full tank of fuel, orientation, and basic medical insurance.'}
+          </p>
         </div>
 
-        {/* Ítem 5 (Con enlace a RSZ rentals) */}
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
-          <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.1rem', fontWeight: 'bold' }}>✓</span>
-          <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-            <strong style={{ color: '#fff' }}>{lang === 'es' ? 'Capacidad de Pasajeros:' : 'Passenger Capacities:'}</strong> {lang === 'es' ? 'Motos (2 pasajeros), Cuatrimotos (2 pasajeros) y Defender (6 pasajeros). Alineamos nuestros estándares de servicio con proveedores confiables como' : 'Motorbikes (2 passengers), Quads (2 passengers), and Defender (6 passengers). We align our service standards with trusted providers like'}{' '}
+      </div>
+
+      {/* Tarjeta 5 Destacada: Capacidades y RSZ rentals (Con text-decoration none !important) */}
+      <div style={{
+        marginTop: '1.5rem',
+        background: 'rgba(20, 20, 20, 0.85)',
+        border: '1px solid rgba(217, 119, 54, 0.4)',
+        borderRadius: '12px',
+        padding: '1.8rem',
+        backdropFilter: 'blur(8px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        gap: '1rem'
+      }}>
+        <div style={{ flex: 1, minWidth: '280px' }}>
+          <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange, #d97736)', fontSize: '1.1rem', marginBottom: '0.4rem', textTransform: 'uppercase' }}>
+            {lang === 'es' ? 'Capacidad de Pasajeros y Estándares' : 'Passenger Capacities & Standards'}
+          </h3>
+          <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.5, margin: 0 }}>
+            {lang === 'es' ? 'Motos (2 pax), Cuatrimotos (2 pax) y Defender (6 pax). Alineamos estándares con proveedores confiables como' : 'Motorbikes (2 pax), Quads (2 pax), and Defender (6 pax). We align standards with trusted providers like'}{' '}
             <a 
               href="https://www.gueytours.com/rsz-rentals/" 
-              style={{ color: 'var(--orange, #d97736)', textDecoration: 'underline', fontWeight: 'bold' }}
+              style={{ color: 'var(--orange, #d97736)', textDecoration: 'none !important', fontWeight: 'bold', borderBottom: '1px dotted var(--orange, #d97736)' }}
               target="_blank"
               rel="noopener noreferrer"
             >
               RSZ rentals
             </a>{' '}
             {lang === 'es' ? 'para garantizar la máxima seguridad.' : 'to guarantee top safety.'}
-          </span>
+          </p>
         </div>
-
       </div>
 
     </div>
