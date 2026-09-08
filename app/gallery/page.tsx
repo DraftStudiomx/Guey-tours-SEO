@@ -13,7 +13,7 @@ export default async function GalleryPage() {
 
       <main
         style={{
-          paddingTop: '80px',
+          paddingTop: '140px',
           background: 'var(--charcoal)',
           minHeight: '100vh',
         }}
@@ -23,11 +23,12 @@ export default async function GalleryPage() {
           style={{
             maxWidth: '950px',
             margin: '0 auto',
-            padding: '60px 24px 20px',
+            padding: '40px 24px 20px',
             textAlign: 'center',
             color: '#fff',
           }}
         >
+          {/* SUBTITLE */}
           <p
             style={{
               color: '#e66a1f',
@@ -41,6 +42,7 @@ export default async function GalleryPage() {
             Gallery Experience
           </p>
 
+          {/* TU ÚNICO H1 */}
           <h1
             style={{
               color: '#fff',
@@ -54,6 +56,7 @@ export default async function GalleryPage() {
             Explore the Guey Tours Gallery
           </h1>
 
+          {/* DESCRIPTION */}
           <div
             style={{
               color: 'rgba(255, 255, 255, 0.8)',
@@ -93,7 +96,7 @@ export default async function GalleryPage() {
         <Gallery images={images} showSeeAll={false} />
       </main>
 
-      {/* FOOTER - SE MANTIENE ABAJO */}
+      {/* FOOTER - SE MANTIENE */}
       <Footer />
 
       <style>{`
@@ -120,6 +123,12 @@ export default async function GalleryPage() {
         .gallery-contact-button:hover {
           background-color: #e66a1f;
           color: #111111;
+        }
+
+        @media (max-width: 768px) {
+          main {
+            padding-top: 110px !important;
+          }
         }
       `}</style>
     </>
