@@ -1,8 +1,10 @@
 'use client'
 
+import { useLang } from '@/lib/i18n'
 import { useEffect, useRef } from 'react'
 
 export default function Hero() {
+  const { t } = useLang()
   const textRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -82,22 +84,22 @@ export default function Hero() {
         zIndex: 20,
       }} />
 
-      {/* Content */}
+      {/* Content con espacio equilibrado arriba, izquierda y abajo */}
       <div
         ref={textRef}
         style={{
           position: 'relative',
           zIndex: 10,
           textAlign: 'left',
-          padding: '0 5rem',
-          maxWidth: '1000px',
+          padding: '0 4rem 3.5rem 7.5rem',
+          maxWidth: '1050px',
           opacity: 0,
           transform: 'translateY(30px)',
           transition: 'opacity 0.9s ease, transform 0.9s ease',
-          marginTop: '180px',
+          marginTop: '140px',
         }}
       >
-        {/* Badge sin fondo naranja */}
+        {/* Badge traducible */}
         <div style={{
           display: 'inline-block',
           color: 'var(--orange)',
@@ -108,15 +110,15 @@ export default function Hero() {
           marginBottom: '1.2rem',
           textTransform: 'uppercase',
         }}>
-          SAN MIGUEL DE ALLENDE · MEXICO
+          {t('hero.location')}
         </div>
 
-        {/* H1 SEO con doble estilo */}
+        {/* H1 SEO Traducible */}
         <h1 style={{
           fontFamily: '"cheddar-gothic-rough", sans-serif',
           fontWeight: 400,
           fontStyle: 'normal',
-          fontSize: 'clamp(3rem, 6.5vw, 5.8rem)',
+          fontSize: 'clamp(2.8rem, 6vw, 5.5rem)',
           lineHeight: 0.95,
           letterSpacing: '0.02em',
           textTransform: 'uppercase',
@@ -124,32 +126,32 @@ export default function Hero() {
           marginBottom: '1.5rem',
           textShadow: '0 4px 30px rgba(0,0,0,0.5)',
         }}>
-          ATV Tours <br />
-          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>IN SAN MIGUEL DE ALLENDE</span>
+          {t('hero.title_part1')} <br />
+          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>{t('hero.title_part2')}</span>
         </h1>
 
-        {/* Párrafo corregido sintácticamente */}
+        {/* Párrafo Traducible */}
         <p style={{
           fontFamily: 'var(--font-body)',
           fontWeight: 300,
-          fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
+          fontSize: 'clamp(1rem, 1.4vw, 1.15rem)',
           color: 'rgba(255,255,255,0.85)',
-          marginBottom: '2.5rem',
-          maxWidth: '620px',
+          marginBottom: '2rem',
+          maxWidth: '640px',
           lineHeight: 1.6,
         }}>
-          Ready to explore San Miguel de Allende beyond the usual cobblestone streets? At Guey Tours, we bring you thrilling ATV tours and unforgettable off-road tours designed for maximum excitement and safety. 
+          {t('hero.paragraph1')}
           <br /><br />
-          Whether you want guided ATV tours or custom private ATV tours, discover the region with us today.
+          {t('hero.paragraph2')}
         </p>
 
-        {/* Botones con animación hover */}
+        {/* Botones traducibles con aire abajo */}
         <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
-          <a href="https://www.gueytours.com/#tours" className="hero-btn-primary">
-            VIEW ALL TOURS
+          <a href="#tours" className="hero-btn-primary">
+            {t('hero.cta1')}
           </a>
-          <a href="https://www.gueytours.com/contact" className="hero-btn-outline">
-            GET A QUOTE
+          <a href="#contact" className="hero-btn-outline">
+            {t('hero.cta2')}
           </a>
         </div>
       </div>
@@ -183,16 +185,17 @@ export default function Hero() {
           <span style={{ marginLeft: '4px', fontWeight: 500 }}>Google</span>
         </div>
         <div style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: '1.9rem', color: '#00e676', lineHeight: 1.2, margin: '2px 0' }}>
-          150+
+          {t('hero.google_count')}
         </div>
         <div style={{ fontFamily: 'sans-serif', fontSize: '0.95rem', fontWeight: 700, color: '#111', letterSpacing: '0.01em', marginBottom: '4px' }}>
-          5-Star Review
+          {t('hero.google_text')}
         </div>
         <div style={{ color: '#FBBC05', fontSize: '1.1rem', letterSpacing: '3px', lineHeight: 1 }}>
           ★★★★★
         </div>
       </div>
 
+      {/* Estilos CSS */}
       <style jsx>{`
         .hero-btn-primary, .hero-btn-outline {
           padding: 0.9rem 2.2rem;
@@ -205,6 +208,7 @@ export default function Hero() {
           display: inline-block;
           border: 2px solid var(--orange);
           transition: all 0.3s ease;
+          cursor: pointer;
         }
         .hero-btn-primary:hover, .hero-btn-outline:hover {
           background: transparent;
@@ -213,10 +217,10 @@ export default function Hero() {
         }
 
         @media (max-width: 768px) {
-          div[style*="padding: '0 5rem'"] {
-            padding: 0 1.5rem !important;
+          div[style*="padding:"] {
+            padding: 0 1.5rem 3rem 1.5rem !important;
             text-align: center !important;
-            margin-top: 100px !important;
+            margin-top: 80px !important;
           }
           div[style*="display: 'flex'][style*="gap: '1.2rem'"] {
             justify-content: center !important;
