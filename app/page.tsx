@@ -31,6 +31,7 @@ export default async function HomePage() {
         <About /> {/* <--- Este debe ser el segundo elemento */}
         <Tours />
         <Vehicles />
+        <WhyChooseUs />
         <Testimonials testimonials={testimonials} />
         <VideoGallery videos={videos} />
         <Gallery images={images} />
