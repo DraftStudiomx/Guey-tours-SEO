@@ -24,13 +24,13 @@ export default async function HomePage() {
   ])
 
   return (
-    <>
+   <>
       <Navbar />
       <main>
         <Hero />
+        <About /> {/* <--- Este debe ser el segundo elemento */}
         <Tours tours={tours} />
         <Vehicles vehicles={vehicles} />
-        <About />
         <Testimonials testimonials={testimonials} />
         <VideoGallery videos={videos} />
         <Gallery images={images} />
