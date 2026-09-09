@@ -57,13 +57,22 @@ const translations: Record<string, Record<Lang, string>> = {
   'tours.atotonilco.desc': { en: 'Journey to the UNESCO World Heritage site of Atotonilco, the "Sistine Chapel of Mexico", and its sacred sanctuary.', es: 'Viaja al sitio Patrimonio de la UNESCO de Atotonilco, la "Capilla Sixtina de México" y su sagrado santuario.' },
   'tours.atotonilco.duration': { en: '4 hours', es: '4 horas' },
 
-  // About
-  'about.title': { en: 'ABOUT US', es: 'NOSOTROS' },
-  'about.subtitle': { en: 'Your adventure specialists in SMA', es: 'Tus especialistas en aventura en SMA' },
-  'about.p1': { en: 'We are a tourism services company focused on adventure experiences in San Miguel de Allende and its surroundings — committed to your safety, comfort, and fun!', es: 'Somos una empresa de servicios turísticos enfocada en experiencias de aventura en San Miguel de Allende y sus alrededores — comprometidos con tu seguridad, comodidad y diversión.' },
-  'about.p2': { en: 'Our guided ATV tours take you to the most breathtaking places in the region — from the Allende Dam to ancient ruins most tourists never discover. All vehicles are late-model, fully maintained, and include helmets and safety equipment.', es: 'Nuestros tours guiados en ATV te llevan a los lugares más impresionantes de la región, desde la Presa Allende hasta ruinas antiguas que la mayoría de los turistas nunca descubren.' },
-  'about.p3': { en: 'Every tour includes complimentary photos taken by your guide, medical expense insurance, and guides with deep local knowledge in both English and Spanish.', es: 'Cada tour incluye fotos gratuitas tomadas por tu guía, seguro de gastos médicos y guías bilingües con profundo conocimiento local.' },
-  'about.readmore': { en: 'Learn More', es: 'Saber Más' },
+  
+ // About
+  'about.title1': { en: 'ATV ADVENTURES', es: 'AVENTURAS EN ATV' },
+  'about.title2': { en: 'IN SAN MIGUEL DE ALLENDE', es: 'EN SAN MIGUEL DE ALLENDE' },
+  'about.p1': { 
+    en: 'At Guey Tours, we specialize in action-packed ATV tours and off-road experiences that let you experience San Miguel de Allende Tours from a completely fresh perspective.', 
+    es: 'En Guey Tours, nos especializamos en tours en cuatrimoto llenos de acción y experiencias todoterreno que te permiten vivir los Tours en San Miguel de Allende desde una perspectiva totalmente nueva.' 
+  },
+  'about.p2': { 
+    en: 'Our ATV Tours San Miguel de Allende combine deep local culture with adrenaline-pumping routes.', 
+    es: 'Nuestros tours en ATV en San Miguel de Allende combinan la profunda cultura local con rutas llenas de adrenalina.' 
+  },
+  'about.bullet1': { en: 'Expert Guides: Certified professionals leading every trip.', es: 'Guías Expertos: Profesionales certificados liderando cada viaje.' },
+  'about.bullet2': { en: 'Top-Tier Fleet: Premium ATV models maintained for peak performance.', es: 'Flota de Primera: Modelos de ATV premium mantenidos para un rendimiento óptimo.' },
+  'about.bullet3': { en: 'Total Peace of Mind: Comprehensive medical insurance included on every journey.', es: 'Tranquilidad Total: Seguro médico completo incluido en cada recorrido.' },
+  'about.button': { en: 'CONTACT US', es: 'CONTÁCTANOS' },
 
   // Why us
   'why.title': { en: 'Why Choose Guey Tours', es: 'Por Qué Elegir Guey Tours' },
