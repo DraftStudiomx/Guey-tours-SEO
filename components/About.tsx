@@ -2,6 +2,7 @@
 
 import { useLang } from '@/lib/i18n'
 import { useScrollReveal } from '@/lib/useScrollReveal'
+import { CheckCircle2 } from 'lucide-react'
 
 export default function About() {
   const { t } = useLang()
@@ -59,7 +60,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Columna Derecha: Títulos, textos y botón */}
+          {/* Columna Derecha: Títulos, tu información real y botón */}
           <div className="reveal-right" style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
             <h2 style={{
               fontFamily: 'var(--font-heading)',
@@ -90,7 +91,23 @@ export default function About() {
               {t('about.p2')}
             </p>
 
-            <div style={{ marginTop: '0.8rem' }}>
+            {/* Viñetas con tus puntos clave */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', margin: '0.4rem 0' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'white', fontSize: '0.9rem' }}>
+                <CheckCircle2 size={18} color="var(--orange)" />
+                <span>{t('about.bullet1')}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'white', fontSize: '0.9rem' }}>
+                <CheckCircle2 size={18} color="var(--orange)" />
+                <span>{t('about.bullet2')}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'white', fontSize: '0.9rem' }}>
+                <CheckCircle2 size={18} color="var(--orange)" />
+                <span>{t('about.bullet3')}</span>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '0.5rem' }}>
               <a
                 href="#contact"
                 style={{
