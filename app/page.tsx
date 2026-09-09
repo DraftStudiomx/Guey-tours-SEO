@@ -4,6 +4,7 @@ import Tours from '@/components/Tours'
 import Vehicles from '@/components/Vehicles'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import MediaTabsViewer from '@/components/MediaTabsViewer'
+import TourMapFAQ from '@/components/TourMapFAQ'
 import About from '@/components/About'
 import Testimonials from '@/components/Testimonials'
 import Gallery from '@/components/Gallery'
@@ -36,9 +37,10 @@ export default async function HomePage() {
         <WhyChooseUs />
         <Testimonials testimonials={testimonials} />
         <MediaTabsViewer videos={videos} images={images} />
+        <TourMapFAQ />
        {/* <VideoGallery videos={videos} /> */}
        {/* <Gallery images={images} /> */}
-        <FAQ />
+       {/* <FAQ /> */}
         <Contact />
       </main>
       <Footer />
