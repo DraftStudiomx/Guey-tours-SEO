@@ -1,8 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import { useLang } from '@/lib/i18n'
 import { useScrollReveal } from '@/lib/useScrollReveal'
-import { useState } from 'react'
 
 interface FaqItem {
   q_en: string
