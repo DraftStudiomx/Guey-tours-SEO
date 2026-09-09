@@ -30,7 +30,7 @@ export default async function HomePage() {
         <Hero />
         <About /> {/* <--- Este debe ser el segundo elemento */}
         <Tours />
-        <Vehicles vehicles={vehicles} />
+        <Vehicles />
         <Testimonials testimonials={testimonials} />
         <VideoGallery videos={videos} />
         <Gallery images={images} />
