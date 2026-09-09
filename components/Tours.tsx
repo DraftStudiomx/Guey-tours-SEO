@@ -135,8 +135,8 @@ export default function Tours() {
           <div className="section-divider" style={{ marginTop: '1.5rem', marginInline: 'auto' }} />
         </div>
 
-        {/* Tour cards grid */}
-        <div className="tours-grid">
+        {/* Tour cards flex container */}
+        <div className="tours-container">
           {manualTours.map((tour, i) => {
             const title = lang === 'es' ? tour.title.es : tour.title.en
             const description = lang === 'es' ? tour.description.es : tour.description.en
@@ -145,7 +145,7 @@ export default function Tours() {
             return (
               <div
                 key={tour.id}
-                className={`reveal tour-card ${i >= 3 ? 'bottom-row-card' : ''}`}
+                className="reveal tour-card"
                 style={{ transitionDelay: `${i * 0.1}s` }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)'
@@ -251,8 +251,15 @@ export default function Tours() {
 
       </div>
 
-      {/* Styles for grid layout and centering bottom items */}
+      {/* Flexbox layout styles for perfect centering */}
       <style jsx>{`
+        .tours-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+        }
+
         .tour-card {
           display: flex;
           flex-direction: column;
@@ -261,40 +268,19 @@ export default function Tours() {
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0,0,0,0.4);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tours-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
-        }
-
-        /* En pantallas grandes, las últimas 2 tarjetas se posicionan en las columnas 1.5 y 2.5 para quedar perfectamente centradas */
-        @media (min-width: 1025px) {
-          .tours-grid > .tour-card:nth-child(4) {
-            grid-column: 1 / span 1;
-            margin-left: 50%;
-          }
-          .tours-grid > .tour-card:nth-child(5) {
-            grid-column: 2 / span 1;
-            margin-left: -50%;
-          }
+          width: calc(33.333% - 1.34rem);
+          max-width: 360px;
         }
 
         @media (max-width: 1024px) {
-          .tours-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-          .tours-grid > .tour-card:nth-child(4),
-          .tours-grid > .tour-card:nth-child(5) {
-            grid-column: auto !important;
-            margin-left: 0 !important;
+          .tour-card {
+            width: calc(50% - 1rem);
           }
         }
 
         @media (max-width: 640px) {
-          .tours-grid {
-            grid-template-columns: 1fr !important;
+          .tour-card {
+            width: 100%;
           }
         }
       `}</style>
