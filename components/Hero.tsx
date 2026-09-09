@@ -151,7 +151,7 @@ export default function Hero() {
           <a href="#tours" className="hero-btn-primary">
             {t('hero.cta1')}
           </a>
-          <a href="#contact" className="hero-btn-outline">
+          <a href="https://www.gueytours.com/contact" className="hero-btn-outline">
             {t('hero.cta2')}
           </a>
         </div>
