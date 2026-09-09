@@ -73,14 +73,13 @@ export default function Navbar() {
     { label: lang === 'es' ? 'Rentas de RZR' : 'RZR Rentals', href: '/rsz-rentals' },
   ]
 
-  // Unificamos todos los enlaces de navegación en un solo array ordenado de izquierda a derecha
   const allNavLinks = [
     { label: t('nav.tours'), href: '/#tours', children: toursChildren },
-    { label: lang === 'es' ? 'PRIVATE EXPERIENCES' : 'PRIVATE EXPERIENCES', href: '/#private-experiences' }, // O ajusta el link según prefieras
+    { label: 'PRIVATE EXPERIENCES', href: '/#private-experiences' },
     { label: t('nav.about'), href: '/#about' },
     { label: t('nav.gallery'), href: '/gallery' },
     { label: t('nav.testimonials'), href: '/#testimonials' },
-    { label: lang === 'es' ? 'FAQS' : 'FAQS', href: '/#faqs' },
+    { label: 'FAQS', href: '/#faqs' },
     { label: t('nav.contact'), href: '/contact' },
   ]
 
@@ -113,29 +112,36 @@ export default function Navbar() {
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  function LangToggle({ size = 'sm' }: { size?: 'sm' | 'md' }) {
-    const padding = size === 'md' ? '0.4rem 0.9rem' : '0.3rem 0.7rem'
-    const fontSize = size === 'md' ? '0.9rem' : '0.8rem'
+  // Selector de idioma con Banderas
+  function LangToggle() {
+    const flags = {
+      en: '🇺🇸',
+      es: '🇲🇽', // Bandera de México ideal para tours en San Miguel de Allende
+    }
+
     return (
-      <div style={{ display: 'flex', gap: 0, border: '1px solid rgba(255,255,255,0.25)', borderRadius: 4, overflow: 'hidden', flexShrink: 0 }}>
+      <div style={{ display: 'flex', gap: '0.3rem', alignItems: 'center', background: 'rgba(0,0,0,0.3)', padding: '0.2rem', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20 }}>
         {(['en', 'es'] as const).map(l => (
           <button
             key={l}
             onClick={() => setLang(l)}
+            title={l === 'en' ? 'English' : 'Español'}
             style={{
-              padding,
               background: lang === l ? 'var(--orange)' : 'transparent',
-              color: 'white',
               border: 'none',
+              borderRadius: '50%',
+              width: '30px',
+              height: '30px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               cursor: 'pointer',
-              fontFamily: 'var(--font-heading)',
-              fontWeight: 700,
-              fontSize,
-              letterSpacing: '0.1em',
-              transition: 'background 0.2s',
+              fontSize: '1rem',
+              transition: 'all 0.2s ease',
+              boxShadow: lang === l ? '0 2px 8px rgba(0,0,0,0.3)' : 'none',
             }}
           >
-            {l.toUpperCase()}
+            {flags[l]}
           </button>
         ))}
       </div>
@@ -301,12 +307,12 @@ export default function Navbar() {
         padding: navPadding,
       }}
     >
-      {/* Desktop Layout: Logo a la izquierda, Menú + Idioma + Redes a la derecha */}
+      {/* Desktop Layout con mayor separación lateral en el padding */}
       <div
         style={{
-          maxWidth: '1600px',
+          maxWidth: '1650px',
           margin: '0 auto',
-          padding: '0 2rem',
+          padding: '0 3rem', // <-- Separado de la orilla de la ventana
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -325,13 +331,13 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Right side: Nav links, Language toggle & Social Icons */}
+        {/* Right side: Nav links, Language Toggle (Flags) & Social Icons */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
           ))}
           <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.2)', margin: '0 0.2rem' }} />
-          <LangToggle size="sm" />
+          <LangToggle />
           <SocialIcons />
         </div>
       </div>
@@ -352,7 +358,7 @@ export default function Navbar() {
         </a>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
-          <LangToggle size="sm" />
+          <LangToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '0.5rem' }}
