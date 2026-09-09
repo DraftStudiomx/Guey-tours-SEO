@@ -69,7 +69,7 @@ export default function Hero() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%)',
+          background: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.2) 100%)',
         }}
       />
 
@@ -84,19 +84,19 @@ export default function Hero() {
         zIndex: 20,
       }} />
 
-      {/* Content (Aligned Left) */}
+      {/* Content with proper breathing room */}
       <div
         ref={textRef}
         style={{
           position: 'relative',
           zIndex: 10,
           textAlign: 'left',
-          padding: '0 4rem',
-          maxWidth: '850px',
+          padding: '0 5rem',
+          maxWidth: '950px',
           opacity: 0,
           transform: 'translateY(30px)',
           transition: 'opacity 0.9s ease, transform 0.9s ease',
-          marginTop: '100px',
+          marginTop: '140px',
         }}
       >
         {/* Badge */}
@@ -108,8 +108,8 @@ export default function Hero() {
           fontWeight: 700,
           fontSize: '0.8rem',
           letterSpacing: '0.2em',
-          padding: '0.4rem 1.2rem',
-          marginBottom: '1.2rem',
+          padding: '0.5rem 1.4rem',
+          marginBottom: '1.8rem',
           textTransform: 'uppercase',
         }}>
           SAN MIGUEL DE ALLENDE · MEXICO
@@ -119,12 +119,12 @@ export default function Hero() {
           fontFamily: '"cheddar-gothic-rough", sans-serif',
           fontWeight: 400,
           fontStyle: 'normal',
-          fontSize: 'clamp(3rem, 7vw, 6.5rem)',
-          lineHeight: 1,
+          fontSize: 'clamp(2.80rem, 6.5vw, 6rem)',
+          lineHeight: 0.95,
           letterSpacing: '0.02em',
           textTransform: 'uppercase',
           color: 'white',
-          marginBottom: '1rem',
+          marginBottom: '1.5rem',
           textShadow: '0 4px 30px rgba(0,0,0,0.5)',
         }}>
           {t('hero.tagline')}
@@ -133,41 +133,41 @@ export default function Hero() {
         <p style={{
           fontFamily: 'var(--font-body)',
           fontWeight: 300,
-          fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
+          fontSize: 'clamp(1.05rem, 2vw, 1.35rem)',
           color: 'rgba(255,255,255,0.85)',
-          marginBottom: '2rem',
-          maxWidth: '580px',
+          marginBottom: '2.5rem',
+          maxWidth: '620px',
           lineHeight: 1.6,
         }}>
           {t('hero.sub')}
         </p>
 
-        {/* Dos Botones */}
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <a href="#tours" className="btn-primary" style={{ padding: '0.8rem 2rem', background: 'var(--orange)', color: 'white', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px' }}>
+        {/* Dos Botones con buen espaciado */}
+        <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
+          <a href="#tours" style={{ padding: '0.9rem 2.2rem', background: 'var(--orange)', color: 'white', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px', display: 'inline-block' }}>
             {t('hero.cta1') || 'VIEW ALL TOURS'}
           </a>
-          <a href="/contact" className="btn-outline" style={{ padding: '0.8rem 2rem', background: 'var(--orange)', color: 'white', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px' }}>
+          <a href="#contact" style={{ padding: '0.9rem 2.2rem', background: 'var(--orange)', color: 'white', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px', display: 'inline-block' }}>
             {t('hero.cta2') || 'GET A QUOTE'}
           </a>
         </div>
       </div>
 
-      {/* Google 5-Star Reviews Widget (Flotante Abajo a la Derecha) */}
+      {/* Google 5-Star Reviews Widget */}
       <div
         style={{
           position: 'absolute',
-          bottom: '2rem',
-          right: '3rem',
+          bottom: '2.5rem',
+          right: '3.5rem',
           zIndex: 15,
           background: 'white',
-          padding: '0.8rem 1.2rem',
+          padding: '0.9rem 1.4rem',
           borderRadius: '8px',
           boxShadow: '0 8px 25px rgba(0,0,0,0.3)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '0.2rem',
+          gap: '0.3rem',
         }}
         className="hidden-mobile"
       >
@@ -190,11 +190,12 @@ export default function Hero() {
 
       <style jsx>{`
         @media (max-width: 768px) {
-          div[style*="padding: '0 4rem'"] {
+          div[style*="padding: '0 5rem'"] {
             padding: 0 1.5rem !important;
             text-align: center !important;
+            margin-top: 80px !important;
           }
-          div[style*="display: 'flex'][style*="gap: '1rem'"] {
+          div[style*="display: 'flex'][style*="gap: '1.2rem'"] {
             justify-content: center !important;
           }
           .hidden-mobile {
