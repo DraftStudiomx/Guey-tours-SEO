@@ -36,8 +36,8 @@ export default async function HomePage() {
         <WhyChooseUs />
         <Testimonials testimonials={testimonials} />
         <MediaTabsViewer videos={videos} images={images} />
-        <VideoGallery videos={videos} />
-        <Gallery images={images} />
+       {/* <VideoGallery videos={videos} /> */}
+       {/* <Gallery images={images} /> */}
         <FAQ />
         <Contact />
       </main>
