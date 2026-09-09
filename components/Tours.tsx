@@ -135,37 +135,18 @@ export default function Tours() {
           <div className="section-divider" style={{ marginTop: '1.5rem', marginInline: 'auto' }} />
         </div>
 
-        {/* Tour cards grid: 3 top, 2 centered bottom */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '2rem',
-        }} className="tours-grid">
+        {/* Tour cards grid */}
+        <div className="tours-grid">
           {manualTours.map((tour, i) => {
             const title = lang === 'es' ? tour.title.es : tour.title.en
             const description = lang === 'es' ? tour.description.es : tour.description.en
             const duration = lang === 'es' ? tour.duration.es : tour.duration.en
 
-            // Apply grid styling to center the last 2 items on large screens
-            const isLastTwo = i >= 3
-
             return (
               <div
                 key={tour.id}
-                className="reveal"
-                style={{
-                  transitionDelay: `${i * 0.1}s`,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  background: '#000',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                  ...(isLastTwo ? { gridColumn: i === 3 ? '1 / span 1.5' : 'unset' } : {}), // handled cleaner via CSS or flexible span
-                }}
-                {...(isLastTwo && i === 3 ? { style: { transitionDelay: `${i * 0.1}s`, display: 'flex', flexDirection: 'column', background: '#000', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.4)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', gridColumn: '1 / 2', gridRow: '2' } } : {})}
-                {...(isLastTwo && i === 4 ? { style: { transitionDelay: `${i * 0.1}s`, display: 'flex', flexDirection: 'column', background: '#000', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.4)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', gridColumn: '2 / 3', gridRow: '2' } } : {})}
+                className={`reveal tour-card ${i >= 3 ? 'bottom-row-card' : ''}`}
+                style={{ transitionDelay: `${i * 0.1}s` }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)'
                   e.currentTarget.style.boxShadow = '0 15px 40px rgba(255,107,0,0.25)'
@@ -270,17 +251,47 @@ export default function Tours() {
 
       </div>
 
-      {/* Responsive layout helper for grid columns on mobile/tablet */}
+      {/* Styles for grid layout and centering bottom items */}
       <style jsx>{`
+        .tour-card {
+          display: flex;
+          flex-direction: column;
+          background: #000;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tours-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+        }
+
+        /* En pantallas grandes, las últimas 2 tarjetas se posicionan en las columnas 1.5 y 2.5 para quedar perfectamente centradas */
+        @media (min-width: 1025px) {
+          .tours-grid > .tour-card:nth-child(4) {
+            grid-column: 1 / span 1;
+            margin-left: 50%;
+          }
+          .tours-grid > .tour-card:nth-child(5) {
+            grid-column: 2 / span 1;
+            margin-left: -50%;
+          }
+        }
+
         @media (max-width: 1024px) {
           .tours-grid {
             grid-template-columns: repeat(2, 1fr) !important;
           }
-          .tours-grid > div {
+          .tours-grid > .tour-card:nth-child(4),
+          .tours-grid > .tour-card:nth-child(5) {
             grid-column: auto !important;
-            grid-row: auto !important;
+            margin-left: 0 !important;
           }
         }
+
         @media (max-width: 640px) {
           .tours-grid {
             grid-template-columns: 1fr !important;
