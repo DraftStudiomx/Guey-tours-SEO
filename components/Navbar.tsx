@@ -13,7 +13,6 @@ const SOCIAL = {
   youtube:   'https://www.youtube.com/@gueytours',
 }
 
-// TikTok icon (lucide doesn't include one — inline SVG)
 function TikTokIcon({ size = 18 }: { size?: number }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
@@ -22,7 +21,6 @@ function TikTokIcon({ size = 18 }: { size?: number }) {
   )
 }
 
-// Facebook icon (lucide dropped brand logos — inline SVG)
 function FacebookIcon({ size = 18 }: { size?: number }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
@@ -31,7 +29,6 @@ function FacebookIcon({ size = 18 }: { size?: number }) {
   )
 }
 
-// Instagram icon (lucide dropped brand logos — inline SVG)
 function InstagramIcon({ size = 18 }: { size?: number }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
@@ -40,7 +37,6 @@ function InstagramIcon({ size = 18 }: { size?: number }) {
   )
 }
 
-// YouTube icon (lucide dropped brand logos — inline SVG)
 function YouTubeIcon({ size = 18 }: { size?: number }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden="true">
@@ -62,7 +58,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Small delay on close to avoid flicker when moving mouse from parent to dropdown
   const openDropdown = () => {
     if (dropdownCloseTimeout.current) clearTimeout(dropdownCloseTimeout.current)
     setToursDropdownOpen(true)
@@ -71,35 +66,30 @@ export default function Navbar() {
     dropdownCloseTimeout.current = setTimeout(() => setToursDropdownOpen(false), 120)
   }
 
-  // Tours has children (currently just Blog). Split-link pattern:
-  //   - clicking "Tours" label → scrolls to /#tours
-  //   - hovering the item or clicking the caret → opens dropdown
   const toursChildren = [
     { label: t('nav.blog'), href: '/blog' },
     { label: lang === 'es' ? 'Renta de ATV' : 'ATV Rentals', href: '/atv-rentals' },
     { label: lang === 'es' ? 'San Miguel de Allende' : 'San Miguel de Allende', href: '/san-miguel-de-allende-tours' },
-    { label: lang === 'es' ? 'Rentas de RZR' : 'RZR Rentals', href: '/rsz-rentals ' },
+    { label: lang === 'es' ? 'Rentas de RZR' : 'RZR Rentals', href: '/rsz-rentals' },
   ]
 
-  const leftLinks = [
+  // Unificamos todos los enlaces de navegación en un solo array ordenado de izquierda a derecha
+  const allNavLinks = [
     { label: t('nav.tours'), href: '/#tours', children: toursChildren },
-    { label: t('nav.testimonials'), href: '/#testimonials' },
+    { label: lang === 'es' ? 'PRIVATE EXPERIENCES' : 'PRIVATE EXPERIENCES', href: '/#private-experiences' }, // O ajusta el link según prefieras
     { label: t('nav.about'), href: '/#about' },
-  ]
-
-  const rightLinks = [
     { label: t('nav.gallery'), href: '/gallery' },
+    { label: t('nav.testimonials'), href: '/#testimonials' },
+    { label: lang === 'es' ? 'FAQS' : 'FAQS', href: '/#faqs' },
     { label: t('nav.contact'), href: '/contact' },
   ]
 
-  // Flattened list for mobile — promote Tours children to top-level siblings
   const mobileLinks = [
-    ...leftLinks.flatMap(link =>
+    ...allNavLinks.flatMap(link =>
       link.children
         ? [{ label: link.label, href: link.href }, ...link.children]
         : [link]
     ),
-    ...rightLinks,
   ]
 
   const linkStyle: React.CSSProperties = {
@@ -107,24 +97,22 @@ export default function Navbar() {
     textDecoration: 'none',
     fontFamily: 'var(--font-inter, var(--font-heading))',
     fontWeight: 700,
-    fontSize: '1.0rem',
-    letterSpacing: '0.1em',
+    fontSize: '0.95rem',
+    letterSpacing: '0.08em',
     opacity: 0.85,
     transition: 'color 0.2s, opacity 0.2s',
   }
 
-  // Always compact sizing. Background/border/padding still transition on scroll.
   const navBackground = scrolled ? 'rgba(20,20,20,0.98)' : 'transparent'
   const navBackdrop   = scrolled ? 'blur(12px)' : 'none'
   const navBorder     = scrolled ? '1px solid rgba(107,191,46,0.2)' : 'none'
   const navPadding    = '0.4rem 0'
 
-  const logoWidth   = 160
-  const logoHeight  = 126
+  const logoWidth   = 150
+  const logoHeight  = 118
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // ─── Language toggle ──────────────────────────────────────────────────────
   function LangToggle({ size = 'sm' }: { size?: 'sm' | 'md' }) {
     const padding = size === 'md' ? '0.4rem 0.9rem' : '0.3rem 0.7rem'
     const fontSize = size === 'md' ? '0.9rem' : '0.8rem'
@@ -154,7 +142,6 @@ export default function Navbar() {
     )
   }
 
-  // ─── Social icons cluster (desktop only, top-right absolute) ──────────────
   function SocialIcons() {
     const iconStyle: React.CSSProperties = {
       color: 'var(--orange)',
@@ -175,25 +162,24 @@ export default function Navbar() {
       el.style.transform = 'translateY(0)'
     }
     return (
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
         <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <FacebookIcon size={22} />
+          <FacebookIcon size={20} />
         </a>
         <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <InstagramIcon size={22} />
+          <InstagramIcon size={20} />
         </a>
         <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <YouTubeIcon size={24} />
+          <YouTubeIcon size={22} />
         </a>
         <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <TikTokIcon size={20} />
+          <TikTokIcon size={18} />
         </a>
       </div>
     )
   }
 
-  // ─── Desktop nav link (handles split-dropdown for items with children) ────
-  function DesktopNavLink({ link }: { link: typeof leftLinks[number] }) {
+  function DesktopNavLink({ link }: { link: typeof allNavLinks[number] }) {
     const hasChildren = 'children' in link && link.children && link.children.length > 0
     const isOpen = hasChildren && toursDropdownOpen
 
@@ -212,7 +198,7 @@ export default function Navbar() {
 
     return (
       <div
-        style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '0.25rem' }}
+        style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '0.15rem' }}
         onMouseEnter={openDropdown}
         onMouseLeave={closeDropdown}
       >
@@ -234,7 +220,7 @@ export default function Navbar() {
             color: 'white',
             opacity: 0.85,
             cursor: 'pointer',
-            padding: '0.25rem',
+            padding: '0.2rem',
             display: 'flex',
             alignItems: 'center',
             transition: 'transform 0.2s, color 0.2s, opacity 0.2s',
@@ -243,7 +229,7 @@ export default function Navbar() {
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; (e.currentTarget as HTMLElement).style.opacity = '1' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'white'; (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
         >
-          <ChevronDown size={14} strokeWidth={2.5} />
+          <ChevronDown size={13} strokeWidth={2.5} />
         </button>
 
         {isOpen && (
@@ -251,8 +237,7 @@ export default function Navbar() {
             style={{
               position: 'absolute',
               top: '100%',
-              left: '50%',
-              transform: 'translateX(-50%)',
+              left: 0,
               marginTop: '0.5rem',
               background: 'rgba(20,20,20,0.98)',
               backdropFilter: 'blur(12px)',
@@ -275,7 +260,7 @@ export default function Navbar() {
                   textDecoration: 'none',
                   fontFamily: 'var(--font-inter, var(--font-heading))',
                   fontWeight: 700,
-                  fontSize: '0.95rem',
+                  fontSize: '0.9rem',
                   letterSpacing: '0.08em',
                   opacity: 0.85,
                   transition: 'color 0.2s, opacity 0.2s, background 0.2s',
@@ -316,28 +301,21 @@ export default function Navbar() {
         padding: navPadding,
       }}
     >
-      {/* Desktop */}
+      {/* Desktop Layout: Logo a la izquierda, Menú + Idioma + Redes a la derecha */}
       <div
         style={{
-          maxWidth: '1500px',
+          maxWidth: '1600px',
           margin: '0 auto',
           padding: '0 2rem',
-          display: 'grid',
-          gridTemplateColumns: '1fr auto 1fr',
+          display: 'flex',
           alignItems: 'center',
-          position: 'relative',
+          justifyContent: 'space-between',
+          gap: '2rem',
         }}
         className="hidden-mobile"
       >
-        {/* Left links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', justifyContent: 'flex-end' }}>
-          {leftLinks.map(link => (
-            <DesktopNavLink key={link.href} link={link} />
-          ))}
-        </div>
-
-        {/* Centre logo */}
-        <a href="/" style={{ textDecoration: 'none', margin: '0 2.5rem' }}>
+        {/* Left logo */}
+        <a href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
           <Image
             src="/guey-logo.png"
             alt="Guey Tours"
@@ -347,17 +325,18 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Right links + language toggle + social */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', justifyContent: 'flex-start' }}>
-          {rightLinks.map(link => (
+        {/* Right side: Nav links, Language toggle & Social Icons */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+          {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
           ))}
+          <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.2)', margin: '0 0.2rem' }} />
           <LangToggle size="sm" />
           <SocialIcons />
         </div>
       </div>
 
-      {/* Mobile header row — logo + lang toggle + hamburger */}
+      {/* Mobile header row */}
       <div
         style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}
         className="show-mobile"
@@ -384,7 +363,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu — no language toggle or social (kept simple) */}
+      {/* Mobile menu */}
       {mobileOpen && (
         <div style={{
           background: 'rgba(20,20,20,0.98)',
@@ -404,24 +383,27 @@ export default function Navbar() {
                 textDecoration: 'none',
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 700,
-                fontSize: '1.2rem',
-                letterSpacing: '0.1em',
+                fontSize: '1.1rem',
+                letterSpacing: '0.08em',
               }}
             >
               {link.label}
             </a>
           ))}
+          <div style={{ paddingTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'center' }}>
+            <SocialIcons />
+          </div>
         </div>
       )}
 
       <style jsx>{`
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }
         }
-        @media (min-width: 769px) {
+        @media (min-width: 1025px) {
           .show-mobile { display: none !important; }
-          .hidden-mobile { display: grid !important; }
+          .hidden-mobile { display: flex !important; }
         }
       `}</style>
     </nav>
