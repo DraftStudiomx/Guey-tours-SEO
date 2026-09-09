@@ -112,38 +112,63 @@ export default function Navbar() {
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // Selector de idioma con Banderas
+  // Selector de idioma con imágenes reales de banderas (USA y México)
   function LangToggle() {
-    const flags = {
-      en: '🇺🇸',
-      es: '🇲🇽', // Bandera de México ideal para tours en San Miguel de Allende
-    }
-
     return (
-      <div style={{ display: 'flex', gap: '0.3rem', alignItems: 'center', background: 'rgba(0,0,0,0.3)', padding: '0.2rem', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20 }}>
-        {(['en', 'es'] as const).map(l => (
-          <button
-            key={l}
-            onClick={() => setLang(l)}
-            title={l === 'en' ? 'English' : 'Español'}
-            style={{
-              background: lang === l ? 'var(--orange)' : 'transparent',
-              border: 'none',
-              borderRadius: '50%',
-              width: '30px',
-              height: '30px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              fontSize: '1rem',
-              transition: 'all 0.2s ease',
-              boxShadow: lang === l ? '0 2px 8px rgba(0,0,0,0.3)' : 'none',
-            }}
-          >
-            {flags[l]}
-          </button>
-        ))}
+      <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', background: 'rgba(0,0,0,0.3)', padding: '0.25rem 0.35rem', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20 }}>
+        {/* Botón Inglés (Bandera USA) */}
+        <button
+          onClick={() => setLang('en')}
+          title="English"
+          style={{
+            background: 'none',
+            border: lang === 'en' ? '2px solid var(--orange)' : '2px solid transparent',
+            borderRadius: '50%',
+            width: '28px',
+            height: '28px',
+            padding: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            overflow: 'hidden',
+            transition: 'all 0.2s ease',
+            opacity: lang === 'en' ? 1 : 0.6,
+          }}
+        >
+          <img 
+            src="https://flagcdn.com/w40/us.png" 
+            alt="English" 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
+          />
+        </button>
+
+        {/* Botón Español (Bandera México) */}
+        <button
+          onClick={() => setLang('es')}
+          title="Español"
+          style={{
+            background: 'none',
+            border: lang === 'es' ? '2px solid var(--orange)' : '2px solid transparent',
+            borderRadius: '50%',
+            width: '28px',
+            height: '28px',
+            padding: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            overflow: 'hidden',
+            transition: 'all 0.2s ease',
+            opacity: lang === 'es' ? 1 : 0.6,
+          }}
+        >
+          <img 
+            src="https://flagcdn.com/w40/mx.png" 
+            alt="Español" 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
+          />
+        </button>
       </div>
     )
   }
@@ -307,12 +332,12 @@ export default function Navbar() {
         padding: navPadding,
       }}
     >
-      {/* Desktop Layout con mayor separación lateral en el padding */}
+      {/* Desktop Layout */}
       <div
         style={{
           maxWidth: '1650px',
           margin: '0 auto',
-          padding: '0 3rem', // <-- Separado de la orilla de la ventana
+          padding: '0 3rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -331,7 +356,7 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Right side: Nav links, Language Toggle (Flags) & Social Icons */}
+        {/* Right side */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
