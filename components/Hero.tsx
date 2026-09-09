@@ -91,12 +91,12 @@ export default function Hero() {
           position: 'relative',
           zIndex: 10,
           textAlign: 'left',
-          padding: '0 4rem 3.5rem 7.5rem',
+          padding: '0 4rem 3.5rem 10rem',
           maxWidth: '1050px',
           opacity: 0,
           transform: 'translateY(30px)',
           transition: 'opacity 0.9s ease, transform 0.9s ease',
-          marginTop: '140px',
+          marginTop: '190px',
         }}
       >
         {/* Badge traducible */}
