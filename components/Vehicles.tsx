@@ -12,7 +12,7 @@ export default function Vehicles() {
   const vehiclesData = [
     {
       slug: 'moto',
-      video_url: 'https://www.gueytours.com/path-to-moto-video.mp4', // Reemplaza con tu URL de video real si cambia
+      video_url: 'images/SEO/ATV Rentals Red Dirt Honda 150 Motorbike Ready for Adventure.mp4', // <-- Coloca aquí la ruta real de tu video de moto
       name: {
         es: 'Motorcycle Rentals',
         en: 'Motorcycle Rentals'
@@ -37,7 +37,7 @@ export default function Vehicles() {
     },
     {
       slug: 'atv',
-      video_url: 'https://www.gueytours.com/path-to-atv-video.mp4',
+      video_url: 'images/SEO/ATV Rentals Red Dirt Honda 150 Motorbike Ready for Adventure.mp4', // <-- Coloca aquí la ruta real de tu video de ATV
       name: {
         es: 'ATV Rentals',
         en: 'ATV Rentals'
@@ -62,7 +62,7 @@ export default function Vehicles() {
     },
     {
       slug: 'defender',
-      video_url: 'https://www.gueytours.com/path-to-defender-video.mp4',
+      video_url: 'images/SEO/Guey Tours Defender ATV rentals for off-road group adventures.mp4', // <-- Coloca aquí la ruta real de tu video de Defender/RZR
       name: {
         es: 'RZR Rentals',
         en: 'RZR Rentals'
