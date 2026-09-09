@@ -1,13 +1,14 @@
 'use client'
 
 import { useLang } from '@/lib/i18n'
+import { Clock } from 'lucide-react'
 import { useScrollReveal } from '@/lib/useScrollReveal'
-import { useState } from 'react'
 
 type TourCard = {
   id: string
   title: { en: string; es: string }
   description: { en: string; es: string }
+  duration: { en: string; es: string }
   url: string
   image: string
   imgTitle: string
@@ -22,6 +23,7 @@ const manualTours: TourCard[] = [
       en: 'Discover the historic heart and vibrant outskirts of the city on an accessible route that blends local culture with light, scenic riding. Perfect for a quick, immersive outdoor introduction.',
       es: 'Descubre el corazón histórico y las afueras vibrantes de la ciudad en una ruta accesible que combina la cultura local con un manejo ligero y panorámico. Perfecto para una introducción al aire libre rápida y envolvente.'
     },
+    duration: { en: '1.5 HRS', es: '1.5 HRS' },
     url: 'https://www.gueytours.com/tour-el-centro-san-miguel',
     image: '/images/SEO/Guey Tours Combine ATV Tours with a Fun City Tour Adventure.webp',
     imgTitle: 'Guey Tours Combine ATV Tours with a Fun City Tour Adventure',
@@ -34,6 +36,7 @@ const manualTours: TourCard[] = [
       en: 'Experience the thrill of a rugged buggy ride across open trails. This tour offers a comfortable yet daring way to navigate dusty paths and wide-open scenic spaces.',
       es: 'Experimenta la emoción de un recorrido en buggy por senderos abiertos. Este tour ofrece una forma cómoda pero atrevida de navegar por caminos polvorientos y espacios panorámicos abiertos.'
     },
+    duration: { en: '2 HRS', es: '2 HRS' },
     url: 'https://www.gueytours.com/tours/san-miguel-viejo',
     image: '/images/SEO/Guey Tours Discover History on ATV Tours & San Miguel Buggy Tour.webp',
     imgTitle: 'Guey Tours: Discover History on ATV Tours & San Miguel Buggy Tour',
@@ -46,6 +49,7 @@ const manualTours: TourCard[] = [
       en: 'Ride out toward the iconic sanctuary of Atotonilco. This route delivers a unique mix of historical landmarks and dynamic terrain that keeps your energy high.',
       es: 'Cabalga hacia el icónico santuario de Atotonilco. Esta ruta ofrece una combinación única de monumentos históricos y terreno dinámico que mantiene tu energía al máximo.'
     },
+    duration: { en: '2 HRS', es: '2 HRS' },
     url: 'https://www.gueytours.com/tours/atotonilco',
     image: '/images/SEO/Guey Tours Atotonilco Sightseeing on UTV & ATV Tours.webp',
     imgTitle: 'Guey Tours: Atotonilco Sightseeing on UTV & ATV Tours',
@@ -58,6 +62,7 @@ const manualTours: TourCard[] = [
       en: 'Navigate through charming historic streets and traditional cobblestone paths just like this. This route blends local colonial architecture with an engaging, dynamic ride through scenic urban neighborhoods.',
       es: 'Navega a través de encantadoras calles históricas y caminos empedrados tradicionales. Esta ruta combina la arquitectura colonial local con un paseo atractivo y dinámico a través de pintorescos vecindarios urbanos.'
     },
+    duration: { en: '2 HRS', es: '2 HRS' },
     url: 'https://www.gueytours.com/tours/atascadero',
     image: '/images/SEO/Guey Tours ATV Tours and Convoy Riding through Atascadero.webp',
     imgTitle: 'Guey Tours: ATV Tours and Convoy Riding through Atascadero',
@@ -70,6 +75,7 @@ const manualTours: TourCard[] = [
       en: 'Immerse yourself in lush, water-carved landscapes. This scenic path treats you to diverse terrain, rich vegetation, and rewarding nature viewpoints.',
       es: 'Sumérgete en paisajes exuberantes esculpidos por el agua. Este sendero panorámico te obsequia diversos terrenos, vegetación rica y gratificantes miradores naturales.'
     },
+    duration: { en: '2 HRS', es: '2 HRS' },
     url: 'https://www.gueytours.com/tours/agua-espinoza',
     image: '/images/SEO/Guey Tours Exploring Agua Espinoza on Exciting ATV Tours.webp',
     imgTitle: 'Guey Tours Exploring Agua Espinoza on Exciting ATV Tours',
@@ -78,11 +84,8 @@ const manualTours: TourCard[] = [
 ]
 
 export default function Tours() {
-  const { lang } = useLang()
+  const { lang, t } = useLang()
   useScrollReveal()
-  const [showAll, setShowAll] = useState(false)
-
-  const displayedTours = showAll ? manualTours : manualTours.slice(0, 3)
 
   return (
     <section
@@ -130,15 +133,16 @@ export default function Tours() {
           <div className="section-divider" style={{ marginTop: '1.5rem', marginInline: 'auto' }} />
         </div>
 
-        {/* Tour cards grid */}
+        {/* Tour cards grid - 5 cards */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '2.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
         }}>
-          {displayedTours.map((tour, i) => {
+          {manualTours.map((tour, i) => {
             const title = lang === 'es' ? tour.title.es : tour.title.en
             const description = lang === 'es' ? tour.description.es : tour.description.en
+            const duration = lang === 'es' ? tour.duration.es : tour.duration.en
 
             return (
               <div
@@ -164,7 +168,7 @@ export default function Tours() {
                 }}
               >
                 {/* Image */}
-                <div style={{ width: '100%', height: '280px', overflow: 'hidden' }}>
+                <div style={{ width: '100%', height: '240px', overflow: 'hidden' }}>
                   <img
                     src={tour.image}
                     title={tour.imgTitle}
@@ -183,39 +187,48 @@ export default function Tours() {
 
                 {/* Info panel */}
                 <div style={{
-                  padding: '1.8rem',
+                  padding: '1.4rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '1rem',
+                  gap: '0.8rem',
                   flex: 1,
                   justifyContent: 'space-between',
                 }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                    <h3 style={{
-                      fontFamily: 'var(--font-heading)',
-                      fontWeight: 800,
-                      fontSize: '1.35rem',
-                      letterSpacing: '0.03em',
-                      textTransform: 'uppercase',
-                      color: 'white',
-                      margin: 0,
-                      lineHeight: 1.2,
-                    }}>
-                      {title}
-                    </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                    {/* Title + Duration */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                      <h3 style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: 800,
+                        fontSize: '1.15rem',
+                        letterSpacing: '0.03em',
+                        textTransform: 'uppercase',
+                        color: 'white',
+                        margin: 0,
+                        lineHeight: 1.1,
+                      }}>
+                        {title}
+                      </h3>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', opacity: 0.75, flexShrink: 0 }}>
+                        <Clock size={14} color="white" />
+                        <span style={{ fontSize: '0.8rem', color: 'white', fontFamily: 'var(--font-heading)', letterSpacing: '0.05em' }}>
+                          {duration}
+                        </span>
+                      </div>
+                    </div>
 
                     <p style={{
-                      fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.75)',
+                      fontSize: '0.85rem',
+                      color: 'rgba(255,255,255,0.7)',
                       margin: 0,
-                      lineHeight: 1.6,
+                      lineHeight: 1.5,
                     }}>
                       {description}
                     </p>
                   </div>
 
                   {/* Book Now Button */}
-                  <div style={{ paddingTop: '1rem' }}>
+                  <div style={{ paddingTop: '0.8rem' }}>
                     <a
                       href={tour.url}
                       style={{
@@ -223,13 +236,13 @@ export default function Tours() {
                         color: 'white',
                         fontFamily: 'var(--font-heading)',
                         fontWeight: 800,
-                        fontSize: '0.95rem',
+                        fontSize: '0.9rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        padding: '0.75rem 2rem',
+                        padding: '0.65rem 1.5rem',
                         borderRadius: '999px',
                         textDecoration: 'none',
-                        display: 'inline-block',
+                        display: 'block',
                         textAlign: 'center',
                         width: '100%',
                         boxSizing: 'border-box',
@@ -238,7 +251,7 @@ export default function Tours() {
                       onMouseEnter={(e) => { e.currentTarget.style.background = '#e05d00' }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'var(--orange)' }}
                     >
-                      {lang === 'es' ? 'Reservar Ahora' : 'Book Now'}
+                      {t('tours.bookNow')}
                     </a>
                   </div>
                 </div>
@@ -246,41 +259,6 @@ export default function Tours() {
             )
           })}
         </div>
-
-        {/* Show More / Show Less Button */}
-        {manualTours.length > 3 && (
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <button
-              onClick={() => setShowAll(!showAll)}
-              style={{
-                background: 'none',
-                border: '2px solid var(--orange)',
-                color: 'var(--orange)',
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 700,
-                fontSize: '0.95rem',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                padding: '0.8rem 2.5rem',
-                borderRadius: '999px',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--orange)'
-                e.currentTarget.style.color = '#fff'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'none'
-                e.currentTarget.style.color = 'var(--orange)'
-              }}
-            >
-              {showAll
-                ? (lang === 'es' ? 'Ver menos' : 'Show Less')
-                : (lang === 'es' ? 'Ver más tours' : 'Show More')}
-            </button>
-          </div>
-        )}
 
       </div>
     </section>
