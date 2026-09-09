@@ -13,6 +13,14 @@ type Vehicle = {
   price: string
   video_url: string
   slug: string | null
+  features?: {
+    experience_en: string
+    experience_es: string
+    extra_en: string
+    extra_es: string
+    keyFeature_en: string
+    keyFeature_es: string
+  }
 }
 
 type Props = {
@@ -51,15 +59,28 @@ export default function Vehicles({ vehicles }: Props) {
           }}>
             ——— {lang === 'es' ? 'Nuestra Flota' : 'Our Fleet'} ———
           </div>
-          <h2 className="section-heading">
-            {lang === 'es' ? 'Experiencias Privadas en Cuatrimoto y RZR' : 'Private ATV & RZR Experiences'}
+          <h2 className="section-heading" style={{ marginBottom: '1rem' }}>
+            {lang === 'es' 
+              ? 'Experiencias Privadas en Cuatrimoto y RZR' 
+              : 'Private ATV & RZR Experiences'}
           </h2>
-          <div className="section-divider" style={{ marginTop: '1rem' }} />
+          <p style={{
+            maxWidth: '650px',
+            margin: '0 auto',
+            fontSize: '0.95rem',
+            color: 'rgba(255,255,255,0.75)',
+            lineHeight: 1.6,
+          }}>
+            {lang === 'es'
+              ? '¿Prefieres una aventura privada? Elige tu vehículo y explora a tu propio ritmo. Perfecto para parejas, familias y grupos.'
+              : 'Prefer a private adventure? Choose your ride and explore at your own pace. Perfect for couples, families and groups.'}
+          </p>
+          <div className="section-divider" style={{ marginTop: '1.5rem' }} />
         </div>
 
         <div className="tours-grid">
           {vehicles.map((vehicle, i) => {
-            const name        = lang === 'es' ? vehicle.name_es        : vehicle.name_en
+            const name = lang === 'es' ? vehicle.name_es : vehicle.name_en
             const description = lang === 'es' ? vehicle.description_es : vehicle.description_en
 
             return (
@@ -76,6 +97,8 @@ export default function Vehicles({ vehicles }: Props) {
                   cursor: 'pointer',
                   gap: 0,
                   transition: 'transform 0.2s, box-shadow 0.2s',
+                  background: '#000',
+                  border: '1px solid rgba(255,255,255,0.08)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)'
@@ -89,7 +112,7 @@ export default function Vehicles({ vehicles }: Props) {
                 {/* Video */}
                 <div style={{
                   width: '100%',
-                  height: '250px',
+                  height: '240px',
                   overflow: 'hidden',
                   flexShrink: 0,
                   background: '#000',
@@ -100,6 +123,13 @@ export default function Vehicles({ vehicles }: Props) {
                     loop
                     muted
                     playsInline
+                    title={
+                      i === 0 
+                        ? (lang === 'es' ? 'Motocicleta deportiva Honda roja para tours en cuatrimoto con Guey Tours' : 'Red Honda Dual Sport Motorcycle for Guey Tours ATV Tours')
+                        : i === 1 
+                        ? (lang === 'es' ? 'Cuatrimoto ATV roja de Guey Tours' : 'ATV Tours by Guey Tours Red ATV Quad')
+                        : (lang === 'es' ? 'Vehículo Can-Am Defender verde para tours grupales de Guey Tours' : 'Guey Tours: Green Can-Am Defender for Group ATV Tours')
+                    }
                     style={{
                       width: '100%',
                       height: '100%',
@@ -111,18 +141,17 @@ export default function Vehicles({ vehicles }: Props) {
 
                 {/* Info panel */}
                 <div style={{
-                  background: '#000',
-                  padding: '1.2rem 1.4rem 1.4rem',
+                  padding: '1.4rem',
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '0.5rem',
+                  gap: '0.6rem',
                   flex: 1,
                 }}>
                   {/* Name */}
                   <h3 style={{
                     fontFamily: 'var(--font-heading)',
                     fontWeight: 800,
-                    fontSize: '1.4rem',
+                    fontSize: '1.3rem',
                     letterSpacing: '0.03em',
                     textTransform: 'uppercase',
                     color: 'white',
@@ -136,7 +165,7 @@ export default function Vehicles({ vehicles }: Props) {
                   <p style={{
                     fontFamily: 'var(--font-heading)',
                     fontWeight: 800,
-                    fontSize: '1.1rem',
+                    fontSize: '1.05rem',
                     color: 'var(--orange)',
                     margin: 0,
                     letterSpacing: '0.03em',
@@ -144,27 +173,27 @@ export default function Vehicles({ vehicles }: Props) {
                     {vehicle.price}
                   </p>
 
-                  {/* Description */}
-                  <p style={{
+                  {/* Description / Extra details */}
+                  <div style={{
                     fontSize: '0.85rem',
                     color: 'rgba(255,255,255,0.7)',
-                    margin: 0,
-                    lineHeight: 1.5,
-                    display: '-webkit-box',
-                    WebkitLineClamp: 1,
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.3rem',
+                    marginTop: '0.2rem',
                   }}>
-                    {description}
-                  </p>
+                    <p style={{ margin: 0, lineHeight: 1.4 }}>
+                      {description}
+                    </p>
+                  </div>
 
-                  {/* RENT IT button */}
+                  {/* RENT IT / BOOK NOW button */}
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginTop: 'auto',
-                    paddingTop: '1.75rem',
+                    paddingTop: '1.5rem',
                   }}>
                     <span
                       onClick={(e) => { e.stopPropagation(); goToVehicle(vehicle.slug) }}
@@ -173,17 +202,19 @@ export default function Vehicles({ vehicles }: Props) {
                         color: 'white',
                         fontFamily: 'var(--font-heading)',
                         fontWeight: 800,
-                        fontSize: '1rem',
+                        fontSize: '0.95rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        padding: '0.7rem 2rem',
+                        padding: '0.65rem 1.8rem',
                         borderRadius: '999px',
                         cursor: 'pointer',
                         display: 'inline-block',
                         animation: 'pulse 2s infinite',
                       }}
                     >
-                      {lang === 'es' ? 'Rentarlo' : 'Rent It'}
+                      {lang === 'es' 
+                        ? (i === 2 ? 'Reservar' : 'Rentarlo') 
+                        : (i === 2 ? 'Book Now' : 'Rent It')}
                     </span>
                   </div>
                 </div>
