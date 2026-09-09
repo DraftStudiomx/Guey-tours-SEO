@@ -1,10 +1,8 @@
 'use client'
 
-import { useLang } from '@/lib/i18n'
 import { useEffect, useRef } from 'react'
 
 export default function Hero() {
-  const { t } = useLang()
   const textRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -37,7 +35,7 @@ export default function Hero() {
       id="home"
       style={{
         position: 'relative',
-        minHeight: 'calc(100vh - 120px)',
+        minHeight: 'calc(100vh - 100px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
@@ -69,7 +67,7 @@ export default function Hero() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.2) 100%)',
+          background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0.2) 100%)',
         }}
       />
 
@@ -84,7 +82,7 @@ export default function Hero() {
         zIndex: 20,
       }} />
 
-      {/* Content with proper breathing room */}
+      {/* Content with proper breathing room (More space from top and left) */}
       <div
         ref={textRef}
         style={{
@@ -92,34 +90,33 @@ export default function Hero() {
           zIndex: 10,
           textAlign: 'left',
           padding: '0 5rem',
-          maxWidth: '950px',
+          maxWidth: '1000px',
           opacity: 0,
           transform: 'translateY(30px)',
           transition: 'opacity 0.9s ease, transform 0.9s ease',
-          marginTop: '140px',
+          marginTop: '180px',
         }}
       >
-        {/* Badge */}
+        {/* 1. Badge sin fondo naranja, letras naranjas tamaño párrafo */}
         <div style={{
           display: 'inline-block',
-          background: 'var(--orange)',
-          color: 'white',
+          color: 'var(--orange)',
           fontFamily: 'var(--font-heading)',
           fontWeight: 700,
-          fontSize: '0.8rem',
-          letterSpacing: '0.2em',
-          padding: '0.5rem 1.4rem',
-          marginBottom: '1.8rem',
+          fontSize: '1.05rem',
+          letterSpacing: '0.15em',
+          marginBottom: '1.2rem',
           textTransform: 'uppercase',
         }}>
           SAN MIGUEL DE ALLENDE · MEXICO
         </div>
 
+        {/* 2. H1 SEO Único con doble estilo y doble color */}
         <h1 style={{
           fontFamily: '"cheddar-gothic-rough", sans-serif',
           fontWeight: 400,
           fontStyle: 'normal',
-          fontSize: 'clamp(2.80rem, 6.5vw, 6rem)',
+          fontSize: 'clamp(3rem, 6.5vw, 5.8rem)',
           lineHeight: 0.95,
           letterSpacing: '0.02em',
           textTransform: 'uppercase',
@@ -127,28 +124,33 @@ export default function Hero() {
           marginBottom: '1.5rem',
           textShadow: '0 4px 30px rgba(0,0,0,0.5)',
         }}>
-          {t('hero.tagline')}
+          ATV Tours <br />
+          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>IN SAN MIGUEL DE ALLENDE</span>
         </h1>
 
+        {/* 3. Párrafo con tamaño equilibrado para textos largos pero legibles */}
         <p style={{
           fontFamily: 'var(--font-body)',
           fontWeight: 300,
-          fontSize: 'clamp(1.05rem, 2vw, 1.35rem)',
+          fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
           color: 'rgba(255,255,255,0.85)',
           marginBottom: '2.5rem',
           maxWidth: '620px',
           lineHeight: 1.6,
         }}>
-          {t('hero.sub')}
+          Ready to explore San Miguel de Allende beyond the usual cobblestone streets? At Guey Tours, we bring you thrilling ATV tours and unforgettable off-road tours designed for maximum excitement and safety. 
+          <br>
+          Whether you want guided ATV tours or custom private ATV tours, discover the region with us today.
+          </>
         </p>
 
-        {/* Dos Botones con buen espaciado */}
+        {/* 4. Botones con animación hover (se quita el relleno y queda borde blanco) */}
         <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
-          <a href="#tours" style={{ padding: '0.9rem 2.2rem', background: 'var(--orange)', color: 'white', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px', display: 'inline-block' }}>
-            {t('hero.cta1') || 'VIEW ALL TOURS'}
+          <a href="https://www.gueytours.com/#tours" className="hero-btn-primary">
+            VIEW ALL TOURS
           </a>
-          <a href="#contact" style={{ padding: '0.9rem 2.2rem', background: 'var(--orange)', color: 'white', textDecoration: 'none', fontWeight: 700, letterSpacing: '0.05em', borderRadius: '4px', display: 'inline-block' }}>
-            {t('hero.cta2') || 'GET A QUOTE'}
+          <a href="https://www.gueytours.com/contact" className="hero-btn-outline">
+            GET A QUOTE
           </a>
         </div>
       </div>
@@ -189,11 +191,29 @@ export default function Hero() {
       </div>
 
       <style jsx>{`
+        .hero-btn-primary, .hero-btn-outline {
+          padding: 0.9rem 2.2rem;
+          background: var(--orange);
+          color: white;
+          text-decoration: none;
+          fontWeight: 700;
+          letter-spacing: 0.05em;
+          border-radius: 4px;
+          display: inline-block;
+          border: 2px solid var(--orange);
+          transition: all 0.3s ease;
+        }
+        .hero-btn-primary:hover, .hero-btn-outline:hover {
+          background: transparent;
+          border-color: white;
+          color: white;
+        }
+
         @media (max-width: 768px) {
           div[style*="padding: '0 5rem'"] {
             padding: 0 1.5rem !important;
             text-align: center !important;
-            margin-top: 80px !important;
+            margin-top: 100px !important;
           }
           div[style*="display: 'flex'][style*="gap: '1.2rem'"] {
             justify-content: center !important;
