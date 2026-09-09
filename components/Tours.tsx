@@ -104,7 +104,7 @@ export default function Tours() {
         background: 'linear-gradient(90deg, transparent, var(--orange), transparent)',
       }} />
 
-      <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 2rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
 
         {/* Section header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
@@ -117,7 +117,9 @@ export default function Tours() {
             textTransform: 'uppercase',
             marginBottom: '1rem',
           }}>
-            Explore Our ATV Tours in San Miguel de Allende
+            {lang === 'es' 
+              ? 'Explora Nuestros Tours en Cuatrimoto en San Miguel de Allende' 
+              : 'Explore Our ATV Tours in San Miguel de Allende'}
           </h2>
           <p style={{
             color: 'rgba(255,255,255,0.75)',
@@ -133,16 +135,19 @@ export default function Tours() {
           <div className="section-divider" style={{ marginTop: '1.5rem', marginInline: 'auto' }} />
         </div>
 
-        {/* Tour cards grid - 5 cards */}
+        {/* Tour cards grid: 3 top, 2 centered bottom */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '2rem',
-        }}>
+        }} className="tours-grid">
           {manualTours.map((tour, i) => {
             const title = lang === 'es' ? tour.title.es : tour.title.en
             const description = lang === 'es' ? tour.description.es : tour.description.en
             const duration = lang === 'es' ? tour.duration.es : tour.duration.en
+
+            // Apply grid styling to center the last 2 items on large screens
+            const isLastTwo = i >= 3
 
             return (
               <div
@@ -157,7 +162,10 @@ export default function Tours() {
                   overflow: 'hidden',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  ...(isLastTwo ? { gridColumn: i === 3 ? '1 / span 1.5' : 'unset' } : {}), // handled cleaner via CSS or flexible span
                 }}
+                {...(isLastTwo && i === 3 ? { style: { transitionDelay: `${i * 0.1}s`, display: 'flex', flexDirection: 'column', background: '#000', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.4)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', gridColumn: '1 / 2', gridRow: '2' } } : {})}
+                {...(isLastTwo && i === 4 ? { style: { transitionDelay: `${i * 0.1}s`, display: 'flex', flexDirection: 'column', background: '#000', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.4)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', gridColumn: '2 / 3', gridRow: '2' } } : {})}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)'
                   e.currentTarget.style.boxShadow = '0 15px 40px rgba(255,107,0,0.25)'
@@ -168,7 +176,7 @@ export default function Tours() {
                 }}
               >
                 {/* Image */}
-                <div style={{ width: '100%', height: '240px', overflow: 'hidden' }}>
+                <div style={{ width: '100%', height: '220px', overflow: 'hidden' }}>
                   <img
                     src={tour.image}
                     title={tour.imgTitle}
@@ -261,6 +269,24 @@ export default function Tours() {
         </div>
 
       </div>
+
+      {/* Responsive layout helper for grid columns on mobile/tablet */}
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .tours-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .tours-grid > div {
+            grid-column: auto !important;
+            grid-row: auto !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .tours-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
