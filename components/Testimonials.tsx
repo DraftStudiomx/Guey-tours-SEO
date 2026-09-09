@@ -52,7 +52,12 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
           }}>
             ——— {t('testimonials.subtitle')} ———
           </div>
-          <h2 className="section-heading">{t('testimonials.title')}</h2>
+          
+          {/* Título actualizado */}
+          <h2 className="section-heading">
+            {lang === 'es' ? 'Lo que dicen nuestros riders' : 'What Our Riders Say'}
+          </h2>
+
           <div className="section-divider" style={{ marginTop: '1rem' }} />
 
           {/* Rating badge */}
