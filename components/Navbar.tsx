@@ -83,14 +83,6 @@ export default function Navbar() {
     { label: t('nav.contact'), href: '/contact' },
   ]
 
-  const mobileLinks = [
-    ...allNavLinks.flatMap(link =>
-      link.children
-        ? [{ label: link.label, href: link.href }, ...link.children]
-        : [link]
-    ),
-  ]
-
   const linkStyle: React.CSSProperties = {
     color: 'white',
     textDecoration: 'none',
@@ -112,11 +104,9 @@ export default function Navbar() {
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // Selector de idioma con imágenes reales de banderas (USA y México)
   function LangToggle() {
     return (
       <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', background: 'rgba(0,0,0,0.3)', padding: '0.25rem 0.35rem', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20 }}>
-        {/* Botón Inglés (Bandera USA) */}
         <button
           onClick={() => setLang('en')}
           title="English"
@@ -143,7 +133,6 @@ export default function Navbar() {
           />
         </button>
 
-        {/* Botón Español (Bandera México) */}
         <button
           onClick={() => setLang('es')}
           title="Español"
@@ -345,7 +334,6 @@ export default function Navbar() {
         }}
         className="hidden-mobile"
       >
-        {/* Left logo */}
         <a href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
           <Image
             src="/guey-logo.png"
@@ -356,7 +344,6 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Right side */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
@@ -394,7 +381,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (Corregido con jerarquía y sangría) */}
       {mobileOpen && (
         <div style={{
           background: 'rgba(20,20,20,0.98)',
@@ -403,24 +390,67 @@ export default function Navbar() {
           flexDirection: 'column',
           gap: '1rem',
           borderTop: '1px solid rgba(107,191,46,0.3)',
+          maxHeight: 'calc(100vh - 80px)',
+          overflowY: 'auto',
         }}>
-          {mobileLinks.map(link => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 700,
-                fontSize: '1.1rem',
-                letterSpacing: '0.08em',
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {allNavLinks.map(link => {
+            const hasChildren = 'children' in link && link.children && link.children.length > 0
+
+            return (
+              <div key={link.href} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                {/* Elemento principal */}
+                <a
+                  href={link.href}
+                  onClick={() => {
+                    if (!hasChildren) setMobileOpen(false)
+                  }}
+                  style={{
+                    color: 'white',
+                    textDecoration: 'none',
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 700,
+                    fontSize: '1.1rem',
+                    letterSpacing: '0.08em',
+                  }}
+                >
+                  {link.label}
+                </a>
+
+                {/* Sub-elementos con sangría y tamaño más ligero para mantener jerarquía */}
+                {hasChildren && (
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem',
+                    paddingLeft: '1rem',
+                    borderLeft: '2px solid rgba(107,191,46,0.3)',
+                    marginLeft: '0.2rem',
+                    marginTop: '0.2rem',
+                    marginBottom: '0.3rem'
+                  }}>
+                    {link.children!.map(child => (
+                      <a
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setMobileOpen(false)}
+                        style={{
+                          color: 'rgba(255,255,255,0.75)',
+                          textDecoration: 'none',
+                          fontFamily: 'var(--font-inter, var(--font-heading))',
+                          fontWeight: 400,
+                          fontSize: '0.95rem',
+                          letterSpacing: '0.05em',
+                        }}
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+
           <div style={{ paddingTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'center' }}>
             <SocialIcons />
           </div>
