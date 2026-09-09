@@ -109,7 +109,7 @@ export default function About() {
 
             <div style={{ marginTop: '0.5rem' }}>
               <a
-                href="#contact"
+                href="https://www.gueytours.com/contact"
                 style={{
                   display: 'inline-block',
                   border: '2px solid var(--orange)',
