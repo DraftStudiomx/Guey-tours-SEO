@@ -29,7 +29,7 @@ export default async function HomePage() {
       <main>
         <Hero />
         <About /> {/* <--- Este debe ser el segundo elemento */}
-        <Tours tours={tours} />
+        <Tours />
         <Vehicles vehicles={vehicles} />
         <Testimonials testimonials={testimonials} />
         <VideoGallery videos={videos} />
