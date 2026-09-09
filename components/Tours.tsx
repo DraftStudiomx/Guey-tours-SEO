@@ -135,17 +135,20 @@ export default function Tours() {
           <div className="section-divider" style={{ marginTop: '1.5rem', marginInline: 'auto' }} />
         </div>
 
-        {/* Tour cards flex container */}
-        <div className="tours-container">
+        {/* Tour cards grid container */}
+        <div className="tours-grid-layout">
           {manualTours.map((tour, i) => {
             const title = lang === 'es' ? tour.title.es : tour.title.en
             const description = lang === 'es' ? tour.description.es : tour.description.en
             const duration = lang === 'es' ? tour.duration.es : tour.duration.en
 
+            // Asignamos una clase especial a los últimos 2 elementos para centrarlos en escritorio
+            const isBottomRow = i >= 3
+
             return (
               <div
                 key={tour.id}
-                className="reveal tour-card"
+                className={`reveal tour-card ${isBottomRow ? 'bottom-card' : ''}`}
                 style={{ transitionDelay: `${i * 0.1}s` }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-6px)'
@@ -251,15 +254,8 @@ export default function Tours() {
 
       </div>
 
-      {/* Flexbox layout styles for perfect centering */}
+      {/* Grid Layout Rules */}
       <style jsx>{`
-        .tours-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 2rem;
-        }
-
         .tour-card {
           display: flex;
           flex-direction: column;
@@ -268,19 +264,48 @@ export default function Tours() {
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0,0,0,0.4);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          width: calc(33.333% - 1.34rem);
-          max-width: 360px;
+          width: 100%;
         }
 
-        @media (max-width: 1024px) {
-          .tour-card {
-            width: calc(50% - 1rem);
+        .tours-grid-layout {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+        }
+
+        /* En pantallas grandes (escritorio), centramos las últimas 2 tarjetas ubicándolas en columnas específicas */
+        @media (min-width: 1024px) {
+          .tours-grid-layout > .tour-card:nth-child(4) {
+            grid-column: 1 / 2;
+            margin-left: 50%;
+          }
+          .tours-grid-layout > .tour-card:nth-child(5) {
+            grid-column: 2 / 3;
+            margin-left: -50%;
           }
         }
 
-        @media (max-width: 640px) {
-          .tour-card {
-            width: 100%;
+        /* En tablets o pantallas medianas, se acomodan de 2 en 2 normalmente */
+        @media (max-width: 1023px) and (min-width: 768px) {
+          .tours-grid-layout {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .tours-grid-layout > .tour-card:nth-child(4),
+          .tours-grid-layout > .tour-card:nth-child(5) {
+            grid-column: auto;
+            margin-left: 0;
+          }
+        }
+
+        /* En celulares y pantallas pequeñas: exactamente una tarjeta por renglón */
+        @media (max-width: 767px) {
+          .tours-grid-layout {
+            grid-template-columns: 1fr;
+          }
+          .tours-grid-layout > .tour-card:nth-child(4),
+          .tours-grid-layout > .tour-card:nth-child(5) {
+            grid-column: auto;
+            margin-left: 0;
           }
         }
       `}</style>
