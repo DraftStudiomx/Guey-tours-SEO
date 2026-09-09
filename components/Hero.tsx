@@ -84,9 +84,10 @@ export default function Hero() {
         zIndex: 20,
       }} />
 
-      {/* Content con espacio equilibrado arriba, izquierda y abajo */}
+      {/* Content */}
       <div
         ref={textRef}
+        className="hero-content-box"
         style={{
           position: 'relative',
           zIndex: 10,
@@ -145,7 +146,7 @@ export default function Hero() {
           {t('hero.paragraph2')}
         </p>
 
-        {/* Botones traducibles con aire abajo */}
+        {/* Botones traducibles */}
         <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
           <a href="#tours" className="hero-btn-primary">
             {t('hero.cta1')}
@@ -156,7 +157,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Widget de Google 5-Star Review Congruente */}
+      {/* Widget de Google 5-Star Review */}
       <div
         style={{
           position: 'absolute',
@@ -195,7 +196,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Estilos CSS */}
+      {/* Estilos CSS adaptados para móvil y escritorio */}
       <style jsx>{`
         .hero-btn-primary, .hero-btn-outline {
           padding: 0.9rem 2.2rem;
@@ -217,16 +218,19 @@ export default function Hero() {
         }
 
         @media (max-width: 768px) {
-          div[style*="padding:"] {
+          .hero-content-box {
             padding: 0 1.5rem 3rem 1.5rem !important;
-            text-align: center !important;
-            margin-top: 80px !important;
+            text-align: left !important;
+            margin-top: 130px !important; /* Baja el contenido para despegarlo del logo de arriba */
           }
-          div[style*="display: 'flex'][style*="gap: '1.2rem'"] {
-            justify-content: center !important;
+          .hero-content-box h1 {
+            font-size: 2.4rem !important; /* Evita que el título se sature en pantallas chicas */
+          }
+          .hero-content-box div[style*="display: 'flex'"] {
+            justify-content: flex-start !important;
           }
           .hidden-mobile {
-            display: none !important;
+            display: none !important; /* Oculta la caja estorbosa de Google en móviles */
           }
         }
       `}</style>
