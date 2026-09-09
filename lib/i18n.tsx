@@ -22,8 +22,15 @@ const translations: Record<string, Record<Lang, string>> = {
   // Hero
   'hero.tagline': { en: 'Best ATV Tours in San Miguel de Allende', es: 'Tours en Cuatrimoto y RZR en San Miguel de Allende' },
   'hero.sub': { en: 'Tours in San Miguel de Allende ATV and RZR', es: 'Tours en San Miguel de Allende Cuatrimoto y RZR' },
-  'hero.cta': { en: 'Book Your Tour', es: 'Reserva Tu Tour' },
-  'hero.cta2': { en: 'View All Tours', es: 'Ver Todos los Tours' },
+  'hero.location': { en: 'SAN MIGUEL DE ALLENDE · MEXICO', es: 'SAN MIGUEL DE ALLENDE · MEXICO' },
+  'hero.title_part1': { en: 'ATV Tours', es: 'ATV Tours' },
+  'hero.title_part2': { en: 'IN SAN MIGUEL DE ALLENDE', es: 'EN SAN MIGUEL DE ALLENDE' },
+  'hero.paragraph1': { en: 'Ready to explore San Miguel de Allende beyond the usual cobblestone streets? At Guey Tours, we bring you thrilling ATV tours and unforgettable off-road tours designed for maximum excitement and safety.', es: '¿Listo para explorar San Miguel de Allende más allá de las típicas calles empedradas? En Guey Tours, te ofrecemos emocionantes tours en cuatrimoto y tours todoterreno inolvidables diseñados para la máxima emoción y seguridad.' },
+  'hero.paragraph2': { en: 'Whether you want guided ATV tours or custom private ATV tours, discover the region with us today.', es: 'Ya sea que quieras tours guiados en cuatrimoto o tours privados personalizados, descubre la región con nosotros hoy mismo.' },
+  'hero.cta1': { en: 'VIEW ALL TOURS', es: 'VER TODOS LOS TOURS' },
+  'hero.cta2': { en: 'GET A QUOTE', es: 'SOLICITAR COTIZACIÓN' },
+  'hero.google_count': { en: '150+', es: '150+' },
+  'hero.google_text': { en: '5-Star Review', es: 'Reseñas de 5 estrellas' },
 
   // Tours section
   'tours.title': { en: 'Explore San Miguel Off-Road', es: 'Explora San Miguel fuera de la carretera' },
@@ -98,37 +105,25 @@ const translations: Record<string, Record<Lang, string>> = {
   'chat.title': { en: 'ATV Tours Assistant', es: 'Asistente de Tours ATV' },
   'chat.online': { en: 'Online', es: 'En línea' },
 
-  // ─── BOOKING WIDGET ──────────────────────────────────────────────────────
+  // BOOKING WIDGET
   'booking.loading': { en: 'Loading tours…', es: 'Cargando tours…' },
-
-  // Step 1
   'booking.step1.title': { en: 'Choose your tour', es: 'Elige tu tour' },
-
-  // Step 2
   'booking.step2.title': { en: 'Pick a date & time', es: 'Elige fecha y hora' },
   'booking.step2.selectTime': { en: 'Select a start time', es: 'Selecciona una hora de inicio' },
-
-  // Step 3
   'booking.step3.title': { en: 'How many people?', es: '¿Cuántas personas?' },
   'booking.step3.numGuests': { en: 'Number of guests', es: 'Número de personas' },
   'booking.step3.peopleSuffix': { en: 'people', es: 'personas' },
   'booking.step3.max': { en: 'Maximum 12 people per booking.', es: 'Máximo 12 personas por reserva.' },
-
-  // Step 4
   'booking.step4.title': { en: 'Choose your vehicles', es: 'Elige tus vehículos' },
   'booking.step4.intro_one': { en: 'Select vehicles to carry 1 person. You can mix types.', es: 'Selecciona vehículos para 1 persona. Puedes mezclar tipos.' },
   'booking.step4.intro_other': { en: 'Select vehicles to carry {n} people. You can mix types.', es: 'Selecciona vehículos para {n} personas. Puedes mezclar tipos.' },
   'booking.step4.seats': { en: 'Seats', es: 'Plazas' },
   'booking.step4.available': { en: 'vehicles available', es: 'vehículos disponibles' },
   'booking.step4.from': { en: 'from', es: 'desde' },
-
-  // Capacity bar
   'booking.capacity.selected_one': { en: '1 seat selected for {p} {noun}', es: '1 plaza seleccionada para {p} {noun}' },
   'booking.capacity.selected_other': { en: '{s} seats selected for {p} {noun}', es: '{s} plazas seleccionadas para {p} {noun}' },
   'booking.capacity.needMore_one': { en: 'Need 1 more seat — add another vehicle.', es: 'Necesitas 1 plaza más — añade otro vehículo.' },
   'booking.capacity.needMore_other': { en: 'Need {n} more seats — add another vehicle.', es: 'Necesitas {n} plazas más — añade otro vehículo.' },
-
-  // Step 5
   'booking.step5.title': { en: 'Your details', es: 'Tus datos' },
   'booking.summary.tour': { en: 'Tour', es: 'Tour' },
   'booking.summary.date': { en: 'Date', es: 'Fecha' },
@@ -142,21 +137,15 @@ const translations: Record<string, Record<Lang, string>> = {
   'booking.form.lastNamePh': { en: 'García', es: 'García' },
   'booking.form.emailPh': { en: 'ana@email.com', es: 'ana@email.com' },
   'booking.form.phonePh': { en: '+52 415 000 0000', es: '+52 415 000 0000' },
-
-  // Buttons
   'booking.btn.next': { en: 'Next →', es: 'Siguiente →' },
   'booking.btn.confirm': { en: 'Confirm & Pay →', es: 'Confirmar y Pagar →' },
   'booking.btn.redirecting': { en: 'Redirecting to payment…', es: 'Redirigiendo al pago…' },
-
-  // Errors
   'booking.error.nameEmail': { en: 'Please fill in your name and email.', es: 'Por favor ingresa tu nombre y correo electrónico.' },
   'booking.error.generic': { en: 'Something went wrong', es: 'Algo salió mal' },
-
-  // Hours label
   'booking.hour': { en: 'hr', es: 'hr' },
   'booking.hours': { en: 'hrs', es: 'hrs' },
 
-  // Months & days for date formatting
+  // Months & days
   'booking.months.0':  { en: 'January',   es: 'Enero' },
   'booking.months.1':  { en: 'February',  es: 'Febrero' },
   'booking.months.2':  { en: 'March',     es: 'Marzo' },
@@ -169,7 +158,6 @@ const translations: Record<string, Record<Lang, string>> = {
   'booking.months.9':  { en: 'October',   es: 'Octubre' },
   'booking.months.10': { en: 'November',  es: 'Noviembre' },
   'booking.months.11': { en: 'December',  es: 'Diciembre' },
-
   'booking.monthsShort.0':  { en: 'Jan', es: 'Ene' },
   'booking.monthsShort.1':  { en: 'Feb', es: 'Feb' },
   'booking.monthsShort.2':  { en: 'Mar', es: 'Mar' },
@@ -182,7 +170,6 @@ const translations: Record<string, Record<Lang, string>> = {
   'booking.monthsShort.9':  { en: 'Oct', es: 'Oct' },
   'booking.monthsShort.10': { en: 'Nov', es: 'Nov' },
   'booking.monthsShort.11': { en: 'Dec', es: 'Dic' },
-
   'booking.days.0': { en: 'Su', es: 'Do' },
   'booking.days.1': { en: 'Mo', es: 'Lu' },
   'booking.days.2': { en: 'Tu', es: 'Ma' },
@@ -191,14 +178,9 @@ const translations: Record<string, Record<Lang, string>> = {
   'booking.days.5': { en: 'Fr', es: 'Vi' },
   'booking.days.6': { en: 'Sa', es: 'Sa' },
 
-  // ─── ADD THESE KEYS to the existing translations object in lib/i18n.tsx ───
-// Paste them alongside the other booking.* keys
-
   // Step 6 — Additional details
   'booking.step6.title': { en: 'Additional details', es: 'Detalles adicionales' },
   'booking.step6.intro': { en: 'Just a few more things to complete your booking.', es: 'Solo unos datos más para completar tu reserva.' },
-
-  // Form labels
   'booking.form.dob': { en: 'Date of birth', es: 'Fecha de nacimiento' },
   'booking.form.gender': { en: 'Gender', es: 'Género' },
   'booking.form.homeAddress': { en: 'Home address', es: 'Dirección de casa' },
@@ -206,18 +188,12 @@ const translations: Record<string, Record<Lang, string>> = {
   'booking.form.accommodation': { en: 'Where are you staying? (hotel or Airbnb)', es: '¿Dónde te hospedas? (hotel o Airbnb)' },
   'booking.form.accommodationPh': { en: 'e.g. Hotel Matilda, or your Airbnb address', es: 'ej. Hotel Matilda, o tu dirección de Airbnb' },
   'booking.form.referral': { en: 'How did you find us?', es: '¿Cómo nos encontraste?' },
-
-  // Required / optional labels
   'booking.form.required': { en: '(required)', es: '(obligatorio)' },
   'booking.form.optional': { en: '(optional)', es: '(opcional)' },
-
-  // Gender options
   'booking.gender.select': { en: 'Select…', es: 'Selecciona…' },
   'booking.gender.male': { en: 'Male', es: 'Masculino' },
   'booking.gender.female': { en: 'Female', es: 'Femenino' },
   'booking.gender.preferNot': { en: 'Prefer not to say', es: 'Prefiero no decir' },
-
-  // Referral source options
   'booking.referral.select': { en: 'Select…', es: 'Selecciona…' },
   'booking.referral.google': { en: 'Google', es: 'Google' },
   'booking.referral.facebook': { en: 'Facebook', es: 'Facebook' },
@@ -228,16 +204,10 @@ const translations: Record<string, Record<Lang, string>> = {
   'booking.referral.travel_site': { en: 'Travel site (TripAdvisor etc.)', es: 'Sitio de viajes (TripAdvisor, etc.)' },
   'booking.referral.walking_by': { en: 'Walking by', es: 'Pasando por ahí' },
   'booking.referral.other': { en: 'Other', es: 'Otro' },
-
-  // Errors for step 6
   'booking.error.dobRequired': { en: 'Please enter your date of birth.', es: 'Por favor ingresa tu fecha de nacimiento.' },
   'booking.error.addressRequired': { en: 'Please enter your home address.', es: 'Por favor ingresa tu dirección de casa.' },
   'booking.error.mustBe18': { en: 'You must be 18 or older to book.', es: 'Debes tener 18 años o más para reservar.' },
-
-
 }
-
-
 
 const LangContext = createContext<LangContextType | null>(null)
 
