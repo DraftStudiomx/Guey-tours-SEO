@@ -88,7 +88,7 @@ export default function Navbar() {
   ]
 
   const rightLinks = [
-    { label: t('nav.gallery'), href: '/#gallery' },
+    { label: t('nav.gallery'), href: '/gallery' },
     { label: t('nav.contact'), href: '/contact' },
   ]
 
