@@ -37,7 +37,7 @@ export default function Vehicles() {
     },
     {
       slug: 'atv',
-      video_url: 'images/SEO/ATV Rentals Red Dirt Honda 150 Motorbike Ready for Adventure.mp4', // <-- Coloca aquí la ruta real de tu video de ATV
+      video_url: 'images/SEO/Guey Tours Reliable quad options for your ATV rentals.mp4', // <-- Coloca aquí la ruta real de tu video de ATV
       name: {
         es: 'ATV Rentals',
         en: 'ATV Rentals'
