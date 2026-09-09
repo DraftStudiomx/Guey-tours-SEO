@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Tours from '@/components/Tours'
 import Vehicles from '@/components/Vehicles'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import MediaTabsViewer from '@/components/MediaTabsViewer'
 import About from '@/components/About'
 import Testimonials from '@/components/Testimonials'
 import Gallery from '@/components/Gallery'
@@ -34,6 +35,7 @@ export default async function HomePage() {
         <Vehicles />
         <WhyChooseUs />
         <Testimonials testimonials={testimonials} />
+        <MediaTabsViewer videos={videos} images={images} />
         <VideoGallery videos={videos} />
         <Gallery images={images} />
         <FAQ />
