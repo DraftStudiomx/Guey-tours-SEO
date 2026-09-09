@@ -82,7 +82,7 @@ export default function Hero() {
         zIndex: 20,
       }} />
 
-      {/* Content with proper breathing room (More space from top and left) */}
+      {/* Content */}
       <div
         ref={textRef}
         style={{
@@ -97,7 +97,7 @@ export default function Hero() {
           marginTop: '180px',
         }}
       >
-        {/* 1. Badge sin fondo naranja, letras naranjas tamaño párrafo */}
+        {/* Badge sin fondo naranja */}
         <div style={{
           display: 'inline-block',
           color: 'var(--orange)',
@@ -111,7 +111,7 @@ export default function Hero() {
           SAN MIGUEL DE ALLENDE · MEXICO
         </div>
 
-        {/* 2. H1 SEO Único con doble estilo y doble color */}
+        {/* H1 SEO con doble estilo */}
         <h1 style={{
           fontFamily: '"cheddar-gothic-rough", sans-serif',
           fontWeight: 400,
@@ -128,7 +128,7 @@ export default function Hero() {
           <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>IN SAN MIGUEL DE ALLENDE</span>
         </h1>
 
-        {/* 3. Párrafo con tamaño equilibrado para textos largos pero legibles */}
+        {/* Párrafo corregido sintácticamente */}
         <p style={{
           fontFamily: 'var(--font-body)',
           fontWeight: 300,
@@ -139,12 +139,11 @@ export default function Hero() {
           lineHeight: 1.6,
         }}>
           Ready to explore San Miguel de Allende beyond the usual cobblestone streets? At Guey Tours, we bring you thrilling ATV tours and unforgettable off-road tours designed for maximum excitement and safety. 
-          <br>
+          <br /><br />
           Whether you want guided ATV tours or custom private ATV tours, discover the region with us today.
-          </>
         </p>
 
-        {/* 4. Botones con animación hover (se quita el relleno y queda borde blanco) */}
+        {/* Botones con animación hover */}
         <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
           <a href="https://www.gueytours.com/#tours" className="hero-btn-primary">
             VIEW ALL TOURS
@@ -155,7 +154,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Google 5-Star Reviews Widget */}
+      {/* Widget de Google 5-Star Review Congruente */}
       <div
         style={{
           position: 'absolute',
@@ -163,29 +162,33 @@ export default function Hero() {
           right: '3.5rem',
           zIndex: 15,
           background: 'white',
-          padding: '0.9rem 1.4rem',
+          padding: '1rem 1.6rem',
           borderRadius: '8px',
           boxShadow: '0 8px 25px rgba(0,0,0,0.3)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '0.3rem',
+          gap: '0.2rem',
+          textAlign: 'center',
         }}
         className="hidden-mobile"
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontFamily: 'sans-serif', fontWeight: 800, fontSize: '0.95rem', color: '#333' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontFamily: 'sans-serif', fontWeight: 700, fontSize: '1.3rem', color: '#222', lineHeight: 1.1 }}>
           <span style={{ color: '#4285F4' }}>G</span>
           <span style={{ color: '#EA4335' }}>o</span>
           <span style={{ color: '#FBBC05' }}>o</span>
           <span style={{ color: '#4285F4' }}>g</span>
           <span style={{ color: '#34A853' }}>l</span>
           <span style={{ color: '#EA4335' }}>e</span>
-          <span style={{ marginLeft: '4px' }}>150+</span>
+          <span style={{ marginLeft: '4px', fontWeight: 500 }}>Google</span>
         </div>
-        <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#555', letterSpacing: '0.02em' }}>
-          5-Star Reviews
+        <div style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: '1.9rem', color: '#00e676', lineHeight: 1.2, margin: '2px 0' }}>
+          150+
         </div>
-        <div style={{ color: '#FBBC05', fontSize: '1rem', letterSpacing: '2px', lineHeight: 1 }}>
+        <div style={{ fontFamily: 'sans-serif', fontSize: '0.95rem', fontWeight: 700, color: '#111', letterSpacing: '0.01em', marginBottom: '4px' }}>
+          5-Star Review
+        </div>
+        <div style={{ color: '#FBBC05', fontSize: '1.1rem', letterSpacing: '3px', lineHeight: 1 }}>
           ★★★★★
         </div>
       </div>
@@ -196,7 +199,7 @@ export default function Hero() {
           background: var(--orange);
           color: white;
           text-decoration: none;
-          fontWeight: 700;
+          font-weight: 700;
           letter-spacing: 0.05em;
           border-radius: 4px;
           display: inline-block;
