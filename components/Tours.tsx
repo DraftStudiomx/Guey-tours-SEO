@@ -24,7 +24,7 @@ const manualTours: TourCard[] = [
       es: 'Descubre el corazón histórico y las afueras vibrantes de la ciudad en una ruta accesible que combina la cultura local con un manejo ligero y panorámico. Perfecto para una introducción al aire libre rápida y envolvente.'
     },
     duration: { en: '1.5 HRS', es: '1.5 HRS' },
-    url: 'https://www.gueytours.com/tour-el-centro-san-miguel',
+    url: 'https://www.gueytours.com/tours/tour-el-centro-san-miguel',
     image: '/images/SEO/Guey Tours Combine ATV Tours with a Fun City Tour Adventure.webp',
     imgTitle: 'Guey Tours Combine ATV Tours with a Fun City Tour Adventure',
     imgAlt: 'Two women in goggles enjoying a Guey Tours City Tour on an ATV, blending thrills with an ATV Tours experience.',
