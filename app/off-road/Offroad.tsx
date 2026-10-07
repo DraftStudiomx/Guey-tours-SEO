@@ -56,9 +56,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/rzr-rentals-mexico-colonial-street.webp" 
-    alt="Front view of a gray UTV Rzr rentals vehicle driving up a narrow cobblestone street flanked by colorful pastel colonial buildings in a historic Mexican town." 
-    title="Touring the historic cobblestone streets of Mexico with Rzr rentals."
+    src="/images/SEO/Exciting off-road vehicle tour through colorful streets of Mexico.webp" 
+    alt="Tourists driving off-road ATVs and utility vehicles along a narrow cobblestone street past colonial buildings." 
+    title="Exciting off-road vehicle tour through colorful streets of Mexico"
     style={{
       position: 'absolute',
       top: 0,
