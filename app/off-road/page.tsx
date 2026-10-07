@@ -1,6 +1,6 @@
 
 import type { Metadata } from 'next'
-import SanMiguelContent from './Off-road'
+import Offroad from './Offroad'
 
 export const metadata: Metadata = {
   title: 'Off-Road Tours in San Miguel de Allende | Guey Tours',
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <Off-road />
+  return <Offroad />
 }
