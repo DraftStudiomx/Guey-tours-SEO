@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export default function SanMiguelContent() {
+export default function RzrRentalContenido() {
   const { lang } = useLang()
 
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -56,9 +56,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/tourist-group-atvs-san-miguel-de-allende-tours.webp" 
-    alt="Group of smiling visitors wearing safety gear and all-terrain vehicles ready to start San Miguel de allende tours" 
-    title="ATV adventure experience with San Miguel de allende tours"
+    src="/images/SEO/rzr-rentals-mexico-colonial-street.webp" 
+    alt="Front view of a gray UTV Rzr rentals vehicle driving up a narrow cobblestone street flanked by colorful pastel colonial buildings in a historic Mexican town." 
+    title="Touring the historic cobblestone streets of Mexico with Rzr rentals."
     style={{
       position: 'absolute',
       top: 0,
@@ -100,7 +100,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               color: '#fff',
               margin: '0 0 0.8rem 0',
             }}>
-              {lang === 'es' ? 'San Miguel de Allende Tours' : 'San Miguel de Allende Tours'}
+              {lang === 'es' ? 'Alquiler de RZR en San Miguel de Allende' : 'RZR Rentals in San Miguel de Allende'}
             </h1>
 
             <div style={{
@@ -116,25 +116,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>Descubre San Miguel de Allende desde una perspectiva diferente con Guey Tours. Ve más allá de la experiencia turística tradicional y explora paisajes naturales, caminos rurales, miradores panorámicos y aventuras al aire libre con guías locales que conocen el destino desde adentro.</>
+                <>Explora San Miguel de Allende más allá del centro de la ciudad con la renta de un RZR de Guey Tours. Disfruta de senderos todoterreno, caminos rurales y paisajes naturales mientras experimentas la libertad de conducir un potente vehículo utilitario (UTV).</>
               ) : (
-                <>Discover San Miguel de Allende from a different perspective with Guey Tours. Go beyond the traditional sightseeing experience and explore natural landscapes, rural roads, scenic viewpoints and outdoor adventures with local guides who know the destination from the inside.</>
+                <>Explore San Miguel de Allende beyond the city center with a RZR rental from Guey Tours. Experience off-road trails, rural roads and natural landscapes while enjoying the freedom of driving a powerful side-by-side vehicle.</>
               )}
             </p>
 
             <p style={{ margin: 0 }}>
               {lang === 'es' ? (
-                <>San Miguel de Allende es uno de los destinos más cautivadores de México, conocido por su colorida arquitectura colonial, sus calles empedradas, su vibrante escena cultural y su encanto histórico. Pero hay mucho más por descubrir más allá del centro de la ciudad.</>
+                <>San Miguel de Allende es famoso por su arquitectura colonial, sus calles históricas y su vibrante cultura, pero la región también ofrece emocionantes experiencias al aire libre. Con la renta de RZR en San Miguel de Allende, puedes descubrir una faceta diferente del destino y disfrutar de una aventura con tu pareja, familia o grupo de amigos.</>
               ) : (
-                <>San Miguel de Allende is one of Mexico’s most captivating destinations, known for its colorful colonial architecture, cobblestone streets, vibrant cultural scene and historic charm. But there is much more to discover beyond the city center.</>
-              )}
-            </p>
-
-            <p style={{ margin: 0 }}>
-              {lang === 'es' ? (
-                <>Con los tours en San Miguel de Allende de Guey Tours, los viajeros pueden combinar el turismo con la aventura, la naturaleza y experiencias locales auténticas.</>
-              ) : (
-                <>With San Miguel de Allende tours from Guey Tours, travelers can combine sightseeing with adventure, nature and authentic local experiences.</>
+                <>San Miguel de Allende is famous for its colonial architecture, historic streets and vibrant culture, but the region also offers exciting outdoor experiences. With RZR rentals in San Miguel de Allende, you can discover a different side of the destination and enjoy an adventure with your partner, family or group of friends.</>
               )}
             </p>
           </div>
@@ -142,7 +134,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           {/* Botón de contacto al final de la primera sección */}
           <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
             <a 
-              href="https://www.gueytours.com/contact" 
+              href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0" 
               style={{
                 display: 'inline-block',
                 background: 'transparent',
@@ -171,7 +163,80 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
 
 
-         {/* Inicio de section dos */}
+
+
+         {/* Segunda sección: Dos columnas (Texto H2 + Imagen) */}
+<div style={{
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: '3rem',
+  marginTop: '5rem',
+  background: 'rgba(255, 255, 255, 0.02)',
+  padding: '3rem',
+  borderRadius: '16px',
+  border: '1px solid rgba(255, 255, 255, 0.08)'
+}}>
+  {/* Columna de Texto H2 */}
+  <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+    <h2 style={{
+      fontFamily: 'var(--font-heading)',
+      fontSize: '1.8rem',
+      color: 'var(--orange, #d97736)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      margin: 0
+    }}>
+      {lang === 'es' ? 'Renta de RZR en San Miguel de Allende' : 'RZR Rental in San Miguel de Allende'}
+    </h2>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es' 
+        ? 'Un RZR es un tipo de vehículo utilitario (UTV) diseñado para la conducción todoterreno. A diferencia de un auto tradicional, un RZR está construido para soportar terrenos irregulares, caminos de terracería y senderos al aire libre, ofreciendo una experiencia de manejo lado a lado.'
+        : 'A RZR is a type of UTV (Utility Terrain Vehicle) designed for off-road driving. Unlike a traditional car, a RZR is built to handle uneven terrain, dirt roads and outdoor trails while providing a side-by-side driving experience.'}
+    </p>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es' ? (
+        <>Guey Tours ofrece rentas de RZR para viajeros que quieren explorar los alrededores de <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende</a> a su propio ritmo.</>
+      ) : (
+        <>Guey Tours offers RZR rentals for travelers who want to explore the surroundings of <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende</a> at their own pace.</>
+      )}
+    </p>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
+      {lang === 'es'
+        ? 'El proceso de renta está diseñado para que tu experiencia sea sencilla. Antes de conducir, puedes recibir información sobre el vehículo, instrucciones básicas de operación, recomendaciones de seguridad y las condiciones de renta.'
+        : 'The rental process is designed to make your experience simple. Before driving, you can receive information about the vehicle, basic operating instructions, safety recommendations and the rental conditions.'}
+    </p>
+  </div>
+
+  {/* Columna de la Imagen */}
+  <div style={{ flex: '1', minWidth: '300px' }}>
+    <div style={{
+      width: '100%',
+      height: '320px',
+      position: 'relative',
+      borderRadius: '12px',
+      overflow: 'hidden',
+      border: '1px solid rgba(255,255,255,0.1)',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
+    }}>
+      <Image
+        src="/images/atv-tour-magic-town-CONTACT-GUEY-TOURS.webp" 
+        alt="RZR tour adventure in the magic town of San Miguel de Allende with Guey Tours."
+        title="RZR Rentals in San Miguel de Allende - Guey Tours"
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+    </div>
+  </div>
+</div>
+          {/* Inicio de segunda section */}
+
+
+        {/* Inicio de section tres */}
 <section style={{
   padding: '6rem 2rem 6rem 2rem',
   marginTop: '3rem',
@@ -197,8 +262,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         lineHeight: 1.2
       }}>
         {lang === 'es' 
-          ? 'Explora San Miguel de Allende con Guey Tours' 
-          : 'Explore San Miguel de Allende With Guey Tours'}
+          ? 'Explora los senderos todoterreno de San Miguel en RZR' 
+          : "Explore San Miguel's Off-Road Trails by RZR"}
       </h2>
       <div style={{
         width: '80px',
@@ -229,8 +294,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1.5rem 0'
       }}>
         {lang === 'es'
-          ? 'Un viaje a San Miguel de Allende puede ser mucho más que caminar por sus calles históricas. Guey Tours ofrece experiencias diseñadas para ayudar a viajeros internacionales a descubrir los paisajes y alrededores de San Miguel a través de la aventura y la exploración.'
-          : 'A trip to San Miguel de Allende can be much more than walking through its historic streets. Guey Tours offers experiences designed to help international travelers discover the landscapes and surroundings of San Miguel through adventure and exploration.'}
+          ? 'Una renta de RZR te da la oportunidad de dejar atrás las rutas turísticas tradicionales y explorar caminos rurales, paisajes naturales y terrenos todoterreno alrededor de San Miguel de Allende.'
+          : 'A RZR rental gives you the opportunity to leave the traditional tourist routes behind and explore rural roads, natural landscapes and off-road terrain around San Miguel de Allende.'}
       </p>
       <p style={{
         fontFamily: 'sans-serif',
@@ -242,42 +307,44 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: 0
       }}>
         {lang === 'es'
-          ? 'En lugar de seguir solo las rutas turísticas convencionales, estas experiencias guiadas te llevan a zonas donde puedes experimentar:'
-          : 'Instead of following only conventional tourist routes, these guided experiences take you to areas where you can experience:'}
+          ? 'En lugar de pasar todo tu viaje en la ciudad, puedes experimentar la región circundante desde el asiento del conductor.'
+          : 'Instead of spending your entire trip in the city, you can experience the surrounding region from behind the wheel.'}
       </p>
     </div>
 
-    {/* Cuadrícula de tarjetas con las 6 experiencias */}
+    {/* Subtítulo para la sección de ideales */}
+    <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.4rem',
+        color: 'rgba(255, 255, 255, 0.9)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: 0
+      }}>
+        {lang === 'es' ? 'Las aventuras en RZR son ideales para:' : 'RZR adventures are ideal for:'}
+      </h3>
+    </div>
+
+    {/* Cuadrícula de tarjetas con las 5 opciones (primeras 3 en diseño normal) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
       gap: '1.5rem',
-      marginBottom: '3.5rem'
+      marginBottom: '1.5rem'
     }}>
       {[
         {
-          es: 'Naturaleza y paisajes abiertos',
-          en: 'Nature and open landscapes'
+          es: 'Parejas que buscan una experiencia al aire libre',
+          en: 'Couples looking for an outdoor experience.'
         },
         {
-          es: 'Caminos rurales y rutas off-road',
-          en: 'Rural roads and off-road trails'
+          es: 'Familias que quieren explorar juntas',
+          en: 'Families who want to explore together.'
         },
         {
-          es: 'Miradores panorámicos',
-          en: 'Scenic viewpoints'
-        },
-        {
-          es: 'Actividades de aventura',
-          en: 'Adventure activities'
-        },
-        {
-          es: 'Comunidades locales y áreas circundantes',
-          en: 'Local communities and surrounding areas'
-        },
-        {
-          es: 'Perspectivas únicas de la región',
-          en: 'Unique perspectives of the region'
+          es: 'Grupos de amigos que buscan aventura',
+          en: 'Groups of friends seeking adventure.'
         }
       ].map((item, index) => (
         <div key={index} style={{
@@ -320,7 +387,67 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       ))}
     </div>
 
-    {/* Tarjeta de cierre sobre los guías locales */}
+    {/* Cuadrícula inferior para las últimas 2 tarjetas centradas automáticamente */}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '1.5rem',
+      marginBottom: '3.5rem',
+      justifyContent: 'center',
+      maxWidth: '750px',
+      marginInline: 'auto'
+    }}>
+      {[
+        {
+          es: 'Viajeros interesados en la conducción todoterreno',
+          en: 'Travelers interested in off-road driving.'
+        },
+        {
+          es: 'Visitantes que quieren descubrir paisajes más allá del centro histórico',
+          en: 'Visitors who want to discover landscapes beyond the historic center.'
+        }
+      ].map((item, index) => (
+        <div key={index + 3} style={{
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.03) 100%)',
+          border: '1px solid rgba(217, 119, 54, 0.25)',
+          borderRadius: '14px',
+          padding: '2rem 1.8rem',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1.2rem',
+          transition: 'transform 0.3s ease, border-color 0.3s ease'
+        }}>
+          <div style={{
+            minWidth: '38px',
+            height: '38px',
+            borderRadius: '50%',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: 'bold',
+            fontSize: '0.9rem',
+            border: '1px solid rgba(217, 119, 54, 0.4)'
+          }}>
+            0{index + 4}
+          </div>
+          <span style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '18px',
+            lineHeight: 1.4
+          }}>
+            {lang === 'es' ? item.es : item.en}
+          </span>
+        </div>
+      ))}
+    </div>
+
+    {/* Tarjeta de cierre sobre la ventaja de Guey Tours */}
     <div style={{
       background: 'rgba(217, 119, 54, 0.07)',
       border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -346,22 +473,22 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           letterSpacing: '0.08em', 
           fontSize: '0.95rem' 
         }}>
-          {lang === 'es' ? 'La Diferencia Local' : 'The Local Difference'}
+          {lang === 'es' ? 'La Ventaja de Guey Tours' : 'The Guey Tours Advantage'}
         </strong>
         {lang === 'es'
-          ? 'La diferencia es el conocimiento local de los guías. Ellos conocen los caminos, paisajes y experiencias que pueden ayudar a los viajeros a descubrir otro lado del destino.'
-          : 'The difference is the local knowledge of the guides. They know the roads, landscapes and experiences that can help travelers discover another side of the destination.'}
+          ? 'Una de las ventajas de elegir a Guey Tours es el conocimiento local de la zona. Comprender los caminos y los paisajes circundantes puede ayudar a que tu experiencia todoterreno sea más agradable y memorable.'
+          : 'One of the advantages of choosing Guey Tours is the local knowledge of the area. Understanding the roads and surrounding landscapes can help make your off-road experience more enjoyable and memorable.'}
       </p>
     </div>
 
   </div>
 </section>
-{/* Fin de section dos */}
+{/* Fin de section tres */}
 
 
           
 
-          {/* INICIO SECTION 3 */}
+          {/* INICIO SECTION 4 */}
 <section style={{
   padding: '6rem 2rem',
   background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
@@ -371,7 +498,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 }}>
   <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
     
-    {/* Título H2 y Párrafo Introductorio */}
+    {/* Título H2 y Párrafo Actualizado */}
     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
@@ -382,7 +509,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        {lang === 'es' ? 'Nuestros Tours en San Miguel de Allende' : 'Our Tours in San Miguel de Allende'}
+        {lang === 'es' ? 'Elige tu experiencia en RZR' : 'Choose Your RZR Experience'}
       </h2>
       <div style={{
         width: '80px',
@@ -402,566 +529,432 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 auto'
       }}>
         {lang === 'es'
-          ? 'Elige la experiencia que mejor se adapte a tu estilo de viaje. Ya sea que busques una aventura al aire libre, una experiencia privada o una forma emocionante de explorar los alrededores, Guey Tours ofrece diferentes maneras de vivir San Miguel de Allende.'
-          : 'Choose the experience that best matches your travel style. Whether you are looking for an outdoor adventure, a private experience or an exciting way to explore the surroundings, Guey Tours offers different ways to experience San Miguel de Allende.'}
+          ? 'Guey Tours ofrece diferentes opciones de RZR según la disponibilidad. Cada renta puede variar en modelo, capacidad, características, duración y precio.'
+          : 'Guey Tours can offer different RZR options depending on availability. Each rental can vary in model, capacity, features, duration and pricing.'}
       </p>
     </div>
 
-    {/* Contenedor de las 2 tarjetas superiores con imagen */}
+    {/* Tarjeta Única Centralizada con Imagen */}
     <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-      gap: '2rem',
-      marginBottom: '2rem',
-      justifyContent: 'center'
-    }}>
-      
-      {/* --- TARJETA 1 (ATV Adventures) --- */}
-      <div style={{
-        background: '#000',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
-      }}>
-        <div style={{
-          width: '100%',
-          height: '200px',
-          overflow: 'hidden',
-          background: '#000',
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '10px',
-          borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
-        }}>
-          <img
-            src="/images/SEO/atv-driver-foreground-san-miguel-de-allende-tours.webp"
-            alt="A traveler driving a green quad bike at the front of a group caravan on San Miguel de allende tours"
-            title="Leading the ATV caravan with San Miguel de allende tours"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-
-        <div style={{ padding: '1.8rem', display: 'flex', flexDirection: 'column', flex: 1, gap: '1.2rem' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
-            margin: 0
-          }}>
-            {lang === 'es' ? 'Aventuras en ATV' : 'ATV Adventures'}
-          </h3>
-          <p style={{
-            fontFamily: 'sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '400',
-            color: 'rgba(255, 255, 255, 0.85)',
-            fontSize: '16px',
-            lineHeight: 1.6,
-            margin: 0
-          }}>
-            {lang === 'es'
-              ? 'Explora senderos y paisajes naturales en un ATV. Estas experiencias son ideales para viajeros que buscan aventura, exploración off-road y diversión al aire libre.'
-              : 'Explore trails and natural landscapes on an ATV. These experiences are ideal for travelers looking for adventure, off-road exploration and outdoor fun.'}
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '14px', color: 'rgba(255,255,255,0.7)', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem' }}>
-            <div><strong>{lang === 'es' ? 'Duración:' : 'Duration:'}</strong> {lang === 'es' ? 'Varía según la experiencia' : 'Varies by experience'}</div>
-            <div><strong>{lang === 'es' ? 'Experiencia:' : 'Experience:'}</strong> {lang === 'es' ? 'Aventura y off-road' : 'Adventure and off-road'}</div>
-            <div><strong>{lang === 'es' ? 'Destacados:' : 'Highlights:'}</strong> {lang === 'es' ? 'Senderos, paisajes y rutas panorámicas' : 'Trails, landscapes and scenic routes'}</div>
-          </div>
-          <div style={{ marginTop: 'auto', paddingTop: '1rem', textAlign: 'center' }}>
-            <a href="https://www.gueytours.com/rsz-rentals/" style={{
-              display: 'inline-block',
-              background: 'transparent',
-              color: 'var(--orange, #d97736)',
-              border: '2px solid var(--orange, #d97736)',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '50px',
-              fontWeight: 'bold',
-              fontFamily: 'var(--font-heading)',
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              fontSize: '0.8rem',
-              letterSpacing: '0.08em',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-            >
-              {lang === 'es' ? 'Ver Tour' : 'View Tour'}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* --- TARJETA 2 (RZR Adventures) --- */}
-      <div style={{
-        background: '#000',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
-      }}>
-        <div style={{
-          width: '100%',
-          height: '200px',
-          overflow: 'hidden',
-          background: '#000',
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '10px',
-          borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
-        }}>
-          <img
-            src="/images/SEO/RZR-adventure-ride-san-miguel-de-allende-tours.webp"
-            alt="An all-terrain RZR vehicle driving down a cobblestone street lined with colorful colonial buildings during San Miguel de allende tours"
-            title="Riding an off-road RZR through historic streets with San Miguel de allende tours"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-
-        <div style={{ padding: '1.8rem', display: 'flex', flexDirection: 'column', flex: 1, gap: '1.2rem' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
-            margin: 0
-          }}>
-            {lang === 'es' ? 'Aventuras en RZR' : 'RZR Adventures'}
-          </h3>
-          <p style={{
-            fontFamily: 'sans-serif',
-            fontStyle: 'normal',
-            fontWeight: '400',
-            color: 'rgba(255, 255, 255, 0.85)',
-            fontSize: '16px',
-            lineHeight: 1.6,
-            margin: 0
-          }}>
-            {lang === 'es'
-              ? 'Lleva tu exploración más allá con una experiencia en RZR. Disfruta de la libertad de rodar por senderos todoterreno y entornos naturales mientras descubres áreas que van más allá de las rutas turísticas tradicionales.'
-              : 'Take your exploration further with a RZR experience. Enjoy the freedom of riding through off-road trails and natural surroundings while discovering areas beyond the traditional tourist routes.'}
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '14px', color: 'rgba(255,255,255,0.7)', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem' }}>
-            <div><strong>{lang === 'es' ? 'Duración:' : 'Duration:'}</strong> {lang === 'es' ? 'Varía según la experiencia' : 'Varies by experience'}</div>
-            <div><strong>{lang === 'es' ? 'Experiencia:' : 'Experience:'}</strong> {lang === 'es' ? 'Aventura todoterreno' : 'Off-road adventure'}</div>
-            <div><strong>{lang === 'es' ? 'Destacados:' : 'Highlights:'}</strong> {lang === 'es' ? 'Senderos, naturaleza y paisajes panorámicos' : 'Trails, nature and panoramic landscapes'}</div>
-          </div>
-          <div style={{ marginTop: 'auto', paddingTop: '1rem', textAlign: 'center' }}>
-            <a href="https://www.gueytours.com/rsz-rentals/" style={{
-              display: 'inline-block',
-              background: 'transparent',
-              color: 'var(--orange, #d97736)',
-              border: '2px solid var(--orange, #d97736)',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '50px',
-              fontWeight: 'bold',
-              fontFamily: 'var(--font-heading)',
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              fontSize: '0.8rem',
-              letterSpacing: '0.08em',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-            >
-              {lang === 'es' ? 'Ver Tour' : 'View Tour'}
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    {/* --- TARJETA 3 INFERIOR (Puro texto, dos párrafos, sin imagen, centrada y estilizada) --- */}
-    <div style={{
-      background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(217, 119, 54, 0.05) 100%)',
+      background: '#000',
       border: '1px solid rgba(217, 119, 54, 0.3)',
       borderRadius: '16px',
-      padding: '2.5rem',
+      overflow: 'hidden',
       boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
       maxWidth: '800px',
       margin: '0 auto',
       display: 'flex',
-      flexDirection: 'column',
-      gap: '1.2rem',
-      textAlign: 'center'
+      flexDirection: 'column'
     }}>
-      <h3 style={{
-        fontFamily: 'var(--font-heading)',
-        fontSize: '1.4rem',
-        color: 'var(--orange, #d97736)',
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-        margin: 0
+      {/* Contenedor de la Imagen */}
+      <div style={{
+        width: '100%',
+        height: '260px',
+        overflow: 'hidden',
+        background: '#000',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
       }}>
-        {lang === 'es' ? 'Experiencias Privadas' : 'Private Experiences'}
-      </h3>
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '16px',
-        lineHeight: 1.6,
-        margin: 0
+        <img
+          src="/images/SEO/atv-and-rzr-rentals-group.webp"
+          alt="Close-up of a group of smiling people wearing helmets and safety goggles, standing next to a row of parked ATVs and Rzr rentals vehicles."
+          title="Getting ready for the ultimate adventure with Rzr rentals and ATVs."
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
+
+      {/* Contenido de la Tarjeta */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(217, 119, 54, 0.05) 100%)',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.5rem',
+        textAlign: 'center'
       }}>
-        {lang === 'es'
-          ? '¿Buscas una aventura más personalizada? Los tours privados son una excelente opción para parejas, familias y grupos que desean disfrutar de San Miguel a su propio ritmo.'
-          : 'Looking for a more personalized adventure? Private tours are a great option for couples, families and groups who want to enjoy San Miguel at their own pace.'}
-      </p>
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '16px',
-        lineHeight: 1.6,
-        margin: 0
-      }}>
-        {lang === 'es'
-          ? 'Estas experiencias ofrecen un itinerario más personalizado y la flexibilidad de enfocarse en las actividades y lugares que más le interesan a tu grupo.'
-          : 'These experiences can offer a more personalized itinerary and the flexibility to focus on the activities and places that interest your group most.'}
-      </p>
-      <div style={{ paddingTop: '0.5rem' }}>
-        <a href="https://www.gueytours.com/rsz-rentals/" style={{
-          display: 'inline-block',
-          background: 'transparent',
-          color: 'var(--orange, #d97736)',
-          border: '2px solid var(--orange, #d97736)',
-          padding: '0.75rem 2rem',
-          borderRadius: '50px',
-          fontWeight: 'bold',
+        <h3 style={{
           fontFamily: 'var(--font-heading)',
-          textDecoration: 'none',
+          fontSize: '1.4rem',
+          color: 'var(--orange, #d97736)',
           textTransform: 'uppercase',
-          fontSize: '0.8rem',
-          letterSpacing: '0.08em',
-          transition: 'all 0.3s ease'
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-        >
-          {lang === 'es' ? 'Ver Tour' : 'View Tour'}
-        </a>
+          letterSpacing: '0.05em',
+          margin: 0
+        }}>
+          {lang === 'es' ? 'Opciones de RZR' : 'RZR Options'}
+        </h3>
+
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          gap: '0.6rem', 
+          fontSize: '16px', 
+          color: 'rgba(255,255,255,0.85)', 
+          borderTop: '1px solid rgba(255,255,255,0.1)', 
+          borderBottom: '1px solid rgba(255,255,255,0.1)', 
+          padding: '1.5rem 0',
+          textAlign: 'left',
+          maxWidth: '500px',
+          margin: '0 auto',
+          width: '100%'
+        }}>
+          <div><strong>{lang === 'es' ? 'Modelo:' : 'Model:'}</strong> {lang === 'es' ? 'Los modelos disponibles varían' : 'Available models vary'}</div>
+          <div><strong>{lang === 'es' ? 'Capacidad:' : 'Capacity:'}</strong> {lang === 'es' ? 'Dependiendo del RZR seleccionado' : 'Depending on the selected RZR'}</div>
+          <div><strong>{lang === 'es' ? 'Experiencia:' : 'Experience:'}</strong> {lang === 'es' ? 'Aventura todoterreno' : 'Off-road adventure'}</div>
+          <div><strong>{lang === 'es' ? 'Características:' : 'Features:'}</strong> {lang === 'es' ? 'Diseño side-by-side y capacidades off-road' : 'Side-by-side design and off-road capabilities'}</div>
+          <div><strong>{lang === 'es' ? 'Disponibilidad:' : 'Availability:'}</strong> {lang === 'es' ? 'Sujeta a fecha y disponibilidad de vehículos' : 'Subject to date and vehicle availability'}</div>
+          <div><strong>{lang === 'es' ? 'Precio:' : 'Price:'}</strong> {lang === 'es' ? 'Contacta a Guey Tours para conocer los precios actuales' : 'Contact Guey Tours for current pricing'}</div>
+        </div>
+
+        <div style={{ paddingTop: '0.5rem' }}>
+          <a href="https://www.gueytours.com/contact" style={{
+            display: 'inline-block',
+            background: 'transparent',
+            color: 'var(--orange, #d97736)',
+            border: '2px solid var(--orange, #d97736)',
+            padding: '0.75rem 2rem',
+            borderRadius: '50px',
+            fontWeight: 'bold',
+            fontFamily: 'var(--font-heading)',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+            fontSize: '0.8rem',
+            letterSpacing: '0.08em',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
+          >
+            {lang === 'es' ? 'RENTAR UN RZR' : 'RENT A RZR'}
+          </a>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
-{/* FIN SECTION 3 */}
+{/* FIN SECTION 4 */}
 
 
           
 
-          {/* Cuarta sección: Diseño apilado (Imagen arriba o banner lateral limpio con texto completo) */}
-<div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '2.5rem',
-  marginTop: '5rem',
-  background: 'rgba(255, 255, 255, 0.02)',
-  padding: '3rem 2rem',
-  borderRadius: '16px',
-  border: '1px solid rgba(255, 255, 255, 0.08)',
-  maxWidth: '900px',
-  marginInline: 'auto'
+         {/* INICIO SECTION 5 */}
+<section style={{
+  padding: '6rem 2rem',
+  background: '#0b0b0b',
+  color: '#fff',
+  fontFamily: 'sans-serif',
+  position: 'relative'
 }}>
-  {/* Título H2 Centrado o Arriba */}
-  <div style={{ textAlign: 'center' }}>
-    <h2 style={{
-      fontFamily: 'var(--font-heading)',
-      fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
-      color: 'var(--orange, #d97736)',
-      textTransform: 'uppercase',
-      letterSpacing: '0.05em',
-      lineHeight: 1.3,
-      margin: 0
-    }}>
-      {lang === 'es' ? 'Descubre San Miguel más allá del centro histórico' : 'Discover San Miguel Beyond the City Center'}
-    </h2>
-    <div style={{
-      width: '60px',
-      height: '3px',
-      background: 'var(--orange, #d97736)',
-      margin: '1rem auto 0 auto',
-      boxShadow: '0 0 10px var(--orange, #d97736)'
-    }} />
-  </div>
-
-  {/* Imagen destacada en formato panorámico/horizontal para que luzca bien */}
-  <div style={{
-    width: '100%',
-    height: '350px',
-    position: 'relative',
-    borderRadius: '12px',
-    overflow: 'hidden',
-    border: '1px solid rgba(217, 119, 54, 0.3)',
-    boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
-  }}>
-    <Image
-      src="/images/Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours.webp" 
-      alt="A group driving ATVs on the cobblestone streets of San Miguel de Allende during an adventure with Guey Tours."
-      title="Experience Thrilling ATV Rentals in San Miguel de Allende with Guey Tours"
-      fill
-      style={{ objectFit: 'cover' }}
-    />
-  </div>
-
-  {/* Contenedor de tus párrafos exactos con excelente legibilidad */}
-  <div style={{
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1.2rem',
-    color: 'rgba(255,255,255,0.85)',
-    fontSize: '1.05rem',
-    lineHeight: 1.8
-  }}>
-    <p style={{ margin: 0 }}>
-      {lang === 'es' 
-        ? 'El centro histórico de San Miguel de Allende es una parte esencial de cualquier visita, pero la región circundante ofrece una experiencia completamente diferente.'
-        : "San Miguel de Allende’s historic center is an essential part of any visit, but the surrounding region offers a completely different experience."}
-    </p>
-
-    <p style={{ margin: 0 }}>
-      {lang === 'es' 
-        ? (
-            <>Con <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, los viajeros pueden explorar áreas rurales, caminos todoterreno, miradores panorámicos y paisajes naturales que a menudo quedan fuera de los itinerarios turísticos convencionales.</>
-          ) 
-        : (
-            <>With <a href="https://www.gueytours.com/" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours</a>, travelers can explore rural areas, off-road paths, scenic viewpoints and natural landscapes that are often outside conventional sightseeing itineraries.</>
-          )}
-    </p>
-
-    <p style={{ margin: 0 }}>
-      {lang === 'es'
-        ? 'Estas experiencias te permiten ver el destino desde una nueva perspectiva mientras disfrutas de la libertad al aire libre.'
-        : 'These experiences allow you to see the destination from a new perspective while enjoying the freedom of the outdoors.'}
-    </p>
-
-    <p style={{ margin: 0 }}>
-      {lang === 'es'
-        ? 'Para los visitantes internacionales, esta puede ser una excelente manera de combinar la cultura y la arquitectura de San Miguel de Allende con la belleza natural y las oportunidades de aventura de la región.'
-        : 'For international visitors, this can be an excellent way to combine the culture and architecture of San Miguel de Allende with the region’s natural beauty and adventure opportunities.'}
-    </p>
-  </div>
-</div>
-          {/* Cuarta sección: Diseño apilado (Imagen arriba o banner lateral limpio con texto completo) */}
-
-
-
-        {/* Quinta sección: 3 columnas horizontales compactas con botones simétricos */}
-<div style={{
-  marginTop: '6rem',
-  padding: '2rem 0',
-  borderTop: '1px solid rgba(255, 255, 255, 0.08)'
-}}>
-  {/* Título Principal Centrado Arriba */}
-  <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-    <h2 style={{
-      fontFamily: 'var(--font-heading)',
-      fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
-      color: 'var(--orange, #d97736)',
-      textTransform: 'uppercase',
-      letterSpacing: '0.05em',
-      lineHeight: 1.2,
-      margin: 0
-    }}>
-      {lang === 'es' ? 'Experiencias de Aventura en San Miguel de Allende' : 'Adventure Experiences in San Miguel de Allende'}
-    </h2>
-  </div>
-
-  {/* Contenedor de 3 Columnas */}
-  <div style={{
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: '2.5rem',
-    justifyContent: 'space-between'
-  }}>
+  <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
     
-    {/* Columna 1: ATV Adventures */}
-    <div style={{ 
-      flex: '1 1 30%', 
-      minWidth: '280px', 
-      display: 'flex', 
-      flexDirection: 'column', 
-      gap: '0.8rem', 
-      borderLeft: '2px solid var(--orange, #d97736)', 
-      paddingLeft: '1.2rem' 
-    }}>
-      <h3 style={{
+    {/* Título H2 y Párrafo Introductorio */}
+    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+      <h2 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: '1.2rem',
+        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
         color: 'var(--orange, #d97736)',
-        margin: 0
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: '0 0 1rem 0',
+        lineHeight: 1.2
       }}>
-        {lang === 'es' ? 'Aventuras en ATV' : 'ATV Adventures'}
-      </h3>
-      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-        {lang === 'es' 
-          ? 'Las experiencias en ATV están diseñadas para viajeros que quieren explorar el aire libre mientras disfrutan de una emocionante aventura todoterreno.'
-          : 'ATV experiences are designed for travelers who want to explore the outdoors while enjoying an exciting off-road adventure.'}
+        {lang === 'es' ? '¿Por qué elegir un RZR para tu aventura?' : 'Why Choose a RZR for Your Adventure?'}
+      </h2>
+      <div style={{
+        width: '80px',
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        margin: '0 auto 2rem auto',
+        boxShadow: '0 0 12px var(--orange, #d97736)'
+      }} />
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        maxWidth: '800px',
+        margin: '0 auto'
+      }}>
+        {lang === 'es'
+          ? 'Elegir entre un RZR y un ATV depende del tipo de aventura que buscas.'
+          : 'Choosing between a RZR and an ATV depends on the type of adventure you want.'}
       </p>
-      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-        {lang === 'es' 
-          ? 'Si prefieres rentar una cuatrimoto y explorar según tus propios planes, también puedes conocer más sobre la renta de ATV en San Miguel de Allende.'
-          : 'If you prefer to rent an ATV and explore according to your own plans, you can also learn more about ATV rentals in San Miguel de Allende.'}
-      </p>
-      
-      {/* Botón de ATV Rentals */}
-      <div style={{ paddingTop: '0.3rem' }}>
-        <a href="https://www.gueytours.com/rzr-rentals" style={{
-          display: 'inline-block',
-          background: 'transparent',
-          color: 'var(--orange, #d97736)',
-          border: '2px solid var(--orange, #d97736)',
-          padding: '0.5rem 1.2rem',
-          borderRadius: '50px',
-          fontWeight: 'bold',
-          fontFamily: 'var(--font-heading)',
-          textDecoration: 'none',
-          textTransform: 'uppercase',
-          fontSize: '0.75rem',
-          letterSpacing: '0.08em',
-          transition: 'all 0.3s ease'
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-        >
-          {lang === 'es' ? 'Renta de ATV' : 'ATV Rentals'}
-        </a>
-      </div>
     </div>
 
-    {/* Columna 2: RZR Adventures */}
-    <div style={{ 
-      flex: '1 1 30%', 
-      minWidth: '280px', 
-      display: 'flex', 
-      flexDirection: 'column', 
-      gap: '0.8rem', 
-      borderLeft: '2px solid rgba(255,255,255,0.2)', 
-      paddingLeft: '1.2rem' 
+    {/* Contenedor de Comparación (Grid de 2 Columnas) */}
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '2rem',
+      justifyContent: 'center'
     }}>
-      <h3 style={{
-        fontFamily: 'var(--font-heading)',
-        fontSize: '1.2rem',
-        color: 'var(--orange, #d97736)',
-        margin: 0
-      }}>
-        {lang === 'es' ? 'Aventuras en RZR' : 'RZR Adventures'}
-      </h3>
-      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-        {lang === 'es' 
-          ? 'Las experiencias en RZR ofrecen otra forma emocionante de explorar la región. Con un vehículo todoterreno potente y rutas rodeadas de naturaleza, puedes experimentar los paisajes de San Miguel más allá de la ciudad.'
-          : 'RZR experiences provide another exciting way to explore the region. With a powerful off-road vehicle and routes surrounded by nature, you can experience the landscapes of San Miguel beyond the city.'}
-      </p>
-      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-        {lang === 'es' 
-          ? 'Si buscas específicamente opciones de renta de vehículos, explora las rentas de RZR disponibles en San Miguel de Allende.'
-          : 'If you are specifically looking for vehicle rental options, explore the RZR rentals available in San Miguel de Allende.'}
-      </p>
       
-      {/* Botón de RZR Rentals */}
-      <div style={{ paddingTop: '0.3rem' }}>
-        <a href="https://www.gueytours.com/rzr-rentals" style={{
-          display: 'inline-block',
-          background: 'transparent',
-          color: 'var(--orange, #d97736)',
-          border: '2px solid var(--orange, #d97736)',
-          padding: '0.5rem 1.2rem',
-          borderRadius: '50px',
-          fontWeight: 'bold',
-          fontFamily: 'var(--font-heading)',
-          textDecoration: 'none',
-          textTransform: 'uppercase',
-          fontSize: '0.75rem',
-          letterSpacing: '0.08em',
-          transition: 'all 0.3s ease'
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-        >
-          {lang === 'es' ? 'Renta de RZR' : 'RZR Rentals'}
-        </a>
-      </div>
-    </div>
-
-    {/* Columna 3: Private Experiences */}
-    <div style={{ 
-      flex: '1 1 30%', 
-      minWidth: '280px', 
-      display: 'flex', 
-      flexDirection: 'column', 
-      gap: '0.8rem', 
-      borderLeft: '2px solid rgba(255,255,255,0.2)', 
-      paddingLeft: '1.2rem' 
-    }}>
-      <h3 style={{
-        fontFamily: 'var(--font-heading)',
-        fontSize: '1.2rem',
-        color: 'var(--orange, #d97736)',
-        margin: 0
+      {/* --- TARJETA RZR (Destacada) --- */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
+        border: '1px solid rgba(217, 119, 54, 0.4)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.5rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
       }}>
-        {lang === 'es' ? 'Experiencias Privadas' : 'Private Experiences'}
-      </h3>
-      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-        {lang === 'es' 
-          ? 'Las experiencias privadas son ideales cuando quieres disfrutar de una aventura con tu propio grupo. Parejas, familias, amigos y grupos privados pueden elegir una experiencia que se adapte mejor a sus intereses y horarios.'
-          : 'Private experiences are ideal when you want to enjoy an adventure with your own group. Couples, families, friends and private groups can choose an experience that better fits their interests and schedule.'}
-      </p>
-      <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-        {lang === 'es' 
-          ? 'Con un servicio personalizado y guías locales, tu aventura puede convertirse en una parte más memorable de tu viaje a San Miguel de Allende.'
-          : 'With personalized service and local guides, your adventure can become a more memorable part of your trip to San Miguel de Allende.'}
-      </p>
-
-      {/* Botón de Private Experiences */}
-      <div style={{ paddingTop: '0.3rem' }}>
-        <a href="https://www.gueytours.com/private-tours" style={{
-          display: 'inline-block',
-          background: 'transparent',
-          color: 'var(--orange, #d97736)',
-          border: '2px solid var(--orange, #d97736)',
-          padding: '0.5rem 1.2rem',
-          borderRadius: '50px',
-          fontWeight: 'bold',
+        <h3 style={{
           fontFamily: 'var(--font-heading)',
-          textDecoration: 'none',
+          fontSize: '1.6rem',
+          color: 'var(--orange, #d97736)',
           textTransform: 'uppercase',
-          fontSize: '0.75rem',
-          letterSpacing: '0.08em',
-          transition: 'all 0.3s ease'
-        }}
-        onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-        onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-        >
-          {lang === 'es' ? 'Tours Privados' : 'Private Tours'}
-        </a>
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
+          paddingBottom: '1rem'
+        }}>
+          RZR
+        </h3>
+        <ul style={{
+          listStyleType: 'none',
+          padding: 0,
+          margin: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6
+        }}>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Mayor capacidad de pasajeros.' : 'Greater passenger capacity.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Diseñado para una experiencia lado a lado (side-by-side).' : 'Designed for a side-by-side experience.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Más adecuado para parejas, familias o grupos.' : 'More suitable for couples, families or groups.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Mayor estabilidad para aventuras todoterreno compartidas.' : 'Greater stability for shared off-road adventures.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+            <span>{lang === 'es' ? 'Permite a los pasajeros disfrutar de la experiencia juntos.' : 'Allows passengers to enjoy the experience together.'}</span>
+          </li>
+        </ul>
       </div>
+
+      {/* --- TARJETA ATV --- */}
+      <div style={{
+        background: '#000',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.5rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.6rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          paddingBottom: '1rem'
+        }}>
+          ATV
+        </h3>
+        <ul style={{
+          listStyleType: 'none',
+          padding: 0,
+          margin: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6
+        }}>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Diseñado habitualmente para conducción individual.' : 'Usually designed for individual riding.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Conexión más directa entre el conductor y el vehículo.' : 'More direct connection between rider and vehicle.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Más ligero y compacto.' : 'Lighter and more compact.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Proporciona una experiencia de conducción más individual.' : 'Provides a more individual riding experience.'}</span>
+          </li>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
+            <span>{lang === 'es' ? 'Ideal para viajeros que buscan un tipo diferente de aventura todoterreno.' : 'Ideal for travelers looking for a different type of off-road adventure.'}</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
   </div>
-</div>
-          {/* Quinta sección: 3 columnas horizontales compactas con botones simétricos */}
+</section>
+{/* FIN SECTION 5 */}
+
+
+
+        {/* INICIO SECTION - What's Included With Your RZR Rental */}
+<section style={{
+  padding: '6rem 2rem',
+  background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, #0b0b0b 100%)',
+  color: '#fff',
+  fontFamily: 'sans-serif',
+  position: 'relative'
+}}>
+  <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+    
+    {/* Título H2 y Párrafo Introductorio */}
+    <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: '0 0 1rem 0',
+        lineHeight: 1.2
+      }}>
+        {lang === 'es' ? '¿Qué incluye tu renta de RZR?' : "What's Included With Your RZR Rental?"}
+      </h2>
+      <div style={{
+        width: '80px',
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        margin: '0 auto 2rem auto',
+        boxShadow: '0 0 12px var(--orange, #d97736)'
+      }} />
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        maxWidth: '800px',
+        margin: '0 auto'
+      }}>
+        {lang === 'es'
+          ? 'Las inclusiones exactas dependen de la renta seleccionada y de las condiciones actuales. Antes de reservar, Guey Tours puede proporcionarte información sobre lo que incluye tu experiencia.'
+          : 'The exact inclusions depend on the selected rental and current conditions. Before booking, Guey Tours can provide information about what is included with your experience.'}
+      </p>
+    </div>
+
+    {/* Tarjeta Contenedora de Inclusiones */}
+    <div style={{
+      background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.06) 100%)',
+      border: '1px solid rgba(217, 119, 54, 0.35)',
+      borderRadius: '16px',
+      padding: '3rem',
+      boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '2rem'
+    }}>
+      
+      <h3 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: '1.3rem',
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: 0,
+        textAlign: 'center'
+      }}>
+        {lang === 'es' ? 'Según la renta, esto puede incluir:' : 'Depending on the rental, this may include:'}
+      </h3>
+
+      {/* Lista de Inclusiones en Cuadrícula de 2 Columnas */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gap: '1rem 2rem',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        padding: '2rem 0'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Vehículo RZR' : 'RZR vehicle'}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Equipo de seguridad' : 'Safety equipment'}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Casco, cuando corresponda' : 'Helmet, when applicable'}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Instrucciones básicas de operación' : 'Basic operating instructions'}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Orientación previa al manejo' : 'Pre-drive orientation'}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Información sobre los requisitos de renta' : 'Information about rental requirements'}</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'rgba(255,255,255,0.9)', fontSize: '16px', gridColumn: '1 / -1' }}>
+          <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
+          <span>{lang === 'es' ? 'Términos y condiciones de renta' : 'Rental terms and conditions'}</span>
+        </div>
+      </div>
+
+      {/* Mensaje de Nota / Aviso al Final */}
+      <div style={{
+        background: 'rgba(217, 119, 54, 0.08)',
+        borderLeft: '4px solid var(--orange, #d97736)',
+        padding: '1rem 1.25rem',
+        borderRadius: '0 8px 8px 0'
+      }}>
+        <p style={{
+          fontFamily: 'sans-serif',
+          color: 'rgba(255, 255, 255, 0.9)',
+          fontSize: '15px',
+          lineHeight: 1.6,
+          margin: 0,
+          fontStyle: 'italic'
+        }}>
+          {lang === 'es'
+            ? 'Antes de tu aventura, asegúrate de comprender las instrucciones de operación, los requisitos de seguridad y las políticas de renta.'
+            : 'Before your adventure, make sure you understand the operating instructions, safety requirements and rental policies.'}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{/* FIN SECTION - What's Included With Your RZR Rental */}
 
           
 
-          {/* --- SEXTA SECCIÓN: Why Choose Guey Tours? --- */}
+          {/* --- SÉPTIMA SECCIÓN: Why Rent a RZR With Guey Tours? --- */}
 <div style={{ marginTop: '7rem', width: '100%', padding: '0 1rem' }}>
   
   <div style={{
@@ -983,17 +976,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("images/historic-streets-san-miguel-de-allende-tours.webp")',
+      backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url("images/happy-child-on-atv-rzr-rentals.webp")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       zIndex: 1
     }} />
 
-    {/* Etiqueta img oculta con el nuevo Alt y Title */}
+    {/* Etiqueta img oculta con Alt y Title actualizados */}
     <img 
-      src="images/historic-streets-san-miguel-de-allende-tours.webp" 
-      alt="Vibrant colored colonial building facades and a cobblestone street during San Miguel de allende tours" 
-      title="Walking through colonial alleyways with San Miguel de allende tours"
+      src="/images/happy-child-on-atv-rzr-rentals.webp" 
+      alt="A happy child wearing a helmet and colorful goggles on a red ATV, smiling and waving both hands at the camera while riding behind a gray Rzr rentals vehicle on a colonial street." 
+      title="Family adventure experience with Rzr rentals and ATV riding."
       style={{ display: 'none' }}
     />
 
@@ -1010,7 +1003,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           letterSpacing: '0.08em',
           margin: '0 0 0.8rem 0',
         }}>
-          {lang === 'es' ? '¿Por Qué Elegir Guey Tours?' : 'Why Choose Guey Tours?'}
+          {lang === 'es' ? '¿Por Qué Rentar un RZR Con Guey Tours?' : 'Why Rent a RZR With Guey Tours?'}
         </h2>
         <p style={{
           fontFamily: 'var(--font-body, sans-serif)',
@@ -1021,8 +1014,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           lineHeight: 1.6
         }}>
           {lang === 'es' 
-            ? 'Elegir el tour correcto puede marcar una gran diferencia al explorar un destino. Guey Tours combina la aventura con el conocimiento local y un servicio personalizado para crear experiencias para viajeros que quieren más que un tour convencional por la ciudad.' 
-            : 'Choosing the right tour can make a major difference when exploring a destination. Guey Tours combines adventure with local knowledge and personalized service to create experiences for travelers who want more than a conventional city tour.'}
+            ? 'Elegir la compañía de renta correcta es una parte importante de tu aventura. Guey Tours combina vehículos de calidad, conocimiento local y asistencia personalizada para ayudar a los viajeros internacionales a disfrutar de su experiencia en RZR en San Miguel de Allende.' 
+            : 'Choosing the right rental company is an important part of your adventure. Guey Tours combines quality vehicles, local knowledge and personalized assistance to help international travelers enjoy their RZR experience in San Miguel de Allende.'}
         </p>
         <div style={{
           width: '100px',
@@ -1045,16 +1038,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         {lang === 'es' ? 'Con Guey Tours puedes esperar:' : 'With Guey Tours, you can expect:'}
       </p>
 
-      {/* Grid de Beneficios forzado a 2 columnas (2x3) */}
+      {/* Grid de Beneficios (6 elementos distribuidos en columnas) */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: '1.5rem',
-        maxWidth: '900px',
+        maxWidth: '1000px',
         margin: '0 auto'
       }}>
         
-        {/* Tarjeta 1: Guías locales */}
+        {/* Tarjeta 1: Vehículos en excelente estado */}
         <div style={{
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
@@ -1065,14 +1058,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>01</span>
           <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
-            {lang === 'es' ? 'Guías Locales' : 'Local Guides'}
+            {lang === 'es' ? 'Vehículos en Óptimas Condiciones' : 'Well-maintained Vehicles'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Guías locales con profundo conocimiento de la región.' : 'Local guides with knowledge of the region.'}
+            {lang === 'es' ? 'Unidades cuidadas y listas para el camino.' : 'Well-maintained vehicles.'}
           </p>
         </div>
 
-        {/* Tarjeta 2: Idioma inglés */}
+        {/* Tarjeta 2: Experiencias enfocadas en la seguridad */}
         <div style={{
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
@@ -1083,14 +1076,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>02</span>
           <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
-            {lang === 'es' ? 'Atención Bilingüe' : 'English-Speaking'}
+            {lang === 'es' ? 'Enfoque en Seguridad' : 'Safety-Focused Experiences'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Guías de habla inglesa para viajeros internacionales.' : 'English-speaking guides for international travelers.'}
+            {lang === 'es' ? 'Experiencias diseñadas priorizando tu protección.' : 'Safety-focused experiences.'}
           </p>
         </div>
 
-        {/* Tarjeta 3: Seguridad */}
+        {/* Tarjeta 3: Conocimiento local */}
         <div style={{
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
@@ -1101,14 +1094,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>03</span>
           <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
-            {lang === 'es' ? 'Enfoque en Seguridad' : 'Safety-Focused'}
+            {lang === 'es' ? 'Conocimiento Local' : 'Local Knowledge'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Experiencias diseñadas priorizando tu seguridad.' : 'Safety-focused experiences.'}
+            {lang === 'es' ? 'Conocimiento experto de San Miguel de Allende.' : 'Local knowledge of San Miguel de Allende.'}
           </p>
         </div>
 
-        {/* Tarjeta 4: Vehículos de calidad */}
+        {/* Tarjeta 4: Asistencia en inglés */}
         <div style={{
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
@@ -1119,10 +1112,10 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>04</span>
           <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
-            {lang === 'es' ? 'Vehículos de Calidad' : 'Quality Vehicles'}
+            {lang === 'es' ? 'Asistencia en Inglés' : 'English-Speaking Assistance'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Equipos y vehículos en óptimas condiciones para la ruta.' : 'Quality vehicles.'}
+            {lang === 'es' ? 'Atención especializada para visitantes extranjeros.' : 'English-speaking assistance.'}
           </p>
         </div>
 
@@ -1140,11 +1133,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             {lang === 'es' ? 'Servicio Personalizado' : 'Personalized Service'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Atención cercana adaptada a lo que necesitas.' : 'Personalized service.'}
+            {lang === 'es' ? 'Trato cercano adaptado a lo que buscas.' : 'Personalized service.'}
           </p>
         </div>
 
-        {/* Tarjeta 6: Aventura al aire libre */}
+        {/* Tarjeta 6: Soporte antes y durante */}
         <div style={{
           background: 'rgba(15, 15, 15, 0.75)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
@@ -1155,16 +1148,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         }}>
           <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.3rem', fontWeight: 'bold', display: 'block', marginBottom: '0.5rem' }}>06</span>
           <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
-            {lang === 'es' ? 'Aventura al Aire Libre' : 'Outdoor & Adventure'}
+            {lang === 'es' ? 'Soporte Integral' : 'Support Before & During'}
           </h3>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.92rem', lineHeight: 1.5, margin: 0 }}>
-            {lang === 'es' ? 'Actividades enfocadas en la aventura y la naturaleza.' : 'Outdoor and adventure-focused activities.'}
+            {lang === 'es' ? 'Soporte antes y durante tu renta.' : 'Support before and during your rental.'}
           </p>
         </div>
 
       </div>
 
-      {/* Tarjeta Inferior: Experiencias más allá de lo tradicional */}
+      {/* Tarjeta Inferior: Aventura local auténtica */}
       <div style={{
         marginTop: '1.8rem',
         background: 'rgba(20, 20, 20, 0.85)',
@@ -1173,16 +1166,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         padding: '1.8rem',
         backdropFilter: 'blur(8px)',
         textAlign: 'center',
-        maxWidth: '900px',
+        maxWidth: '1000px',
         margin: '1.8rem auto 0 auto'
       }}>
         <h3 style={{ fontFamily: 'var(--font-heading)', color: 'var(--orange, #d97736)', fontSize: '1.1rem', marginBottom: '0.5rem', textTransform: 'uppercase' }}>
-          {lang === 'es' ? 'Más Allá de lo Convencional' : 'Beyond Traditional Areas'}
+          {lang === 'es' ? 'Aventura Local Auténtica' : 'An Authentic Local Adventure'}
         </h3>
         <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>
           {lang === 'es' 
-            ? 'Disfruta de experiencias que van más allá de las zonas turísticas tradicionales, descubriendo la verdadera esencia de San Miguel.' 
-            : 'Explore experiences beyond traditional tourist areas, uncovering authentic landscapes and hidden gems.'}
+            ? 'Vive una experiencia genuina explorando los paisajes y caminos alrededor de San Miguel de Allende.' 
+            : 'Enjoy a genuine experience exploring the landscapes and trails around San Miguel de Allende.'}
         </p>
       </div>
 
@@ -1191,12 +1184,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   </div>
 
 </div>
-{/* --- FIN DE LA SEXTA SECCIÓN --- */}
+{/* --- FIN DE LA SÉPTIMA SECCIÓN --- */}
           
 
 
 
-          {/* --- SEPTIMA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+          {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
       <section
         id="faq"
         style={{
@@ -1241,28 +1234,28 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
               {
-                q_en: 'What are the best tours to take in San Miguel de Allende?',
-                q_es: '¿Cuáles son los mejores tours para hacer en San Miguel de Allende?',
-                a_en: 'Some of the best San Miguel de Allende tours include cultural experiences, ATV adventures, RZR tours, off-road experiences, and private tours. Guey Tours focuses on outdoor adventures that allow travelers to explore the city’s surroundings beyond the traditional tourist areas.',
-                a_es: 'Algunos de los mejores tours en San Miguel de Allende incluyen experiencias culturales, aventuras en ATV, tours en RZR, experiencias todo terreno y tours privados. Guey Tours se enfoca en aventuras al aire libre que permiten a los viajeros explorar los alrededores de la ciudad más allá de las zonas turísticas tradicionales.',
+                q_en: 'What is a RZR and how does it work?',
+                q_es: '¿Qué es un RZR y cómo funciona?',
+                a_en: 'A RZR is a type of UTV (Utility Terrain Vehicle) designed for off-road driving. Its side-by-side configuration allows two or more passengers, depending on the model, to enjoy trails, rural roads and natural landscapes together.',
+                a_es: 'Un RZR es un vehículo todoterreno (UTV) diseñado para la conducción off-road. Su configuración lado a lado permite que dos o más pasajeros, según el modelo, disfruten juntos de senderos, caminos rurales y paisajes naturales.',
               },
               {
-                q_en: 'What are the best San Miguel de Allende tours for international travelers?',
-                q_es: '¿Cuáles son los mejores tours en San Miguel de Allende para viajeros internacionales?',
-                a_en: 'The best tour depends on your interests. For international travelers looking for adventure, nature, and outdoor activities, ATV and RZR experiences are great options. Private tours are also ideal for couples, families, and groups looking for a personalized experience.',
-                a_es: 'El mejor tour depende de tus intereses. Para los viajeros internacionales que buscan aventura, naturaleza y actividades al aire libre, las experiencias en ATV y RZR son excelentes opciones. Los tours privados también son ideales para parejas, familias y grupos que buscan una experiencia personalizada.',
+                q_en: 'Where can I rent a RZR in San Miguel de Allende?',
+                q_es: '¿Dónde puedo rentar un RZR en San Miguel de Allende?',
+                a_en: 'You can rent a RZR with Guey Tours in San Miguel de Allende. Availability, vehicle options, rental duration and pricing may vary, so it is recommended to contact the team before booking.',
+                a_es: 'Puedes rentar un RZR con Guey Tours en San Miguel de Allende. La disponibilidad, las opciones de vehículos, la duración de la renta y los precios pueden variar, por lo que se recomienda contactar al equipo antes de reservar.',
               },
               {
-                q_en: 'Can I take an ATV tour in San Miguel de Allende?',
-                q_es: '¿Puedo hacer un tour en ATV en San Miguel de Allende?',
-                a_en: 'Yes. ATV tours are an exciting way to explore the natural landscapes, rural roads, and off-road trails around San Miguel de Allende. Guey Tours offers experiences designed for travelers who want to combine adventure with local exploration.',
-                a_es: 'Sí. Los tours en ATV son una forma emocionante de explorar los paisajes naturales, caminos rurales y senderos todo terreno alrededor de San Miguel de Allende. Guey Tours ofrece experiencias diseñadas para viajeros que desean combinar la aventura con la exploración local.',
+                q_en: 'How much does it cost to rent a RZR in San Miguel de Allende?',
+                q_es: '¿Cuánto cuesta rentar un RZR en San Miguel de Allende?',
+                a_en: 'The price of RZR rentals in San Miguel de Allende depends on factors such as the vehicle, rental duration and availability. Contact Guey Tours for current pricing and available options for your travel dates.',
+                a_es: 'El precio de las rentas de RZR en San Miguel de Allende depende de factores como el vehículo, la duración de la renta y la disponibilidad. Contacta a Guey Tours para conocer los precios actuales y las opciones disponibles para tus fechas de viaje.',
               },
               {
-                q_en: 'What is the difference between an ATV rental and an ATV tour?',
-                q_es: '¿Cuál es la diferencia entre una renta de ATV y un tour en ATV?',
-                a_en: 'An ATV rental gives you more independence to plan your own route, while an ATV tour typically includes a guided experience along selected trails. A guided tour is a good option if you want local knowledge and a structured adventure.',
-                a_es: 'Una renta de ATV te brinda mayor independencia para planear tu propia ruta, mientras que un tour en ATV generalmente incluye una experiencia guiada a lo largo de senderos seleccionados. Un tour guiado es una buena opción si deseas conocimiento local y una aventura estructurada.',
+                q_en: 'Do I need a driver\'s license to rent a RZR?',
+                q_es: '¿Necesito licencia de conducir para rentar un RZR?',
+                a_en: 'Driver requirements can vary depending on the rental conditions and vehicle. Before booking, ask Guey Tours about minimum age, driver\'s license requirements and other conditions for operating a RZR.',
+                a_es: 'Los requisitos para el conductor pueden variar según las condiciones de renta y el vehículo. Antes de reservar, consulta con Guey Tours sobre la edad mínima, los requisitos de licencia de conducir y otras condiciones para operar un RZR.',
               },
             ].map((faq, i) => {
               const isOpen = openIndex === i
@@ -1348,9 +1341,13 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
 
         </div>
-      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA SEPTIMA SECCIÓN */}
+      </section>
 
-          {/* --- OCTAVA SECCIÓN: Call to Action (CTA) --- */}
+          {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+
+          
+
+          {/* --- NOVENA SECCIÓN: Call to Action (CTA) --- */}
       <section
         style={{
           background: 'linear-gradient(180deg, #0b0b0b 0%, #141414 100%)',
@@ -1406,12 +1403,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: '0 auto 2.5rem auto',
           }}>
             {lang === 'en' 
-              ? 'Whether you are visiting San Miguel for the first time or returning to discover something new, San Miguel de Allende tours with Guey Tours can help you experience the destination beyond the expected.' 
-              : 'Ya sea que visites San Miguel por primera vez o regreses para descubrir algo nuevo, los tours por San Miguel de Allende con Guey Tours pueden ayudarte a experimentar el destino más allá de lo esperado.'}
+              ? 'If youre ready to explore beyond the historic center, reserve your RZR and discover a more adventurous side of San Miguel de Allende.' 
+              : 'Si estás listo para explorar más allá del centro histórico, reserva tu RZR y descubre un lado más aventurero de San Miguel de Allende.  '}
           </p>
 
           <a
-            href="https://www.gueytours.com/contact"
+            href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
             style={{
               display: 'inline-block',
               background: 'var(--orange, #d97736)',
@@ -1428,11 +1425,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               transition: 'transform 0.2s, background 0.2s',
             }}
           >
-            {lang === 'en' ? 'PLAN YOUR ADVENTURE' : 'PLANEA TU AVENTURA'}
+            {lang === 'en' ? 'CONTACT US' : 'CONTACTANOS'}
           </a>
 
         </div>
-      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA OCTAVA SECCIÓN */}
+      </section> {/* <--- AQUÍ TERMINA EXACTAMENTE LA NOVENA SECCIÓN */}
 
 
           {/* --- DÉCIMA SECCIÓN: Contacto y Formulario --- */}
@@ -1658,49 +1655,57 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       {/* --- FIN DE LA DÉCIMA SECCIÓN --- */}
 
 {/* --- DATOS ESTRUCTURADOS (SEO: FAQPage) --- */}
-      <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": lang === 'es' ? '¿Cuáles son los mejores tours para hacer en San Miguel de Allende?' : 'What are the best tours to take in San Miguel de Allende?',
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": lang === 'es' ? 'Algunos de los mejores tours en San Miguel de Allende incluyen experiencias culturales, aventuras en ATV, tours en RZR, experiencias todo terreno y tours privados. Guey Tours se enfoca en aventuras al aire libre que permiten a los viajeros explorar los alrededores de la ciudad más allá de las zonas turísticas tradicionales.' : 'Some of the best San Miguel de Allende tours include cultural experiences, ATV adventures, RZR tours, off-road experiences, and private tours. Guey Tours focuses on outdoor adventures that allow travelers to explore the city’s surroundings beyond the traditional tourist areas.'
-          }
-        },
-        {
-          "@type": "Question",
-          "name": lang === 'es' ? '¿Cuáles son los mejores tours en San Miguel de Allende para viajeros internacionales?' : 'What are the best San Miguel de Allende tours for international travelers?',
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": lang === 'es' ? 'El mejor tour depende de tus intereses. Para los viajeros internacionales que buscan aventura, naturaleza y actividades al aire libre, las experiencias en ATV y RZR son excelentes opciones. Los tours privados también son ideales para parejas, familias y grupos que buscan una experiencia personalizada.' : 'The best tour depends on your interests. For international travelers looking for adventure, nature, and outdoor activities, ATV and RZR experiences are great options. Private tours are also ideal for couples, families, and groups looking for a personalized experience.'
-          }
-        },
-        {
-          "@type": "Question",
-          "name": lang === 'es' ? '¿Puedo hacer un tour en ATV en San Miguel de Allende?' : 'Can I take an ATV tour in San Miguel de Allende?',
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": lang === 'es' ? 'Sí. Los tours en ATV son una forma emocionante de explorar los paisajes naturales, caminos rurales y senderos todo terreno alrededor de San Miguel de Allende. Guey Tours ofrece experiencias diseñadas para viajeros que desean combinar la aventura con la exploración local.' : 'Yes. ATV tours are an exciting way to explore the natural landscapes, rural roads, and off-road trails around San Miguel de Allende. Guey Tours offers experiences designed for travelers who want to combine adventure with local exploration.'
-          }
-        },
-        {
-          "@type": "Question",
-          "name": lang === 'es' ? '¿Cuál es la diferencia entre una renta de ATV y un tour en ATV?' : 'What is the difference between an ATV rental and an ATV tour?',
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": lang === 'es' ? 'Una renta de ATV te brinda mayor independencia para planear tu propia ruta, mientras que un tour en ATV generalmente incluye una experiencia guiada a lo largo de senderos seleccionados. Un tour guiado es una buena opción si deseas conocimiento local y una aventura estructurada.' : 'An ATV rental gives you more independence to plan your own route, while an ATV tour typically includes a guided experience along selected trails. A guided tour is a good option if you want local knowledge and a structured adventure.'
-          }
-        }
-      ]
-    })
-  }}
-/>
+     <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": lang === 'es' ? '¿Qué es un RZR y cómo funciona?' : 'What is a RZR and how does it work?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": lang === 'es' 
+                    ? 'Un RZR es un vehículo todoterreno (UTV) diseñado para la conducción off-road. Su configuración lado a lado permite que dos o más pasajeros, según el modelo, disfruten juntos de senderos, caminos rurales y paisajes naturales.' 
+                    : 'A RZR is a type of UTV (Utility Terrain Vehicle) designed for off-road driving. Its side-by-side configuration allows two or more passengers, depending on the model, to enjoy trails, rural roads and natural landscapes together.'
+                }
+              },
+              {
+                "@type": "Question",
+                "name": lang === 'es' ? '¿Dónde puedo rentar un RZR en San Miguel de Allende?' : 'Where can I rent a RZR in San Miguel de Allende?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": lang === 'es' 
+                    ? 'Puedes rentar un RZR con Guey Tours en San Miguel de Allende. La disponibilidad, las opciones de vehículos, la duración de la renta y los precios pueden variar, por lo que se recomienda contactar al equipo antes de reservar.' 
+                    : 'You can rent a RZR with Guey Tours in San Miguel de Allende. Availability, vehicle options, rental duration and pricing may vary, so it is recommended to contact the team before booking.'
+                }
+              },
+              {
+                "@type": "Question",
+                "name": lang === 'es' ? '¿Cuánto cuesta rentar un RZR en San Miguel de Allende?' : 'How much does it cost to rent a RZR in San Miguel de Allende?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": lang === 'es' 
+                    ? 'El precio de las rentas de RZR en San Miguel de Allende depende de factores como el vehículo, la duración de la renta y la disponibilidad. Contacta a Guey Tours para conocer los precios actuales y las opciones disponibles para tus fechas de viaje.' 
+                    : 'The price of RZR rentals in San Miguel de Allende depends on factors such as the vehicle, rental duration and availability. Contact Guey Tours for current pricing and available options for your travel dates.'
+                }
+              },
+              {
+                "@type": "Question",
+                "name": lang === 'es' ? '¿Necesito licencia de conducir para rentar un RZR?' : 'Do I need a driver\'s license to rent a RZR?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": lang === 'es' 
+                    ? 'Los requisitos para el conductor pueden variar según las condiciones de renta y el vehículo. Antes de reservar, consulta con Guey Tours sobre la edad mínima, los requisitos de licencia de conducir y otras condiciones para operar un RZR.' 
+                    : 'Driver requirements can vary depending on the rental conditions and vehicle. Before booking, ask Guey Tours about minimum age, driver\'s license requirements and other conditions for operating a RZR.'
+                }
+              }
+            ]
+          })
+        }}
+      />
 
           
 
