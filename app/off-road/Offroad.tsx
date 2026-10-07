@@ -79,88 +79,89 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     zIndex: 1
   }} />
 </div>
-          {/* Encabezado estilo galería */}
-          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <div style={{
-              color: 'var(--orange, #d97736)',
-              fontFamily: 'var(--font-heading)',
-              fontSize: '0.9rem',
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              marginBottom: '0.5rem'
-            }}>
-              --- {lang === 'es' ? 'AVENTURA SOBRE RUEDAS' : 'OFF-ROAD EXPERIENCE'} ---
-            </div>
-            
-            <h1 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '3rem',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: '#fff',
-              margin: '0 0 0.8rem 0',
-            }}>
-              {lang === 'es' ? 'Alquiler de RZR en San Miguel de Allende' : 'RZR Rentals in San Miguel de Allende'}
-            </h1>
+         {/* Encabezado estilo galería */}
+<div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+  <div style={{
+    color: 'var(--orange, #d97736)',
+    fontFamily: 'var(--font-heading)',
+    fontSize: '0.9rem',
+    letterSpacing: '0.2em',
+    textTransform: 'uppercase',
+    marginBottom: '0.5rem'
+  }}>
+    --- {lang === 'es' ? '¡Prepárate para el viaje de tu vida!' : 'Get ready for the ultimate ride of your life!'} ---
+  </div>
+  
+  <h1 style={{
+    fontFamily: 'var(--font-heading)',
+    fontSize: 'clamp(1.8rem, 4vw, 3rem)',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
+    color: '#fff',
+    margin: '0 0 0.8rem 0',
+    wordBreak: 'break-word',
+  }}>
+    {lang === 'es' ? 'Alquiler de RZR en San Miguel de Allende' : 'RZR Rentals in San Miguel de Allende'}
+  </h1>
 
-            <div style={{
-              width: '120px',
-              height: '2px',
-              background: 'var(--orange, #d97736)',
-              margin: '0 auto',
-              boxShadow: '0 0 10px var(--orange, #d97736)'
-            }} />
-          </div>
+  <div style={{
+    width: '120px',
+    height: '2px',
+    background: 'var(--orange, #d97736)',
+    margin: '0 auto',
+    boxShadow: '0 0 10px var(--orange, #d97736)'
+  }} />
+</div>
 
-          {/* Primera sección de texto */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
-            <p style={{ margin: 0 }}>
-              {lang === 'es' ? (
-                <>Explora San Miguel de Allende más allá del centro de la ciudad con la renta de un RZR de Guey Tours. Disfruta de senderos todoterreno, caminos rurales y paisajes naturales mientras experimentas la libertad de conducir un potente vehículo utilitario (UTV).</>
-              ) : (
-                <>Explore San Miguel de Allende beyond the city center with a RZR rental from Guey Tours. Experience off-road trails, rural roads and natural landscapes while enjoying the freedom of driving a powerful side-by-side vehicle.</>
-              )}
-            </p>
+{/* Sección de texto unificada y optimizada para móviles */}
+<div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
+  <p style={{ margin: 0, wordBreak: 'break-word' }}>
+    {lang === 'es' ? (
+      <>En Guey Tours, te ofrecemos una experiencia todoterreno inolvidable a través del impresionante campo de Guanajuato. Si buscas una aventura al aire libre que combine adrenalina, libertad y paisajes impresionantes, nuestros tours te llevarán mucho más allá de los caminos turísticos habituales.</>
+    ) : (
+      <>At Guey Tours, we bring you an unforgettable off-road experience through the stunning countryside of Guanajuato. If you are looking for an outdoor adventure that combines adrenaline, freedom, and breathtaking landscapes, our tours will take you way beyond the typical tourist paths.</>
+    )}
+  </p>
 
-            <p style={{ margin: 0 }}>
-              {lang === 'es' ? (
-                <>San Miguel de Allende es famoso por su arquitectura colonial, sus calles históricas y su vibrante cultura, pero la región también ofrece emocionantes experiencias al aire libre. Con la renta de RZR en San Miguel de Allende, puedes descubrir una faceta diferente del destino y disfrutar de una aventura con tu pareja, familia o grupo de amigos.</>
-              ) : (
-                <>San Miguel de Allende is famous for its colonial architecture, historic streets and vibrant culture, but the region also offers exciting outdoor experiences. With RZR rentals in San Miguel de Allende, you can discover a different side of the destination and enjoy an adventure with your partner, family or group of friends.</>
-              )}
-            </p>
-          </div>
+  <p style={{ margin: 0, wordBreak: 'break-word' }}>
+    {lang === 'es' ? (
+      <>¡Ponte al volante y explora la rica herencia de México desde una perspectiva completamente nueva!</>
+    ) : (
+      <>Get behind the wheel and explore Mexico’s rich heritage from a whole new perspective!</>
+    )}
+  </p>
+</div>
 
-          {/* Botón de contacto al final de la primera sección */}
-          <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
-            <a 
-              href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0" 
-              style={{
-                display: 'inline-block',
-                background: 'transparent',
-                color: 'var(--orange, #d97736)',
-                border: '2px solid var(--orange, #d97736)',
-                padding: '0.75rem 2.5rem',
-                borderRadius: '50px',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-heading)',
-                textDecoration: 'none !important',
-                textTransform: 'uppercase',
-                letterSpacing: '0.08em',
-                transition: 'all 0.3s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--orange, #d97736)';
-                e.currentTarget.style.color = '#fff';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = 'var(--orange, #d97736)';
-              }}
-            >
-              {lang === 'es' ? 'Contáctanos' : 'Contact Us'}
-            </a>
-          </div>
+{/* Botón de contacto */}
+<div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+  <a 
+    href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0" 
+    style={{
+      display: 'inline-block',
+      background: 'transparent',
+      color: 'var(--orange, #d97736)',
+      border: '2px solid var(--orange, #d97736)',
+      padding: '0.75rem 2.5rem',
+      borderRadius: '50px',
+      fontWeight: 'bold',
+      fontFamily: 'var(--font-heading)',
+      textDecoration: 'none',
+      textTransform: 'uppercase',
+      letterSpacing: '0.08em',
+      transition: 'all 0.3s ease',
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.background = 'var(--orange, #d97736)';
+      e.currentTarget.style.color = '#fff';
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.background = 'transparent';
+      e.currentTarget.style.color = 'var(--orange, #d97736)';
+    }}
+  >
+    {lang === 'es' ? 'Contáctanos' : 'Contact Us'}
+  </a>
+</div>
 
 
 
