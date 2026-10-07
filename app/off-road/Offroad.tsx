@@ -101,7 +101,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     margin: '0 0 0.8rem 0',
     wordBreak: 'break-word',
   }}>
-    {lang === 'es' ? 'Alquiler de RZR en San Miguel de Allende' : 'RZR Rentals in San Miguel de Allende'}
+    {lang === 'es' ? 'Off-Road: Vive una aventura todoterreno en Guanajuato.' : 'Off-Road: Live an All-Terrain adventure in Guanajuato'}
   </h1>
 
   <div style={{
@@ -135,7 +135,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 {/* Botón de contacto */}
 <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
   <a 
-    href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0" 
+    href="https://www.gueytours.com/contacto/" 
     style={{
       display: 'inline-block',
       background: 'transparent',
@@ -163,6 +163,288 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   </a>
 </div>
 
+
+
+          {/* Segunda sección: Tres tarjetas (Video + Vehículos) */}
+<div style={{ marginTop: '4rem' }}>
+  {/* Título de la sección */}
+  <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+    <h2 style={{
+      fontFamily: 'var(--font-heading)',
+      fontSize: 'clamp(2rem, 4vw, 2.5rem)',
+      textTransform: 'uppercase',
+      color: '#fff',
+      letterSpacing: '0.05em',
+      marginBottom: '0.5rem',
+      wordBreak: 'break-word',
+    }}>
+      {lang === 'es' ? 'Nuestras Experiencias y Vehículos' : 'Our Experiences & Vehicles'}
+    </h2>
+    <div style={{
+      width: '80px',
+      height: '2px',
+      background: 'var(--orange, #d97736)',
+      margin: '0 auto',
+      boxShadow: '0 0 8px var(--orange, #d97736)'
+    }} />
+  </div>
+
+  {/* Contenedor de las 3 Tarjetas (Responsive Grid) */}
+  <div style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '2rem',
+    padding: '0 1rem',
+    maxWidth: '1200px',
+    margin: '0 auto'
+  }}>
+    
+    {/* --- TARJETA 1: Video (Optimizado para SEO) --- */}
+    <div style={{
+      background: '#1a1a1a',
+      borderRadius: '16px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+    }}>
+      <div style={{ width: '100%', height: '220px', background: '#000', position: 'relative' }}>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          title={lang === 'es' ? 'Alquiler de cuatrimotos (ATV) de Guey Tours para rutas todoterreno' : 'ATV Rentals from Guey Tours for off-road'}
+          aria-label={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        >
+          <source src="/images/SEO/Guey Tours Motorcycle Rentals for Off-Road.mp4" type="video/mp4" />
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+
+      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
+        <div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            marginBottom: '0.5rem',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Renta de Motorcycle' : 'Motorcycle rentals'}
+          </h3>
+          <p style={{
+            color: 'var(--orange, #d97736)',
+            fontWeight: 'bold',
+            fontSize: '1rem',
+            marginBottom: '1rem'
+          }}>
+            {lang === 'es' ? 'ACCIÓN EN VIVO' : 'LIVE ACTION'}
+          </p>
+          <p style={{
+            color: 'rgba(255,255,255,0.75)',
+            fontSize: '0.95rem',
+            lineHeight: 1.6,
+            marginBottom: '1.5rem',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' 
+              ? 'Siente la emoción antes de subirte. Observa nuestros recorridos y prepárate para la aventura.'
+              : 'Feel the excitement before you ride. Watch our tours and get ready for the adventure.'}
+          </p>
+        </div>
+
+        <div>
+          <a 
+            href="https://www.gueytours.com/rentals/moto" 
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              background: 'var(--orange, #d97736)',
+              color: '#fff',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '8px',
+              fontWeight: 'bold',
+              fontFamily: 'var(--font-heading)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              transition: 'opacity 0.3s ease'
+            }}
+          >
+            {lang === 'es' ? 'Ver Más' : 'View More'}
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    {/* --- TARJETA 2: ATV Tour (Con Alt y Title SEO) --- */}
+    <div style={{
+      background: '#1a1a1a',
+      borderRadius: '16px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+    }}>
+      <div style={{ width: '100%', height: '220px', background: '#222', overflow: 'hidden' }}>
+        <img 
+          src="/images/SEO/ATV-Rentals-Guey-Tours.jpg" 
+          alt={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'} 
+          title={lang === 'es' ? 'Alquiler de cuatrimotos (ATV) de Guey Tours para rutas todoterreno' : 'ATV Rentals from Guey Tours for off-road'}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        />
+      </div>
+
+      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
+        <div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            marginBottom: '0.5rem',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Renta un ATV' : 'ATV rentals'}
+          </h3>
+          <p style={{
+            color: 'var(--orange, #d97736)',
+            fontWeight: 'bold',
+            fontSize: '1rem',
+            marginBottom: '1rem'
+          }}>
+            $2950 MXN {lang === 'es' ? 'POR HORA' : 'PER HOUR'}
+          </p>
+          <p style={{
+            color: 'rgba(255,255,255,0.75)',
+            fontSize: '0.95rem',
+            lineHeight: 1.6,
+            marginBottom: '1.5rem',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' 
+              ? 'Ideal para ir en familia o con amigos. Mucha diversión e instrucción completa antes de arrancar.'
+              : 'Great for family and friends. A lot of fun, with full instructions provided before setting off.'}
+          </p>
+        </div>
+
+        <div>
+          <a 
+            href="https://www.gueytours.com/rentals/atv" 
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              background: 'var(--orange, #d97736)',
+              color: '#fff',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '8px',
+              fontWeight: 'bold',
+              fontFamily: 'var(--font-heading)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              transition: 'opacity 0.3s ease'
+            }}
+          >
+            {lang === 'es' ? 'Reservar Ahora' : 'Book Now'}
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    {/* --- TARJETA 3: RZR Tour (Con Alt y Title SEO) --- */}
+    <div style={{
+      background: '#1a1a1a',
+      borderRadius: '16px',
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+    }}>
+      <div style={{ width: '100%', height: '220px', background: '#222', overflow: 'hidden' }}>
+        <img 
+          src="/images/SEO/RZR-Rentals-Guey-Tours.jpg" 
+          alt={lang === 'es' ? 'Imagen de los RZR de alquiler de Guey Tours para conducción todoterreno, con fondo negro.' : 'Image of the RZR Rentals from Guey Tours for off-road with a black background'} 
+          title={lang === 'es' ? 'Alquiler de RZR de Guey Tours para rutas todoterreno' : 'RZR Rentals from Guey Tours for off-road'}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+        />
+      </div>
+
+      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
+        <div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            marginBottom: '0.5rem',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Renta un RZR' : 'RZR rentals'}
+          </h3>
+          <p style={{
+            color: 'var(--orange, #d97736)',
+            fontWeight: 'bold',
+            fontSize: '1rem',
+            marginBottom: '1rem'
+          }}>
+            $850 MXN {lang === 'es' ? 'POR HORA' : 'PER HOUR'}
+          </p>
+          <p style={{
+            color: 'rgba(255,255,255,0.75)',
+            fontSize: '0.95rem',
+            lineHeight: 1.6,
+            marginBottom: '1.5rem',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' 
+              ? 'Vehículo cómodo y confiable para 2 personas. Perfecto para dominar los caminos rurales.'
+              : 'Comfortable and reliable vehicle for 2 people. Perfect for handling rural paths.'}
+          </p>
+        </div>
+
+        <div>
+          <a 
+            href="https://www.gueytours.com/rentals/defender" 
+            style={{
+              display: 'block',
+              textAlign: 'center',
+              background: 'var(--orange, #d97736)',
+              color: '#fff',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '8px',
+              fontWeight: 'bold',
+              fontFamily: 'var(--font-heading)',
+              textDecoration: 'none',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              transition: 'opacity 0.3s ease'
+            }}
+          >
+            {lang === 'es' ? 'Reservar ATV' : 'Rent It'}
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{/* Fin de la segunda sección: Tres tarjetas */}
+          
+
+          
+          
 
 
 
