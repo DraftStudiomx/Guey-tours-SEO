@@ -217,7 +217,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           muted 
           playsInline 
           title={lang === 'es' ? 'Alquiler de motos todoterreno de Guey Tours' : 'Guey Tours Motorcycle Rentals for Off-Road'}
-          aria-label={lang === 'es' ? 'Imagen de las motocicletas todoterreno de alquiler de Guey Tours sobre fondo negro.' : 'Image of Guey Tours' Motorcycle Rentals for off-road with a black background'}
+          aria-label={lang === 'es' ? 'Imagen de las motocicletas todoterreno de alquiler de Guey Tours sobre fondo negro.' : 'Image of Guey Tours Motorcycle Rentals for off-road with a black background'}
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         >
           <source src="/images/SEO/Guey Tours Motorcycle Rentals for Off-Road.mp4" type="video/mp4" />
