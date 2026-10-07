@@ -283,7 +283,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           aria-label={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'}
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         >
-          <source src="/images/SEO/ATV-Rentals-Guey-Tours.mp4" type="video/mp4" />
+          <source src="/images/SEO/ATV Rentals from Guey Tours for off-road.mp4" type="video/mp4" />
           Tu navegador no soporta videos.
         </video>
       </div>
@@ -346,7 +346,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           aria-label={lang === 'es' ? 'Imagen de los RZR de alquiler de Guey Tours para conducción todoterreno, con fondo negro.' : 'Image of the RZR Rentals from Guey Tours for off-road with a black background'}
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         >
-          <source src="/images/SEO/RZR-Rentals-Guey-Tours.mp4" type="video/mp4" />
+          <source src="/images/SEO/RZR Rentals from Guey Tours for off-road.mp4" type="video/mp4" />
           Tu navegador no soporta videos.
         </video>
       </div>
