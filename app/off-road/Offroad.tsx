@@ -488,7 +488,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
         {/* Inicio de section tres */}
 <section style={{
-  padding: '6rem 2rem 6rem 2rem',
+  padding: '6rem 1.5rem 6rem 1.5rem',
   marginTop: '3rem',
   background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
   color: '#fff',
@@ -509,7 +509,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+        fontSize: 'clamp(2rem, 4vw, 3rem)',
         color: 'var(--orange, #d97736)',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
@@ -534,7 +534,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       background: 'rgba(255, 255, 255, 0.02)',
       borderLeft: '4px solid var(--orange, #d97736)',
       borderRadius: '0 16px 16px 0',
-      padding: 'clamp(1.5rem, 3vw, 2.5rem) clamp(1.5rem, 3vw, 3rem)',
+      padding: 'clamp(1.5rem, 3vw, 2.5rem) clamp(1.2rem, 2.5vw, 3rem)',
       marginBottom: '3.5rem',
       boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
       backdropFilter: 'blur(10px)',
@@ -574,7 +574,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
       gap: '2rem',
       marginBottom: '4rem',
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
+      width: '100%'
     }}>
       
       {/* Tarjeta 1: ATV rentals (Con botón Ver más) */}
@@ -642,7 +643,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </a>
       </div>
 
-      {/* Tarjeta 2: Side by Side (Con botón Contáctanos)[cite: 4] */}
+      {/* Tarjeta 2: Side by Side (Con botón Contáctanos) */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -687,7 +688,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           }}>
             {lang === 'es' 
               ? 'Ideal para familias y grupos que quieren compartir la adrenalina juntos en un equipo cómodo y de alto rendimiento.' 
-              : 'Ideal for families and groups who want to share the adrenaline together in a high-powered, comfortable rig.'}[cite: 4]
+              : 'Ideal for families and groups who want to share the adrenaline together in a high-powered, comfortable rig.'}
           </p>
         </div>
         <a href="https://www.gueytours.com/contact" style={{
@@ -707,7 +708,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </a>
       </div>
 
-      {/* Tarjeta 3: RSZ rentals (Con botón Ver más)[cite: 4] */}
+      {/* Tarjeta 3: RSZ rentals (Con botón Ver más) */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -752,7 +753,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           }}>
             {lang === 'es' 
               ? 'Construido para la velocidad, estabilidad y manejo de los caminos todo terreno más difíciles con facilidad.' 
-              : 'Built for speed, stability, and handling the toughest all-terrain paths with ease.'}[cite: 4]
+              : 'Built for speed, stability, and handling the toughest all-terrain paths with ease.'}
           </p>
         </div>
         <a href="https://www.gueytours.com/rsz-rentals" style={{
@@ -804,8 +805,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           {lang === 'es' ? 'La Ventaja de Guey Tours' : 'The Guey Tours Advantage'}
         </strong>
         {lang === 'es'
-          ? 'Una de las ventajas de elegir a Guey Tours es el conocimiento local de la zona. Comprender los caminos y los paisajes circundantes puede ayudar a que tu experiencia todoterreno sea más agradable y memorable.'
-          : 'One of the advantages of choosing Guey Tours is the local knowledge of the area. Understanding the roads and surrounding landscapes can help make your off-road experience more enjoyable and memorable.'}
+          ? 'Nuestro servicio de alquiler incluye equipo de seguridad de primera calidad, una explicación detallada sobre el funcionamiento y vehículos todoterreno perfectamente preparados para enfrentarse a la naturaleza.'
+          : 'Our rental service includes top-tier safety gear, a detailed operational briefing, and fully prepped off-road vehicles ready to take on the wilderness.'}
       </p>
     </div>
 
@@ -818,34 +819,60 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           {/* INICIO SECTION 4 */}
 <section style={{
-  padding: '6rem 2rem',
+  padding: '6rem 1.5rem',
   background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
   color: '#fff',
   fontFamily: 'sans-serif',
-  position: 'relative'
+  position: 'relative',
+  boxSizing: 'border-box',
+  overflow: 'hidden',
+  width: '100%'
 }}>
-  <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+  <div style={{
+    maxWidth: '900px',
+    margin: '0 auto',
+    width: '100%',
+    boxSizing: 'border-box'
+  }}>
     
-    {/* Título H2 y Párrafo Actualizado */}
-    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+    {/* Título H2 */}
+    <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+        fontSize: 'clamp(2rem, 4vw, 3rem)',
         color: 'var(--orange, #d97736)',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        {lang === 'es' ? 'Elige tu experiencia en RZR' : 'Choose Your RZR Experience'}
+        {lang === 'es' 
+          ? 'Descubre Guanajuato desde una perspectiva diferente' 
+          : 'Discover Guanajuato from a different perspective'}
       </h2>
       <div style={{
         width: '80px',
         height: '3px',
         background: 'var(--orange, #d97736)',
-        margin: '0 auto 2rem auto',
+        margin: '0 auto',
         boxShadow: '0 0 12px var(--orange, #d97736)'
       }} />
+    </div>
+
+    {/* Contenedor fluido con diseño sofisticado para los párrafos */}
+    <div style={{
+      background: 'rgba(255, 255, 255, 0.02)',
+      borderLeft: '4px solid var(--orange, #d97736)',
+      borderRadius: '0 16px 16px 0',
+      padding: 'clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 3rem)',
+      boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
+      backdropFilter: 'blur(10px)',
+      boxSizing: 'border-box',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.8rem'
+    }}>
+      {/* Párrafo 1 */}
       <p style={{
         fontFamily: 'sans-serif',
         fontStyle: 'normal',
@@ -853,112 +880,48 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         color: 'rgba(255, 255, 255, 0.85)',
         fontSize: '18px',
         lineHeight: 1.8,
-        maxWidth: '800px',
-        margin: '0 auto'
+        margin: 0
       }}>
         {lang === 'es'
-          ? 'Guey Tours ofrece diferentes opciones de RZR según la disponibilidad. Cada renta puede variar en modelo, capacidad, características, duración y precio.'
-          : 'Guey Tours can offer different RZR options depending on availability. Each rental can vary in model, capacity, features, duration and pricing.'}
+          ? 'Aléjate de los autobuses turísticos llenos de gente y adéntrate de lleno en el lado salvaje de Guanajuato.'
+          : 'Step away from the crowded tour buses and dive straight into the wild side of Guanajuato.'}
       </p>
-    </div>
 
-    {/* Tarjeta Única Centralizada con Imagen */}
-    <div style={{
-      background: '#000',
-      border: '1px solid rgba(217, 119, 54, 0.3)',
-      borderRadius: '16px',
-      overflow: 'hidden',
-      boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
-      maxWidth: '800px',
-      margin: '0 auto',
-      display: 'flex',
-      flexDirection: 'column'
-    }}>
-      {/* Contenedor de la Imagen */}
-      <div style={{
-        width: '100%',
-        height: '260px',
-        overflow: 'hidden',
-        background: '#000',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderBottom: '1px solid rgba(217, 119, 54, 0.15)'
+      {/* Párrafo 2 (Con el enlace en la frase solicitada) */}
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        margin: 0
       }}>
-        <img
-          src="/images/SEO/atv-and-rzr-rentals-group.webp"
-          alt="Close-up of a group of smiling people wearing helmets and safety goggles, standing next to a row of parked ATVs and Rzr rentals vehicles."
-          title="Getting ready for the ultimate adventure with Rzr rentals and ATVs."
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        />
-      </div>
+        {lang === 'es' ? (
+          <>
+            Nuestros <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'underline', fontWeight: 'bold' }}>Tours por San Miguel de Allende</a> te guían a través de cañones panorámicos, senderos montañosos históricos y antiguos pueblos rurales que pocos visitantes llegan a ver.
+          </>
+        ) : (
+          <>
+            Our <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'underline', fontWeight: 'bold' }}>San Miguel de Allende Tours</a> lead you through scenic canyons, historical mountain trails, and ancient rural villages that few visitors ever get to see.
+          </>
+        )}
+      </p>
 
-      {/* Contenido de la Tarjeta */}
-      <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(217, 119, 54, 0.05) 100%)',
-        padding: '2.5rem',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '1.5rem',
-        textAlign: 'center'
+      {/* Párrafo 3 */}
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        margin: 0
       }}>
-        <h3 style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.4rem',
-          color: 'var(--orange, #d97736)',
-          textTransform: 'uppercase',
-          letterSpacing: '0.05em',
-          margin: 0
-        }}>
-          {lang === 'es' ? 'Opciones de RZR' : 'RZR Options'}
-        </h3>
-
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          gap: '0.6rem', 
-          fontSize: '16px', 
-          color: 'rgba(255,255,255,0.85)', 
-          borderTop: '1px solid rgba(255,255,255,0.1)', 
-          borderBottom: '1px solid rgba(255,255,255,0.1)', 
-          padding: '1.5rem 0',
-          textAlign: 'left',
-          maxWidth: '500px',
-          margin: '0 auto',
-          width: '100%'
-        }}>
-          <div><strong>{lang === 'es' ? 'Modelo:' : 'Model:'}</strong> {lang === 'es' ? 'Los modelos disponibles varían' : 'Available models vary'}</div>
-          <div><strong>{lang === 'es' ? 'Capacidad:' : 'Capacity:'}</strong> {lang === 'es' ? 'Dependiendo del RZR seleccionado' : 'Depending on the selected RZR'}</div>
-          <div><strong>{lang === 'es' ? 'Experiencia:' : 'Experience:'}</strong> {lang === 'es' ? 'Aventura todoterreno' : 'Off-road adventure'}</div>
-          <div><strong>{lang === 'es' ? 'Características:' : 'Features:'}</strong> {lang === 'es' ? 'Diseño side-by-side y capacidades off-road' : 'Side-by-side design and off-road capabilities'}</div>
-          <div><strong>{lang === 'es' ? 'Disponibilidad:' : 'Availability:'}</strong> {lang === 'es' ? 'Sujeta a fecha y disponibilidad de vehículos' : 'Subject to date and vehicle availability'}</div>
-          <div><strong>{lang === 'es' ? 'Precio:' : 'Price:'}</strong> {lang === 'es' ? 'Contacta a Guey Tours para conocer los precios actuales' : 'Contact Guey Tours for current pricing'}</div>
-        </div>
-
-        <div style={{ paddingTop: '0.5rem' }}>
-          <a href="https://www.gueytours.com/contact" style={{
-            display: 'inline-block',
-            background: 'transparent',
-            color: 'var(--orange, #d97736)',
-            border: '2px solid var(--orange, #d97736)',
-            padding: '0.75rem 2rem',
-            borderRadius: '50px',
-            fontWeight: 'bold',
-            fontFamily: 'var(--font-heading)',
-            textDecoration: 'none',
-            textTransform: 'uppercase',
-            fontSize: '0.8rem',
-            letterSpacing: '0.08em',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--orange, #d97736)'; e.currentTarget.style.color = '#fff'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--orange, #d97736)'; }}
-          >
-            {lang === 'es' ? 'RENTAR UN RZR' : 'RENT A RZR'}
-          </a>
-        </div>
-      </div>
+        {lang === 'es'
+          ? 'Esta aventura todoterreno te permite detenerte en miradores impresionantes, tomar fotografías increíbles y compartir momentos inolvidables con tus compañeros de viaje mientras navegas por paisajes históricos.'
+          : 'This off-road adventure lets you stop at breathtaking viewpoints, take amazing photos, and share unforgettable moments with your travel companions while navigating historic landscapes.'}
+      </p>
     </div>
 
   </div>
