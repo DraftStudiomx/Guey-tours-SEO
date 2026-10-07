@@ -899,11 +899,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         {lang === 'es' ? (
           <>
-            Nuestros <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'underline', fontWeight: 'bold' }}>Tours por San Miguel de Allende</a> te guían a través de cañones panorámicos, senderos montañosos históricos y antiguos pueblos rurales que pocos visitantes llegan a ver.
+            Nuestros <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Tours por San Miguel de Allende</a> te guían a través de cañones panorámicos, senderos montañosos históricos y antiguos pueblos rurales que pocos visitantes llegan a ver.
           </>
         ) : (
           <>
-            Our <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'underline', fontWeight: 'bold' }}>San Miguel de Allende Tours</a> lead you through scenic canyons, historical mountain trails, and ancient rural villages that few visitors ever get to see.
+            Our <a href="https://www.gueytours.com/san-miguel-de-allende-tours/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>San Miguel de Allende Tours</a> lead you through scenic canyons, historical mountain trails, and ancient rural villages that few visitors ever get to see.
           </>
         )}
       </p>
@@ -931,7 +931,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           
 
-         {/* INICIO SECTION 5 */}
+        {/* INICIO SECTION 5 */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
@@ -952,7 +952,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        {lang === 'es' ? '¿Por qué elegir un RZR para tu aventura?' : 'Why Choose a RZR for Your Adventure?'}
+        {lang === 'es' ? '¿Por qué tomar un tour todoterreno con Guey Tours?' : 'Why take an Off-Road tour with Guey Tours?'}
       </h2>
       <div style={{
         width: '80px',
@@ -972,12 +972,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 auto'
       }}>
         {lang === 'es'
-          ? 'Elegir entre un RZR y un ATV depende del tipo de aventura que buscas.'
-          : 'Choosing between a RZR and an ATV depends on the type of adventure you want.'}
+          ? 'Elegirnos significa reservar con expertos locales que ponen tu seguridad y diversión en primer lugar:'
+          : 'Choosing us means booking with local experts who put your safety and enjoyment first:'}
       </p>
     </div>
 
-    {/* Contenedor de Comparación (Grid de 2 Columnas) */}
+    {/* Contenedor de Tarjetas (Grid de 2x2) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -985,7 +985,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       justifyContent: 'center'
     }}>
       
-      {/* --- TARJETA RZR (Destacada) --- */}
+      {/* --- TARJETA 1: Local expertise (Destacada) --- */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -993,56 +993,34 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         padding: '2.5rem',
         display: 'flex',
         flexDirection: 'column',
-        gap: '1.5rem',
+        gap: '1.2rem',
         boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
       }}>
         <h3 style={{
           fontFamily: 'var(--font-heading)',
-          fontSize: '1.6rem',
+          fontSize: '1.4rem',
           color: 'var(--orange, #d97736)',
           textTransform: 'uppercase',
           letterSpacing: '0.05em',
           margin: 0,
           borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
-          paddingBottom: '1rem'
+          paddingBottom: '0.8rem'
         }}>
-          RZR
+          {lang === 'es' ? 'Experiencia local' : 'Local expertise'}
         </h3>
-        <ul style={{
-          listStyleType: 'none',
-          padding: 0,
-          margin: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1rem',
+        <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
           fontSize: '16px',
-          lineHeight: 1.6
+          lineHeight: 1.6,
+          margin: 0
         }}>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
-            <span>{lang === 'es' ? 'Mayor capacidad de pasajeros.' : 'Greater passenger capacity.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
-            <span>{lang === 'es' ? 'Diseñado para una experiencia lado a lado (side-by-side).' : 'Designed for a side-by-side experience.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
-            <span>{lang === 'es' ? 'Más adecuado para parejas, familias o grupos.' : 'More suitable for couples, families or groups.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
-            <span>{lang === 'es' ? 'Mayor estabilidad para aventuras todoterreno compartidas.' : 'Greater stability for shared off-road adventures.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'var(--orange, #d97736)', fontWeight: 'bold' }}>✓</span>
-            <span>{lang === 'es' ? 'Permite a los pasajeros disfrutar de la experiencia juntos.' : 'Allows passengers to enjoy the experience together.'}</span>
-          </li>
-        </ul>
+          {lang === 'es'
+            ? 'Nuestros guías conocen cada rincón de estas rutas todoterreno, garantizando un itinerario seguro y emocionante.'
+            : 'Our guides know every corner of these off-road routes, ensuring a safe and exciting itinerary.'}
+        </p>
       </div>
 
-      {/* --- TARJETA ATV --- */}
+      {/* --- TARJETA 2: Top-tier fleet --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -1050,53 +1028,101 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         padding: '2.5rem',
         display: 'flex',
         flexDirection: 'column',
-        gap: '1.5rem',
+        gap: '1.2rem',
         boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
       }}>
         <h3 style={{
           fontFamily: 'var(--font-heading)',
-          fontSize: '1.6rem',
+          fontSize: '1.4rem',
           color: '#fff',
           textTransform: 'uppercase',
           letterSpacing: '0.05em',
           margin: 0,
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-          paddingBottom: '1rem'
+          paddingBottom: '0.8rem'
         }}>
-          ATV
+          {lang === 'es' ? 'Flota de primer nivel' : 'Top-tier fleet'}
         </h3>
-        <ul style={{
-          listStyleType: 'none',
-          padding: 0,
-          margin: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1rem',
+        <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
           fontSize: '16px',
-          lineHeight: 1.6
+          lineHeight: 1.6,
+          margin: 0
         }}>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
-            <span>{lang === 'es' ? 'Diseñado habitualmente para conducción individual.' : 'Usually designed for individual riding.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
-            <span>{lang === 'es' ? 'Conexión más directa entre el conductor y el vehículo.' : 'More direct connection between rider and vehicle.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
-            <span>{lang === 'es' ? 'Más ligero y compacto.' : 'Lighter and more compact.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
-            <span>{lang === 'es' ? 'Proporciona una experiencia de conducción más individual.' : 'Provides a more individual riding experience.'}</span>
-          </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-            <span style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 'bold' }}>•</span>
-            <span>{lang === 'es' ? 'Ideal para viajeros que buscan un tipo diferente de aventura todoterreno.' : 'Ideal for travelers looking for a different type of off-road adventure.'}</span>
-          </li>
-        </ul>
+          {lang === 'es'
+            ? 'Mantenemos nuestros vehículos todo terreno con los más altos estándares mecánicos para un rendimiento óptimo.'
+            : 'We maintain our all-terrain vehicles to the highest mechanical standards for peak performance.'}
+        </p>
+      </div>
+
+      {/* --- TARJETA 3: Full support --- */}
+      <div style={{
+        background: '#000',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.2rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.4rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          paddingBottom: '0.8rem'
+        }}>
+          {lang === 'es' ? 'Soporte completo' : 'Full support'}
+        </h3>
+        <p style={{
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6,
+          margin: 0
+        }}>
+          {lang === 'es'
+            ? 'Brindamos orientación y asistencia continua durante todos tus tours de aventura.'
+            : 'We provide continuous guidance and assistance throughout your whole adventure tours.'}
+        </p>
+      </div>
+
+      {/* --- TARJETA 4: Personalized attention --- */}
+      <div style={{
+        background: '#000',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.2rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.4rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          paddingBottom: '0.8rem'
+        }}>
+          {lang === 'es' ? 'Atención personalizada' : 'Personalized attention'}
+        </h3>
+        <p style={{
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6,
+          margin: 0
+        }}>
+          {lang === 'es'
+            ? 'Servicio amigable y bilingüe adaptado a viajeros internacionales que buscan diversión de alta calidad.'
+            : 'Friendly, bilingual service tailored to international travelers looking for high-quality fun.'}
+        </p>
       </div>
 
     </div>
