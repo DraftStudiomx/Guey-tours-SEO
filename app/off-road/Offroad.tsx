@@ -165,7 +165,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
 
-          {/* Segunda sección: Tres tarjetas (Video + Vehículos) */}
+          {/* Segunda sección: Tres tarjetas (Videos con Alt/Title + Títulos + Botones) */}
 <div style={{ marginTop: '4rem' }}>
   {/* Título de la sección */}
   <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
@@ -199,7 +199,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     margin: '0 auto'
   }}>
     
-    {/* --- TARJETA 1: Video (Optimizado para SEO) --- */}
+    {/* --- TARJETA 1: Video Motorcycle --- */}
     <div style={{
       background: '#1a1a1a',
       borderRadius: '16px',
@@ -216,8 +216,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           loop 
           muted 
           playsInline 
-          title={lang === 'es' ? 'Alquiler de cuatrimotos (ATV) de Guey Tours para rutas todoterreno' : 'ATV Rentals from Guey Tours for off-road'}
-          aria-label={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'}
+          title={lang === 'es' ? 'Alquiler de motos todoterreno de Guey Tours' : 'Guey Tours Motorcycle Rentals for Off-Road'}
+          aria-label={lang === 'es' ? 'Imagen de las motocicletas todoterreno de alquiler de Guey Tours sobre fondo negro.' : 'Image of Guey Tours' Motorcycle Rentals for off-road with a black background'}
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         >
           <source src="/images/SEO/Guey Tours Motorcycle Rentals for Off-Road.mp4" type="video/mp4" />
@@ -226,37 +226,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </div>
 
       <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-        <div>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            marginBottom: '0.5rem',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Renta de Motorcycle' : 'Motorcycle rentals'}
-          </h3>
-          <p style={{
-            color: 'var(--orange, #d97736)',
-            fontWeight: 'bold',
-            fontSize: '1rem',
-            marginBottom: '1rem'
-          }}>
-            {lang === 'es' ? 'ACCIÓN EN VIVO' : 'LIVE ACTION'}
-          </p>
-          <p style={{
-            color: 'rgba(255,255,255,0.75)',
-            fontSize: '0.95rem',
-            lineHeight: 1.6,
-            marginBottom: '1.5rem',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' 
-              ? 'Siente la emoción antes de subirte. Observa nuestros recorridos y prepárate para la aventura.'
-              : 'Feel the excitement before you ride. Watch our tours and get ready for the adventure.'}
-          </p>
-        </div>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.4rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '1.5rem',
+          wordBreak: 'break-word'
+        }}>
+          {lang === 'es' ? 'Renta de Motorcycle' : 'Motorcycle rentals'}
+        </h3>
 
         <div>
           <a 
@@ -283,7 +262,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     </div>
 
 
-    {/* --- TARJETA 2: ATV Tour (Con Alt y Title SEO) --- */}
+    {/* --- TARJETA 2: Video ATV --- */}
     <div style={{
       background: '#1a1a1a',
       borderRadius: '16px',
@@ -294,47 +273,32 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       justifyContent: 'space-between',
       boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
     }}>
-      <div style={{ width: '100%', height: '220px', background: '#222', overflow: 'hidden' }}>
-        <img 
-          src="/images/SEO/ATV-Rentals-Guey-Tours.jpg" 
-          alt={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'} 
-          title={lang === 'es' ? 'Alquiler de cuatrimotos (ATV) de Guey Tours para rutas todoterreno' : 'ATV Rentals from Guey Tours for off-road'}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-        />
+      <div style={{ width: '100%', height: '220px', background: '#000', position: 'relative' }}>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          title={lang === 'es' ? 'Alquiler de cuatrimotos (ATV) de Guey Tours para rutas todoterreno' : 'ATV Rentals from Guey Tours for off-road '}
+          aria-label={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        >
+          <source src="/images/SEO/ATV-Rentals-Guey-Tours.mp4" type="video/mp4" />
+          Tu navegador no soporta videos.
+        </video>
       </div>
 
       <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-        <div>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            marginBottom: '0.5rem',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Renta un ATV' : 'ATV rentals'}
-          </h3>
-          <p style={{
-            color: 'var(--orange, #d97736)',
-            fontWeight: 'bold',
-            fontSize: '1rem',
-            marginBottom: '1rem'
-          }}>
-            $2950 MXN {lang === 'es' ? 'POR HORA' : 'PER HOUR'}
-          </p>
-          <p style={{
-            color: 'rgba(255,255,255,0.75)',
-            fontSize: '0.95rem',
-            lineHeight: 1.6,
-            marginBottom: '1.5rem',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' 
-              ? 'Ideal para ir en familia o con amigos. Mucha diversión e instrucción completa antes de arrancar.'
-              : 'Great for family and friends. A lot of fun, with full instructions provided before setting off.'}
-          </p>
-        </div>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.4rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '1.5rem',
+          wordBreak: 'break-word'
+        }}>
+          {lang === 'es' ? 'Renta un ATV' : 'ATV rentals'}
+        </h3>
 
         <div>
           <a 
@@ -354,14 +318,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               transition: 'opacity 0.3s ease'
             }}
           >
-            {lang === 'es' ? 'Reservar Ahora' : 'Book Now'}
+            {lang === 'es' ? 'Ver Más' : 'View More'}
           </a>
         </div>
       </div>
     </div>
 
 
-    {/* --- TARJETA 3: RZR Tour (Con Alt y Title SEO) --- */}
+    {/* --- TARJETA 3: Video RZR --- */}
     <div style={{
       background: '#1a1a1a',
       borderRadius: '16px',
@@ -372,47 +336,32 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       justifyContent: 'space-between',
       boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
     }}>
-      <div style={{ width: '100%', height: '220px', background: '#222', overflow: 'hidden' }}>
-        <img 
-          src="/images/SEO/RZR-Rentals-Guey-Tours.jpg" 
-          alt={lang === 'es' ? 'Imagen de los RZR de alquiler de Guey Tours para conducción todoterreno, con fondo negro.' : 'Image of the RZR Rentals from Guey Tours for off-road with a black background'} 
+      <div style={{ width: '100%', height: '220px', background: '#000', position: 'relative' }}>
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
           title={lang === 'es' ? 'Alquiler de RZR de Guey Tours para rutas todoterreno' : 'RZR Rentals from Guey Tours for off-road'}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-        />
+          aria-label={lang === 'es' ? 'Imagen de los RZR de alquiler de Guey Tours para conducción todoterreno, con fondo negro.' : 'Image of the RZR Rentals from Guey Tours for off-road with a black background'}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        >
+          <source src="/images/SEO/RZR-Rentals-Guey-Tours.mp4" type="video/mp4" />
+          Tu navegador no soporta videos.
+        </video>
       </div>
 
       <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-        <div>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            marginBottom: '0.5rem',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Renta un RZR' : 'RZR rentals'}
-          </h3>
-          <p style={{
-            color: 'var(--orange, #d97736)',
-            fontWeight: 'bold',
-            fontSize: '1rem',
-            marginBottom: '1rem'
-          }}>
-            $850 MXN {lang === 'es' ? 'POR HORA' : 'PER HOUR'}
-          </p>
-          <p style={{
-            color: 'rgba(255,255,255,0.75)',
-            fontSize: '0.95rem',
-            lineHeight: 1.6,
-            marginBottom: '1.5rem',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' 
-              ? 'Vehículo cómodo y confiable para 2 personas. Perfecto para dominar los caminos rurales.'
-              : 'Comfortable and reliable vehicle for 2 people. Perfect for handling rural paths.'}
-          </p>
-        </div>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.4rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          marginBottom: '1.5rem',
+          wordBreak: 'break-word'
+        }}>
+          {lang === 'es' ? 'Renta un RZR' : 'RZR rentals'}
+        </h3>
 
         <div>
           <a 
@@ -432,7 +381,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               transition: 'opacity 0.3s ease'
             }}
           >
-            {lang === 'es' ? 'Reservar ATV' : 'Rent It'}
+            {lang === 'es' ? 'Ver Más' : 'View More'}
           </a>
         </div>
       </div>
@@ -440,7 +389,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   </div>
 </div>
-{/* Fin de la segunda sección: Tres tarjetas */}
+{/* Segunda sección: Tres tarjetas (Videos + Títulos + Botones) */}
+          
           
 
           
