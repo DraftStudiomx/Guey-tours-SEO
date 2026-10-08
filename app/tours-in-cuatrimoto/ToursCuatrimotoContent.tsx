@@ -283,7 +283,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     }
     .atv4_link {
       color: var(--orange, #d97736);
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 600;
       transition: opacity 0.3s ease;
     }
@@ -524,11 +524,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         {lang === 'es' ? (
           <>
-            Unirte a nuestro equipo es una de las mejores experiencias en <a href="https://www.gueytours.com/" className="atv4_link">San Miguel de Allende</a> para visitantes internacionales que buscan un día lleno de acción al aire libre.
+            Unirte a nuestro equipo es una de las mejores experiencias en <a href="https://www.gueytours.com/san-miguel-de-allende-tours" className="atv4_link">San Miguel de Allende</a> para visitantes internacionales que buscan un día lleno de acción al aire libre.
           </>
         ) : (
           <>
-            Joining our team is one of the top-rated <a href="https://www.gueytours.com/" className="atv4_link">San Miguel de Allende Tours</a> for international visitors looking for an action-packed day outdoors.
+            Joining our team is one of the top-rated <a href="https://www.gueytours.com/san-miguel-de-allende-tours" className="atv4_link">San Miguel de Allende Tours</a> for international visitors looking for an action-packed day outdoors.
           </>
         )}
       </p>
@@ -542,7 +542,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           
           
           
-{/* Inicio de section wild (Descubre San Miguel más allá del centro) */}
+{/* Inicio de section rent (ATV rentals in San Miguel de Allende) */}
 <section style={{
   padding: '6rem 1.5rem',
   marginTop: '3rem',
@@ -555,17 +555,53 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   width: '100%'
 }}>
   <style>{`
-    .wild_content_box {
+    .rent_content_box {
       max-width: 900px;
       margin: 0 auto;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.06) 100%);
       border: 1px solid rgba(217, 119, 54, 0.3);
-      borderRadius: 20px;
+      border-radius: 20px;
       padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3vw, 3rem);
       box-shadow: 0 15px 35px rgba(0,0,0,0.5);
       backdrop-filter: blur(10px);
       box-sizing: border-box;
       width: 100%;
+    }
+    .rent_link {
+      color: var(--orange, #d97736);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    .rent_link:hover {
+      opacity: 0.8;
+    }
+    .rent_list_item {
+      font-family: sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      fontSize: 17px;
+      lineHeight: 29px;
+      margin-bottom: 1rem;
+      word-break: break-word;
+    }
+    .rent_btn {
+      display: inline-block;
+      background: var(--orange, #d97736);
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-family: var(--font-heading);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 10px 25px rgba(217, 119, 54, 0.3);
+      transition: opacity 0.3s ease;
+    }
+    .rent_btn:hover {
+      opacity: 0.9;
     }
   `}</style>
 
@@ -589,8 +625,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         wordBreak: 'break-word'
       }}>
         {lang === 'es' 
-          ? 'Descubre San Miguel más allá del centro de la ciudad' 
-          : 'Discover San Miguel beyond the City Center'}
+          ? 'Alquiler de cuatrimotos (ATV) en San Miguel de Allende' 
+          : 'ATV rentals in San Miguel de Allende'}
       </h2>
       <div style={{
         width: '80px',
@@ -601,28 +637,42 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }} />
     </div>
 
-    {/* Contenedor Principal de Párrafos */}
-    <div className="wild_content_box">
+    {/* Contenedor Principal */}
+    <div className="rent_content_box">
       
-      {/* Párrafo Destacado / Introductorio */}
+      {/* Párrafo Introductorio con URL editable en el texto */}
       <p style={{
         fontFamily: 'sans-serif',
         fontStyle: 'normal',
-        fontWeight: '500',
-        color: '#fff',
-        fontSize: 'clamp(1.1rem, 2vw, 1.25rem)',
-        lineHeight: 1.7,
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '17px',
+        lineHeight: '29px',
         margin: '0 0 1.5rem 0',
-        wordBreak: 'break-word',
-        borderLeft: '4px solid var(--orange, #d97736)',
-        paddingLeft: '1rem'
+        wordBreak: 'break-word'
       }}>
-        {lang === 'es'
-          ? 'Sal de los caminos habituales y descubre el campo salvaje que rodea San Miguel.'
-          : 'Step off the beaten path and unlock the wild countryside surrounding San Miguel.'}
+        {lang === 'es' ? (
+          <>
+            Si prefieres conducir de forma independiente o deseas mayor flexibilidad durante tu estancia, ofrecemos opciones especializadas para el <a href="https://www.gueytours.com/atv-rentals" className="rent_link">alquiler de ATV en San Miguel de Allende</a>:
+          </>
+        ) : (
+          <>
+            If you prefer driving independently or want extra flexibility during your stay, we offer specialized options for <a href="https://www.gueytours.com/atv-rentals" className="rent_link">ATV rentals San Miguel de Allende</a>:
+          </>
+        )}
       </p>
 
-      {/* Segundo Párrafo */}
+      {/* Lista de Opciones */}
+      <ul style={{ margin: '0 0 1.5rem 1.5rem', padding: 0 }}>
+        <li className="rent_list_item">
+          <strong>{lang === 'es' ? 'Alquiler de ATV autoguiado:' : 'Self-Guided ATV Rentals:'}</strong> {lang === 'es' ? 'Ideal para conductores experimentados que desean explorar senderos designados a su propio ritmo.' : 'Ideal for experienced riders who want to explore designated trails at their own speed.'}
+        </li>
+        <li className="rent_list_item" style={{ marginBottom: 0 }}>
+          <strong>{lang === 'es' ? 'Aventura guiada en ATV:' : 'Guided ATV Adventure:'}</strong> {lang === 'es' ? 'La elección perfecta si quieres que un guía local experimentado abra el camino mientras comparte la historia local y lugares secretos.' : 'The perfect choice if you want an experienced local guide to lead the way while sharing local history and secret spots.'}
+        </li>
+      </ul>
+
+      {/* Párrafo Intermedio */}
       <p style={{
         fontFamily: 'sans-serif',
         fontStyle: 'normal',
@@ -634,11 +684,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         wordBreak: 'break-word'
       }}>
         {lang === 'es'
-          ? 'Conducir un potente UTV te brinda acceso a rutas rurales ocultas, cruces de ríos y miradores imponentes en las montañas a los que los autobuses turísticos estándar simplemente no pueden llegar.'
-          : 'Driving a powerful UTV gives you access to hidden rural routes, river crossings, and sweeping mountain lookouts that standard tourist buses simply cannot reach.'}
+          ? 'Todos nuestros vehículos todo terreno reciben un mantenimiento riguroso para garantizar potencia, seguridad y un manejo óptimo en cualquier terreno.'
+          : 'All our all-terrain vehicles receive rigorous maintenance to guarantee power, safety, and optimal handling across all terrains.'}
       </p>
 
-      {/* Tercer Párrafo */}
+      {/* Párrafo Final */}
       <p style={{
         fontFamily: 'sans-serif',
         fontStyle: 'normal',
@@ -650,20 +700,31 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         wordBreak: 'break-word'
       }}>
         {lang === 'es'
-          ? 'Navegar por estas pintorescas rutas en UTV te pone cara a cara con auténticas comunidades rurales, cañones dramáticos y vistas inolvidables, mostrándote un lado de México que la mayoría de los visitantes nunca llegan a ver.'
-          : 'Navigating these scenic UTV routes brings you face-to-face with authentic rural communities, dramatic canyons, and unforgettable vistas, showing you a side of Mexico most visitors never get to see.'}
+          ? 'Contáctanos para conocer más sobre nuestros paquetes de alquiler de ATV.'
+          : 'Contact us to learn more about our ATV rentals packages.'}
       </p>
 
     </div>
 
+    {/* Botón Global Inferior */}
+    <div style={{ textAlign: 'center', marginTop: '3.5rem', boxSizing: 'border-box' }}>
+      <a
+        href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rent_btn"
+      >
+        {lang === 'es' ? 'Contacta con nosotros' : 'Contact us'}
+      </a>
+    </div>
+
   </div>
 </section>
-{/* Fin de section wild */}
-
+{/* Fin de section rent */}
 
           
     
-      {/* Inicio de section exp (Experiencias de Aventura / Adventure experiences) */}
+     {/* Inicio de section exp (Experiencias de Aventura / Adventure experiences) */}
 <section style={{
   padding: '6rem 1.5rem',
   marginTop: '3rem',
@@ -726,7 +787,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   }}>
     
     {/* Título H2 */}
-    <div style={{ textAlign: 'center', marginBottom: '4rem', boxSizing: 'border-box' }}>
+    <div style={{ textAlign: 'center', marginBottom: '3rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
         fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -738,22 +799,37 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         wordBreak: 'break-word'
       }}>
         {lang === 'es' 
-          ? 'Experiencias de aventura en San Miguel de Allende' 
-          : 'Adventure experiences in San Miguel de Allende'}
+          ? '¿Qué necesitas para un tour en ATV?' 
+          : 'What do you need for an ATV tour?'}
       </h2>
       <div style={{
         width: '80px',
         height: '3px',
         background: 'var(--orange, #d97736)',
-        margin: '0 auto',
+        margin: '0 auto 2rem auto',
         boxShadow: '0 0 12px var(--orange, #d97736)'
       }} />
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '17px',
+        lineHeight: '29px',
+        maxWidth: '850px',
+        margin: '0 auto',
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es'
+          ? 'Para garantizar una aventura en cuatrimoto fluida y cómoda, ten en cuenta estas recomendaciones clave antes de salir:'
+          : 'To ensure a smooth and comfortable ATV adventure, keep these key recommendations in mind before heading out:'}
+      </p>
     </div>
 
-    {/* Cuadrícula de 3 Tarjetas */}
+    {/* Cuadrícula de Tarjetas */}
     <div className="exp_grid">
       
-      {/* Tarjeta 1: ATV Adventures */}
+      {/* Tarjeta 1: Minimum Age & License */}
       <div className="exp_card">
         <div>
           <span style={{
@@ -769,7 +845,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Cuatrimotos' : 'ATV'}
+            {lang === 'es' ? 'Edad y Licencia' : 'Age & License'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -779,7 +855,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             wordBreak: 'break-word',
             textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Aventuras en ATV' : 'ATV Adventures'}
+            {lang === 'es' ? 'Edad mínima y licencia' : 'Minimum Age & License'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
@@ -788,20 +864,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: 0,
             wordBreak: 'break-word'
           }}>
-            {lang === 'es' ? (
-              <>
-                Si quieres un control total sobre máquinas ágiles en senderos de tierra accidentados, nuestras cuatrimotos ofrecen pura diversión en terrenos naturales. Conoce nuestras opciones de <a href="https://www.gueytours.com/atv-rentals" className="exp_link">alquiler de ATV</a> para elegir entre alquileres de un solo vehículo o excursiones guiadas por senderos.
-              </>
-            ) : (
-              <>
-                If you want total control over agile machines on rugged dirt paths, our quad bikes deliver pure fun across natural terrain. Check out our options for <a href="https://www.gueytours.com/atv-rentals" className="exp_link">ATV rentals</a> to choose between single-vehicle rentals or fully guided trail trips.
-              </>
-            )}
+            {lang === 'es'
+              ? 'Los conductores deben tener al menos 18 años y contar con una licencia de conducir vigente. Los pasajeros son bienvenidos según la capacidad del vehículo.'
+              : 'Drivers must be at least 18 years old with a valid driver’s license. Passengers are welcome based on vehicle capacity.'}
           </p>
         </div>
       </div>
 
-      {/* Tarjeta 2: RZR Adventures */}
+      {/* Tarjeta 2: Safety Gear & Recommended Attire */}
       <div className="exp_card">
         <div>
           <span style={{
@@ -817,7 +887,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'RZR / UTV' : 'RZR'}
+            {lang === 'es' ? 'Seguridad y Vestimenta' : 'Gear & Attire'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -827,7 +897,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             wordBreak: 'break-word',
             textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Aventuras en RZR' : 'RZR Adventures'}
+            {lang === 'es' ? 'Seguridad y atuendo recomendado' : 'Safety Gear & Attire'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
@@ -836,20 +906,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: 0,
             wordBreak: 'break-word'
           }}>
-            {lang === 'es' ? (
-              <>
-                Para potencia de servicio pesado y emoción a alta velocidad, súbete a un vehículo utilitario premium diseñado para enfrentar terrenos extremos. Descubre nuestros <a href="https://www.gueytours.com/rsz-rentals" className="exp_link">alquileres de RZR </a> especializados y domina los senderos de montaña en un vehículo 4x4 imparable.
-              </>
-            ) : (
-              <>
-                For heavy-duty power and high-speed excitement, step inside a premium side-by-side vehicle engineered to tackle extreme terrain. Discover our specialized <a href="https://www.gueytours.com/rsz-rentals" className="exp_link"> RZR rentals</a> and master the mountain trails in an unstoppable 4x4 vehicle.
-              </>
-            )}
+            {lang === 'es'
+              ? 'Se proporcionan cascos y gafas protectoras de uso obligatorio. Usa ropa cómoda que no te importe que se ensucie, pantalón largo, calzado cerrado y protector solar.'
+              : 'Helmets and protective goggles are provided and mandatory. Wear comfortable clothes you don\'t mind getting dusty, long pants, closed-toe shoes, and sunblock.'}
           </p>
         </div>
       </div>
 
-      {/* Tarjeta 3: Private Experiences */}
+      {/* Tarjeta 3: Pre-Ride Briefing */}
       <div className="exp_card">
         <div>
           <span style={{
@@ -865,7 +929,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Privado' : 'Private'}
+            {lang === 'es' ? 'Práctica' : 'Briefing'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -875,7 +939,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             wordBreak: 'break-word',
             textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Experiencias Privadas' : 'Private Experiences'}
+            {lang === 'es' ? 'Instucción previa al recorrido' : 'Pre-Ride Briefing'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
@@ -884,15 +948,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: 0,
             wordBreak: 'break-word'
           }}>
-            {lang === 'es' ? (
-              <>
-                ¿Buscas un viaje exclusivo hecho a tu medida? Diseñamos tours privados personalizados para parejas, familias o grupos que buscan un ritmo personal. Reserva un tour privado en UTV con guías dedicados visitando nuestra página de Tours Privados.
-              </>
-            ) : (
-              <>
-                Looking for an exclusive journey tailored just for you? We design custom private tours for couples, families, or private groups seeking a personal pace. Book a private UTV tour with dedicated guides by visiting our Private Tours page.
-              </>
-            )}
+            {lang === 'es'
+              ? 'Cada tour en ATV comienza con una orientación práctica de seguridad y una prueba de manejo antes de salir al sendero.'
+              : 'Every ATV tour starts with a hands-on safety orientation and practice test before heading out.'}
           </p>
         </div>
       </div>
