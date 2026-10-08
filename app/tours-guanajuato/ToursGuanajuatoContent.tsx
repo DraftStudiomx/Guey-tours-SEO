@@ -305,17 +305,19 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Contenedor de las 5 Tarjetas con Flexbox para centrar las últimas 2 */}
+    {/* Contenedor de las 5 Tarjetas (3 arriba, 2 abajo centradas) */}
     <div style={{
       display: 'flex',
       flexWrap: 'wrap',
       gap: '2rem',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      maxWidth: '1160px',
+      margin: '0 auto'
     }}>
       
       {/* --- TARJETA 1 --- */}
       <div style={{
-        flex: '1 1 320px',
+        flex: '1 1 340px',
         maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -371,7 +373,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 2 --- */}
       <div style={{
-        flex: '1 1 320px',
+        flex: '1 1 340px',
         maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -427,7 +429,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 3 --- */}
       <div style={{
-        flex: '1 1 320px',
+        flex: '1 1 340px',
         maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -483,7 +485,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 4 --- */}
       <div style={{
-        flex: '1 1 320px',
+        flex: '1 1 340px',
         maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -539,7 +541,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 5 --- */}
       <div style={{
-        flex: '1 1 320px',
+        flex: '1 1 340px',
         maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
