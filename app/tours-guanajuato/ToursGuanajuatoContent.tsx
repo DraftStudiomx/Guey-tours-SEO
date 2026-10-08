@@ -305,20 +305,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Contenedor de las 5 Tarjetas (3 arriba, 2 abajo centradas) */}
+    {/* Contenedor de las 5 Tarjetas (Grid responsivo seguro y fluido) */}
     <div style={{
-      display: 'flex',
-      flexWrap: 'wrap',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
       gap: '2rem',
-      justifyContent: 'center',
-      maxWidth: '1160px',
-      margin: '0 auto'
+      justifyContent: 'center'
     }}>
       
       {/* --- TARJETA 1 --- */}
       <div style={{
-        flex: '1 1 340px',
-        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -373,8 +369,6 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 2 --- */}
       <div style={{
-        flex: '1 1 340px',
-        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -429,8 +423,6 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 3 --- */}
       <div style={{
-        flex: '1 1 340px',
-        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -485,8 +477,6 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 4 --- */}
       <div style={{
-        flex: '1 1 340px',
-        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -541,8 +531,6 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 5 --- */}
       <div style={{
-        flex: '1 1 340px',
-        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
