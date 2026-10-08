@@ -1546,57 +1546,50 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       {/* --- FIN DE LA DÉCIMA SECCIÓN --- */}
 
 {/* --- DATOS ESTRUCTURADOS (SEO: FAQPage) --- */}
-     <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": lang === 'es' ? '¿Qué es un RZR y cómo funciona?' : 'What is a RZR and how does it work?',
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": lang === 'es' 
-                    ? 'Un RZR es un vehículo todoterreno (UTV) diseñado para la conducción off-road. Su configuración lado a lado permite que dos o más pasajeros, según el modelo, disfruten juntos de senderos, caminos rurales y paisajes naturales.' 
-                    : 'A RZR is a type of UTV (Utility Terrain Vehicle) designed for off-road driving. Its side-by-side configuration allows two or more passengers, depending on the model, to enjoy trails, rural roads and natural landscapes together.'
-                }
-              },
-              {
-                "@type": "Question",
-                "name": lang === 'es' ? '¿Dónde puedo rentar un RZR en San Miguel de Allende?' : 'Where can I rent a RZR in San Miguel de Allende?',
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": lang === 'es' 
-                    ? 'Puedes rentar un RZR con Guey Tours en San Miguel de Allende. La disponibilidad, las opciones de vehículos, la duración de la renta y los precios pueden variar, por lo que se recomienda contactar al equipo antes de reservar.' 
-                    : 'You can rent a RZR with Guey Tours in San Miguel de Allende. Availability, vehicle options, rental duration and pricing may vary, so it is recommended to contact the team before booking.'
-                }
-              },
-              {
-                "@type": "Question",
-                "name": lang === 'es' ? '¿Cuánto cuesta rentar un RZR en San Miguel de Allende?' : 'How much does it cost to rent a RZR in San Miguel de Allende?',
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": lang === 'es' 
-                    ? 'El precio de las rentas de RZR en San Miguel de Allende depende de factores como el vehículo, la duración de la renta y la disponibilidad. Contacta a Guey Tours para conocer los precios actuales y las opciones disponibles para tus fechas de viaje.' 
-                    : 'The price of RZR rentals in San Miguel de Allende depends on factors such as the vehicle, rental duration and availability. Contact Guey Tours for current pricing and available options for your travel dates.'
-                }
-              },
-              {
-                "@type": "Question",
-                "name": lang === 'es' ? '¿Necesito licencia de conducir para rentar un RZR?' : 'Do I need a driver\'s license to rent a RZR?',
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": lang === 'es' 
-                    ? 'Los requisitos para el conductor pueden variar según las condiciones de renta y el vehículo. Antes de reservar, consulta con Guey Tours sobre la edad mínima, los requisitos de licencia de conducir y otras condiciones para operar un RZR.' 
-                    : 'Driver requirements can vary depending on the rental conditions and vehicle. Before booking, ask Guey Tours about minimum age, driver\'s license requirements and other conditions for operating a RZR.'
-                }
-              }
-            ]
-          })
-        }}
-      />
+     {/* SCRIPT DE DATOS ESTRUCTURADOS JSON-LD PARA PREGUNTAS FRECUENTES (SEO FAQ SCHEMA) */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need prior driving experience to join an off-road tour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No previous experience is required! Before starting the tour, our expert guides provide a comprehensive safety briefing and hands-on instructions so you can handle our off-road vehicles with complete confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I wear for an off-road adventure in San Miguel de Allende?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend wearing comfortable long pants, closed-toe shoes (like sneakers or hiking boots), and sunglasses. Dust and mud are part of the fun, so bring clothes you don't mind getting a little dirty!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your ATV rentals and tour routes safe for international tourists?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Safety is our top priority at Guey Tours. All our vehicles undergo strict maintenance inspections, and we provide certified helmets, goggles, and full guide support along every route."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I drive a SIDE BY SIDE vehicle with my family?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our SIDE BY SIDE vehicles are designed for multi-passenger comfort and safety, making them the perfect choice for families or groups of friends who want to enjoy an off-road tour together."
+          }
+        }
+      ]
+    })
+  }}
+/>
 
           
 
