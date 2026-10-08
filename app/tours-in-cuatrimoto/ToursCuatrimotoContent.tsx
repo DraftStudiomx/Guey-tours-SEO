@@ -782,7 +782,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           
     
-     {/* Inicio de section exp (Experiencias de Aventura / Adventure experiences) */}
+    {/* Inicio de section exp (Experiencias de Aventura / Adventure experiences) */}
 <section style={{
   padding: '6rem 1.5rem',
   marginTop: '3rem',
@@ -797,22 +797,22 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   <style>{`
     .exp_grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       box-sizing: border-box;
       width: 100%;
     }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       .exp_grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
       }
     }
     .exp_card {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%);
       border: 1px solid rgba(217, 119, 54, 0.3);
-      borderRadius: 16px;
+      border-radius: 16px;
       padding: 2.5rem 2rem;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       display: flex;
@@ -838,14 +838,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   `}</style>
 
   <div style={{
-    maxWidth: '1200px',
+    maxWidth: '1100px',
     margin: '0 auto',
     width: '100%',
     boxSizing: 'border-box'
   }}>
     
-    {/* Título H2 */}
-    <div style={{ textAlign: 'center', marginBottom: '3rem', boxSizing: 'border-box' }}>
+    {/* Título H2 y Párrafo Introductorio */}
+    <div style={{ textAlign: 'center', marginBottom: '4rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
         fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -884,7 +884,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Cuadrícula de Tarjetas */}
+    {/* Cuadrícula de 4 Tarjetas en 2x2 */}
     <div className="exp_grid">
       
       {/* Tarjeta 1: Minimum Age & License */}
@@ -916,9 +916,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             {lang === 'es' ? 'Edad mínima y licencia' : 'Minimum Age & License'}
           </h3>
           <p style={{
-            color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '1rem',
-            lineHeight: 1.7,
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
             margin: 0,
             wordBreak: 'break-word'
           }}>
@@ -929,7 +932,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* Tarjeta 2: Safety Gear & Recommended Attire */}
+      {/* Tarjeta 2: Safety Gear */}
       <div className="exp_card">
         <div>
           <span style={{
@@ -945,7 +948,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Seguridad y Vestimenta' : 'Gear & Attire'}
+            {lang === 'es' ? 'Seguridad' : 'Safety Gear'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -955,23 +958,71 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             wordBreak: 'break-word',
             textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Seguridad y atuendo recomendado' : 'Safety Gear & Attire'}
+            {lang === 'es' ? 'Equipo de seguridad' : 'Safety Gear'}
           </h3>
           <p style={{
-            color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '1rem',
-            lineHeight: 1.7,
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
             margin: 0,
             wordBreak: 'break-word'
           }}>
             {lang === 'es'
-              ? 'Se proporcionan cascos y gafas protectoras de uso obligatorio. Usa ropa cómoda que no te importe que se ensucie, pantalón largo, calzado cerrado y protector solar.'
-              : 'Helmets and protective goggles are provided and mandatory. Wear comfortable clothes you don\'t mind getting dusty, long pants, closed-toe shoes, and sunblock.'}
+              ? 'Se proporcionan cascos y gafas protectoras, siendo de uso obligatorio para todos los participantes.'
+              : 'Helmets and protective goggles are provided and mandatory for all participants.'}
           </p>
         </div>
       </div>
 
-      {/* Tarjeta 3: Pre-Ride Briefing */}
+      {/* Tarjeta 3: Recommended Attire */}
+      <div className="exp_card">
+        <div>
+          <span style={{
+            display: 'inline-block',
+            padding: '0.3rem 0.8rem',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            borderRadius: '20px',
+            fontSize: '0.8rem',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            letterSpacing: '0.05em',
+            marginBottom: '1rem',
+            border: '1px solid rgba(217, 119, 54, 0.4)'
+          }}>
+            {lang === 'es' ? 'Vestimenta' : 'Attire'}
+          </span>
+          <h3 style={{
+            color: '#fff',
+            fontSize: '1.35rem',
+            margin: '0 0 1rem 0',
+            fontFamily: 'var(--font-heading)',
+            wordBreak: 'break-word',
+            textTransform: 'uppercase'
+          }}>
+            {lang === 'es' ? 'Atuendo recomendado' : 'Recommended Attire'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es'
+              ? 'Usa ropa cómoda que no te importe que se ensucie con polvo, pantalón largo, calzado cerrado y protector solar.'
+              : 'Wear comfortable clothes you don\'t mind getting dusty, long pants, closed-toe shoes, and sunblock.'}
+          </p>
+        </div>
+      </div>
+
+      {/* Tarjeta 4: Pre-Ride Briefing */}
       <div className="exp_card">
         <div>
           <span style={{
@@ -997,18 +1048,21 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             wordBreak: 'break-word',
             textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Instucción previa al recorrido' : 'Pre-Ride Briefing'}
+            {lang === 'es' ? 'Instrucción previa al recorrido' : 'Pre-Ride Briefing'}
           </h3>
           <p style={{
-            color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '1rem',
-            lineHeight: 1.7,
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
             margin: 0,
             wordBreak: 'break-word'
           }}>
             {lang === 'es'
-              ? 'Cada tour en ATV comienza con una orientación práctica de seguridad y una prueba de manejo antes de salir al sendero.'
-              : 'Every ATV tour starts with a hands-on safety orientation and practice test before heading out.'}
+              ? 'Cada tour en ATV comienza con una orientación práctica de seguridad y una prueba de manejo.'
+              : 'Every ATV tour starts with a hands-on safety orientation and practice test.'}
           </p>
         </div>
       </div>
@@ -1026,7 +1080,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
           
 
-        {/* INICIO SECTION 5 */}
+       {/* INICIO SECTION 5 */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
@@ -1047,7 +1101,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        {lang === 'es' ? '¿Por qué elegir Guey Tours?' : 'Why Choose Guey Tours?'}
+        {lang === 'es' ? '¿Por qué hacer un tour en ATV con Guey Tours?' : 'Why take an ATV tour with Guey Tours?'}
       </h2>
       <div style={{
         width: '80px',
@@ -1069,17 +1123,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         {lang === 'es' ? (
           <>
-            En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> nos enfocamos en ofrecer experiencias inolvidables y emocionantes:
+            En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> te ofrecemos la mejor experiencia todoterreno:
           </>
         ) : (
           <>
-            At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> we focus on delivering unforgettable and exciting experiences:
+            At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> we bring you the ultimate off-road experience:
           </>
         )}
       </p>
     </div>
 
-    {/* Contenedor de Tarjetas (Grid) */}
+    {/* Contenedor de Tarjetas (Grid 2x2 simétrico) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -1088,7 +1142,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       marginBottom: '4rem'
     }}>
       
-      {/* --- TARJETA 1: Local Knowledge --- */}
+      {/* --- TARJETA 1: Deep Trail Knowledge --- */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -1109,7 +1163,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Conocimiento local' : 'Local Knowledge'}
+          {lang === 'es' ? 'Conocimiento profundo de los senderos' : 'Deep Trail Knowledge'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1118,12 +1172,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Guías locales apasionados que conocen cada sendero secreto y rincón histórico.'
-            : 'Passionate local guides who know every secret trail and historic spot.'}
+            ? 'Conocemos los caminos más seguros y panorámicos de toda la región.'
+            : 'We know the safest, most scenic paths across the region.'}
         </p>
       </div>
 
-      {/* --- TARJETA 2: English-Speaking Staff --- */}
+      {/* --- TARJETA 2: Bilingual & Experienced Guides --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -1144,7 +1198,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Personal bilingüe' : 'English-Speaking Staff'}
+          {lang === 'es' ? 'Guías bilingües y experimentados' : 'Bilingual & Experienced Guides'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1153,12 +1207,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Comunicación clara, amigable y atención personalizada para viajeros internacionales.'
-            : 'Clear, friendly communication and personalized attention for international travelers.'}
+            ? 'Personal dedicado de habla inglesa que brinda asistencia continua durante el recorrido.'
+            : 'Dedicated English-speaking staff providing continuous support.'}
         </p>
       </div>
 
-      {/* --- TARJETA 3: Safety-Focused --- */}
+      {/* --- TARJETA 3: Top-Tier Fleet --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -1179,7 +1233,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Enfoque en la seguridad' : 'Safety-Focused'}
+          {lang === 'es' ? 'Flota de primer nivel' : 'Top-Tier Fleet'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1188,12 +1242,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Equipo de protección de primera calidad, orientaciones completas y asistencia constante en los senderos.'
-            : 'Top-quality safety gear, full orientations, and constant trail support.'}
+            ? 'Vehículos modernos y en excelente estado, diseñados para dominar terrenos difíciles.'
+            : 'Modern, well-maintained vehicles built to master rugged terrain.'}
         </p>
       </div>
 
-      {/* --- TARJETA 4: Quality Vehicles --- */}
+      {/* --- TARJETA 4: Safety First --- */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -1214,7 +1268,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Vehículos de calidad' : 'Quality Vehicles'}
+          {lang === 'es' ? 'La seguridad primero' : 'Safety First'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1223,48 +1277,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Vehículos recreativos meticulosamente mantenidos y modelos de vehículos utilitarios listos para la conducción off-road.'
-            : 'Meticulously maintained recreational vehicles and off-road utility vehicle models ready for off-road driving.'}
-        </p>
-      </div>
-
-      {/* --- TARJETA 5: Pure Thrills (Ocupa espacio o se alinea) --- */}
-      <div style={{
-        background: '#000',
-        border: '1px solid rgba(255, 255, 255, 0.15)',
-        borderRadius: '16px',
-        padding: '2.5rem',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '1.2rem',
-        boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
-        gridColumn: '1 / -1',
-        maxWidth: '650px',
-        margin: '0 auto',
-        width: '100%',
-        boxSizing: 'border-box'
-      }}>
-        <h3 style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.4rem',
-          color: '#fff',
-          textTransform: 'uppercase',
-          letterSpacing: '0.05em',
-          margin: 0,
-          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-          paddingBottom: '0.8rem'
-        }}>
-          {lang === 'es' ? 'Emociones puras' : 'Pure Thrills'}
-        </h3>
-        <p style={{
-          color: 'rgba(255, 255, 255, 0.85)',
-          fontSize: '16px',
-          lineHeight: 1.6,
-          margin: 0
-        }}>
-          {lang === 'es'
-            ? 'Itinerarios hechos a la medida diseñados en torno a una auténtica aventura en UTV de alta energía.'
-            : 'Tailor-made itineraries built around genuine, high-energy UTV adventure.'}
+            ? 'Protocolos de seguridad integrales para que puedas concentrarte por completo en divertirte.'
+            : 'Comprehensive safety protocols so you can focus entirely on having fun.'}
         </p>
       </div>
 
@@ -1273,7 +1287,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     {/* Botón de Llamado a la Acción (CTA) */}
     <div style={{ textAlign: 'center' }}>
       <a
-        href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+an+ATV+tour.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -1292,7 +1306,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           transition: 'all 0.3s ease'
         }}
       >
-        {lang === 'es' ? 'Planifica tu aventura' : 'Plan your adventure'}
+        {lang === 'es' ? 'Reserva tu tour en ATV' : 'Book your ATV tour'}
       </a>
     </div>
 
