@@ -1414,7 +1414,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
 
-         {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+        {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
       <section
         id="faq"
         style={{
@@ -1450,7 +1450,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               ——— {lang === 'en' ? 'Got questions?' : '¿Tienes preguntas?'} ———
             </div>
             <h2 className="section-heading">
-              {lang === 'en' ? 'FAQs about our tours in Guanajuato' : 'Preguntas frecuentes sobre nuestros tours en Guanajuato'}
+              {lang === 'en' ? 'FAQs about UTV tours' : 'Preguntas frecuentes sobre recorridos en UTV'}
             </h2>
             <div className="section-divider" style={{ marginTop: '1rem' }} />
           </div>
@@ -1459,28 +1459,28 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
               {
-                q_en: 'What is included in your Tours Guanajuato packages?',
-                q_es: '¿Qué incluyen sus paquetes de Tours Guanajuato?',
-                a_en: 'Our Tours Guanajuato include high-performance all-terrain vehicles, protective safety gear (helmets and goggles), expert bilingual guides, fuel, and a comprehensive safety orientation before hitting the trails.',
-                a_es: 'Nuestros Tours Guanajuato incluyen vehículos todoterreno de alto rendimiento, equipo de protección de seguridad (cascos y gafas), guías bilingües expertos, combustible y una orientación de seguridad completa antes de salir a los senderos.',
+                q_en: 'What is a UTV and how does it differ from an ATV?',
+                q_es: '¿Qué es un UTV y en qué se diferencia de una cuatrimoto (ATV)?',
+                a_en: 'A UTV (Utility Terrain Vehicle) is a side-by-side 4x4 vehicle equipped with bucket seats, seatbelts, a steering wheel, and a protective roll cage, making it ideal for passengers who want to ride together comfortably on an off-road tour.',
+                a_es: 'Un UTV (Utility Terrain Vehicle) es un vehículo 4x4 tipo side-by-side equipado con asientos individuales, cinturones de seguridad, volante y una jaula antivuelco protectora, lo que lo hace ideal para los pasajeros que desean viajar juntos cómodamente en un recorrido todoterreno.',
               },
               {
-                q_en: 'Are your Guanajuato tours suitable for beginners with no off-road experience?',
-                q_es: '¿Sus tours en Guanajuato son adecuados para principiantes sin experiencia previa todoterreno?',
-                a_en: 'Yes, absolutely! Our professional guides provide hands-on instructions so drivers of all skill levels can safely enjoy our tours and navigate all-terrain paths with confidence.',
-                a_es: '¡Sí, absolutamente! Nuestros guías profesionales proporcionan instrucciones prácticas para que conductores de todos los niveles puedan disfrutar con seguridad de nuestros tours y recorrer los caminos todoterreno con total confianza.',
+                q_en: 'Do I need a valid driver’s license to drive a UTV on your tours?',
+                q_es: '¿Necesito una licencia de conducir vigente para manejar un UTV en sus tours?',
+                a_en: 'Yes, all drivers must present a valid driver’s license to operate a UTV or take advantage of our RSZ rentals. Passengers of all ages are welcome to join the ride!',
+                a_es: 'Sí, todos los conductores deben presentar una licencia de conducir vigente para operar un UTV o aprovechar nuestros alquileres de RZR. ¡Los pasajeros de todas las edades son bienvenidos a unirse al viaje!',
               },
               {
-                q_en: 'What should I bring for outdoor activities in San Miguel de Allende and Guanajuato?',
-                q_es: '¿Qué debo llevar para las actividades al aire libre en San Miguel de Allende y Guanajuato?',
-                a_en: 'We recommend wearing comfortable long pants, closed-toe shoes, sunblock, and sunglasses. Bringing a light jacket and a camera to capture the stunning scenery is also recommended.',
-                a_es: 'Recomendamos usar pantalones largos y cómodos, calzado cerrado, protector solar y gafas de sol. También se recomienda llevar una chaqueta ligera y una cámara para capturar los impresionantes paisajes.',
+                q_en: 'What should I bring for a UTV adventure in San Miguel de Allende?',
+                q_es: '¿Qué debo llevar para una aventura en UTV en San Miguel de Allende?',
+                a_en: 'We recommend wearing comfortable clothing you don\'t mind getting dusty, closed-toe shoes, sunblock, and sunglasses. We provide helmets, goggles, and fresh water for your UTV adventure.',
+                a_es: 'Recomendamos usar ropa cómoda que no te importe que se ensucie con polvo, calzado cerrado, protector solar y gafas de sol. Proporcionamos cascos, gafas protectoras y agua fresca para tu aventura en UTV.',
               },
               {
-                q_en: 'How far in advance should I book my Tours in Guanajuato?',
-                q_es: '¿Con cuánta anticipación debo reservar mis Tours en Guanajuato?',
-                a_en: 'Because our Tours Guanajuato and all-terrain rentals are highly popular among international travelers, we recommend booking at least 48 hours in advance to secure your preferred date and vehicle model.',
-                a_es: 'Debido a que nuestros Tours Guanajuato y alquileres todoterreno son muy populares entre los viajeros internacionales, recomendamos reservar con al menos 48 horas de anticipación para asegurar tu fecha preferida y el modelo de vehículo.',
+                q_en: 'Is a UTV tour suitable for beginners with no off-road driving experience?',
+                q_es: '¿Es un tour en UTV adecuado para principiantes sin experiencia previa de manejo todoterreno?',
+                a_en: 'Absolutely! Before hitting the trail, our bilingual guides provide hands-on instructions and a complete safety briefing so you feel totally confident mastering off-road driving on any terrain.',
+                a_es: '¡Absolutamente! Antes de salir al sendero, nuestros guías bilingües ofrecen instrucciones prácticas y una sesión informativa completa de seguridad para que te sientas totalmente seguro dominando la conducción todoterreno en cualquier terreno.',
               },
             ].map((faq, i) => {
               const isOpen = openIndex === i
@@ -1806,41 +1806,40 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is included in your Tours Guanajuato packages?",
+          "name": "What is a UTV and how does it differ from an ATV?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our Tours Guanajuato include high-performance all-terrain vehicles, protective safety gear (helmets and goggles), expert bilingual guides, fuel, and a comprehensive safety orientation before hitting the trails."
+            "text": "A UTV (Utility Terrain Vehicle) is a side-by-side 4x4 vehicle equipped with bucket seats, seatbelts, a steering wheel, and a protective roll cage, making it ideal for passengers who want to ride together comfortably on an off-road tour."
           }
         },
         {
           "@type": "Question",
-          "name": "Are your Guanajuato tours suitable for beginners with no off-road experience?",
+          "name": "Do I need a valid driver’s license to drive a UTV on your tours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, absolutely! Our professional guides provide hands-on instructions so drivers of all skill levels can safely enjoy our tours and navigate all-terrain paths with confidence."
+            "text": "Yes, all drivers must present a valid driver’s license to operate a UTV or take advantage of our RSZ rentals. Passengers of all ages are welcome to join the ride!"
           }
         },
         {
           "@type": "Question",
-          "name": "What should I bring for outdoor activities in San Miguel de Allende and Guanajuato?",
+          "name": "What should I bring for a UTV adventure in San Miguel de Allende?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We recommend wearing comfortable long pants, closed-toe shoes, sunblock, and sunglasses. Bringing a light jacket and a camera to capture the stunning scenery is also recommended."
+            "text": "We recommend wearing comfortable clothing you don't mind getting dusty, closed-toe shoes, sunblock, and sunglasses. We provide helmets, goggles, and fresh water for your UTV adventure."
           }
         },
         {
           "@type": "Question",
-          "name": "How far in advance should I book my Tours in Guanajuato?",
+          "name": "Is a UTV tour suitable for beginners with no off-road driving experience?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Because our Tours Guanajuato and all-terrain rentals are highly popular among international travelers, we recommend booking at least 48 hours in advance to secure your preferred date and vehicle model."
+            "text": "Absolutely! Before hitting the trail, our bilingual guides provide hands-on instructions and a complete safety briefing so you feel totally confident mastering off-road driving on any terrain."
           }
         }
       ]
     })
   }}
 />
-
           
 
           {/* Aquí puedes seguir pegando los demás scripts de FAQPage, Breadcrumb, etc. con el mismo formato */}
