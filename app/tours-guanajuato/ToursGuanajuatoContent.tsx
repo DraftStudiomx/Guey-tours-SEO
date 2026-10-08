@@ -1212,7 +1212,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               ——— {lang === 'en' ? 'Got questions?' : '¿Tienes preguntas?'} ———
             </div>
             <h2 className="section-heading">
-              {lang === 'en' ? 'FREQUENTLY ASKED QUESTIONS' : 'PREGUNTAS FRECUENTES'}
+              {lang === 'en' ? 'FAQs about our tours in Guanajuato' : 'Preguntas frecuentes sobre nuestros tours en Guanajuato'}
             </h2>
             <div className="section-divider" style={{ marginTop: '1rem' }} />
           </div>
