@@ -244,7 +244,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
         
-         {/* INICIO SECTION - 5 TARJETAS PERFECTAS RESPONSIVAS */}
+        {/* INICIO SECTION - 5 TARJETAS PERFECTAS RESPONSIVAS */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
@@ -323,7 +323,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       boxSizing: 'border-box'
     }}>
       
-      {/* --- TARJETA 1 --- */}
+      {/* --- TARJETA 1: City Tour --- */}
       <div className="c5_card_1" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -345,16 +345,42 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           />
         </div>
         <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            margin: 0,
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
-          </h3>
+          <div>
+            <div style={{
+              display: 'inline-block',
+              background: 'rgba(217, 119, 54, 0.15)',
+              color: 'var(--orange, #d97736)',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '20px',
+              fontSize: '0.85rem',
+              fontWeight: 'bold',
+              marginBottom: '0.75rem',
+              border: '1px solid rgba(217, 119, 54, 0.3)'
+            }}>
+              {lang === 'es' ? '⏱ Duración: 1 Hora' : '⏱ Duration: 1 Hr.'}
+            </div>
+            <h3 style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.4rem',
+              color: '#fff',
+              textTransform: 'uppercase',
+              margin: '0 0 0.75rem 0',
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
+            </h3>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.8)',
+              fontSize: '0.95rem',
+              lineHeight: 1.6,
+              margin: 0,
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es'
+                ? 'Descubre el corazón histórico y las afueras vibrantes de la ciudad en una ruta accesible que combina la cultura local con un manejo ligero y panorámico. Perfecto para una introducción rápida y envolvente al aire libre.'
+                : 'Discover the historic heart and vibrant outskirts of the city on an accessible route that blends local culture with light, scenic riding. Perfect for a quick, immersive outdoor introduction.'}
+            </p>
+          </div>
           <div>
             <a
               href="https://www.gueytours.com/tours/tour-el-centro-san-miguel"
@@ -379,7 +405,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 2 --- */}
+      {/* --- TARJETA 2: San Miguel Buggy Tour --- */}
       <div className="c5_card_2" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -401,16 +427,42 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           />
         </div>
         <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            margin: 0,
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
-          </h3>
+          <div>
+            <div style={{
+              display: 'inline-block',
+              background: 'rgba(217, 119, 54, 0.15)',
+              color: 'var(--orange, #d97736)',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '20px',
+              fontSize: '0.85rem',
+              fontWeight: 'bold',
+              marginBottom: '0.75rem',
+              border: '1px solid rgba(217, 119, 54, 0.3)'
+            }}>
+              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
+            </div>
+            <h3 style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.4rem',
+              color: '#fff',
+              textTransform: 'uppercase',
+              margin: '0 0 0.75rem 0',
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
+            </h3>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.8)',
+              fontSize: '0.95rem',
+              lineHeight: 1.6,
+              margin: 0,
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es'
+                ? 'Experimenta la emoción de un recorrido en buggy todo terreno a través de senderos abiertos. Este tour ofrece una forma cómoda pero atrevida de navegar por caminos polvorientos y espacios panorámicos muy amplios.'
+                : 'Experience the thrill of a rugged buggy ride across open trails. This tour offers a comfortable yet daring way to navigate dusty paths and wide-open scenic spaces.'}
+            </p>
+          </div>
           <div>
             <a
               href="https://www.gueytours.com/tours/san-miguel-viejo"
@@ -435,7 +487,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 3 --- */}
+      {/* --- TARJETA 3: Atotonilco ATV Tour --- */}
       <div className="c5_card_3" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -457,16 +509,42 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           />
         </div>
         <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            margin: 0,
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
-          </h3>
+          <div>
+            <div style={{
+              display: 'inline-block',
+              background: 'rgba(217, 119, 54, 0.15)',
+              color: 'var(--orange, #d97736)',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '20px',
+              fontSize: '0.85rem',
+              fontWeight: 'bold',
+              marginBottom: '0.75rem',
+              border: '1px solid rgba(217, 119, 54, 0.3)'
+            }}>
+              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
+            </div>
+            <h3 style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.4rem',
+              color: '#fff',
+              textTransform: 'uppercase',
+              margin: '0 0 0.75rem 0',
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
+            </h3>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.8)',
+              fontSize: '0.95rem',
+              lineHeight: 1.6,
+              margin: 0,
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es'
+                ? 'Pasea hacia el icónico santuario de Atotonilco. Esta ruta ofrece una mezcla única de puntos de referencia históricos y terrenos dinámicos que mantienen tu energía al máximo.'
+                : 'Ride out toward the iconic sanctuary of Atotonilco. This route delivers a unique mix of historical landmarks and dynamic terrain that keeps your energy high.'}
+            </p>
+          </div>
           <div>
             <a
               href="https://www.gueytours.com/tours/atotonilco"
@@ -491,7 +569,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 4 --- */}
+      {/* --- TARJETA 4: Atascadero ATV Tour --- */}
       <div className="c5_card_4" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -513,16 +591,42 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           />
         </div>
         <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            margin: 0,
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
-          </h3>
+          <div>
+            <div style={{
+              display: 'inline-block',
+              background: 'rgba(217, 119, 54, 0.15)',
+              color: 'var(--orange, #d97736)',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '20px',
+              fontSize: '0.85rem',
+              fontWeight: 'bold',
+              marginBottom: '0.75rem',
+              border: '1px solid rgba(217, 119, 54, 0.3)'
+            }}>
+              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
+            </div>
+            <h3 style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.4rem',
+              color: '#fff',
+              textTransform: 'uppercase',
+              margin: '0 0 0.75rem 0',
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
+            </h3>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.8)',
+              fontSize: '0.95rem',
+              lineHeight: 1.6,
+              margin: 0,
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es'
+                ? 'Navega a través de encantadoras calles históricas y tradicionales caminos empedrados. Esta ruta combina la arquitectura colonial local con un paseo atractivo y dinámico por barrios urbanos pintorescos.'
+                : 'Navigate through charming historic streets and traditional cobblestone paths just like this. This route blends local colonial architecture with an engaging, dynamic ride through scenic urban neighborhoods.'}
+            </p>
+          </div>
           <div>
             <a
               href="https://www.gueytours.com/tours/atascadero"
@@ -547,7 +651,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 5 --- */}
+      {/* --- TARJETA 5: Agua Espinosa ATV Tour --- */}
       <div className="c5_card_5" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
@@ -569,16 +673,42 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           />
         </div>
         <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <h3 style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.4rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            margin: 0,
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
-          </h3>
+          <div>
+            <div style={{
+              display: 'inline-block',
+              background: 'rgba(217, 119, 54, 0.15)',
+              color: 'var(--orange, #d97736)',
+              padding: '0.25rem 0.75rem',
+              borderRadius: '20px',
+              fontSize: '0.85rem',
+              fontWeight: 'bold',
+              marginBottom: '0.75rem',
+              border: '1px solid rgba(217, 119, 54, 0.3)'
+            }}>
+              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
+            </div>
+            <h3 style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: '1.4rem',
+              color: '#fff',
+              textTransform: 'uppercase',
+              margin: '0 0 0.75rem 0',
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
+            </h3>
+            <p style={{
+              color: 'rgba(255, 255, 255, 0.8)',
+              fontSize: '0.95rem',
+              lineHeight: 1.6,
+              margin: 0,
+              wordBreak: 'break-word'
+            }}>
+              {lang === 'es'
+                ? 'Sumérgete en paisajes exuberantes moldeados por el agua. Este sendero panorámico te obsequia terrenos diversos, vegetación rica y miradores naturales sumamente gratificantes.'
+                : 'Immerse yourself in lush, water-carved landscapes. This scenic path treats you to diverse terrain, rich vegetation, and rewarding nature viewpoints.'}
+            </p>
+          </div>
           <div>
             <a
               href="https://www.gueytours.com/tu-url-5"
