@@ -1,6 +1,6 @@
 
 import type { Metadata } from 'next'
-import Offroad from './ToursGuanajuatoContent'
+import ToursGuanajuatoContent from './ToursGuanajuatoContent'
 
 export const metadata: Metadata = {
   title: 'Tours Guanajuato: ATV & Off-Road Adventures | Guey Tours',
