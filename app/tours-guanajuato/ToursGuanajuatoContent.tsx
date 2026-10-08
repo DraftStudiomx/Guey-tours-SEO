@@ -1176,7 +1176,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
 
-          {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+         {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
       <section
         id="faq"
         style={{
@@ -1221,28 +1221,28 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
               {
-                q_en: 'Do I need prior driving experience to join an off-road tour?',
-                q_es: '¿Necesito experiencia previa en conducción para participar en una excursión todoterreno?',
-                a_en: 'No previous experience is required! Before starting the tour, our expert guides provide a comprehensive safety briefing and hands-on instructions so you can handle our off-road vehicles with complete confidence.',
-                a_es: '¡No se requiere experiencia previa! Antes de comenzar el recorrido, nuestros guías expertos ofrecen una charla de seguridad completa e instrucciones prácticas para que puedas manejar nuestros vehículos todoterreno con total confianza.',
+                q_en: 'What is included in your Tours Guanajuato packages?',
+                q_es: '¿Qué incluyen sus paquetes de Tours Guanajuato?',
+                a_en: 'Our Tours Guanajuato include high-performance all-terrain vehicles, protective safety gear (helmets and goggles), expert bilingual guides, fuel, and a comprehensive safety orientation before hitting the trails.',
+                a_es: 'Nuestros Tours Guanajuato incluyen vehículos todoterreno de alto rendimiento, equipo de protección de seguridad (cascos y gafas), guías bilingües expertos, combustible y una orientación de seguridad completa antes de salir a los senderos.',
               },
               {
-                q_en: 'What should I wear for an off-road adventure in San Miguel de Allende?',
-                q_es: '¿Qué debería ponerme para una aventura todoterreno en San Miguel de Allende?',
-                a_en: 'We recommend wearing comfortable long pants, closed-toe shoes (like sneakers or hiking boots), and sunglasses. Dust and mud are part of the fun, so bring clothes you dont mind getting a little dirty!',
-                a_es: 'Recomendamos usar pantalones largos y cómodos, calzado cerrado (como zapatillas deportivas o botas de senderismo) y gafas de sol. El polvo y el barro son parte de la diversión, ¡así que trae ropa que no te importe ensuciar un poco!',
+                q_en: 'Are your Guanajuato tours suitable for beginners with no off-road experience?',
+                q_es: '¿Sus tours en Guanajuato son adecuados para principiantes sin experiencia previa todoterreno?',
+                a_en: 'Yes, absolutely! Our professional guides provide hands-on instructions so drivers of all skill levels can safely enjoy our tours and navigate all-terrain paths with confidence.',
+                a_es: '¡Sí, absolutamente! Nuestros guías profesionales proporcionan instrucciones prácticas para que conductores de todos los niveles puedan disfrutar con seguridad de nuestros tours y recorrer los caminos todoterreno con total confianza.',
               },
               {
-                q_en: 'Are your ATV rentals and tour routes safe for international tourists?',
-                q_es: '¿Son seguros para los turistas internacionales sus servicios de alquiler de vehículos todoterreno (ATV) y sus rutas de excursión?',
-                a_en: 'Absolutely. Safety is our top priority at Guey Tours. All our vehicles undergo strict maintenance inspections, and we provide certified helmets, goggles, and full guide support along every route.',
-                a_es: 'Por supuesto. La seguridad es nuestra máxima prioridad en Guey Tours. Todos nuestros vehículos se someten a estrictas revisiones de mantenimiento y proporcionamos cascos y gafas certificados, además de contar con el acompañamiento completo de un guía en todas las rutas.',
+                q_en: 'What should I bring for outdoor activities in San Miguel de Allende and Guanajuato?',
+                q_es: '¿Qué debo llevar para las actividades al aire libre en San Miguel de Allende y Guanajuato?',
+                a_en: 'We recommend wearing comfortable long pants, closed-toe shoes, sunblock, and sunglasses. Bringing a light jacket and a camera to capture the stunning scenery is also recommended.',
+                a_es: 'Recomendamos usar pantalones largos y cómodos, calzado cerrado, protector solar y gafas de sol. También se recomienda llevar una chaqueta ligera y una cámara para capturar los impresionantes paisajes.',
               },
               {
-                q_en: 'Can I drive a SIDE BY SIDE vehicle with my family?',
-                q_es: '¿Puedo conducir un vehículo tipo «side-by-side» con mi familia?',
-                a_en: 'Yes! Our SIDE BY SIDE vehicles are designed for multi-passenger comfort and safety, making them the perfect choice for families or groups of friends who want to enjoy an off-road tour together.',
-                a_es: '¡Sí! Nuestros vehículos SIDE BY SIDE están diseñados para la comodidad y seguridad de varios pasajeros, lo que los convierte en la opción perfecta para familias o grupos de amigos que quieren disfrutar juntos de un recorrido todoterreno.',
+                q_en: 'How far in advance should I book my Tours in Guanajuato?',
+                q_es: '¿Con cuánta anticipación debo reservar mis Tours en Guanajuato?',
+                a_en: 'Because our Tours Guanajuato and all-terrain rentals are highly popular among international travelers, we recommend booking at least 48 hours in advance to secure your preferred date and vehicle model.',
+                a_es: 'Debido a que nuestros Tours Guanajuato y alquileres todoterreno son muy populares entre los viajeros internacionales, recomendamos reservar con al menos 48 horas de anticipación para asegurar tu fecha preferida y el modelo de vehículo.',
               },
             ].map((faq, i) => {
               const isOpen = openIndex === i
@@ -1329,8 +1329,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
         </div>
       </section>
-
-          {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+      {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
 
           
 
@@ -1569,34 +1568,34 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I need prior driving experience to join an off-road tour?",
+          "name": "What is included in your Tours Guanajuato packages?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No previous experience is required! Before starting the tour, our expert guides provide a comprehensive safety briefing and hands-on instructions so you can handle our off-road vehicles with complete confidence."
+            "text": "Our Tours Guanajuato include high-performance all-terrain vehicles, protective safety gear (helmets and goggles), expert bilingual guides, fuel, and a comprehensive safety orientation before hitting the trails."
           }
         },
         {
           "@type": "Question",
-          "name": "What should I wear for an off-road adventure in San Miguel de Allende?",
+          "name": "Are your Guanajuato tours suitable for beginners with no off-road experience?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We recommend wearing comfortable long pants, closed-toe shoes (like sneakers or hiking boots), and sunglasses. Dust and mud are part of the fun, so bring clothes you don't mind getting a little dirty!"
+            "text": "Yes, absolutely! Our professional guides provide hands-on instructions so drivers of all skill levels can safely enjoy our tours and navigate all-terrain paths with confidence."
           }
         },
         {
           "@type": "Question",
-          "name": "Are your ATV rentals and tour routes safe for international tourists?",
+          "name": "What should I bring for outdoor activities in San Miguel de Allende and Guanajuato?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Safety is our top priority at Guey Tours. All our vehicles undergo strict maintenance inspections, and we provide certified helmets, goggles, and full guide support along every route."
+            "text": "We recommend wearing comfortable long pants, closed-toe shoes, sunblock, and sunglasses. Bringing a light jacket and a camera to capture the stunning scenery is also recommended."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I drive a SIDE BY SIDE vehicle with my family?",
+          "name": "How far in advance should I book my Tours in Guanajuato?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes! Our SIDE BY SIDE vehicles are designed for multi-passenger comfort and safety, making them the perfect choice for families or groups of friends who want to enjoy an off-road tour together."
+            "text": "Because our Tours Guanajuato and all-terrain rentals are highly popular among international travelers, we recommend booking at least 48 hours in advance to secure your preferred date and vehicle model."
           }
         }
       ]
