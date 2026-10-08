@@ -544,7 +544,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           
 {/* Inicio de section rent (ATV rentals in San Miguel de Allende) */}
 <section style={{
-  padding: '6rem 1.5rem',
+  padding: '7rem 1.5rem',
   marginTop: '3rem',
   background: 'linear-gradient(180deg, rgba(217, 119, 54, 0.03) 0%, #0b0b0b 100%)',
   color: '#fff',
@@ -555,65 +555,78 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   width: '100%'
 }}>
   <style>{`
-    .rent_content_box {
-      max-width: 900px;
+    .rent_container {
+      max-width: 1100px;
       margin: 0 auto;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.06) 100%);
-      border: 1px solid rgba(217, 119, 54, 0.3);
-      border-radius: 20px;
-      padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3vw, 3rem);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
       box-sizing: border-box;
       width: 100%;
     }
+    .rent_card_main {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.05) 100%);
+      border: 1px solid rgba(217, 119, 54, 0.25);
+      border-radius: 24px;
+      padding: clamp(2.5rem, 5vw, 4rem);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      backdrop-filter: blur(12px);
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .rent_grid_options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    @media (min-width: 768px) {
+      .rent_grid_options {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .rent_option_box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 4px solid var(--orange, #d97736);
+      border-radius: 14px;
+      padding: 1.75rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .rent_option_box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(217, 119, 54, 0.5);
+    }
     .rent_link {
       color: var(--orange, #d97736);
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 600;
       transition: opacity 0.3s ease;
     }
     .rent_link:hover {
       opacity: 0.8;
     }
-    .rent_list_item {
-      font-family: sans-serif;
-      font-style: normal;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.85);
-      fontSize: 17px;
-      lineHeight: 29px;
-      margin-bottom: 1rem;
-      word-break: break-word;
-    }
     .rent_btn {
       display: inline-block;
       background: var(--orange, #d97736);
       color: #fff;
       padding: 1rem 2.5rem;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 50px;
+      font-weight: 700;
       font-family: var(--font-heading);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      box-shadow: 0 10px 25px rgba(217, 119, 54, 0.3);
-      transition: opacity 0.3s ease;
+      box-shadow: 0 10px 25px rgba(217, 119, 54, 0.4);
+      transition: all 0.3s ease;
     }
     .rent_btn:hover {
-      opacity: 0.9;
+      opacity: 0.95;
+      transform: translateY(-2px);
     }
   `}</style>
 
-  <div style={{
-    maxWidth: '1100px',
-    margin: '0 auto',
-    width: '100%',
-    boxSizing: 'border-box'
-  }}>
+  <div className="rent_container">
     
     {/* Título H2 */}
-    <div style={{ textAlign: 'center', marginBottom: '3rem', boxSizing: 'border-box' }}>
+    <div style={{ textAlign: 'center', marginBottom: '4rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
         fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -637,77 +650,122 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }} />
     </div>
 
-    {/* Contenedor Principal */}
-    <div className="rent_content_box">
+    {/* Contenedor Principal (Tarjeta Estilizada) */}
+    <div className="rent_card_main">
       
-      {/* Párrafo Introductorio con URL editable en el texto */}
+      {/* Párrafo Introductorio */}
       <p style={{
         fontFamily: 'sans-serif',
         fontStyle: 'normal',
         fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
+        color: 'rgba(255, 255, 255, 0.9)',
         fontSize: '17px',
         lineHeight: '29px',
-        margin: '0 0 1.5rem 0',
-        wordBreak: 'break-word'
+        margin: '0 0 2rem 0',
+        wordBreak: 'break-word',
+        textAlign: 'center'
       }}>
         {lang === 'es' ? (
           <>
-            Si prefieres conducir de forma independiente o deseas mayor flexibilidad durante tu estancia, ofrecemos opciones especializadas para el <a href="https://www.gueytours.com/atv-rentals" className="rent_link">alquiler de ATV en San Miguel de Allende</a>:
+            Si prefieres conducir de forma independiente o deseas mayor flexibilidad durante tu estancia, ofrecemos opciones especializadas para el <a href="https://www.gueytours.com/atv-rentals" className="rent_link">alquiler de ATV </a> en San Miguel de Allende:
           </>
         ) : (
           <>
-            If you prefer driving independently or want extra flexibility during your stay, we offer specialized options for <a href="https://www.gueytours.com/atv-rentals" className="rent_link">ATV rentals San Miguel de Allende</a>:
+            If you prefer driving independently or want extra flexibility during your stay, we offer specialized options for <a href="https://www.gueytours.com/atv-rentals" className="rent_link">ATV rentals</a> San Miguel de Allende:
           </>
         )}
       </p>
 
-      {/* Lista de Opciones */}
-      <ul style={{ margin: '0 0 1.5rem 1.5rem', padding: 0 }}>
-        <li className="rent_list_item">
-          <strong>{lang === 'es' ? 'Alquiler de ATV autoguiado:' : 'Self-Guided ATV Rentals:'}</strong> {lang === 'es' ? 'Ideal para conductores experimentados que desean explorar senderos designados a su propio ritmo.' : 'Ideal for experienced riders who want to explore designated trails at their own speed.'}
-        </li>
-        <li className="rent_list_item" style={{ marginBottom: 0 }}>
-          <strong>{lang === 'es' ? 'Aventura guiada en ATV:' : 'Guided ATV Adventure:'}</strong> {lang === 'es' ? 'La elección perfecta si quieres que un guía local experimentado abra el camino mientras comparte la historia local y lugares secretos.' : 'The perfect choice if you want an experienced local guide to lead the way while sharing local history and secret spots.'}
-        </li>
-      </ul>
+      {/* Grid de Opciones (Tarjetas Modernas) */}
+      <div className="rent_grid_options">
+        
+        {/* Opción 1: Autoguiado */}
+        <div className="rent_option_box">
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.2rem',
+            color: '#fff',
+            margin: '0 0 0.75rem 0',
+            textTransform: 'uppercase'
+          }}>
+            {lang === 'es' ? 'Alquiler de ATV autoguiado' : 'Self-Guided ATV Rentals'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontSize: '15px',
+            lineHeight: '24px',
+            color: 'rgba(255, 255, 255, 0.8)',
+            margin: 0
+          }}>
+            {lang === 'es' 
+              ? 'Ideal para conductores experimentados que desean explorar senderos designados a su propio ritmo.' 
+              : 'Ideal for experienced riders who want to explore designated trails at their own speed.'}
+          </p>
+        </div>
 
-      {/* Párrafo Intermedio */}
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '17px',
-        lineHeight: '29px',
-        margin: '0 0 1.5rem 0',
-        wordBreak: 'break-word'
-      }}>
-        {lang === 'es'
-          ? 'Todos nuestros vehículos todo terreno reciben un mantenimiento riguroso para garantizar potencia, seguridad y un manejo óptimo en cualquier terreno.'
-          : 'All our all-terrain vehicles receive rigorous maintenance to guarantee power, safety, and optimal handling across all terrains.'}
-      </p>
+        {/* Opción 2: Guiado */}
+        <div className="rent_option_box">
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.2rem',
+            color: '#fff',
+            margin: '0 0 0.75rem 0',
+            textTransform: 'uppercase'
+          }}>
+            {lang === 'es' ? 'Aventura guiada en ATV' : 'Guided ATV Adventure'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontSize: '15px',
+            lineHeight: '24px',
+            color: 'rgba(255, 255, 255, 0.8)',
+            margin: 0
+          }}>
+            {lang === 'es' 
+              ? 'La elección perfecta si quieres que un guía local experimentado abra el camino mientras comparte historia y lugares secretos.' 
+              : 'The perfect choice if you want an experienced local guide to lead the way while sharing local history and secret spots.'}
+          </p>
+        </div>
 
-      {/* Párrafo Final */}
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '17px',
-        lineHeight: '29px',
-        margin: 0,
-        wordBreak: 'break-word'
-      }}>
-        {lang === 'es'
-          ? 'Contáctanos para conocer más sobre nuestros paquetes de alquiler de ATV.'
-          : 'Contact us to learn more about our ATV rentals packages.'}
-      </p>
+      </div>
+
+      {/* Párrafo Intermedio y Final Integrados */}
+      <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+        <p style={{
+          fontFamily: 'sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '400',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '17px',
+          lineHeight: '29px',
+          margin: '0 0 1rem 0',
+          wordBreak: 'break-word'
+        }}>
+          {lang === 'es'
+            ? 'Todos nuestros vehículos todo terreno reciben un mantenimiento riguroso para garantizar potencia, seguridad y un manejo óptimo en cualquier terreno.'
+            : 'All our all-terrain vehicles receive rigorous maintenance to guarantee power, safety, and optimal handling across all terrains.'}
+        </p>
+
+        <p style={{
+          fontFamily: 'sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '400',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '17px',
+          lineHeight: '29px',
+          margin: 0,
+          wordBreak: 'break-word'
+        }}>
+          {lang === 'es'
+            ? 'Contáctanos para conocer más sobre nuestros paquetes de alquiler de ATV.'
+            : 'Contact us to learn more about our ATV rentals packages.'}
+        </p>
+      </div>
 
     </div>
 
     {/* Botón Global Inferior */}
-    <div style={{ textAlign: 'center', marginTop: '3.5rem', boxSizing: 'border-box' }}>
+    <div style={{ textAlign: 'center', marginTop: '4rem', boxSizing: 'border-box' }}>
       <a
         href="https://api.whatsapp.com/send/?phone=5214151090021&text=Hi%21+I%27d+like+to+reserve+the+Honda+150+Motorbike.+Could+you+let+me+know+availability%3F&type=phone_number&app_absent=0"
         target="_blank"
