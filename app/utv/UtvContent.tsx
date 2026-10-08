@@ -289,7 +289,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         lineHeight: 1.2,
         wordBreak: 'break-word'
       }}>
-        {lang === 'es' ? 'Elige tu experiencia de aventura en Guanajuato' : 'Choose your adventure experience in Guanajuato'}
+        {lang === 'es' ? 'Nuestros recorridos en San Miguel de Allende' : 'Our tours in San Miguel de Allende'}
       </h2>
       <div style={{
         width: '80px',
@@ -298,21 +298,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 auto 2rem auto',
         boxShadow: '0 0 12px var(--orange, #d97736)'
       }} />
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
-        lineHeight: 1.8,
-        maxWidth: '800px',
-        margin: '0 auto',
-        wordBreak: 'break-word'
-      }}>
-        {lang === 'es'
-          ? 'Ofrecemos actividades versátiles en Guanajuato, adaptadas a tu estilo de conducción preferido. Explora nuestras principales opciones de recorridos a continuación:'
-          : 'We offer versatile activities in Guanajuato tailored to your favorite style of riding. Explore our main tour options below:'}
-      </p>
+      
     </div>
 
     {/* Contenedor Grid Unificado con control responsive */}
@@ -338,9 +324,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
-            src="/images/SEO/Fun ATV City Tour experience with guided tours Guanajuato group.webp"
-            alt={lang === 'es' ? 'Turistas alegres posando en un vehículo todoterreno (ATV) durante un recorrido guiado por la ciudad con Tours Guanajuato, equipados con cascos y gafas protectoras.' : 'Cheerful tourists posing on ATV during a guided City Tour with tours Guanajuato wearing helmets and goggles.'}
-            title={lang === 'es' ? 'Divertida experiencia de recorrido en cuatrimoto (ATV) por la ciudad con visitas guiadas en grupo en Guanajuato.' : 'Fun ATV City Tour experience with guided tours Guanajuato group'}
+            src="/images/SEO/Exciting City tour adventure with happy group joining UTV tours.webp"
+            alt={lang === 'es' ? 'Jóvenes turistas felices con casco haciendo el signo de la paz mientras conducen un vehículo todoterreno (UTV) durante un recorrido por la ciudad.' : 'Happy young tourists in helmets making peace signs while riding an all-terrain vehicle on a City tour, UTV tours.'}
+            title={lang === 'es' ? 'Una emocionante aventura de recorrido por la ciudad con un grupo alegre que participa en excursiones en UTV.' : 'Exciting City tour adventure with happy group joining UTV tours'}
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -370,9 +356,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
             </h3>
             <p style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              fontSize: '0.95rem',
-              lineHeight: 1.6,
+              fontFamily: 'sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '400',
+              color: 'rgba(255, 255, 255, 0.85)',
+              fontSize: '17px',
+              lineHeight: '29px',
               margin: 0,
               wordBreak: 'break-word'
             }}>
@@ -420,9 +409,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
-            src="/images/SEO/Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato.webp"
-            alt={lang === 'es' ? 'Dos turistas sonrientes frente a un antiguo arco de piedra durante un recorrido guiado en buggy por San Miguel (Guanajuato).' : 'Two female tourists smiling in front of an ancient stone arch during a guided San Miguel Buggy Tour, tours Guanajuato.'}
-            title={lang === 'es' ? 'Parada en ruinas históricas durante el recorrido en buggy por San Miguel y los tours en Guanajuato.' : 'Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato'}
+            src="/images/SEO/Historic ruin landmark visit on San Miguel Buggy Tour, UTV tours.webp"
+            alt={lang === 'es' ? 'Dos mujeres posan bajo un antiguo arco de piedra durante una parada al aire libre de un recorrido guiado en buggy por San Miguel.' : 'Two women posing under an old stone archway during a guided San Miguel Buggy Tour outdoor stop with UTV tours.'}
+            title={lang === 'es' ? 'Visita a ruinas históricas en el recorrido en buggy y UTV por San Miguel' : 'Historic ruin landmark visit on San Miguel Buggy Tour, UTV tours'}
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -452,9 +441,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
             </h3>
             <p style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              fontSize: '0.95rem',
-              lineHeight: 1.6,
+              fontFamily: 'sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '400',
+              color: 'rgba(255, 255, 255, 0.85)',
+              fontSize: '17px',
+              lineHeight: '29px',
               margin: 0,
               wordBreak: 'break-word'
             }}>
@@ -502,9 +494,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
-            src="/images/SEO/Historic church stop during Atotonilco ATV Tour, tours Guanajuato.webp"
-            alt={lang === 'es' ? 'Vehículo todoterreno estacionado cerca de la fachada de una histórica iglesia blanca durante una excursión en cuatrimoto al aire libre en Atotonilco, Guanajuato.' : 'All-terrain vehicle parked near a historic white church facade during an outdoor Atotonilco ATV Tour, tours Guanajuato.'}
-            title={lang === 'es' ? 'Parada en una iglesia histórica durante el tour en cuatrimoto por Atotonilco, tours en Guanajuato' : 'Historic church stop during Atotonilco ATV Tour, tours Guanajuato'}
+            src="/images/SEO/Historic church stop on Atotonilco ATV Tour during UTV Tours trip.webp"
+            alt={lang === 'es' ? 'Vehículo todoterreno estacionado cerca de la fachada de una histórica iglesia blanca durante una excursión al aire libre en cuatrimoto (ATV) o vehículo utilitario (UTV) en Atotonilco.' : 'All-terrain vehicle parked near a historic white church facade during an outdoor Atotonilco ATV Tour, UTV Tours.'}
+            title={lang === 'es' ? 'Parada en una iglesia histórica durante el recorrido en cuatrimoto (ATV) por Atotonilco, en el marco de la excursión en UTV.' : 'Historic church stop on Atotonilco ATV Tour during UTV Tours trip'}
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -534,9 +526,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
             </h3>
             <p style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              fontSize: '0.95rem',
-              lineHeight: 1.6,
+              fontFamily: 'sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '400',
+              color: 'rgba(255, 255, 255, 0.85)',
+              fontSize: '17px',
+              lineHeight: '29px',
               margin: 0,
               wordBreak: 'break-word'
             }}>
@@ -584,9 +579,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
-            src="/images/SEO/Guided group on Atascadero ATV Tour along historic tours Guanajuato.webp"
-            alt={lang === 'es' ? 'Conductores de cuatrimotos recorren una calle empedrada cerca de edificios coloniales durante un tour en vehículos todoterreno (ATV) en Atascadero, Guanajuato.' : 'Riders on quads driving along a cobblestone street near colonial buildings during an Atascadero ATV Tour, tours Guanajuato.'}
-            title={lang === 'es' ? 'Guided group on Atascadero ATV Tour along historic tours Guanajuato' : 'Guided group on Atascadero ATV Tour along historic tours Guanajuato'}
+            src="/images/SEO/Guided group on Atascadero UTV tour along historic colonial streets.webp"
+            alt={lang === 'es' ? 'Conductores de cuatrimotos recorren una calle empedrada cerca de edificios coloniales durante una excursión en UTV al aire libre en Atascadero.' : 'Riders on quads driving along a cobblestone street near colonial buildings during an outdoor Atascadero UTV tour.'}
+            title={lang === 'es' ? 'Grupo guiado en un recorrido en UTV por Atascadero, a través de históricas calles coloniales.' : 'Guided group on Atascadero UTV tour along historic colonial streets'}
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -616,9 +611,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
             </h3>
             <p style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              fontSize: '0.95rem',
-              lineHeight: 1.6,
+              fontFamily: 'sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '400',
+              color: 'rgba(255, 255, 255, 0.85)',
+              fontSize: '17px',
+              lineHeight: '29px',
               margin: 0,
               wordBreak: 'break-word'
             }}>
@@ -666,9 +664,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
-            src="/images/SEO/Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato.webp"
-            alt={lang === 'es' ? 'Grupo de pilotos en cuatrimotos todoterreno explorando un sendero rural durante un tour en ATV por Agua Espinosa, Guanajuato.' : 'Group of riders on all-terrain quads exploring countryside trail during an Agua Espinosa ATV Tour, tours Guanajuato.'}
-            title={lang === 'es' ? 'Paseo grupal al aire libre en el tour en cuatrimoto (ATV) Agua Espinosa con Tours Guanajuato.' : 'Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato'}
+            src="/images/SEO/Outdoor group riding on Agua Espinosa UTV Tour through countryside.webp"
+            alt={lang === 'es' ? 'Grupo de conductores en cuatrimotos todoterreno explorando un sendero rural durante una aventura guiada en UTV por Agua Espinosa.' : 'Group of riders on all-terrain quads exploring countryside trail during an guided Agua Espinosa UTV Tour adventure.'}
+            title={lang === 'es' ? 'Paseo grupal al aire libre por el campo en el tour en UTV Agua Espinosa.' : 'Outdoor group riding on Agua Espinosa UTV Tour through countryside'}
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
@@ -698,9 +696,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
             </h3>
             <p style={{
-              color: 'rgba(255, 255, 255, 0.8)',
-              fontSize: '0.95rem',
-              lineHeight: 1.6,
+              fontFamily: 'sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '400',
+              color: 'rgba(255, 255, 255, 0.85)',
+              fontSize: '17px',
+              lineHeight: '29px',
               margin: 0,
               wordBreak: 'break-word'
             }}>
@@ -711,7 +712,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
           <div>
             <a
-              href="https://www.gueytours.com/tu-url-5"
+              href="https://www.gueytours.com/tours/agua-espinoza"
               style={{
                 display: 'block',
                 textAlign: 'center',
@@ -735,12 +736,154 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     </div>
 
+    {/* --- BOTÓN GLOBAL INFERIOR --- */}
+    <div style={{ textAlign: 'center', marginTop: '4rem', boxSizing: 'border-box' }}>
+      <a
+        href="https://www.gueytours.com/#tours"
+        style={{
+          display: 'inline-block',
+          background: 'var(--orange, #d97736)',
+          color: '#fff',
+          padding: '1rem 2.5rem',
+          borderRadius: '8px',
+          fontWeight: 'bold',
+          fontFamily: 'var(--font-heading)',
+          textDecoration: 'none',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          boxShadow: '0 10px 25px rgba(217, 119, 54, 0.3)',
+          transition: 'opacity 0.3s ease'
+        }}
+      >
+        {lang === 'es' ? 'Ver todos nuestros tours' : 'View our tours'}
+      </a>
+    </div>
+
   </div>
 </section>
 {/* FIN SECTION - 5 TARJETAS PERFECTAS */}
-          
-          
 
+
+          
+          
+          
+{/* Inicio de section wild (Descubre San Miguel más allá del centro) */}
+<section style={{
+  padding: '6rem 1.5rem',
+  marginTop: '3rem',
+  background: 'linear-gradient(180deg, rgba(217, 119, 54, 0.03) 0%, #0b0b0b 100%)',
+  color: '#fff',
+  fontFamily: 'sans-serif',
+  position: 'relative',
+  boxSizing: 'border-box',
+  overflow: 'hidden',
+  width: '100%'
+}}>
+  <style>{`
+    .wild_content_box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.06) 100%);
+      border: 1px solid rgba(217, 119, 54, 0.3);
+      borderRadius: 20px;
+      padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 3vw, 3rem);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+      width: 100%;
+    }
+  `}</style>
+
+  <div style={{
+    maxWidth: '1100px',
+    margin: '0 auto',
+    width: '100%',
+    boxSizing: 'border-box'
+  }}>
+    
+    {/* Título H2 */}
+    <div style={{ textAlign: 'center', marginBottom: '3rem', boxSizing: 'border-box' }}>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: 'clamp(2rem, 4vw, 3rem)',
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: '0 0 1rem 0',
+        lineHeight: 1.2,
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es' 
+          ? 'Descubre San Miguel más allá del centro de la ciudad' 
+          : 'Discover San Miguel beyond the City Center'}
+      </h2>
+      <div style={{
+        width: '80px',
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        margin: '0 auto',
+        boxShadow: '0 0 12px var(--orange, #d97736)'
+      }} />
+    </div>
+
+    {/* Contenedor Principal de Párrafos */}
+    <div className="wild_content_box">
+      
+      {/* Párrafo Destacado / Introductorio */}
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '500',
+        color: '#fff',
+        fontSize: 'clamp(1.1rem, 2vw, 1.25rem)',
+        lineHeight: 1.7,
+        margin: '0 0 1.5rem 0',
+        wordBreak: 'break-word',
+        borderLeft: '4px solid var(--orange, #d97736)',
+        paddingLeft: '1rem'
+      }}>
+        {lang === 'es'
+          ? 'Sal de los caminos habituales y descubre el campo salvaje que rodea San Miguel.'
+          : 'Step off the beaten path and unlock the wild countryside surrounding San Miguel.'}
+      </p>
+
+      {/* Segundo Párrafo */}
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '17px',
+        lineHeight: '29px',
+        margin: '0 0 1.5rem 0',
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es'
+          ? 'Conducir un potente UTV te brinda acceso a rutas rurales ocultas, cruces de ríos y miradores imponentes en las montañas a los que los autobuses turísticos estándar simplemente no pueden llegar.'
+          : 'Driving a powerful UTV gives you access to hidden rural routes, river crossings, and sweeping mountain lookouts that standard tourist buses simply cannot reach.'}
+      </p>
+
+      {/* Tercer Párrafo */}
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '17px',
+        lineHeight: '29px',
+        margin: 0,
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es'
+          ? 'Navegar por estas pintorescas rutas en UTV te pone cara a cara con auténticas comunidades rurales, cañones dramáticos y vistas inolvidables, mostrándote un lado de México que la mayoría de los visitantes nunca llegan a ver.'
+          : 'Navigating these scenic UTV routes brings you face-to-face with authentic rural communities, dramatic canyons, and unforgettable vistas, showing you a side of Mexico most visitors never get to see.'}
+      </p>
+
+    </div>
+
+  </div>
+</section>
+{/* Fin de section wild */}
     
       {/* Inicio de section tres (2x2 simétrico en escritorio y fluido en mobile) */}
 <section style={{
