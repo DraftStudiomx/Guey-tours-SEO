@@ -1319,7 +1319,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
 
-        {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
+       {/* --- OCTAVA SECCIÓN: Preguntas Frecuentes (FAQ) --- */}
       <section
         id="faq"
         style={{
@@ -1355,7 +1355,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               ——— {lang === 'en' ? 'Got questions?' : '¿Tienes preguntas?'} ———
             </div>
             <h2 className="section-heading">
-              {lang === 'en' ? 'FAQs about UTV tours' : 'Preguntas frecuentes sobre recorridos en UTV'}
+              {lang === 'en' ? 'FAQs about ATV tours' : 'Preguntas frecuentes sobre recorridos en ATV'}
             </h2>
             <div className="section-divider" style={{ marginTop: '1rem' }} />
           </div>
@@ -1364,28 +1364,28 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
               {
-                q_en: 'What is a UTV and how does it differ from an ATV?',
-                q_es: '¿Qué es un UTV y en qué se diferencia de una cuatrimoto (ATV)?',
-                a_en: 'A UTV (Utility Terrain Vehicle) is a side-by-side 4x4 vehicle equipped with bucket seats, seatbelts, a steering wheel, and a protective roll cage, making it ideal for passengers who want to ride together comfortably on an off-road tour.',
-                a_es: 'Un UTV (Utility Terrain Vehicle) es un vehículo 4x4 tipo side-by-side equipado con asientos individuales, cinturones de seguridad, volante y una jaula antivuelco protectora, lo que lo hace ideal para los pasajeros que desean viajar juntos cómodamente en un recorrido todoterreno.',
+                q_en: 'Do I need prior riding experience to join your ATV tours?',
+                q_es: '¿Necesito experiencia previa de manejo para unirme a sus tours en ATV?',
+                a_en: 'No prior experience is necessary! Before every tour, our bilingual guides provide a full safety briefing and hands-on riding instruction so you feel confident operating the vehicle.',
+                a_es: '¡No se necesita experiencia previa! Antes de cada tour, nuestros guías bilingües ofrecen una sesión informativa completa de seguridad y una instrucción práctica de manejo para que te sientas seguro operando el vehículo.',
               },
               {
-                q_en: 'Do I need a valid driver’s license to drive a UTV on your tours?',
-                q_es: '¿Necesito una licencia de conducir vigente para manejar un UTV en sus tours?',
-                a_en: 'Yes, all drivers must present a valid driver’s license to operate a UTV or take advantage of our RSZ rentals. Passengers of all ages are welcome to join the ride!',
-                a_es: 'Sí, todos los conductores deben presentar una licencia de conducir vigente para operar un UTV o aprovechar nuestros alquileres de RZR. ¡Los pasajeros de todas las edades son bienvenidos a unirse al viaje!',
+                q_en: 'What is included in your ATV rentals San Miguel de Allende?',
+                q_es: '¿Qué se incluye en sus alquileres de ATV en San Miguel de Allende?',
+                a_en: 'Our ATV rentals include a fully prepped all-terrain vehicle, a full tank of fuel, protective helmets, goggles, and an orientation on local trail routes.',
+                a_es: 'Nuestros alquileres de ATV incluyen un vehículo todoterreno totalmente preparado, tanque lleno de combustible, cascos protectores, gafas y una orientación sobre las rutas de los senderos locales.',
               },
               {
-                q_en: 'What should I bring for a UTV adventure in San Miguel de Allende?',
-                q_es: '¿Qué debo llevar para una aventura en UTV en San Miguel de Allende?',
-                a_en: 'We recommend wearing comfortable clothing you don\'t mind getting dusty, closed-toe shoes, sunblock, and sunglasses. We provide helmets, goggles, and fresh water for your UTV adventure.',
-                a_es: 'Recomendamos usar ropa cómoda que no te importe que se ensucie con polvo, calzado cerrado, protector solar y gafas de sol. Proporcionamos cascos, gafas protectoras y agua fresca para tu aventura en UTV.',
+                q_en: 'What is the minimum age required to drive on an ATV tour San Miguel de Allende?',
+                q_es: '¿Cuál es la edad mínima requerida para conducir en un tour en ATV en San Miguel de Allende?',
+                a_en: 'Drivers must be 18 years or older with a valid driver\'s license. Younger family members can participate as passengers when accompanied by an adult.',
+                a_es: 'Los conductores deben tener 18 años o más y contar con una licencia de conducir vigente. Los miembros más jóvenes de la familia pueden participar como pasajeros cuando estén acompañados por un adulto.',
               },
               {
-                q_en: 'Is a UTV tour suitable for beginners with no off-road driving experience?',
-                q_es: '¿Es un tour en UTV adecuado para principiantes sin experiencia previa de manejo todoterreno?',
-                a_en: 'Absolutely! Before hitting the trail, our bilingual guides provide hands-on instructions and a complete safety briefing so you feel totally confident mastering off-road driving on any terrain.',
-                a_es: '¡Absolutamente! Antes de salir al sendero, nuestros guías bilingües ofrecen instrucciones prácticas y una sesión informativa completa de seguridad para que te sientas totalmente seguro dominando la conducción todoterreno en cualquier terreno.',
+                q_en: 'What should I wear for an outdoor ATV adventure?',
+                q_es: '¿Qué debo vestir para una aventura al aire libre en ATV?',
+                a_en: 'We recommend wearing closed-toe shoes (sneakers or boots), long pants, sunglasses, and comfortable clothing that you don\'t mind getting a little dusty on the trail.',
+                a_es: 'Recomendamos usar calzado cerrado (tenis o botas), pantalón largo, gafas de sol y ropa cómoda que no te importe que se ensucie un poco con polvo en el sendero.',
               },
             ].map((faq, i) => {
               const isOpen = openIndex === i
@@ -1711,34 +1711,34 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is a UTV and how does it differ from an ATV?",
+          "name": "Do I need prior riding experience to join your ATV tours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A UTV (Utility Terrain Vehicle) is a side-by-side 4x4 vehicle equipped with bucket seats, seatbelts, a steering wheel, and a protective roll cage, making it ideal for passengers who want to ride together comfortably on an off-road tour."
+            "text": "No prior experience is necessary! Before every tour, our bilingual guides provide a full safety briefing and hands-on riding instruction so you feel confident operating the vehicle."
           }
         },
         {
           "@type": "Question",
-          "name": "Do I need a valid driver’s license to drive a UTV on your tours?",
+          "name": "What is included in your ATV rentals San Miguel de Allende?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, all drivers must present a valid driver’s license to operate a UTV or take advantage of our RSZ rentals. Passengers of all ages are welcome to join the ride!"
+            "text": "Our ATV rentals include a fully prepped all-terrain vehicle, a full tank of fuel, protective helmets, goggles, and an orientation on local trail routes."
           }
         },
         {
           "@type": "Question",
-          "name": "What should I bring for a UTV adventure in San Miguel de Allende?",
+          "name": "What is the minimum age required to drive on an ATV tour San Miguel de Allende?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We recommend wearing comfortable clothing you don't mind getting dusty, closed-toe shoes, sunblock, and sunglasses. We provide helmets, goggles, and fresh water for your UTV adventure."
+            "text": "Drivers must be 18 years or older with a valid driver's license. Younger family members can participate as passengers when accompanied by an adult."
           }
         },
         {
           "@type": "Question",
-          "name": "Is a UTV tour suitable for beginners with no off-road driving experience?",
+          "name": "What should I wear for an outdoor ATV adventure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely! Before hitting the trail, our bilingual guides provide hands-on instructions and a complete safety briefing so you feel totally confident mastering off-road driving on any terrain."
+            "text": "We recommend wearing closed-toe shoes (sneakers or boots), long pants, sunglasses, and comfortable clothing that you don't mind getting a little dusty on the trail."
           }
         }
       ]
