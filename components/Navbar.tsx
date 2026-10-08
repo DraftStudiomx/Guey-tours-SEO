@@ -72,6 +72,8 @@ export default function Navbar() {
     { label: lang === 'es' ? 'San Miguel de Allende' : 'San Miguel de Allende', href: '/san-miguel-de-allende-tours' },
     { label: lang === 'es' ? 'Rentas de RZR' : 'RZR Rentals', href: '/rsz-rentals' },
     { label: lang === 'es' ? 'Aventura todoterreno en Guanajuato' : 'Off-road adventure in Guanajuato', href: '/off-road' },
+    { label: lang === 'es' ? 'UTV' : 'UTV', href: '/utv' },
+    { label: lang === 'es' ? 'Tours in cuatrimoto' : 'ATV tours', href: '/tours-in-cuatrimoto' },
   ]
 
   const allNavLinks = [
