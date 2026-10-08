@@ -56,9 +56,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/Scenic city tours Guanajuato along historic cobblestone streets.webp" 
-    alt="Charming illuminated street with colorful colonial buildings during evening walking tours Guanajuato with church dome." 
-    title="Scenic city tours Guanajuato along historic cobblestone streets"
+    src="/images/SEO/Group riding all-terrain vehicles during guided outdoor UTV tours.webp" 
+    alt="Group of people wearing safety helmets driving off-road vehicles down a narrow stone street during UTV tours." 
+    title=" Group riding all-terrain vehicles during guided outdoor UTV tours"
     style={{
       position: 'absolute',
       top: 0,
@@ -89,7 +89,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     textTransform: 'uppercase',
     marginBottom: '0.5rem'
   }}>
-    --- {lang === 'es' ? 'Aventura en Guanajuato' : 'Adventure in Guanajuato'} ---
+    --- {lang === 'es' ? 'Aventura en San Miguel de Allende' : 'Adventure in San Miguel de Allende'} ---
   </div>
   
   <h1 style={{
@@ -101,7 +101,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     margin: '0 0 0.8rem 0',
     wordBreak: 'break-word',
   }}>
-    {lang === 'es' ? 'Tours en Guanajuato: Descubre el estado de una manera diferente.' : 'Tours Guanajuato: Discover the state in a different way'}
+    {lang === 'es' ? 'UTV Adventures: Excursiones inolvidables en San Miguel de Allende' : 'UTV Adventures: Unforgettable San Miguel de Allende tours'}
   </h1>
 
   <div style={{
@@ -117,17 +117,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
   <p style={{ margin: 0, wordBreak: 'break-word' }}>
     {lang === 'es' ? (
-      <>Bienvenidos a <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> su puerta de entrada definitiva para explorar el centro de México más allá de los lugares turísticos convencionales. Nos especializamos en transformar sus vacaciones en un viaje inolvidable, repleto de adrenalina, paisajes impresionantes y auténticas actividades al aire libre.</>
+      <>Bienvenidos a San Miguel de Allende, un destino de fama mundial reconocido por su impresionante arquitectura colonial y su rica cultura. En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> llevamos sus vacaciones más allá con emocionantes actividades al aire libre que le permiten explorar Guanajuato más allá de las calles del centro histórico.</>
     ) : (
-      <>Welcome to <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> your ultimate gateway to exploring central Mexico beyond the conventional sightseeing spots. We specialize in turning your vacation into an unforgettable journey filled with adrenaline, stunning landscapes, and authentic outdoor activities.  </>
+      <>Welcome to San Miguel de Allende, a world-famous destination renowned for its stunning colonial architecture and rich culture. At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> we take your vacation further with thrilling outdoor activities that let you explore Guanajuato beyond the historic downtown streets.  </>
     )}
   </p>
 
   <p style={{ margin: 0, wordBreak: 'break-word' }}>
     {lang === 'es' ? (
-      <>Si buscas recorridos de primer nivel en Guanajuato que se alejen de los aburridos viajes en autobús, has llegado al lugar indicado. ¡Prepárate para descubrir nuestra amplia variedad de tours por Guanajuato, diseñados para todo tipo de viajero!</>
+      <>Ya sea que viajes en pareja, en familia o con un grupo de amigos, ¡tenemos la aventura al aire libre perfecta para ti! ¡Prepárate para maravillarte con paisajes que nunca imaginaste!</>
     ) : (
-      <>If you are looking for top-tier Guanajuato tours that break away from boring bus rides, you have come to the right place. Get ready to discover our wide variety of Tours Guanajuato designed for every type of traveler!</>
+      <>Whether you are traveling as a couple, with family, or alongside a group of friends, we have the perfect outdoor adventure ready for you! Prepare to be amazed by landscapes you never imagined!</>
     )}
   </p>
 </div>
@@ -200,36 +200,23 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       margin: 0,
       wordBreak: 'break-word'
     }}>
-      {lang === 'es' ? '¿Qué puedes experimentar en un recorrido por Guanajuato?' : 'What can you experience on a tour through Guanajuato?'}
+      {lang === 'es' ? 'Explora San Miguel de Allende con Guey Tours' : 'Explore San Miguel de Allende with Guey Tours'}
     </h2>
 
     {/* NUEVO PÁRRAFO ABAJO DEL H2 */}
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.9)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
-      {lang === 'es'
-        ? 'Al viajar con nosotros, accedes a lugares impresionantes de Guanajuato que la mayoría de los turistas se pierde.'
-        : 'When you travel with us, you unlock access to breathtaking places to visit in Guanajuato that most tourists miss. '}
-    </p>
-
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
       {lang === 'es' ? (
-        <>Nuestros recorridos por <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>San Miguel de Allende</a> y las excursiones por la región le llevan a adentrarse en cañones escarpados, senderos montañosos históricos y pintorescos pueblos rurales.</>
+        <>En <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> creamos experiencias únicas diseñadas para que descubras San Miguel de Allende desde una perspectiva totalmente nueva. Mientras que los recorridos turísticos tradicionales te mantienen en calles pavimentadas, nuestras excursiones guiadas te sumergen directamente en la naturaleza virgen, en paisajes montañosos y en senderos agrestes entre cañones.</>
       ) : (
-        <>Our <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>San Miguel de Allende Tours</a> and regional excursions take you deep into rugged canyons, historic mountain trails, and colorful rural villages.</>
+        <>At <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> we craft unique experiences designed to help you discover San Miguel de Allende from a whole new perspective. While traditional sightseeing trips keep you on paved streets, our guided journeys plunge you directly into raw nature, mountain vistas, and rugged canyon trails.</>
       )}
     </p>
 
     {/* TUS 3 PÁRRAFOS ORIGINALES */}
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
       {lang === 'es' 
-        ? 'En lugar de estar atrapado en el tráfico, recorrerás pintorescos caminos de tierra, cruzarás ríos y disfrutarás de vistas panorámicas de las montañas.'
-        : 'Instead of sitting in traffic, you will navigate scenic dirt roads, cross rivers, and take in panoramic mountain views. '}
-    </p>
-
-
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
-      {lang === 'es'
-        ? 'Desde atracciones turísticas de fama mundial hasta joyas naturales ocultas, nuestras experiencias de viaje combinan una rica historia local con el auténtico turismo de aventura.'
-        : 'From world-famous tourist attractions to hidden natural gems, our travel experiences combine rich local history with true adventure tourism.'}
+        ? 'Guiada por expertos conductores locales, cada excursión todoterreno combina una emoción intensa con un profundo conocimiento de la zona. Elegirnos significa alejarse del turismo convencional para disfrutar de una experiencia de conducción auténtica y potente a través de paisajes impresionantes.'
+        : 'Guided by expert local drivers, every off-road tour blends high-energy excitement with deep local knowledge. Choosing us means stepping away from conventional sightseeing to enjoy an authentic, high-powered driving experience across breathtaking scenery.'}
     </p>
   </div>
 
@@ -245,9 +232,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
     }}>
       <Image
-        src="/images/SEO/Group tour posing with ATVs near iconic cathedral tours Guanajuato.webp" 
-        alt="Group of tourists with safety helmets posing in front of a landmark pink parish church on guided tours Guanajuato."
-        title="Group tour posing with ATVs near iconic cathedral tours Guanajuato"
+        src="/images/SEO/Happy riders enjoying guided UTV Tours through historic city street.webp" 
+        alt=" Cheerful tourists wearing helmets and goggles posing on an all-terrain vehicle near a church during UTV Tours."
+        title="Happy riders enjoying guided UTV Tours through historic city street"
         fill
         style={{ objectFit: 'cover' }}
       />
