@@ -539,6 +539,174 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 {/* FIN SECTION - 4 TARJETAS ATV TOUR */}
 
 
+
+          {/* --- SECCIÓN DE IMÁGENES LADO A LADO (SOLO IMÁGENES) --- */}
+<section style={{
+  padding: '4rem 1.5rem',
+  background: '#0b0b0b',
+  width: '100%',
+  boxSizing: 'border-box'
+}}>
+  <style>{`
+    .gal_grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    @media (min-width: 768px) {
+      .gal_grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    .gal_card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+    .gal_card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(217, 119, 54, 0.5);
+    }
+    .gal_img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gal_card:hover .gal_img {
+      transform: scale(1.03);
+    }
+  `}</style>
+
+  <div className="gal_grid">
+    {[
+      {
+        src: '/images/SEO/Happy rider in helmet and goggles enjoying outdoor guided ATV tours.webp',
+        alt_es: 'Mujer joven con casco de seguridad y gafas protectoras sonriendo cerca de la cámara durante una excursión guiada en quad al aire libre.',
+        alt_en: 'Young woman wearing a safety helmet and goggles smiling close to the camera during outdoor guided ATV tours.',
+        title_es: 'Un conductor feliz, con casco y gafas, disfruta de una excursión guiada en quad al aire libre.',
+        title_en: 'Happy rider in helmet and goggles enjoying outdoor guided ATV tours',
+      },
+      {
+        src: '/images/SEO/Off-road utility vehicle driving down historic street on ATV tours.webp',
+        alt_es: 'Vehículo todoterreno tipo «side-by-side» circulando por una estrecha calle colonial empedrada durante una excursión guiada en vehículos todoterreno al aire libre.',
+        alt_en: 'All-terrain side-by-side vehicle driving down a narrow colonial cobblestone street during guided outdoor ATV tours.',
+        title_es: 'Vehículo utilitario todoterreno circulando por una calle histórica durante una excursión en quad.',
+        title_en: 'Off-road utility vehicle driving down historic street on ATV tours',
+      }
+    ].map((img, index) => {
+      const currentAlt = lang === 'es' ? img.alt_es : img.alt_en;
+      const currentTitle = lang === 'es' ? img.title_es : img.title_en;
+
+      return (
+        <div
+          key={index}
+          className="gal_card"
+          onClick={() => setSelectedImage({ src: img.src, alt: currentAlt })}
+          role="button"
+          tabIndex={0}
+          aria-label={lang === 'es' ? 'Ampliar imagen' : 'Enlarge image'}
+        >
+          <div style={{ width: '100%', height: '320px', overflow: 'hidden', background: '#000' }}>
+            <img
+              src={img.src}
+              alt={currentAlt}
+              title={currentTitle}
+              loading="lazy"
+              className="gal_img"
+            />
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  {/* --- VISOR FLOTANTE / LIGHTBOX (MODAL) --- */}
+  {selectedImage && (
+    <div
+      onClick={() => setSelectedImage(null)}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        background: 'rgba(0, 0, 0, 0.9)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 9999,
+        padding: '1.5rem',
+        boxSizing: 'border-box',
+        backdropFilter: 'blur(8px)',
+        cursor: 'zoom-out'
+      }}
+    >
+      <div
+        style={{
+          position: 'relative',
+          maxWidth: '900px',
+          width: '100%',
+          maxHeight: '85vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={() => setSelectedImage(null)}
+          style={{
+            position: 'absolute',
+            top: '-45px',
+            right: '0',
+            background: 'var(--orange, #d97736)',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '50%',
+            width: '36px',
+            height: '36px',
+            fontSize: '1.2rem',
+            fontWeight: 'bold',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.5)'
+          }}
+          aria-label="Close modal"
+        >
+          ✕
+        </button>
+
+        <img
+          src={selectedImage.src}
+          alt={selectedImage.alt}
+          style={{
+            maxWidth: '100%',
+            maxHeight: '80vh',
+            objectFit: 'contain',
+            borderRadius: '12px',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.8)',
+            border: '1px solid rgba(255, 255, 255, 0.15)'
+          }}
+        />
+      </div>
+    </div>
+  )}
+</section>
+{/* --- FIN DE SECCIÓN DE IMÁGENES --- */}
+
+          
           
           
           
