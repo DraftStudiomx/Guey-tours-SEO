@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export default function RzrRentalContenido() {
+export default function Offroad() {
   const { lang } = useLang()
 
   const [form, setForm] = useState({ name: '', email: '', message: '' })
