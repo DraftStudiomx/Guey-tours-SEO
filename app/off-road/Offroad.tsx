@@ -135,7 +135,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 {/* Botón de contacto */}
 <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
   <a 
-    href="https://www.gueytours.com/contacto/" 
+    href="https://www.gueytours.com/contact" 
     style={{
       display: 'inline-block',
       background: 'transparent',
