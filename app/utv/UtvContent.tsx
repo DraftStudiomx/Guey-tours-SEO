@@ -884,8 +884,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   </div>
 </section>
 {/* Fin de section wild */}
+
+
+          
     
-      {/* Inicio de section tres (2x2 simétrico en escritorio y fluido en mobile) */}
+      {/* Inicio de section exp (Experiencias de Aventura / Adventure experiences) */}
 <section style={{
   padding: '6rem 1.5rem',
   marginTop: '3rem',
@@ -898,31 +901,57 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   width: '100%'
 }}>
   <style>{`
-    .sec3_grid {
+    .exp_grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      max-width: 920px;
+      max-width: 1200px;
       margin: 0 auto;
       box-sizing: border-box;
       width: 100%;
     }
-    @media (min-width: 768px) {
-      .sec3_grid {
-        grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 992px) {
+      .exp_grid {
+        grid-template-columns: repeat(3, 1fr);
       }
+    }
+    .exp_card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%);
+      border: 1px solid rgba(217, 119, 54, 0.3);
+      borderRadius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      width: 100%;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .exp_card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(217, 119, 54, 0.6);
+    }
+    .exp_link {
+      color: var(--orange, #d97736);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    .exp_link:hover {
+      opacity: 0.8;
     }
   `}</style>
 
   <div style={{
-    maxWidth: '1100px',
+    maxWidth: '1200px',
     margin: '0 auto',
     width: '100%',
     boxSizing: 'border-box'
   }}>
     
     {/* Título H2 */}
-    <div style={{ textAlign: 'center', marginBottom: '3rem', boxSizing: 'border-box' }}>
+    <div style={{ textAlign: 'center', marginBottom: '4rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
         fontSize: 'clamp(2rem, 4vw, 3rem)',
@@ -934,8 +963,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         wordBreak: 'break-word'
       }}>
         {lang === 'es' 
-          ? 'Excursiones de aventura para todo tipo de viajero' 
-          : "Adventure tours for every type of traveler"}
+          ? 'Experiencias de aventura en San Miguel de Allende' 
+          : 'Adventure experiences in San Miguel de Allende'}
       </h2>
       <div style={{
         width: '80px',
@@ -946,49 +975,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }} />
     </div>
 
-    {/* Párrafo introductorio */}
-    <div style={{
-      background: 'rgba(255, 255, 255, 0.02)',
-      borderLeft: '4px solid var(--orange, #d97736)',
-      borderRadius: '0 16px 16px 0',
-      padding: 'clamp(1.5rem, 3vw, 2.5rem) clamp(1.2rem, 2.5vw, 3rem)',
-      marginBottom: '3.5rem',
-      boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
-      backdropFilter: 'blur(10px)',
-      boxSizing: 'border-box'
-    }}>
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
-        lineHeight: 1.8,
-        margin: 0,
-        wordBreak: 'break-word'
-      }}>
-        {lang === 'es'
-          ? 'Ya sea que estés planeando un viaje en solitario, una escapada romántica o unas vacaciones en grupo, nuestras excursiones en Guanajuato se adaptan a tu estilo:'
-          : 'Whether you are planning a solo trip, a romantic getaway, or a group vacation, our excursions in Guanajuato adapt to your style:'}
-      </p>
-    </div>
-
-    {/* Cuadrícula exacta de 4 tarjetas en formato 2x2 */}
-    <div className="sec3_grid">
+    {/* Cuadrícula de 3 Tarjetas */}
+    <div className="exp_grid">
       
-      {/* Tarjeta 1: Couples */}
-      <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        padding: '2.5rem 2rem',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
+      {/* Tarjeta 1: ATV Adventures */}
+      <div className="exp_card">
         <div>
           <span style={{
             display: 'inline-block',
@@ -1003,44 +994,40 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Parejas' : 'Couples'}
+            {lang === 'es' ? 'Cuatrimotos' : 'ATV'}
           </span>
           <h3 style={{
             color: '#fff',
             fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
-            wordBreak: 'break-word'
+            wordBreak: 'break-word',
+            textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Parejas' : 'Couples'}
+            {lang === 'es' ? 'Aventuras en ATV' : 'ATV Adventures'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
             fontSize: '1rem',
-            lineHeight: 1.6,
+            lineHeight: 1.7,
             margin: 0,
             wordBreak: 'break-word'
           }}>
-            {lang === 'es' 
-              ? 'Comparte un paseo emocionante juntos mientras descubres miradores panorámicos y paisajes pintorescos.' 
-              : 'Share an exciting ride together while discovering scenic viewpoints and picturesque landscapes.'}
+            {lang === 'es' ? (
+              <>
+                Si quieres un control total sobre máquinas ágiles en senderos de tierra accidentados, nuestras cuatrimotos ofrecen pura diversión en terrenos naturales. Conoce nuestras opciones de <a href="[URL_AQUÍ]" className="exp_link">alquiler de ATV</a> para elegir entre alquileres de un solo vehículo o excursiones guiadas por senderos.
+              </>
+            ) : (
+              <>
+                If you want total control over agile machines on rugged dirt paths, our quad bikes deliver pure fun across natural terrain. Check out our options for <a href="[URL_AQUÍ]" className="exp_link">ATV rentals</a> to choose between single-vehicle rentals or fully guided trail trips.
+              </>
+            )}
           </p>
         </div>
       </div>
 
-      {/* Tarjeta 2: Friends & Groups */}
-      <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        padding: '2.5rem 2rem',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
+      {/* Tarjeta 2: RZR Adventures */}
+      <div className="exp_card">
         <div>
           <span style={{
             display: 'inline-block',
@@ -1055,44 +1042,40 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Amigos y Grupos' : 'Friends & Groups'}
+            {lang === 'es' ? 'RZR / UTV' : 'RZR'}
           </span>
           <h3 style={{
             color: '#fff',
             fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
-            wordBreak: 'break-word'
+            wordBreak: 'break-word',
+            textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Amigos y Grupos' : 'Friends & Groups'}
+            {lang === 'es' ? 'Aventuras en RZR' : 'RZR Adventures'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
             fontSize: '1rem',
-            lineHeight: 1.6,
+            lineHeight: 1.7,
             margin: 0,
             wordBreak: 'break-word'
           }}>
-            {lang === 'es' 
-              ? 'Desafíense mutuamente en pistas todoterreno y disfruten de una aventura grupal al aire libre inolvidable.' 
-              : 'Challenge each other on all-terrain tracks and enjoy an unforgettable group outdoor adventure.'}
+            {lang === 'es' ? (
+              <>
+                Para potencia de servicio pesado y emoción a alta velocidad, súbete a un vehículo utilitario premium diseñado para enfrentar terrenos extremos. Descubre nuestros <a href="[URL_AQUÍ]" className="exp_link">alquileres de RZR especializados</a> y domina los senderos de montaña en un vehículo 4x4 imparable.
+              </>
+            ) : (
+              <>
+                For heavy-duty power and high-speed excitement, step inside a premium side-by-side vehicle engineered to tackle extreme terrain. Discover our <a href="[URL_AQUÍ]" className="exp_link">specialized RZR rentals</a> and master the mountain trails in an unstoppable 4x4 vehicle.
+              </>
+            )}
           </p>
         </div>
       </div>
 
-      {/* Tarjeta 3: Families */}
-      <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        padding: '2.5rem 2rem',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
+      {/* Tarjeta 3: Private Experiences */}
+      <div className="exp_card">
         <div>
           <span style={{
             display: 'inline-block',
@@ -1107,79 +1090,34 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Familias' : 'Families'}
+            {lang === 'es' ? 'Privado' : 'Private'}
           </span>
           <h3 style={{
             color: '#fff',
             fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
-            wordBreak: 'break-word'
+            wordBreak: 'break-word',
+            textTransform: 'uppercase'
           }}>
-            {lang === 'es' ? 'Familias' : 'Families'}
+            {lang === 'es' ? 'Experiencias Privadas' : 'Private Experiences'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
             fontSize: '1rem',
-            lineHeight: 1.6,
+            lineHeight: 1.7,
             margin: 0,
             wordBreak: 'break-word'
           }}>
-            {lang === 'es' 
-              ? 'Vive una diversión segura y guiada en vehículos de múltiples pasajeros aptos para niños mayores y adolescentes.' 
-              : 'Experience safe, guided fun in multi-passenger vehicles suitable for older kids and teens.'}
-          </p>
-        </div>
-      </div>
-
-      {/* Tarjeta 4: Nature & Thrill Seekers */}
-      <div style={{
-        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
-        border: '1px solid rgba(217, 119, 54, 0.3)',
-        borderRadius: '16px',
-        padding: '2.5rem 2rem',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
-        <div>
-          <span style={{
-            display: 'inline-block',
-            padding: '0.3rem 0.8rem',
-            background: 'rgba(217, 119, 54, 0.15)',
-            color: 'var(--orange, #d97736)',
-            borderRadius: '20px',
-            fontSize: '0.8rem',
-            fontWeight: 'bold',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
-            marginBottom: '1rem',
-            border: '1px solid rgba(217, 119, 54, 0.4)'
-          }}>
-            {lang === 'es' ? 'Naturaleza y Adrenalina' : 'Nature & Thrill Seekers'}
-          </span>
-          <h3 style={{
-            color: '#fff',
-            fontSize: '1.35rem',
-            margin: '0 0 1rem 0',
-            fontFamily: 'var(--font-heading)',
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' ? 'Amantes de la Naturaleza y Emociones' : 'Nature & Thrill Seekers'}
-          </h3>
-          <p style={{
-            color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '1rem',
-            lineHeight: 1.6,
-            margin: 0,
-            wordBreak: 'break-word'
-          }}>
-            {lang === 'es' 
-              ? 'Perfecto para viajeros que buscan cosas emocionantes que hacer en Guanajuato fuera de los límites de la ciudad.' 
-              : 'Perfect for travelers looking for exciting things to do in Guanajuato outside city limits.'}
+            {lang === 'es' ? (
+              <>
+                ¿Buscas un viaje exclusivo hecho a tu medida? Diseñamos tours privados personalizados para parejas, familias o grupos que buscan un ritmo personal. Reserva un <a href="[URL_AQUÍ]" className="exp_link">tour privado en UTV</a> con guías dedicados visitando nuestra página de Tours Privados.
+              </>
+            ) : (
+              <>
+                Looking for an exclusive journey tailored just for you? We design custom private tours for couples, families, or private groups seeking a personal pace. Book a <a href="[URL_AQUÍ]" className="exp_link">private UTV tour</a> with dedicated guides by visiting our Private Tours page.
+              </>
+            )}
           </p>
         </div>
       </div>
@@ -1188,7 +1126,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   </div>
 </section>
-{/* Fin de section tres */}
+{/* Fin de section exp */}
 
 
           
