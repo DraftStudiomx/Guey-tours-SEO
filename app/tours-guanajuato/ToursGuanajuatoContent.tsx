@@ -257,18 +257,20 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
         
-          {/* INICIO SECTION - 5 TARJETAS CON IMÁGENES */}
+          {/* INICIO SECTION - 5 TARJETAS CON IMÁGENES (ESTILOS AISLADOS) */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
   color: '#fff',
   fontFamily: 'sans-serif',
-  position: 'relative'
+  position: 'relative',
+  boxSizing: 'border-box',
+  width: '100%'
 }}>
-  <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+  <div style={{ maxWidth: '1200px', margin: '0 auto', boxSizing: 'border-box' }}>
     
     {/* Título H2 y Párrafo Corto Introductorio */}
-    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+    <div style={{ textAlign: 'center', marginBottom: '4rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
         fontSize: 'clamp(2.2rem, 4vw, 3rem)',
@@ -305,12 +307,15 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Contenedor de las 5 Tarjetas (Grid responsivo seguro y fluido) */}
+    {/* Contenedor Principal con Grid Único para las 5 tarjetas (3 arriba, 2 abajo) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
       gap: '2rem',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      maxWidth: '1160px',
+      margin: '0 auto',
+      boxSizing: 'border-box'
     }}>
       
       {/* --- TARJETA 1 --- */}
@@ -322,7 +327,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -332,7 +338,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
           <h3 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '1.4rem',
@@ -376,7 +382,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -386,7 +393,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
           <h3 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '1.4rem',
@@ -430,7 +437,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -440,7 +448,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
           <h3 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '1.4rem',
@@ -484,7 +492,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -494,7 +503,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
           <h3 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '1.4rem',
@@ -538,7 +547,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -548,7 +558,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
           <h3 style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '1.4rem',
