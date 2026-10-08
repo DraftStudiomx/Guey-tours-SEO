@@ -89,7 +89,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     textTransform: 'uppercase',
     marginBottom: '0.5rem'
   }}>
-    --- {lang === 'es' ? '¡Prepárate para el viaje de tu vida!' : 'Get ready for the ultimate ride of your life!'} ---
+    --- {lang === 'es' ? 'Tours en Guanajuato: Descubre el estado de una manera diferente.' : 'Tours Guanajuato: Discover the state in a different way'} ---
   </div>
   
   <h1 style={{
@@ -117,17 +117,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
   <p style={{ margin: 0, wordBreak: 'break-word' }}>
     {lang === 'es' ? (
-      <>En Guey Tours, te ofrecemos una experiencia todoterreno inolvidable a través del impresionante campo de Guanajuato. Si buscas una aventura al aire libre que combine adrenalina, libertad y paisajes impresionantes, nuestros tours te llevarán mucho más allá de los caminos turísticos habituales.</>
+      <>Bienvenidos a <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> su puerta de entrada definitiva para explorar el centro de México más allá de los lugares turísticos convencionales. Nos especializamos en transformar sus vacaciones en un viaje inolvidable, repleto de adrenalina, paisajes impresionantes y auténticas actividades al aire libre.</>
     ) : (
-      <>At Guey Tours, we bring you an unforgettable off-road experience through the stunning countryside of Guanajuato. If you are looking for an outdoor adventure that combines adrenaline, freedom, and breathtaking landscapes, our tours will take you way beyond the typical tourist paths.</>
+      <>Welcome to <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> your ultimate gateway to exploring central Mexico beyond the conventional sightseeing spots. We specialize in turning your vacation into an unforgettable journey filled with adrenaline, stunning landscapes, and authentic outdoor activities.  </>
     )}
   </p>
 
   <p style={{ margin: 0, wordBreak: 'break-word' }}>
     {lang === 'es' ? (
-      <>¡Ponte al volante y explora la rica herencia de México desde una perspectiva completamente nueva!</>
+      <>Si buscas recorridos de primer nivel en Guanajuato que se alejen de los aburridos viajes en autobús, has llegado al lugar indicado. ¡Prepárate para descubrir nuestra amplia variedad de tours por Guanajuato, diseñados para todo tipo de viajero!</>
     ) : (
-      <>Get behind the wheel and explore Mexico’s rich heritage from a whole new perspective!</>
+      <>If you are looking for top-tier Guanajuato tours that break away from boring bus rides, you have come to the right place. Get ready to discover our wide variety of Tours Guanajuato designed for every type of traveler!</>
     )}
   </p>
 </div>
@@ -163,6 +163,97 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   </a>
 </div>
 
+
+
+
+          
+ {/* Segunda sección: Dos columnas responsivas (Texto H2 + Imagen) */}
+<div style={{
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: '2.5rem',
+  marginTop: '5rem',
+  background: 'rgba(255, 255, 255, 0.02)',
+  padding: 'clamp(1.5rem, 4vw, 3rem)', // Se adapta en móviles para no desbordar
+  borderRadius: '16px',
+  border: '1px solid rgba(255, 255, 255, 0.08)',
+  boxSizing: 'border-box',
+  width: '100%',
+  overflow: 'hidden'
+}}>
+  {/* Columna de Texto H2 y Párrafos */}
+  <div style={{ 
+    flex: '1 1 280px', 
+    minWidth: 0, // Evita desbordamientos en grid/flex con textos largos
+    display: 'flex', 
+    flexDirection: 'column', 
+    gap: '1.2rem' 
+  }}>
+    <h2 style={{
+      fontFamily: 'var(--font-heading)',
+      fontSize: 'clamp(1.5rem, 3vw, 1.8rem)',
+      color: 'var(--orange, #d97736)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+      margin: 0,
+      wordBreak: 'break-word'
+    }}>
+      {lang === 'es' ? '¿Qué puedes experimentar en un recorrido por Guanajuato?' : 'What can you experience on a tour through Guanajuato?'}
+    </h2>
+
+    {/* NUEVO PÁRRAFO ABAJO DEL H2 */}
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.9)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
+      {lang === 'es'
+        ? 'Al viajar con nosotros, accedes a lugares impresionantes de Guanajuato que la mayoría de los turistas se pierde.'
+        : 'When you travel with us, you unlock access to breathtaking places to visit in Guanajuato that most tourists miss. '}
+    </p>
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
+      {lang === 'es' ? (
+        <>Nuestros recorridos por <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>San Miguel de Allende</a> y las excursiones por la región le llevan a adentrarse en cañones escarpados, senderos montañosos históricos y pintorescos pueblos rurales.</>
+      ) : (
+        <>Our <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>San Miguel de Allende Tours</a> and regional excursions take you deep into rugged canyons, historic mountain trails, and colorful rural villages.</>
+      )}
+    </p>
+
+    {/* TUS 3 PÁRRAFOS ORIGINALES */}
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
+      {lang === 'es' 
+        ? 'En lugar de estar atrapado en el tráfico, recorrerás pintorescos caminos de tierra, cruzarás ríos y disfrutarás de vistas panorámicas de las montañas.'
+        : 'Instead of sitting in traffic, you will navigate scenic dirt roads, cross rivers, and take in panoramic mountain views. '}
+    </p>
+
+
+    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
+      {lang === 'es'
+        ? 'Desde atracciones turísticas de fama mundial hasta joyas naturales ocultas, nuestras experiencias de viaje combinan una rica historia local con el auténtico turismo de aventura.'
+        : 'From world-famous tourist attractions to hidden natural gems, our travel experiences combine rich local history with true adventure tourism.'}
+    </p>
+  </div>
+
+  {/* Columna de la Imagen (Adaptada y fluida para móviles) */}
+  <div style={{ flex: '1 1 280px', minWidth: 0, width: '100%' }}>
+    <div style={{
+      width: '100%',
+      height: '320px',
+      position: 'relative',
+      borderRadius: '12px',
+      overflow: 'hidden',
+      border: '1px solid rgba(255,255,255,0.1)',
+      boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
+    }}>
+      <Image
+        src="/images/SEO/Group tour posing with ATVs near iconic cathedral tours Guanajuato.webp" 
+        alt="Group of tourists with safety helmets posing in front of a landmark pink parish church on guided tours Guanajuato."
+        title="Group tour posing with ATVs near iconic cathedral tours Guanajuato"
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+    </div>
+  </div>
+</div>
 
 
           {/* Segunda sección: Tres tarjetas (Videos con Alt/Title + Títulos + Botones) */}
@@ -397,92 +488,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           
 
 
-         {/* Segunda sección: Dos columnas responsivas (Texto H2 + Imagen) */}
-<div style={{
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  alignItems: 'center',
-  gap: '2.5rem',
-  marginTop: '5rem',
-  background: 'rgba(255, 255, 255, 0.02)',
-  padding: 'clamp(1.5rem, 4vw, 3rem)', // Se adapta en móviles para no desbordar
-  borderRadius: '16px',
-  border: '1px solid rgba(255, 255, 255, 0.08)',
-  boxSizing: 'border-box',
-  width: '100%',
-  overflow: 'hidden'
-}}>
-  {/* Columna de Texto H2 y Párrafos */}
-  <div style={{ 
-    flex: '1 1 280px', 
-    minWidth: 0, // Evita desbordamientos en grid/flex con textos largos
-    display: 'flex', 
-    flexDirection: 'column', 
-    gap: '1.2rem' 
-  }}>
-    <h2 style={{
-      fontFamily: 'var(--font-heading)',
-      fontSize: 'clamp(1.5rem, 3vw, 1.8rem)',
-      color: 'var(--orange, #d97736)',
-      textTransform: 'uppercase',
-      letterSpacing: '0.05em',
-      margin: 0,
-      wordBreak: 'break-word'
-    }}>
-      {lang === 'es' ? '¿Qué es una experiencia todoterreno?' : 'What is an off-road experience?'}
-    </h2>
-
-    {/* NUEVO PÁRRAFO ABAJO DEL H2 */}
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.9)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
-      {lang === 'es'
-        ? 'Una experiencia todoterreno consiste en dejar atrás las carreteras pavimentadas para conquistar paisajes naturales e impredecibles.'
-        : 'An off-road experience is all about leaving paved highways behind to conquer natural, unpredictable landscapes. '}
-    </p>
-
-    {/* TUS 3 PÁRRAFOS ORIGINALES */}
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
-      {lang === 'es' 
-        ? 'A diferencia de la conducción urbana cotidiana, conducir en terrenos difíciles pone a prueba tus habilidades y despierta tu espíritu aventurero mientras te desplazas por tierra, barro, rocas y pendientes pronunciadas.'
-        : 'Unlike everyday city driving, driving on challenging terrain tests your skills and sparks your sense of adventure as you navigate dirt, mud, rocks, and steep hills.'}
-    </p>
-
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
-      {lang === 'es' ? (
-        <>Al unirte a nosotros, pilotarás vehículos recreativos de alto rendimiento diseñados para dominar terrenos abruptos.</>
-      ) : (
-        <>When you join us, you will pilot high-performance recreational vehicles designed to master rugged paths. </>
-      )}
-    </p>
-
-    <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
-      {lang === 'es'
-        ? 'Recorrerás caminos de tierra, cauces de ríos y senderos ocultos por donde los automóviles convencionales simplemente no pueden pasar. No es solo un paseo; es una emocionante experiencia todoterreno diseñada para viajeros que buscan una emoción auténtica.'
-        : 'You will traverse dirt roads, riverbeds, and hidden trails where standard cars simply cannot go. It is not just a ride; it is a thrilling off-road experience created for travelers seeking genuine excitement.'}
-    </p>
-  </div>
-
-  {/* Columna de la Imagen (Adaptada y fluida para móviles) */}
-  <div style={{ flex: '1 1 280px', minWidth: 0, width: '100%' }}>
-    <div style={{
-      width: '100%',
-      height: '320px',
-      position: 'relative',
-      borderRadius: '12px',
-      overflow: 'hidden',
-      border: '1px solid rgba(255,255,255,0.1)',
-      boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
-    }}>
-      <Image
-        src="/images/SEO/Guided off-road ATV quad tour group exploring picturesque streets.webp" 
-        alt="Group of tourists wearing helmets riding all-terrain off-road quads together on a sunny outdoor guided adventure."
-        title="Guided off-road ATV quad tour group exploring picturesque streets"
-        fill
-        style={{ objectFit: 'cover' }}
-      />
-    </div>
-  </div>
-</div>
+        
           
 
 
