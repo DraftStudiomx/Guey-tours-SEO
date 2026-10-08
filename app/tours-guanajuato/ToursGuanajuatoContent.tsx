@@ -257,7 +257,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
         
-         {/* INICIO SECTION - 5 TARJETAS CON TAMAÑOS EXACTOS E IGUALES */}
+         {/* INICIO SECTION - 5 TARJETAS PERFECTAS RESPONSIVAS */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
@@ -267,6 +267,27 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   boxSizing: 'border-box',
   width: '100%'
 }}>
+  <style>{`
+    @media (min-width: 768px) {
+      .c5_desktop_grid {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+      }
+      .c5_card_1 { grid-column: span 2 !important; }
+      .c5_card_2 { grid-column: span 2 !important; }
+      .c5_card_3 { grid-column: span 2 !important; }
+      .c5_card_4 { grid-column: 2 / span 2 !important; }
+      .c5_card_5 { grid-column: span 2 !important; }
+    }
+    @media (max-width: 767px) {
+      .c5_desktop_grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+      }
+    }
+  `}</style>
+
   <div style={{ maxWidth: '1200px', margin: '0 auto', boxSizing: 'border-box' }}>
     
     {/* Título H2 y Párrafo Corto Introductorio */}
@@ -307,20 +328,16 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Contenedor Grid Unificado para control perfecto de tamaños */}
-    <div className="c5_grid_container" style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(6, 1fr)',
+    {/* Contenedor Grid Unificado con control responsive */}
+    <div className="c5_desktop_grid" style={{
       gap: '2rem',
       maxWidth: '1160px',
       margin: '0 auto',
       boxSizing: 'border-box'
     }}>
       
-      {/* Estilo base compartido para que todas midan exactamente lo mismo */}
-      {/* --- TARJETA 1 (Ocupa 2 columnas de 6 -> 3 arriba) --- */}
-      <div style={{
-        gridColumn: 'span 2',
+      {/* --- TARJETA 1 --- */}
+      <div className="c5_card_1" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -329,7 +346,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        width: '100%'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -374,9 +392,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 2 (Ocupa 2 columnas) --- */}
-      <div style={{
-        gridColumn: 'span 2',
+      {/* --- TARJETA 2 --- */}
+      <div className="c5_card_2" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -385,7 +402,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        width: '100%'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -430,9 +448,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 3 (Ocupa 2 columnas) --- */}
-      <div style={{
-        gridColumn: 'span 2',
+      {/* --- TARJETA 3 --- */}
+      <div className="c5_card_3" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -441,7 +458,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        width: '100%'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -486,9 +504,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 4 (Inicia en columna 2, ocupa 2 columnas -> Centrada abajo junto con la 5) --- */}
-      <div style={{
-        gridColumn: '2 / span 2',
+      {/* --- TARJETA 4 --- */}
+      <div className="c5_card_4" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -497,7 +514,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        width: '100%'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -542,9 +560,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         </div>
       </div>
 
-      {/* --- TARJETA 5 (Ocupa 2 columnas al lado de la 4) --- */}
-      <div style={{
-        gridColumn: 'span 2',
+      {/* --- TARJETA 5 --- */}
+      <div className="c5_card_5" style={{
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -553,7 +570,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         flexDirection: 'column',
         justifyContent: 'space-between',
         boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        width: '100%'
       }}>
         <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
           <img
@@ -602,12 +620,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   </div>
 </section>
-{/* FIN SECTION - 5 TARJETAS */}
+{/* FIN SECTION - 5 TARJETAS PERFECTAS */}
           
           
 
     
-       {/* Inicio de section tres (2x2 simétrico y responsivo) */}
+      {/* Inicio de section tres (2x2 simétrico en escritorio y fluido en mobile) */}
 <section style={{
   padding: '6rem 1.5rem',
   marginTop: '3rem',
@@ -619,6 +637,23 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden',
   width: '100%'
 }}>
+  <style>{`
+    .sec3_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 920px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      .sec3_grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  `}</style>
+
   <div style={{
     maxWidth: '1100px',
     margin: '0 auto',
@@ -679,15 +714,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     </div>
 
     {/* Cuadrícula exacta de 4 tarjetas en formato 2x2 */}
-    <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-      gap: '2rem',
-      maxWidth: '920px',
-      margin: '0 auto',
-      boxSizing: 'border-box',
-      width: '100%'
-    }}>
+    <div className="sec3_grid">
       
       {/* Tarjeta 1: Couples */}
       <div style={{
