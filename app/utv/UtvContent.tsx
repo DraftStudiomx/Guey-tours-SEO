@@ -934,7 +934,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     }
     .exp_link {
       color: var(--orange, #d97736);
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 600;
       transition: opacity 0.3s ease;
     }
@@ -1015,11 +1015,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           }}>
             {lang === 'es' ? (
               <>
-                Si quieres un control total sobre máquinas ágiles en senderos de tierra accidentados, nuestras cuatrimotos ofrecen pura diversión en terrenos naturales. Conoce nuestras opciones de <a href="[URL_AQUÍ]" className="exp_link">alquiler de ATV</a> para elegir entre alquileres de un solo vehículo o excursiones guiadas por senderos.
+                Si quieres un control total sobre máquinas ágiles en senderos de tierra accidentados, nuestras cuatrimotos ofrecen pura diversión en terrenos naturales. Conoce nuestras opciones de <a href="https://www.gueytours.com/atv-rentals" className="exp_link">alquiler de ATV</a> para elegir entre alquileres de un solo vehículo o excursiones guiadas por senderos.
               </>
             ) : (
               <>
-                If you want total control over agile machines on rugged dirt paths, our quad bikes deliver pure fun across natural terrain. Check out our options for <a href="[URL_AQUÍ]" className="exp_link">ATV rentals</a> to choose between single-vehicle rentals or fully guided trail trips.
+                If you want total control over agile machines on rugged dirt paths, our quad bikes deliver pure fun across natural terrain. Check out our options for <a href="https://www.gueytours.com/atv-rentals" className="exp_link">ATV rentals</a> to choose between single-vehicle rentals or fully guided trail trips.
               </>
             )}
           </p>
@@ -1063,11 +1063,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           }}>
             {lang === 'es' ? (
               <>
-                Para potencia de servicio pesado y emoción a alta velocidad, súbete a un vehículo utilitario premium diseñado para enfrentar terrenos extremos. Descubre nuestros <a href="[URL_AQUÍ]" className="exp_link">alquileres de RZR especializados</a> y domina los senderos de montaña en un vehículo 4x4 imparable.
+                Para potencia de servicio pesado y emoción a alta velocidad, súbete a un vehículo utilitario premium diseñado para enfrentar terrenos extremos. Descubre nuestros <a href="https://www.gueytours.com/rsz-rentals" className="exp_link">alquileres de RZR </a> especializados y domina los senderos de montaña en un vehículo 4x4 imparable.
               </>
             ) : (
               <>
-                For heavy-duty power and high-speed excitement, step inside a premium side-by-side vehicle engineered to tackle extreme terrain. Discover our <a href="[URL_AQUÍ]" className="exp_link">specialized RZR rentals</a> and master the mountain trails in an unstoppable 4x4 vehicle.
+                For heavy-duty power and high-speed excitement, step inside a premium side-by-side vehicle engineered to tackle extreme terrain. Discover our specialized <a href="https://www.gueytours.com/rsz-rentals" className="exp_link"> RZR rentals</a> and master the mountain trails in an unstoppable 4x4 vehicle.
               </>
             )}
           </p>
@@ -1111,11 +1111,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           }}>
             {lang === 'es' ? (
               <>
-                ¿Buscas un viaje exclusivo hecho a tu medida? Diseñamos tours privados personalizados para parejas, familias o grupos que buscan un ritmo personal. Reserva un <a href="[URL_AQUÍ]" className="exp_link">tour privado en UTV</a> con guías dedicados visitando nuestra página de Tours Privados.
+                ¿Buscas un viaje exclusivo hecho a tu medida? Diseñamos tours privados personalizados para parejas, familias o grupos que buscan un ritmo personal. Reserva un tour privado en UTV con guías dedicados visitando nuestra página de Tours Privados.
               </>
             ) : (
               <>
-                Looking for an exclusive journey tailored just for you? We design custom private tours for couples, families, or private groups seeking a personal pace. Book a <a href="[URL_AQUÍ]" className="exp_link">private UTV tour</a> with dedicated guides by visiting our Private Tours page.
+                Looking for an exclusive journey tailored just for you? We design custom private tours for couples, families, or private groups seeking a personal pace. Book a private UTV tour with dedicated guides by visiting our Private Tours page.
               </>
             )}
           </p>
@@ -1156,7 +1156,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        {lang === 'es' ? '¿Por qué reservar tu tour con Guey Tours?' : 'Why book your tour with Guey Tours?'}
+        {lang === 'es' ? '¿Por qué elegir Guey Tours?' : 'Why Choose Guey Tours?'}
       </h2>
       <div style={{
         width: '80px',
@@ -1166,29 +1166,29 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         boxShadow: '0 0 12px var(--orange, #d97736)'
       }} />
       <p style={{
-  fontFamily: 'sans-serif',
-  fontStyle: 'normal',
-  fontWeight: '400',
-  color: 'rgba(255, 255, 255, 0.85)',
-  fontSize: '18px',
-  lineHeight: 1.8,
-  maxWidth: '800px',
-  margin: '0 auto',
-  wordBreak: 'break-word'
-}}>
-  {lang === 'es' ? (
-    <>
-      En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> nos enfocamos en ofrecer recorridos de alta calidad, seguros y emocionantes en Guanajuato:
-    </>
-  ) : (
-    <>
-      At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> we focus on delivering high-quality, safe, and exciting Tours in Guanajuato:
-    </>
-  )}
-</p>
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        maxWidth: '800px',
+        margin: '0 auto',
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es' ? (
+          <>
+            En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> nos enfocamos en ofrecer experiencias inolvidables y emocionantes:
+          </>
+        ) : (
+          <>
+            At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none' }}>Guey Tours,</a> we focus on delivering unforgettable and exciting experiences:
+          </>
+        )}
+      </p>
     </div>
 
-    {/* Contenedor de Tarjetas (Grid de 2x2) */}
+    {/* Contenedor de Tarjetas (Grid) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
@@ -1197,7 +1197,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       marginBottom: '4rem'
     }}>
       
-      {/* --- TARJETA 1: Local expertise (Destacada Color Naranja) --- */}
+      {/* --- TARJETA 1: Local Knowledge --- */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -1218,7 +1218,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Profundo conocimiento local' : 'Deep Local Knowledge'}
+          {lang === 'es' ? 'Conocimiento local' : 'Local Knowledge'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1227,12 +1227,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Nuestros guías bilingües conocen las mejores rutas, los lugares secretos y los protocolos de seguridad.'
-            : 'Our bilingual guides know the best trails, secret spots, and safety protocols.'}
+            ? 'Guías locales apasionados que conocen cada sendero secreto y rincón histórico.'
+            : 'Passionate local guides who know every secret trail and historic spot.'}
         </p>
       </div>
 
-      {/* --- TARJETA 2: Top-tier fleet (Negra) --- */}
+      {/* --- TARJETA 2: English-Speaking Staff --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -1253,7 +1253,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Flota de primer nivel' : 'Top-tier fleet'}
+          {lang === 'es' ? 'Personal bilingüe' : 'English-Speaking Staff'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1262,12 +1262,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Mantenemos vehículos de altas prestaciones, garantizando una conducción suave, segura y potente.'
-            : 'We maintain high-spec vehicles ensuring a smooth, safe, and powerful ride.'}
+            ? 'Comunicación clara, amigable y atención personalizada para viajeros internacionales.'
+            : 'Clear, friendly communication and personalized attention for international travelers.'}
         </p>
       </div>
 
-      {/* --- TARJETA 3: Full support (Negra) --- */}
+      {/* --- TARJETA 3: Safety-Focused --- */}
       <div style={{
         background: '#000',
         border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -1288,7 +1288,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Asistencia totalmente guiada' : 'Fully Guided Support'}
+          {lang === 'es' ? 'Enfoque en la seguridad' : 'Safety-Focused'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1297,12 +1297,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Ofrecemos el equipo, las sesiones informativas y asistencia completa para que puedas conducir con total tranquilidad.'
-            : 'We provide gear, briefings, and full support so you can ride with complete peace of mind.'}
+            ? 'Equipo de protección de primera calidad, orientaciones completas y asistencia constante en los senderos.'
+            : 'Top-quality safety gear, full orientations, and constant trail support.'}
         </p>
       </div>
 
-      {/* --- TARJETA 4: Personalized attention (Destacada Color Naranja) --- */}
+      {/* --- TARJETA 4: Quality Vehicles --- */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.08) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.4)',
@@ -1323,7 +1323,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           borderBottom: '1px solid rgba(217, 119, 54, 0.2)',
           paddingBottom: '0.8rem'
         }}>
-          {lang === 'es' ? 'Atención centrada en el cliente' : 'Customer-Centric Care'}
+          {lang === 'es' ? 'Vehículos de calidad' : 'Quality Vehicles'}
         </h3>
         <p style={{
           color: 'rgba(255, 255, 255, 0.85)',
@@ -1332,8 +1332,48 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           margin: 0
         }}>
           {lang === 'es'
-            ? 'Servicio dedicado y personalizado para brindar experiencias memorables a los viajeros internacionales en Guanajuato.'
-            : 'Dedicated service tailored to give international travelers memorable experiences in Guanajuato.'}
+            ? 'Vehículos recreativos meticulosamente mantenidos y modelos de vehículos utilitarios listos para la conducción off-road.'
+            : 'Meticulously maintained recreational vehicles and off-road utility vehicle models ready for off-road driving.'}
+        </p>
+      </div>
+
+      {/* --- TARJETA 5: Pure Thrills (Ocupa espacio o se alinea) --- */}
+      <div style={{
+        background: '#000',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        borderRadius: '16px',
+        padding: '2.5rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1.2rem',
+        boxShadow: '0 15px 35px rgba(0,0,0,0.6)',
+        gridColumn: '1 / -1',
+        maxWidth: '650px',
+        margin: '0 auto',
+        width: '100%',
+        boxSizing: 'border-box'
+      }}>
+        <h3 style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: '1.4rem',
+          color: '#fff',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          margin: 0,
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          paddingBottom: '0.8rem'
+        }}>
+          {lang === 'es' ? 'Emociones puras' : 'Pure Thrills'}
+        </h3>
+        <p style={{
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontSize: '16px',
+          lineHeight: 1.6,
+          margin: 0
+        }}>
+          {lang === 'es'
+            ? 'Itinerarios hechos a la medida diseñados en torno a una auténtica aventura en UTV de alta energía.'
+            : 'Tailor-made itineraries built around genuine, high-energy UTV adventure.'}
         </p>
       </div>
 
@@ -1361,7 +1401,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           transition: 'all 0.3s ease'
         }}
       >
-        {lang === 'es' ? 'Reserva tu tour por Guanajuato hoy mismo.' : 'Book your Guanajuato tour today'}
+        {lang === 'es' ? 'Planifica tu aventura' : 'Plan your adventure'}
       </a>
     </div>
 
