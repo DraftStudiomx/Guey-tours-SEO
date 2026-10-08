@@ -305,16 +305,18 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Contenedor de las 5 Tarjetas (Grid Responsivo Adaptable) */}
+    {/* Contenedor de las 5 Tarjetas con Flexbox para centrar las últimas 2 */}
     <div style={{
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      display: 'flex',
+      flexWrap: 'wrap',
       gap: '2rem',
       justifyContent: 'center'
     }}>
       
       {/* --- TARJETA 1 --- */}
       <div style={{
+        flex: '1 1 320px',
+        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -369,6 +371,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 2 --- */}
       <div style={{
+        flex: '1 1 320px',
+        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -423,6 +427,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 3 --- */}
       <div style={{
+        flex: '1 1 320px',
+        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -477,6 +483,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 4 --- */}
       <div style={{
+        flex: '1 1 320px',
+        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -531,6 +539,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
       {/* --- TARJETA 5 --- */}
       <div style={{
+        flex: '1 1 320px',
+        maxWidth: '360px',
         background: '#1a1a1a',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -668,13 +678,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Cuadrícula de opciones de 4 tarjetas (Grid 2x2 responsivo) */}
+    {/* Cuadrícula de opciones de 4 tarjetas (Grid 2x2 forzado y simétrico) */}
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
       gap: '2rem',
-      boxSizing: 'border-box',
-      width: '100%'
+      maxWidth: '960px',
+      margin: '0 auto',
+      boxSizing: 'border-box'
     }}>
       
       {/* Tarjeta 1: Couples */}
