@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export default function ToursGuanajuatoContent() {
+export default function UtvContent() {
   const { lang } = useLang()
 
   const [form, setForm] = useState({ name: '', email: '', message: '' })
