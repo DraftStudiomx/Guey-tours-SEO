@@ -89,7 +89,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     textTransform: 'uppercase',
     marginBottom: '0.5rem'
   }}>
-    --- {lang === 'es' ? 'Tours en Guanajuato: Descubre el estado de una manera diferente.' : 'Tours Guanajuato: Discover the state in a different way'} ---
+    --- {lang === 'es' ? 'Aventura en Guanajuato' : 'Adventure in Guanajuato'} ---
   </div>
   
   <h1 style={{
@@ -101,7 +101,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     margin: '0 0 0.8rem 0',
     wordBreak: 'break-word',
   }}>
-    {lang === 'es' ? 'Off-Road: Vive una aventura todoterreno en Guanajuato.' : 'Off-Road: Live an All-Terrain adventure in Guanajuato'}
+    {lang === 'es' ? 'Tours en Guanajuato: Descubre el estado de una manera diferente.' : 'Tours Guanajuato: Discover the state in a different way'}
   </h1>
 
   <div style={{
@@ -135,7 +135,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 {/* Botón de contacto */}
 <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
   <a 
-    href="https://www.gueytours.com/contacto/" 
+    href="https://www.gueytours.com/contact" 
     style={{
       display: 'inline-block',
       background: 'transparent',
@@ -256,231 +256,338 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 </div>
 
 
-          {/* Segunda sección: Tres tarjetas (Videos con Alt/Title + Títulos + Botones) */}
-<div style={{ marginTop: '4rem' }}>
-  {/* Título de la sección */}
-  <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-    <h2 style={{
-      fontFamily: 'var(--font-heading)',
-      fontSize: 'clamp(2rem, 4vw, 2.5rem)',
-      textTransform: 'uppercase',
-      color: '#fff',
-      letterSpacing: '0.05em',
-      marginBottom: '0.5rem',
-      wordBreak: 'break-word',
-    }}>
-      {lang === 'es' ? 'Nuestras Experiencias y Vehículos' : 'Our Experiences & Vehicles'}
-    </h2>
-    <div style={{
-      width: '80px',
-      height: '2px',
-      background: 'var(--orange, #d97736)',
-      margin: '0 auto',
-      boxShadow: '0 0 8px var(--orange, #d97736)'
-    }} />
-  </div>
-
-  {/* Contenedor de las 3 Tarjetas (Responsive Grid) */}
-  <div style={{
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '2rem',
-    padding: '0 1rem',
-    maxWidth: '1200px',
-    margin: '0 auto'
-  }}>
+        
+          {/* INICIO SECTION - 5 TARJETAS CON IMÁGENES */}
+<section style={{
+  padding: '6rem 2rem',
+  background: '#0b0b0b',
+  color: '#fff',
+  fontFamily: 'sans-serif',
+  position: 'relative'
+}}>
+  <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
     
-    {/* --- TARJETA 1: Video Motorcycle --- */}
-    <div style={{
-      background: '#1a1a1a',
-      borderRadius: '16px',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
-    }}>
-      <div style={{ width: '100%', height: '220px', background: '#000', position: 'relative' }}>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          title={lang === 'es' ? 'Alquiler de motos todoterreno de Guey Tours' : 'Guey Tours Motorcycle Rentals for Off-Road'}
-          aria-label={lang === 'es' ? 'Imagen de las motocicletas todoterreno de alquiler de Guey Tours sobre fondo negro.' : 'Image of Guey Tours Motorcycle Rentals for off-road with a black background'}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        >
-          <source src="/images/SEO/Guey Tours Motorcycle Rentals for Off-Road.mp4" type="video/mp4" />
-          Tu navegador no soporta videos.
-        </video>
-      </div>
-
-      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-        <h3 style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.4rem',
-          color: '#fff',
-          textTransform: 'uppercase',
-          marginBottom: '1.5rem',
-          wordBreak: 'break-word'
-        }}>
-          {lang === 'es' ? 'Renta de Motorcycle' : 'Motorcycle rentals'}
-        </h3>
-
-        <div>
-          <a 
-            href="https://www.gueytours.com/rentals/moto" 
-            style={{
-              display: 'block',
-              textAlign: 'center',
-              background: 'var(--orange, #d97736)',
-              color: '#fff',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '8px',
-              fontWeight: 'bold',
-              fontFamily: 'var(--font-heading)',
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-              transition: 'opacity 0.3s ease'
-            }}
-          >
-            {lang === 'es' ? 'Ver Más' : 'View More'}
-          </a>
-        </div>
-      </div>
+    {/* Título H2 y Párrafo Corto Introductorio */}
+    <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+      <h2 style={{
+        fontFamily: 'var(--font-heading)',
+        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+        color: 'var(--orange, #d97736)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        margin: '0 0 1rem 0',
+        lineHeight: 1.2,
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es' ? 'Elige tu experiencia de aventura en Guanajuato' : 'Choose your adventure experience in Guanajuato'}
+      </h2>
+      <div style={{
+        width: '80px',
+        height: '3px',
+        background: 'var(--orange, #d97736)',
+        margin: '0 auto 2rem auto',
+        boxShadow: '0 0 12px var(--orange, #d97736)'
+      }} />
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '18px',
+        lineHeight: 1.8,
+        maxWidth: '800px',
+        margin: '0 auto',
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es'
+          ? 'Ofrecemos actividades versátiles en Guanajuato, adaptadas a tu estilo de conducción preferido. Explora nuestras principales opciones de recorridos a continuación:'
+          : 'We offer versatile activities in Guanajuato tailored to your favorite style of riding. Explore our main tour options below:'}
+      </p>
     </div>
 
-
-    {/* --- TARJETA 2: Video ATV --- */}
+    {/* Contenedor de las 5 Tarjetas (Grid Responsivo Adaptable) */}
     <div style={{
-      background: '#1a1a1a',
-      borderRadius: '16px',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gap: '2rem',
+      justifyContent: 'center'
     }}>
-      <div style={{ width: '100%', height: '220px', background: '#000', position: 'relative' }}>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          title={lang === 'es' ? 'Alquiler de cuatrimotos (ATV) de Guey Tours para rutas todoterreno' : 'ATV Rentals from Guey Tours for off-road '}
-          aria-label={lang === 'es' ? 'Imagen de los vehículos todoterreno (ATV) de alquiler de Guey Tours para conducción fuera de carretera, con fondo negro.' : 'Image of the ATV Rentals from Guey Tours for off-road with a black background'}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        >
-          <source src="/images/SEO/ATV Rentals from Guey Tours for off-road.mp4" type="video/mp4" />
-          Tu navegador no soporta videos.
-        </video>
-      </div>
-
-      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-        <h3 style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.4rem',
-          color: '#fff',
-          textTransform: 'uppercase',
-          marginBottom: '1.5rem',
-          wordBreak: 'break-word'
-        }}>
-          {lang === 'es' ? 'Renta un ATV' : 'ATV rentals'}
-        </h3>
-
-        <div>
-          <a 
-            href="https://www.gueytours.com/rentals/atv" 
-            style={{
-              display: 'block',
-              textAlign: 'center',
-              background: 'var(--orange, #d97736)',
-              color: '#fff',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '8px',
-              fontWeight: 'bold',
-              fontFamily: 'var(--font-heading)',
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-              transition: 'opacity 0.3s ease'
-            }}
-          >
-            {lang === 'es' ? 'Ver Más' : 'View More'}
-          </a>
+      
+      {/* --- TARJETA 1 --- */}
+      <div style={{
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Fun ATV City Tour experience with guided tours Guanajuato group.webp"
+            alt={lang === 'es' ? 'Turistas alegres posando en un vehículo todoterreno (ATV) durante un recorrido guiado por la ciudad con Tours Guanajuato, equipados con cascos y gafas protectoras.' : 'Cheerful tourists posing on ATV during a guided City Tour with tours Guanajuato wearing helmets and goggles.'}
+            title={lang === 'es' ? 'Divertida experiencia de recorrido en cuatrimoto (ATV) por la ciudad con visitas guiadas en grupo en Guanajuato.' : 'Fun ATV City Tour experience with guided tours Guanajuato group'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/tour-el-centro-san-miguel"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-
-    {/* --- TARJETA 3: Video RZR --- */}
-    <div style={{
-      background: '#1a1a1a',
-      borderRadius: '16px',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
-    }}>
-      <div style={{ width: '100%', height: '220px', background: '#000', position: 'relative' }}>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          title={lang === 'es' ? 'Alquiler de RZR de Guey Tours para rutas todoterreno' : 'RZR Rentals from Guey Tours for off-road'}
-          aria-label={lang === 'es' ? 'Imagen de los RZR de alquiler de Guey Tours para conducción todoterreno, con fondo negro.' : 'Image of the RZR Rentals from Guey Tours for off-road with a black background'}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        >
-          <source src="/images/SEO/RZR Rentals from Guey Tours for off-road.mp4" type="video/mp4" />
-          Tu navegador no soporta videos.
-        </video>
-      </div>
-
-      <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between' }}>
-        <h3 style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.4rem',
-          color: '#fff',
-          textTransform: 'uppercase',
-          marginBottom: '1.5rem',
-          wordBreak: 'break-word'
-        }}>
-          {lang === 'es' ? 'Renta un RZR' : 'RZR rentals'}
-        </h3>
-
-        <div>
-          <a 
-            href="https://www.gueytours.com/rentals/defender" 
-            style={{
-              display: 'block',
-              textAlign: 'center',
-              background: 'var(--orange, #d97736)',
-              color: '#fff',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '8px',
-              fontWeight: 'bold',
-              fontFamily: 'var(--font-heading)',
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-              transition: 'opacity 0.3s ease'
-            }}
-          >
-            {lang === 'es' ? 'Ver Más' : 'View More'}
-          </a>
+      {/* --- TARJETA 2 --- */}
+      <div style={{
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Dos turistas sonrientes frente a un antiguo arco de piedra durante un recorrido guiado en buggy por San Miguel (Guanajuato).' : 'Two female tourists smiling in front of an ancient stone arch during a guided San Miguel Buggy Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Parada en ruinas históricas durante el recorrido en buggy por San Miguel y los tours en Guanajuato.' : 'Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/san-miguel-viejo"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
         </div>
       </div>
+
+      {/* --- TARJETA 3 --- */}
+      <div style={{
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Historic church stop during Atotonilco ATV Tour, tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Vehículo todoterreno estacionado cerca de la fachada de una histórica iglesia blanca durante una excursión en cuatrimoto al aire libre en Atotonilco, Guanajuato.' : 'All-terrain vehicle parked near a historic white church facade during an outdoor Atotonilco ATV Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Parada en una iglesia histórica durante el tour en cuatrimoto por Atotonilco, tours en Guanajuato' : 'Historic church stop during Atotonilco ATV Tour, tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/atotonilco"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* --- TARJETA 4 --- */}
+      <div style={{
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Guided group on Atascadero ATV Tour along historic tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Conductores de cuatrimotos recorren una calle empedrada cerca de edificios coloniales durante un tour en vehículos todoterreno (ATV) en Atascadero, Guanajuato.' : 'Riders on quads driving along a cobblestone street near colonial buildings during an Atascadero ATV Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Guided group on Atascadero ATV Tour along historic tours Guanajuato' : 'Guided group on Atascadero ATV Tour along historic tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/atascadero"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* --- TARJETA 5 --- */}
+      <div style={{
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Grupo de pilotos en cuatrimotos todoterreno explorando un sendero rural durante un tour en ATV por Agua Espinosa, Guanajuato.' : 'Group of riders on all-terrain quads exploring countryside trail during an Agua Espinosa ATV Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Paseo grupal al aire libre en el tour en cuatrimoto (ATV) Agua Espinosa con Tours Guanajuato.' : 'Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tu-url-5"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
-</div>
-{/* Segunda sección: Tres tarjetas (Videos + Títulos + Botones) */}
+</section>
+{/* FIN SECTION - 5 TARJETAS CON IMÁGENES */}
           
           
 
@@ -523,8 +630,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         lineHeight: 1.2
       }}>
         {lang === 'es' 
-          ? 'Alquiler de vehículos todoterreno para explorar Guanajuato' 
-          : "Off road vehicle rental to explore Guanajuato"}
+          ? 'Excursiones de aventura para todo tipo de viajero' 
+          : "Adventure tours for every type of traveler"}
       </h2>
       <div style={{
         width: '80px',
@@ -556,35 +663,21 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 0 1.5rem 0'
       }}>
         {lang === 'es'
-          ? 'Para brindarle total libertad en la ruta, ofrecemos opciones premium de alquiler de vehículos todoterreno adaptadas a sus preferencias de conducción.'
-          : 'To give you complete freedom on the trail, we offer premium Off Road Vehicle Rental options tailored to your driving preferences.'}
-      </p>
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
-        lineHeight: 1.8,
-        margin: 0
-      }}>
-        {lang === 'es'
-          ? 'Ya sea que quieras conducir solo, en pareja o con un grupo de amigos, tenemos la máquina ideal para tu viaje:'
-          : 'Whether you want to drive solo, as a couple, or with a group of friends, we have the ideal machine for your journey:'}
+          ? 'Ya sea que estés planeando un viaje en solitario, una escapada romántica o unas vacaciones en grupo, nuestras excursiones en Guanajuato se adaptan a tu estilo:'
+          : 'Whether you are planning a solo trip, a romantic getaway, or a group vacation, our excursions in Guanajuato adapt to your style:'}
       </p>
     </div>
 
-    {/* Cuadrícula de opciones rediseñada con botones y mejor estructura */}
+    {/* Cuadrícula de opciones de 4 tarjetas (Grid 2x2 responsivo) */}
     <div style={{
       display: 'grid',
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
       gap: '2rem',
-      marginBottom: '4rem',
       boxSizing: 'border-box',
       width: '100%'
     }}>
       
-      {/* Tarjeta 1: ATV rentals (Con botón Ver más) */}
+      {/* Tarjeta 1: Couples */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -611,7 +704,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Opción 01' : 'Option 01'}
+            {lang === 'es' ? 'Parejas' : 'Couples'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -619,37 +712,22 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)'
           }}>
-            {lang === 'es' ? 'Renta de ATV' : 'ATV rentals'}
+            {lang === 'es' ? 'Parejas' : 'Couples'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
             fontSize: '1rem',
             lineHeight: 1.6,
-            margin: '0 0 2rem 0'
+            margin: 0
           }}>
             {lang === 'es' 
-              ? 'Perfecto para conductores solitarios o parejas que quieren un paseo ágil, potente y receptivo en los senderos.' 
-              : 'Perfect for solo riders or couples who want a nimble, powerful, and responsive ride on the trails.'}
+              ? 'Comparte un paseo emocionante juntos mientras descubres miradores panorámicos y paisajes pintorescos.' 
+              : 'Share an exciting ride together while discovering scenic viewpoints and picturesque landscapes.'}
           </p>
         </div>
-        <a href="https://www.gueytours.com/atv-rentals" style={{
-          display: 'inline-block',
-          textAlign: 'center',
-          background: 'transparent',
-          color: 'var(--orange, #d97736)',
-          border: '1px solid var(--orange, #d97736)',
-          padding: '0.75rem 1.5rem',
-          borderRadius: '8px',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          fontSize: '0.95rem',
-          transition: 'all 0.3s ease'
-        }}>
-          {lang === 'es' ? 'Ver más' : 'Learn more'}
-        </a>
       </div>
 
-      {/* Tarjeta 2: Side by Side (Con botón Contáctanos) */}
+      {/* Tarjeta 2: Friends & Groups */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -676,7 +754,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Opción 02' : 'Option 02'}
+            {lang === 'es' ? 'Amigos y Grupos' : 'Friends & Groups'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -684,37 +762,22 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)'
           }}>
-            {lang === 'es' ? 'Vehículos Side by Side' : 'Side by Side vehicles'}
+            {lang === 'es' ? 'Amigos y Grupos' : 'Friends & Groups'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
             fontSize: '1rem',
             lineHeight: 1.6,
-            margin: '0 0 2rem 0'
+            margin: 0
           }}>
             {lang === 'es' 
-              ? 'Ideal para familias y grupos que quieren compartir la adrenalina juntos en un equipo cómodo y de alto rendimiento.' 
-              : 'Ideal for families and groups who want to share the adrenaline together in a high-powered, comfortable rig.'}
+              ? 'Desafíense mutuamente en pistas todoterreno y disfruten de una aventura grupal al aire libre inolvidable.' 
+              : 'Challenge each other on all-terrain tracks and enjoy an unforgettable group outdoor adventure.'}
           </p>
         </div>
-        <a href="https://www.gueytours.com/contact" style={{
-          display: 'inline-block',
-          textAlign: 'center',
-          background: 'var(--orange, #d97736)',
-          color: '#fff',
-          padding: '0.75rem 1.5rem',
-          borderRadius: '8px',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          fontSize: '0.95rem',
-          transition: 'all 0.3s ease',
-          boxShadow: '0 4px 12px rgba(217, 119, 54, 0.4)'
-        }}>
-          {lang === 'es' ? 'Contáctanos' : 'Contact Us'}
-        </a>
       </div>
 
-      {/* Tarjeta 3: RSZ rentals (Con botón Ver más) */}
+      {/* Tarjeta 3: Families */}
       <div style={{
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
@@ -741,7 +804,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             marginBottom: '1rem',
             border: '1px solid rgba(217, 119, 54, 0.4)'
           }}>
-            {lang === 'es' ? 'Opción 03' : 'Option 03'}
+            {lang === 'es' ? 'Familias' : 'Families'}
           </span>
           <h3 style={{
             color: '#fff',
@@ -749,71 +812,71 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)'
           }}>
-            {lang === 'es' ? 'Renta de RSZ' : 'RSZ rentals'}
+            {lang === 'es' ? 'Familias' : 'Families'}
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
             fontSize: '1rem',
             lineHeight: 1.6,
-            margin: '0 0 2rem 0'
+            margin: 0
           }}>
             {lang === 'es' 
-              ? 'Construido para la velocidad, estabilidad y manejo de los caminos todo terreno más difíciles con facilidad.' 
-              : 'Built for speed, stability, and handling the toughest all-terrain paths with ease.'}
+              ? 'Vive una diversión segura y guiada en vehículos de múltiples pasajeros aptos para niños mayores y adolescentes.' 
+              : 'Experience safe, guided fun in multi-passenger vehicles suitable for older kids and teens.'}
           </p>
         </div>
-        <a href="https://www.gueytours.com/rsz-rentals" style={{
-          display: 'inline-block',
-          textAlign: 'center',
-          background: 'transparent',
-          color: 'var(--orange, #d97736)',
-          border: '1px solid var(--orange, #d97736)',
-          padding: '0.75rem 1.5rem',
-          borderRadius: '8px',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          fontSize: '0.95rem',
-          transition: 'all 0.3s ease'
-        }}>
-          {lang === 'es' ? 'Ver más' : 'Learn more'}
-        </a>
       </div>
 
-    </div>
-
-    {/* Tarjeta de cierre sobre la ventaja de Guey Tours */}
-    <div style={{
-      background: 'rgba(217, 119, 54, 0.07)',
-      border: '1px solid rgba(217, 119, 54, 0.4)',
-      borderRadius: '16px',
-      padding: '2.5rem 3rem',
-      boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
-      textAlign: 'center',
-      boxSizing: 'border-box'
-    }}>
-      <p style={{
-        fontFamily: 'sans-serif',
-        fontStyle: 'normal',
-        fontWeight: '400',
-        color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
-        lineHeight: 1.8,
-        margin: 0
+      {/* Tarjeta 4: Nature & Thrill Seekers */}
+      <div style={{
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
+        border: '1px solid rgba(217, 119, 54, 0.3)',
+        borderRadius: '16px',
+        padding: '2.5rem 2rem',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+        boxSizing: 'border-box'
       }}>
-        <strong style={{ 
-          color: 'var(--orange, #d97736)', 
-          textTransform: 'uppercase', 
-          display: 'block', 
-          marginBottom: '0.8rem', 
-          letterSpacing: '0.08em', 
-          fontSize: '0.95rem' 
-        }}>
-          {lang === 'es' ? 'La Ventaja de Guey Tours' : 'The Guey Tours Advantage'}
-        </strong>
-        {lang === 'es'
-          ? 'Nuestro servicio de alquiler incluye equipo de seguridad de primera calidad, una explicación detallada sobre el funcionamiento y vehículos todoterreno perfectamente preparados para enfrentarse a la naturaleza.'
-          : 'Our rental service includes top-tier safety gear, a detailed operational briefing, and fully prepped off-road vehicles ready to take on the wilderness.'}
-      </p>
+        <div>
+          <span style={{
+            display: 'inline-block',
+            padding: '0.3rem 0.8rem',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            borderRadius: '20px',
+            fontSize: '0.8rem',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            letterSpacing: '0.05em',
+            marginBottom: '1rem',
+            border: '1px solid rgba(217, 119, 54, 0.4)'
+          }}>
+            {lang === 'es' ? 'Naturaleza y Adrenalina' : 'Nature & Thrill Seekers'}
+          </span>
+          <h3 style={{
+            color: '#fff',
+            fontSize: '1.35rem',
+            margin: '0 0 1rem 0',
+            fontFamily: 'var(--font-heading)'
+          }}>
+            {lang === 'es' ? 'Amantes de la Naturaleza y Emociones' : 'Nature & Thrill Seekers'}
+          </h3>
+          <p style={{
+            color: 'rgba(255, 255, 255, 0.8)',
+            fontSize: '1.0rem',
+            lineHeight: 1.6,
+            margin: 0
+          }}>
+            {lang === 'es' 
+              ? 'Perfecto para viajeros que buscan cosas emocionantes que hacer en Guanajuato fuera de los límites de la ciudad.' 
+              : 'Perfect for travelers looking for exciting things to do in Guanajuato outside city limits.'}
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>
