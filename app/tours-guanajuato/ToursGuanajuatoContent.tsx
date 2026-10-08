@@ -606,17 +606,10 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           
           
 
-          
-          
-
-
-        
-          
-
-
-       {/* Inicio de section tres (Estilos y variables únicas adv_) */}
+    
+       {/* Inicio de section tres (2x2 simétrico y responsivo) */}
 <section style={{
-  padding: '4rem 1rem',
+  padding: '6rem 1.5rem',
   marginTop: '3rem',
   background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
   color: '#fff',
@@ -630,15 +623,14 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     maxWidth: '1100px',
     margin: '0 auto',
     width: '100%',
-    boxSizing: 'border-box',
-    padding: '0 0.5rem'
+    boxSizing: 'border-box'
   }}>
     
     {/* Título H2 */}
-    <div style={{ textAlign: 'center', marginBottom: '2.5rem', boxSizing: 'border-box' }}>
+    <div style={{ textAlign: 'center', marginBottom: '3rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: 'clamp(1.8rem, 4vw, 3rem)',
+        fontSize: 'clamp(2rem, 4vw, 3rem)',
         color: 'var(--orange, #d97736)',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
@@ -664,8 +656,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       background: 'rgba(255, 255, 255, 0.02)',
       borderLeft: '4px solid var(--orange, #d97736)',
       borderRadius: '0 16px 16px 0',
-      padding: '1.5rem',
-      marginBottom: '3rem',
+      padding: 'clamp(1.5rem, 3vw, 2.5rem) clamp(1.2rem, 2.5vw, 3rem)',
+      marginBottom: '3.5rem',
       boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
       backdropFilter: 'blur(10px)',
       boxSizing: 'border-box'
@@ -675,8 +667,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         fontStyle: 'normal',
         fontWeight: '400',
         color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '16px',
-        lineHeight: 1.7,
+        fontSize: '18px',
+        lineHeight: 1.8,
         margin: 0,
         wordBreak: 'break-word'
       }}>
@@ -686,12 +678,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* Cuadrícula de 4 tarjetas 2x2 (Responsiva sin desbordes) */}
+    {/* Cuadrícula exacta de 4 tarjetas en formato 2x2 */}
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-      gap: '1.5rem',
-      maxWidth: '960px',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      gap: '2rem',
+      maxWidth: '920px',
       margin: '0 auto',
       boxSizing: 'border-box',
       width: '100%'
@@ -702,7 +694,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
         borderRadius: '16px',
-        padding: '2rem 1.5rem',
+        padding: '2.5rem 2rem',
         boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
         display: 'flex',
         flexDirection: 'column',
@@ -728,7 +720,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </span>
           <h3 style={{
             color: '#fff',
-            fontSize: '1.25rem',
+            fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
             wordBreak: 'break-word'
@@ -737,7 +729,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '0.95rem',
+            fontSize: '1rem',
             lineHeight: 1.6,
             margin: 0,
             wordBreak: 'break-word'
@@ -754,7 +746,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
         borderRadius: '16px',
-        padding: '2rem 1.5rem',
+        padding: '2.5rem 2rem',
         boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
         display: 'flex',
         flexDirection: 'column',
@@ -780,7 +772,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </span>
           <h3 style={{
             color: '#fff',
-            fontSize: '1.25rem',
+            fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
             wordBreak: 'break-word'
@@ -789,7 +781,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '0.95rem',
+            fontSize: '1rem',
             lineHeight: 1.6,
             margin: 0,
             wordBreak: 'break-word'
@@ -806,7 +798,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
         borderRadius: '16px',
-        padding: '2rem 1.5rem',
+        padding: '2.5rem 2rem',
         boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
         display: 'flex',
         flexDirection: 'column',
@@ -832,7 +824,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </span>
           <h3 style={{
             color: '#fff',
-            fontSize: '1.25rem',
+            fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
             wordBreak: 'break-word'
@@ -841,7 +833,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '0.95rem',
+            fontSize: '1rem',
             lineHeight: 1.6,
             margin: 0,
             wordBreak: 'break-word'
@@ -858,7 +850,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(217, 119, 54, 0.05) 100%)',
         border: '1px solid rgba(217, 119, 54, 0.3)',
         borderRadius: '16px',
-        padding: '2rem 1.5rem',
+        padding: '2.5rem 2rem',
         boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
         display: 'flex',
         flexDirection: 'column',
@@ -884,7 +876,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </span>
           <h3 style={{
             color: '#fff',
-            fontSize: '1.25rem',
+            fontSize: '1.35rem',
             margin: '0 0 1rem 0',
             fontFamily: 'var(--font-heading)',
             wordBreak: 'break-word'
@@ -893,7 +885,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </h3>
           <p style={{
             color: 'rgba(255, 255, 255, 0.8)',
-            fontSize: '0.95rem',
+            fontSize: '1rem',
             lineHeight: 1.6,
             margin: 0,
             wordBreak: 'break-word'
