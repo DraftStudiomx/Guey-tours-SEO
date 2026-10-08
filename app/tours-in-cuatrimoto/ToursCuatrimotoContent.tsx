@@ -56,9 +56,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/Group riding all-terrain vehicles during guided outdoor UTV tours.webp" 
-    alt="Group of people wearing safety helmets driving off-road vehicles down a narrow stone street during UTV tours." 
-    title=" Group riding all-terrain vehicles during guided outdoor UTV tours"
+    src="/images/SEO/Fleet of colorful quad bikes lined up for guided outdoor ATV tours.webp" 
+    alt="Group of tourists wearing safety helmets ready on a fleet of blue and red quad bikes during outdoor ATV tours." 
+    title=" Fleet of colorful quad bikes lined up for guided outdoor ATV tours"
     style={{
       position: 'absolute',
       top: 0,
@@ -101,7 +101,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     margin: '0 0 0.8rem 0',
     wordBreak: 'break-word',
   }}>
-    {lang === 'es' ? 'UTV Adventures: Excursiones inolvidables en San Miguel de Allende' : 'UTV Adventures: Unforgettable San Miguel de Allende tours'}
+    {lang === 'es' ? 'Excursiones en cuatrimoto: Aventura en San Miguel de Allende' : 'ATV Tours: Adventure in San Miguel de Allende'}
   </h1>
 
   <div style={{
@@ -117,17 +117,17 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
   <p style={{ margin: 0, wordBreak: 'break-word' }}>
     {lang === 'es' ? (
-      <>Bienvenidos a San Miguel de Allende, un destino de fama mundial reconocido por su impresionante arquitectura colonial y su rica cultura. En <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> llevamos sus vacaciones más allá con emocionantes actividades al aire libre que le permiten explorar Guanajuato más allá de las calles del centro histórico.</>
+      <>¡Bienvenidos a <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours!</a> Te llevamos a vivir la experiencia definitiva en recorridos en cuatrimoto (ATV) a través de los impresionantes paisajes de San Miguel de Allende. Si buscas una forma emocionante de explorar más allá de las calles del centro histórico, conducir nuestras cuatrimotos te permitirá descubrir caminos de terracería y vistas panorámicas inigualables.</>
     ) : (
-      <>Welcome to San Miguel de Allende, a world-famous destination renowned for its stunning colonial architecture and rich culture. At <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> we take your vacation further with thrilling outdoor activities that let you explore Guanajuato beyond the historic downtown streets.  </>
+      <>Welcome to <a href="https://www.gueytours.com/" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours!</a> We take you on the ultimate ATV tours through the breathtaking landscapes of San Miguel de Allende. If you are looking for an exciting way to explore beyond the historic downtown streets, riding our quad bikes allows you to discover rugged dirt roads and scenic views like nowhere else.</>
     )}
   </p>
 
   <p style={{ margin: 0, wordBreak: 'break-word' }}>
     {lang === 'es' ? (
-      <>Ya sea que viajes en pareja, en familia o con un grupo de amigos, ¡tenemos la aventura al aire libre perfecta para ti! ¡Prepárate para maravillarte con paisajes que nunca imaginaste!</>
+      <>¡Reserva tu viaje hoy mismo y prepárate para una descarga de adrenalina!</>
     ) : (
-      <>Whether you are traveling as a couple, with family, or alongside a group of friends, we have the perfect outdoor adventure ready for you! Prepare to be amazed by landscapes you never imagined!</>
+      <>Book your ride today and get ready for an adrenaline rush!</>
     )}
   </p>
 </div>
@@ -200,23 +200,23 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       margin: 0,
       wordBreak: 'break-word'
     }}>
-      {lang === 'es' ? 'Explora San Miguel de Allende con Guey Tours' : 'Explore San Miguel de Allende with Guey Tours'}
+      {lang === 'es' ? 'Vive la experiencia de San Miguel de Allende en cuatrimoto.' : 'Experience San Miguel de Allende on an ATV'}
     </h2>
 
     {/* NUEVO PÁRRAFO ABAJO DEL H2 */}
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
       {lang === 'es' ? (
-        <>En <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> creamos experiencias únicas diseñadas para que descubras San Miguel de Allende desde una perspectiva totalmente nueva. Mientras que los recorridos turísticos tradicionales te mantienen en calles pavimentadas, nuestras excursiones guiadas te sumergen directamente en la naturaleza virgen, en paisajes montañosos y en senderos agrestes entre cañones.</>
+        <>Conducir nuestros vehículos todoterreno (ATV) de alto rendimiento en San Miguel de Allende te permite acceder a rutas y senderos ocultos a los que los autobuses turísticos convencionales simplemente no pueden llegar.</>
       ) : (
-        <>At <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange, #d97736)', textDecoration: 'none', fontWeight: 'bold' }}>Guey Tours,</a> we craft unique experiences designed to help you discover San Miguel de Allende from a whole new perspective. While traditional sightseeing trips keep you on paved streets, our guided journeys plunge you directly into raw nature, mountain vistas, and rugged canyon trails.</>
+        <>Riding our high-performance ATVs in San Miguel de Allende gives you access to hidden trail routes that traditional tourist buses simply cannot reach.</>
       )}
     </p>
 
     {/* TUS 3 PÁRRAFOS ORIGINALES */}
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', wordBreak: 'break-word' }}>
       {lang === 'es' 
-        ? 'Guiada por expertos conductores locales, cada excursión todoterreno combina una emoción intensa con un profundo conocimiento de la zona. Elegirnos significa alejarse del turismo convencional para disfrutar de una experiencia de conducción auténtica y potente a través de paisajes impresionantes.'
-        : 'Guided by expert local drivers, every off-road tour blends high-energy excitement with deep local knowledge. Choosing us means stepping away from conventional sightseeing to enjoy an authentic, high-powered driving experience across breathtaking scenery.'}
+        ? 'Este emocionante recorrido en cuatrimoto te sumerge en un entorno natural agreste, llevándote a través de cañones espectaculares y senderos montañosos históricos. Es una auténtica experiencia al aire libre, diseñada para viajeros que buscan emociones intensas, contacto con la naturaleza y recuerdos inolvidables.'
+        : 'This thrilling ATV ride immerses you in raw natural surroundings, taking you through dramatic canyons and historic mountain tracks. It is a genuine outdoor experience designed for travelers seeking hands-on excitement, nature, and unforgettable memories.'}
     </p>
   </div>
 
@@ -232,9 +232,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
     }}>
       <Image
-        src="/images/SEO/Happy riders enjoying guided UTV Tours through historic city street.webp" 
-        alt=" Cheerful tourists wearing helmets and goggles posing on an all-terrain vehicle near a church during UTV Tours."
-        title="Happy riders enjoying guided UTV Tours through historic city street"
+        src="/images/SEO/Single rider driving green quad through city street on ATV tours.webp" 
+        alt=" Person wearing a helmet riding a green quad down a narrow cobblestone street past colonial buildings on ATV tours."
+        title="Single rider driving green quad through city street on ATV tours"
         fill
         style={{ objectFit: 'cover' }}
       />
@@ -244,7 +244,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
         
-        {/* INICIO SECTION - 5 TARJETAS PERFECTAS RESPONSIVAS */}
+        {/* INICIO SECTION - 4 TARJETAS ATV TOUR (2x2 sin imágenes) */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
@@ -255,29 +255,46 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   width: '100%'
 }}>
   <style>{`
-    @media (min-width: 768px) {
-      .c5_desktop_grid {
-        display: grid !important;
-        grid-template-columns: repeat(6, 1fr) !important;
-      }
-      .c5_card_1 { grid-column: span 2 !important; }
-      .c5_card_2 { grid-column: span 2 !important; }
-      .c5_card_3 { grid-column: span 2 !important; }
-      .c5_card_4 { grid-column: 2 / span 2 !important; }
-      .c5_card_5 { grid-column: span 2 !important; }
+    .atv4_grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      width: 100%;
     }
-    @media (max-width: 767px) {
-      .c5_desktop_grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 1.5rem !important;
+    @media (min-width: 768px) {
+      .atv4_grid {
+        grid-template-columns: repeat(2, 1fr) !important;
       }
+    }
+    .atv4_card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .atv4_link {
+      color: var(--orange, #d97736);
+      text-decoration: underline;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    .atv4_link:hover {
+      opacity: 0.8;
     }
   `}</style>
 
-  <div style={{ maxWidth: '1200px', margin: '0 auto', boxSizing: 'border-box' }}>
+  <div style={{ maxWidth: '1100px', margin: '0 auto', boxSizing: 'border-box' }}>
     
-    {/* Título H2 y Párrafo Corto Introductorio */}
+    {/* Título H2 y Párrafo Introductorio */}
     <div style={{ textAlign: 'center', marginBottom: '4rem', boxSizing: 'border-box' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
@@ -289,7 +306,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         lineHeight: 1.2,
         wordBreak: 'break-word'
       }}>
-        {lang === 'es' ? 'Nuestros recorridos en San Miguel de Allende' : 'Our tours in San Miguel de Allende'}
+        {lang === 'es' ? 'Tour en cuatrimoto en San Miguel de Allende' : 'ATV tour in San Miguel de Allende'}
       </h2>
       <div style={{
         width: '80px',
@@ -298,470 +315,228 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         margin: '0 auto 2rem auto',
         boxShadow: '0 0 12px var(--orange, #d97736)'
       }} />
-      
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '17px',
+        lineHeight: '29px',
+        maxWidth: '850px',
+        margin: '0 auto',
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es'
+          ? 'Nuestro recorrido guiado en cuatrimoto por San Miguel de Allende ofrece una experiencia completa de 2 a 3 horas llena de acción y descubrimientos:'
+          : 'Our guided ATV tour San Miguel de Allende delivers a complete 2 to 3-hour journey packed with action and discovery:'}
+      </p>
     </div>
 
-    {/* Contenedor Grid Unificado con control responsive */}
-    <div className="c5_desktop_grid" style={{
-      gap: '2rem',
-      maxWidth: '1160px',
-      margin: '0 auto',
-      boxSizing: 'border-box'
-    }}>
+    {/* Cuadrícula 2x2 de Tarjetas */}
+    <div className="atv4_grid">
       
-      {/* --- TARJETA 1: City Tour --- */}
-      <div className="c5_card_1" style={{
-        background: '#1a1a1a',
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
-        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-          <img
-            src="/images/SEO/Exciting City tour adventure with happy group joining UTV tours.webp"
-            alt={lang === 'es' ? 'Jóvenes turistas felices con casco haciendo el signo de la paz mientras conducen un vehículo todoterreno (UTV) durante un recorrido por la ciudad.' : 'Happy young tourists in helmets making peace signs while riding an all-terrain vehicle on a City tour, UTV tours.'}
-            title={lang === 'es' ? 'Una emocionante aventura de recorrido por la ciudad con un grupo alegre que participa en excursiones en UTV.' : 'Exciting City tour adventure with happy group joining UTV tours'}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(217, 119, 54, 0.15)',
-              color: 'var(--orange, #d97736)',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '20px',
-              fontSize: '0.85rem',
-              fontWeight: 'bold',
-              marginBottom: '0.75rem',
-              border: '1px solid rgba(217, 119, 54, 0.3)'
-            }}>
-              {lang === 'es' ? '⏱ Duración: 1 Hora' : '⏱ Duration: 1 Hr.'}
-            </div>
-            <h3 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.4rem',
-              color: '#fff',
-              textTransform: 'uppercase',
-              margin: '0 0 0.75rem 0',
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
-            </h3>
-            <p style={{
-              fontFamily: 'sans-serif',
-              fontStyle: 'normal',
-              fontWeight: '400',
-              color: 'rgba(255, 255, 255, 0.85)',
-              fontSize: '17px',
-              lineHeight: '29px',
-              margin: 0,
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es'
-                ? 'Descubre el corazón histórico y las afueras vibrantes de la ciudad en una ruta accesible que combina la cultura local con un manejo ligero y panorámico. Perfecto para una introducción rápida y envolvente al aire libre.'
-                : 'Discover the historic heart and vibrant outskirts of the city on an accessible route that blends local culture with light, scenic riding. Perfect for a quick, immersive outdoor introduction.'}
-            </p>
+      {/* Tarjeta 1 */}
+      <div className="atv4_card">
+        <div>
+          <div style={{
+            display: 'inline-block',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            padding: '0.25rem 0.75rem',
+            borderRadius: '20px',
+            fontSize: '0.85rem',
+            fontWeight: 'bold',
+            marginBottom: '1rem',
+            border: '1px solid rgba(217, 119, 54, 0.3)'
+          }}>
+            {lang === 'es' ? 'Equipo' : 'Equipment'}
           </div>
-          <div>
-            <a
-              href="https://www.gueytours.com/tours/tour-el-centro-san-miguel"
-              style={{
-                display: 'block',
-                textAlign: 'center',
-                background: 'var(--orange, #d97736)',
-                color: '#fff',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-heading)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                transition: 'opacity 0.3s ease'
-              }}
-            >
-              {lang === 'es' ? 'Ver Más' : 'View More'}
-            </a>
-          </div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.35rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: '0 0 1rem 0',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Equipo incluido y características' : 'Included Equipment & Features'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es'
+              ? 'Equipo de seguridad completo, combustible y acceso a rutas privadas de ATV.'
+              : 'Full safety gear, fuel, and access to private ATV routes.'}
+          </p>
         </div>
       </div>
 
-      {/* --- TARJETA 2: San Miguel Buggy Tour --- */}
-      <div className="c5_card_2" style={{
-        background: '#1a1a1a',
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
-        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-          <img
-            src="/images/SEO/Historic ruin landmark visit on San Miguel Buggy Tour, UTV tours.webp"
-            alt={lang === 'es' ? 'Dos mujeres posan bajo un antiguo arco de piedra durante una parada al aire libre de un recorrido guiado en buggy por San Miguel.' : 'Two women posing under an old stone archway during a guided San Miguel Buggy Tour outdoor stop with UTV tours.'}
-            title={lang === 'es' ? 'Visita a ruinas históricas en el recorrido en buggy y UTV por San Miguel' : 'Historic ruin landmark visit on San Miguel Buggy Tour, UTV tours'}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(217, 119, 54, 0.15)',
-              color: 'var(--orange, #d97736)',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '20px',
-              fontSize: '0.85rem',
-              fontWeight: 'bold',
-              marginBottom: '0.75rem',
-              border: '1px solid rgba(217, 119, 54, 0.3)'
-            }}>
-              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
-            </div>
-            <h3 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.4rem',
-              color: '#fff',
-              textTransform: 'uppercase',
-              margin: '0 0 0.75rem 0',
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
-            </h3>
-            <p style={{
-              fontFamily: 'sans-serif',
-              fontStyle: 'normal',
-              fontWeight: '400',
-              color: 'rgba(255, 255, 255, 0.85)',
-              fontSize: '17px',
-              lineHeight: '29px',
-              margin: 0,
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es'
-                ? 'Experimenta la emoción de un recorrido en buggy todo terreno a través de senderos abiertos. Este tour ofrece una forma cómoda pero atrevida de navegar por caminos polvorientos y espacios panorámicos muy amplios.'
-                : 'Experience the thrill of a rugged buggy ride across open trails. This tour offers a comfortable yet daring way to navigate dusty paths and wide-open scenic spaces.'}
-            </p>
+      {/* Tarjeta 2 */}
+      <div className="atv4_card">
+        <div>
+          <div style={{
+            display: 'inline-block',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            padding: '0.25rem 0.75rem',
+            borderRadius: '20px',
+            fontSize: '0.85rem',
+            fontWeight: 'bold',
+            marginBottom: '1rem',
+            border: '1px solid rgba(217, 119, 54, 0.3)'
+          }}>
+            {lang === 'es' ? 'Guías' : 'Guides'}
           </div>
-          <div>
-            <a
-              href="https://www.gueytours.com/tours/san-miguel-viejo"
-              style={{
-                display: 'block',
-                textAlign: 'center',
-                background: 'var(--orange, #d97736)',
-                color: '#fff',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-heading)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                transition: 'opacity 0.3s ease'
-              }}
-            >
-              {lang === 'es' ? 'Ver Más' : 'View More'}
-            </a>
-          </div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.35rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: '0 0 1rem 0',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Acompañamiento experto' : 'Expert Escort'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es'
+              ? 'Guías amigables y bilingües que te acompañan durante todo el recorrido.'
+              : 'Friendly, English-speaking guides accompanying you throughout the entire trip.'}
+          </p>
         </div>
       </div>
 
-      {/* --- TARJETA 3: Atotonilco ATV Tour --- */}
-      <div className="c5_card_3" style={{
-        background: '#1a1a1a',
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
-        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-          <img
-            src="/images/SEO/Historic church stop on Atotonilco ATV Tour during UTV Tours trip.webp"
-            alt={lang === 'es' ? 'Vehículo todoterreno estacionado cerca de la fachada de una histórica iglesia blanca durante una excursión al aire libre en cuatrimoto (ATV) o vehículo utilitario (UTV) en Atotonilco.' : 'All-terrain vehicle parked near a historic white church facade during an outdoor Atotonilco ATV Tour, UTV Tours.'}
-            title={lang === 'es' ? 'Parada en una iglesia histórica durante el recorrido en cuatrimoto (ATV) por Atotonilco, en el marco de la excursión en UTV.' : 'Historic church stop on Atotonilco ATV Tour during UTV Tours trip'}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(217, 119, 54, 0.15)',
-              color: 'var(--orange, #d97736)',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '20px',
-              fontSize: '0.85rem',
-              fontWeight: 'bold',
-              marginBottom: '0.75rem',
-              border: '1px solid rgba(217, 119, 54, 0.3)'
-            }}>
-              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
-            </div>
-            <h3 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.4rem',
-              color: '#fff',
-              textTransform: 'uppercase',
-              margin: '0 0 0.75rem 0',
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
-            </h3>
-            <p style={{
-              fontFamily: 'sans-serif',
-              fontStyle: 'normal',
-              fontWeight: '400',
-              color: 'rgba(255, 255, 255, 0.85)',
-              fontSize: '17px',
-              lineHeight: '29px',
-              margin: 0,
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es'
-                ? 'Pasea hacia el icónico santuario de Atotonilco. Esta ruta ofrece una mezcla única de puntos de referencia históricos y terrenos dinámicos que mantienen tu energía al máximo.'
-                : 'Ride out toward the iconic sanctuary of Atotonilco. This route delivers a unique mix of historical landmarks and dynamic terrain that keeps your energy high.'}
-            </p>
+      {/* Tarjeta 3 */}
+      <div className="atv4_card">
+        <div>
+          <div style={{
+            display: 'inline-block',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            padding: '0.25rem 0.75rem',
+            borderRadius: '20px',
+            fontSize: '0.85rem',
+            fontWeight: 'bold',
+            marginBottom: '1rem',
+            border: '1px solid rgba(217, 119, 54, 0.3)'
+          }}>
+            {lang === 'es' ? 'Ruta' : 'Itinerary'}
           </div>
-          <div>
-            <a
-              href="https://www.gueytours.com/tours/atotonilco"
-              style={{
-                display: 'block',
-                textAlign: 'center',
-                background: 'var(--orange, #d97736)',
-                color: '#fff',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-heading)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                transition: 'opacity 0.3s ease'
-              }}
-            >
-              {lang === 'es' ? 'Ver Más' : 'View More'}
-            </a>
-          </div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.35rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: '0 0 1rem 0',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Itinerario panorámico' : 'Scenic Itinerary'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es'
+              ? 'Una combinación equilibrada de senderos de terracería técnicos, cruces de cañones y miradores panorámicos.'
+              : 'A balanced mix of technical dirt paths, canyon crossings, and panoramic lookouts.'}
+          </p>
         </div>
       </div>
 
-      {/* --- TARJETA 4: Atascadero ATV Tour --- */}
-      <div className="c5_card_4" style={{
-        background: '#1a1a1a',
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
-        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-          <img
-            src="/images/SEO/Guided group on Atascadero UTV tour along historic colonial streets.webp"
-            alt={lang === 'es' ? 'Conductores de cuatrimotos recorren una calle empedrada cerca de edificios coloniales durante una excursión en UTV al aire libre en Atascadero.' : 'Riders on quads driving along a cobblestone street near colonial buildings during an outdoor Atascadero UTV tour.'}
-            title={lang === 'es' ? 'Grupo guiado en un recorrido en UTV por Atascadero, a través de históricas calles coloniales.' : 'Guided group on Atascadero UTV tour along historic colonial streets'}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(217, 119, 54, 0.15)',
-              color: 'var(--orange, #d97736)',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '20px',
-              fontSize: '0.85rem',
-              fontWeight: 'bold',
-              marginBottom: '0.75rem',
-              border: '1px solid rgba(217, 119, 54, 0.3)'
-            }}>
-              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
-            </div>
-            <h3 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.4rem',
-              color: '#fff',
-              textTransform: 'uppercase',
-              margin: '0 0 0.75rem 0',
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
-            </h3>
-            <p style={{
-              fontFamily: 'sans-serif',
-              fontStyle: 'normal',
-              fontWeight: '400',
-              color: 'rgba(255, 255, 255, 0.85)',
-              fontSize: '17px',
-              lineHeight: '29px',
-              margin: 0,
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es'
-                ? 'Navega a través de encantadoras calles históricas y tradicionales caminos empedrados. Esta ruta combina la arquitectura colonial local con un paseo atractivo y dinámico por barrios urbanos pintorescos.'
-                : 'Navigate through charming historic streets and traditional cobblestone paths just like this. This route blends local colonial architecture with an engaging, dynamic ride through scenic urban neighborhoods.'}
-            </p>
+      {/* Tarjeta 4 */}
+      <div className="atv4_card">
+        <div>
+          <div style={{
+            display: 'inline-block',
+            background: 'rgba(217, 119, 54, 0.15)',
+            color: 'var(--orange, #d97736)',
+            padding: '0.25rem 0.75rem',
+            borderRadius: '20px',
+            fontSize: '0.85rem',
+            fontWeight: 'bold',
+            marginBottom: '1rem',
+            border: '1px solid rgba(217, 119, 54, 0.3)'
+          }}>
+            {lang === 'es' ? 'Requisitos' : 'Requirements'}
           </div>
-          <div>
-            <a
-              href="https://www.gueytours.com/tours/atascadero"
-              style={{
-                display: 'block',
-                textAlign: 'center',
-                background: 'var(--orange, #d97736)',
-                color: '#fff',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-heading)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                transition: 'opacity 0.3s ease'
-              }}
-            >
-              {lang === 'es' ? 'Ver Más' : 'View More'}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* --- TARJETA 5: Agua Espinosa ATV Tour --- */}
-      <div className="c5_card_5" style={{
-        background: '#1a1a1a',
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-        boxSizing: 'border-box',
-        width: '100%'
-      }}>
-        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-          <img
-            src="/images/SEO/Outdoor group riding on Agua Espinosa UTV Tour through countryside.webp"
-            alt={lang === 'es' ? 'Grupo de conductores en cuatrimotos todoterreno explorando un sendero rural durante una aventura guiada en UTV por Agua Espinosa.' : 'Group of riders on all-terrain quads exploring countryside trail during an guided Agua Espinosa UTV Tour adventure.'}
-            title={lang === 'es' ? 'Paseo grupal al aire libre por el campo en el tour en UTV Agua Espinosa.' : 'Outdoor group riding on Agua Espinosa UTV Tour through countryside'}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-          />
-        </div>
-        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-          <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(217, 119, 54, 0.15)',
-              color: 'var(--orange, #d97736)',
-              padding: '0.25rem 0.75rem',
-              borderRadius: '20px',
-              fontSize: '0.85rem',
-              fontWeight: 'bold',
-              marginBottom: '0.75rem',
-              border: '1px solid rgba(217, 119, 54, 0.3)'
-            }}>
-              {lang === 'es' ? '⏱ Duración: 2 Horas' : '⏱ Duration: 2 Hrs.'}
-            </div>
-            <h3 style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: '1.4rem',
-              color: '#fff',
-              textTransform: 'uppercase',
-              margin: '0 0 0.75rem 0',
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
-            </h3>
-            <p style={{
-              fontFamily: 'sans-serif',
-              fontStyle: 'normal',
-              fontWeight: '400',
-              color: 'rgba(255, 255, 255, 0.85)',
-              fontSize: '17px',
-              lineHeight: '29px',
-              margin: 0,
-              wordBreak: 'break-word'
-            }}>
-              {lang === 'es'
-                ? 'Sumérgete en paisajes exuberantes moldeados por el agua. Este sendero panorámico te obsequia terrenos diversos, vegetación rica y miradores naturales sumamente gratificantes.'
-                : 'Immerse yourself in lush, water-carved landscapes. This scenic path treats you to diverse terrain, rich vegetation, and rewarding nature viewpoints.'}
-            </p>
-          </div>
-          <div>
-            <a
-              href="https://www.gueytours.com/tours/agua-espinoza"
-              style={{
-                display: 'block',
-                textAlign: 'center',
-                background: 'var(--orange, #d97736)',
-                color: '#fff',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '8px',
-                fontWeight: 'bold',
-                fontFamily: 'var(--font-heading)',
-                textDecoration: 'none',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                transition: 'opacity 0.3s ease'
-              }}
-            >
-              {lang === 'es' ? 'Ver Más' : 'View More'}
-            </a>
-          </div>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.35rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: '0 0 1rem 0',
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Requisitos' : 'Requirements'}
+          </h3>
+          <p style={{
+            fontFamily: 'sans-serif',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            color: 'rgba(255, 255, 255, 0.85)',
+            fontSize: '17px',
+            lineHeight: '29px',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es'
+              ? 'Licencia de conducir vigente para los operadores y muchas ganas de vivir una emocionante aventura.'
+              : "A valid driver's license for operators and a passion for exciting adventure activities."}
+          </p>
         </div>
       </div>
 
     </div>
 
-    {/* --- BOTÓN GLOBAL INFERIOR --- */}
-    <div style={{ textAlign: 'center', marginTop: '4rem', boxSizing: 'border-box' }}>
-      <a
-        href="https://www.gueytours.com/#tours"
-        style={{
-          display: 'inline-block',
-          background: 'var(--orange, #d97736)',
-          color: '#fff',
-          padding: '1rem 2.5rem',
-          borderRadius: '8px',
-          fontWeight: 'bold',
-          fontFamily: 'var(--font-heading)',
-          textDecoration: 'none',
-          textTransform: 'uppercase',
-          letterSpacing: '0.05em',
-          boxShadow: '0 10px 25px rgba(217, 119, 54, 0.3)',
-          transition: 'opacity 0.3s ease'
-        }}
-      >
-        {lang === 'es' ? 'Ver todos nuestros tours' : 'View our tours'}
-      </a>
+    {/* Párrafo Final con URL integrada */}
+    <div style={{ textAlign: 'center', marginTop: '3.5rem', boxSizing: 'border-box' }}>
+      <p style={{
+        fontFamily: 'sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400',
+        color: 'rgba(255, 255, 255, 0.85)',
+        fontSize: '17px',
+        lineHeight: '29px',
+        maxWidth: '850px',
+        margin: '0 auto',
+        wordBreak: 'break-word'
+      }}>
+        {lang === 'es' ? (
+          <>
+            Unirte a nuestro equipo es una de las mejores experiencias en <a href="https://www.gueytours.com/" className="atv4_link">San Miguel de Allende</a> para visitantes internacionales que buscan un día lleno de acción al aire libre.
+          </>
+        ) : (
+          <>
+            Joining our team is one of the top-rated <a href="https://www.gueytours.com/" className="atv4_link">San Miguel de Allende Tours</a> for international visitors looking for an action-packed day outdoors.
+          </>
+        )}
+      </p>
     </div>
 
   </div>
 </section>
-{/* FIN SECTION - 5 TARJETAS PERFECTAS */}
+{/* FIN SECTION - 4 TARJETAS ATV TOUR */}
 
 
           
