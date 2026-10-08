@@ -56,9 +56,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/Exciting off-road vehicle tour through colorful streets of Mexico.webp" 
-    alt="Tourists driving off-road ATVs and utility vehicles along a narrow cobblestone street past colonial buildings." 
-    title="Exciting off-road vehicle tour through colorful streets of Mexico"
+    src="/images/SEO/Scenic city tours Guanajuato along historic cobblestone streets.webp" 
+    alt="Charming illuminated street with colorful colonial buildings during evening walking tours Guanajuato with church dome." 
+    title="Scenic city tours Guanajuato along historic cobblestone streets"
     style={{
       position: 'absolute',
       top: 0,
