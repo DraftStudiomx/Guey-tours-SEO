@@ -257,7 +257,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
 
         
-          {/* INICIO SECTION - 5 TARJETAS (FILA 1: 3 TARJETAS / FILA 2: 2 TARJETAS) */}
+         {/* INICIO SECTION - 5 TARJETAS CON TAMAÑOS EXACTOS E IGUALES */}
 <section style={{
   padding: '6rem 2rem',
   background: '#0b0b0b',
@@ -307,199 +307,295 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </p>
     </div>
 
-    {/* CONTENEDOR GENERAL DE FILAS */}
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
+    {/* Contenedor Grid Unificado para control perfecto de tamaños */}
+    <div className="c5_grid_container" style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(6, 1fr)',
       gap: '2rem',
-      boxSizing: 'border-box',
-      width: '100%'
+      maxWidth: '1160px',
+      margin: '0 auto',
+      boxSizing: 'border-box'
     }}>
-
-      {/* --- FILA 1: Exactamente 3 Tarjetas --- */}
+      
+      {/* Estilo base compartido para que todas midan exactamente lo mismo */}
+      {/* --- TARJETA 1 (Ocupa 2 columnas de 6 -> 3 arriba) --- */}
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-        gap: '2rem',
-        justifyContent: 'center',
+        gridColumn: 'span 2',
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
         boxSizing: 'border-box'
       }}>
-        
-        {/* Tarjeta 1 */}
-        <div style={{
-          background: '#1a1a1a',
-          borderRadius: '16px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-            <img
-              src="/images/SEO/Fun ATV City Tour experience with guided tours Guanajuato group.webp"
-              alt={lang === 'es' ? 'Turistas alegres posando en un vehículo todoterreno (ATV) durante un recorrido guiado por la ciudad con Tours Guanajuato, equipados con cascos y gafas protectoras.' : 'Cheerful tourists posing on ATV during a guided City Tour with tours Guanajuato wearing helmets and goggles.'}
-              title={lang === 'es' ? 'Divertida experiencia de recorrido en cuatrimoto (ATV) por la ciudad con visitas guiadas en grupo en Guanajuato.' : 'Fun ATV City Tour experience with guided tours Guanajuato group'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            />
-          </div>
-          <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#fff', textTransform: 'uppercase', margin: 0, wordBreak: 'break-word' }}>
-              {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
-            </h3>
-            <div>
-              <a href="https://www.gueytours.com/tours/tour-el-centro-san-miguel" style={{ display: 'block', textAlign: 'center', background: 'var(--orange, #d97736)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'es' ? 'Ver Más' : 'View More'}
-              </a>
-            </div>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Fun ATV City Tour experience with guided tours Guanajuato group.webp"
+            alt={lang === 'es' ? 'Turistas alegres posando en un vehículo todoterreno (ATV) durante un recorrido guiado por la ciudad con Tours Guanajuato, equipados con cascos y gafas protectoras.' : 'Cheerful tourists posing on ATV during a guided City Tour with tours Guanajuato wearing helmets and goggles.'}
+            title={lang === 'es' ? 'Divertida experiencia de recorrido en cuatrimoto (ATV) por la ciudad con visitas guiadas en grupo en Guanajuato.' : 'Fun ATV City Tour experience with guided tours Guanajuato group'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Recorrido por la ciudad' : 'City Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/tour-el-centro-san-miguel"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
           </div>
         </div>
-
-        {/* Tarjeta 2 */}
-        <div style={{
-          background: '#1a1a1a',
-          borderRadius: '16px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-            <img
-              src="/images/SEO/Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato.webp"
-              alt={lang === 'es' ? 'Dos turistas sonrientes frente a un antiguo arco de piedra durante un recorrido guiado en buggy por San Miguel (Guanajuato).' : 'Two female tourists smiling in front of an ancient stone arch during a guided San Miguel Buggy Tour, tours Guanajuato.'}
-              title={lang === 'es' ? 'Parada en ruinas históricas durante el recorrido en buggy por San Miguel y los tours en Guanajuato.' : 'Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            />
-          </div>
-          <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#fff', textTransform: 'uppercase', margin: 0, wordBreak: 'break-word' }}>
-              {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
-            </h3>
-            <div>
-              <a href="https://www.gueytours.com/tours/san-miguel-viejo" style={{ display: 'block', textAlign: 'center', background: 'var(--orange, #d97736)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'es' ? 'Ver Más' : 'View More'}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Tarjeta 3 */}
-        <div style={{
-          background: '#1a1a1a',
-          borderRadius: '16px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-            <img
-              src="/images/SEO/Historic church stop during Atotonilco ATV Tour, tours Guanajuato.webp"
-              alt={lang === 'es' ? 'Vehículo todoterreno estacionado cerca de la fachada de una histórica iglesia blanca durante una excursión en cuatrimoto al aire libre en Atotonilco, Guanajuato.' : 'All-terrain vehicle parked near a historic white church facade during an outdoor Atotonilco ATV Tour, tours Guanajuato.'}
-              title={lang === 'es' ? 'Parada en una iglesia histórica durante el tour en cuatrimoto por Atotonilco, tours en Guanajuato' : 'Historic church stop during Atotonilco ATV Tour, tours Guanajuato'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            />
-          </div>
-          <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#fff', textTransform: 'uppercase', margin: 0, wordBreak: 'break-word' }}>
-              {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
-            </h3>
-            <div>
-              <a href="https://www.gueytours.com/tours/atotonilco" style={{ display: 'block', textAlign: 'center', background: 'var(--orange, #d97736)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'es' ? 'Ver Más' : 'View More'}
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      {/* --- FILA 2: Exactamente 2 Tarjetas (centradas y equilibradas) --- */}
+      {/* --- TARJETA 2 (Ocupa 2 columnas) --- */}
       <div style={{
+        gridColumn: 'span 2',
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
         display: 'flex',
-        flexWrap: 'wrap',
-        gap: '2rem',
-        justifyContent: 'center',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
         boxSizing: 'border-box'
       }}>
-        
-        {/* Tarjeta 4 */}
-        <div style={{
-          flex: '1 1 320px',
-          maxWidth: '380px',
-          background: '#1a1a1a',
-          borderRadius: '16px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-            <img
-              src="/images/SEO/Guided group on Atascadero ATV Tour along historic tours Guanajuato.webp"
-              alt={lang === 'es' ? 'Conductores de cuatrimotos recorren una calle empedrada cerca de edificios coloniales durante un tour en vehículos todoterreno (ATV) en Atascadero, Guanajuato.' : 'Riders on quads driving along a cobblestone street near colonial buildings during an Atascadero ATV Tour, tours Guanajuato.'}
-              title={lang === 'es' ? 'Guided group on Atascadero ATV Tour along historic tours Guanajuato' : 'Guided group on Atascadero ATV Tour along historic tours Guanajuato'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            />
-          </div>
-          <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#fff', textTransform: 'uppercase', margin: 0, wordBreak: 'break-word' }}>
-              {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
-            </h3>
-            <div>
-              <a href="https://www.gueytours.com/tours/atascadero" style={{ display: 'block', textAlign: 'center', background: 'var(--orange, #d97736)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'es' ? 'Ver Más' : 'View More'}
-              </a>
-            </div>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Dos turistas sonrientes frente a un antiguo arco de piedra durante un recorrido guiado en buggy por San Miguel (Guanajuato).' : 'Two female tourists smiling in front of an ancient stone arch during a guided San Miguel Buggy Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Parada en ruinas históricas durante el recorrido en buggy por San Miguel y los tours en Guanajuato.' : 'Historic ruin stop on San Miguel Buggy Tour and tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Tour en buggy por San Miguel' : 'San Miguel Buggy Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/san-miguel-viejo"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
           </div>
         </div>
+      </div>
 
-        {/* Tarjeta 5 */}
-        <div style={{
-          flex: '1 1 320px',
-          maxWidth: '380px',
-          background: '#1a1a1a',
-          borderRadius: '16px',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-          boxSizing: 'border-box'
-        }}>
-          <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
-            <img
-              src="/images/SEO/Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato.webp"
-              alt={lang === 'es' ? 'Grupo de pilotos en cuatrimotos todoterreno explorando un sendero rural durante un tour en ATV por Agua Espinosa, Guanajuato.' : 'Group of riders on all-terrain quads exploring countryside trail during an Agua Espinosa ATV Tour, tours Guanajuato.'}
-              title={lang === 'es' ? 'Paseo grupal al aire libre en el tour en cuatrimoto (ATV) Agua Espinosa con Tours Guanajuato.' : 'Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-            />
-          </div>
-          <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: '#fff', textTransform: 'uppercase', margin: 0, wordBreak: 'break-word' }}>
-              {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
-            </h3>
-            <div>
-              <a href="https://www.gueytours.com/tu-url-5" style={{ display: 'block', textAlign: 'center', background: 'var(--orange, #d97736)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '8px', fontWeight: 'bold', fontFamily: 'var(--font-heading)', textDecoration: 'none', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                {lang === 'es' ? 'Ver Más' : 'View More'}
-              </a>
-            </div>
+      {/* --- TARJETA 3 (Ocupa 2 columnas) --- */}
+      <div style={{
+        gridColumn: 'span 2',
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Historic church stop during Atotonilco ATV Tour, tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Vehículo todoterreno estacionado cerca de la fachada de una histórica iglesia blanca durante una excursión en cuatrimoto al aire libre en Atotonilco, Guanajuato.' : 'All-terrain vehicle parked near a historic white church facade during an outdoor Atotonilco ATV Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Parada en una iglesia histórica durante el tour en cuatrimoto por Atotonilco, tours en Guanajuato' : 'Historic church stop during Atotonilco ATV Tour, tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Tour en cuatrimoto por Atotonilco' : 'Atotonilco ATV Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/atotonilco"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
           </div>
         </div>
+      </div>
 
+      {/* --- TARJETA 4 (Inicia en columna 2, ocupa 2 columnas -> Centrada abajo junto con la 5) --- */}
+      <div style={{
+        gridColumn: '2 / span 2',
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Guided group on Atascadero ATV Tour along historic tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Conductores de cuatrimotos recorren una calle empedrada cerca de edificios coloniales durante un tour en vehículos todoterreno (ATV) en Atascadero, Guanajuato.' : 'Riders on quads driving along a cobblestone street near colonial buildings during an Atascadero ATV Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Guided group on Atascadero ATV Tour along historic tours Guanajuato' : 'Guided group on Atascadero ATV Tour along historic tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Excursión en cuatrimoto en Atascadero' : 'Atascadero ATV Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tours/atascadero"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* --- TARJETA 5 (Ocupa 2 columnas al lado de la 4) --- */}
+      <div style={{
+        gridColumn: 'span 2',
+        background: '#1a1a1a',
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+        boxSizing: 'border-box'
+      }}>
+        <div style={{ width: '100%', height: '220px', background: '#000', overflow: 'hidden' }}>
+          <img
+            src="/images/SEO/Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato.webp"
+            alt={lang === 'es' ? 'Grupo de pilotos en cuatrimotos todoterreno explorando un sendero rural durante un tour en ATV por Agua Espinosa, Guanajuato.' : 'Group of riders on all-terrain quads exploring countryside trail during an Agua Espinosa ATV Tour, tours Guanajuato.'}
+            title={lang === 'es' ? 'Paseo grupal al aire libre en el tour en cuatrimoto (ATV) Agua Espinosa con Tours Guanajuato.' : 'Outdoor group riding on Agua Espinosa ATV Tour with tours Guanajuato'}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
+        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1, justifyContent: 'space-between', gap: '1.5rem', boxSizing: 'border-box' }}>
+          <h3 style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '1.4rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            margin: 0,
+            wordBreak: 'break-word'
+          }}>
+            {lang === 'es' ? 'Tour en cuatrimoto por Agua Espinosa' : 'Agua Espinosa ATV Tour'}
+          </h3>
+          <div>
+            <a
+              href="https://www.gueytours.com/tu-url-5"
+              style={{
+                display: 'block',
+                textAlign: 'center',
+                background: 'var(--orange, #d97736)',
+                color: '#fff',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                fontWeight: 'bold',
+                fontFamily: 'var(--font-heading)',
+                textDecoration: 'none',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                transition: 'opacity 0.3s ease'
+              }}
+            >
+              {lang === 'es' ? 'Ver Más' : 'View More'}
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
