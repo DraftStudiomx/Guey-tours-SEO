@@ -67,11 +67,11 @@ export default function Navbar() {
   }
 
   const toursChildren = [
-    { label: t('nav.blog'), href: '/blog' },
     { label: lang === 'es' ? 'Renta de ATV' : 'ATV Rentals', href: '/atv-rentals' },
     { label: lang === 'es' ? 'San Miguel de Allende' : 'San Miguel de Allende', href: '/san-miguel-de-allende-tours' },
     { label: lang === 'es' ? 'Rentas de RZR' : 'RZR Rentals', href: '/rsz-rentals' },
     { label: lang === 'es' ? 'Aventura todoterreno en Guanajuato' : 'Off-road adventure in Guanajuato', href: '/off-road' },
+    { label: lang === 'es' ? 'Tours Guanajuato' : 'Tours Guanajuato', href: '/tours-guanajuato' },
     { label: lang === 'es' ? 'UTV' : 'UTV', href: '/utv' },
     { label: lang === 'es' ? 'Tours in cuatrimoto' : 'ATV tours', href: '/tours-in-cuatrimoto' },
   ]
@@ -82,6 +82,7 @@ export default function Navbar() {
     { label: t('nav.about'), href: '/#about' },
     { label: t('nav.gallery'), href: '/gallery' },
     { label: t('nav.testimonials'), href: '/#testimonials' },
+    { label: t('nav.blog'), href: '/blog' },
     { label: 'FAQS', href: '/#faqs' },
     { label: t('nav.contact'), href: '/contact' },
   ]
