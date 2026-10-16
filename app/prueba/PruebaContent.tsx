@@ -4,7 +4,7 @@ import { useLang } from '@/lib/i18n'
 import { useState } from 'react'
 import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
-import Navbares from '@/components/Navbar'
+import Navbares from '@/components/Navbares'
 import Footer from '@/components/Footer'
 
 export default function PruebaContent() {
