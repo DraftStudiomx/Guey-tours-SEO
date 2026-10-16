@@ -26,7 +26,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   
   return (
     <>
-      <Navbar />
+      <Navbares />
       <main style={{
         background: 'var(--dark, #0b0b0b)',
         minHeight: '100vh',
@@ -42,6 +42,52 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           fontFamily: 'sans-serif',
           textAlign: 'left'
         }}>
+
+          {/* --- BOTONES DIRECTOS PARA PRUEBA DE CAMBIO DE IDIOMA POR URL --- */}
+<div style={{
+  display: 'flex',
+  justifyContent: 'flex-end',
+  gap: '0.6rem',
+  marginBottom: '1.5rem'
+}}>
+  {/* Botón Español */}
+  <a
+    href="/es/tours-guanajuato" // <--- Pon la URL de tu página en español
+    style={{
+      color: '#fff',
+      textDecoration: 'none',
+      fontFamily: 'var(--font-heading)',
+      fontWeight: 'bold',
+      fontSize: '0.85rem',
+      padding: '0.4rem 0.8rem',
+      borderRadius: '4px',
+      border: '1px solid var(--orange, #d97736)',
+      background: 'rgba(217, 119, 54, 0.2)',
+      transition: 'all 0.3s ease'
+    }}
+  >
+    ES
+  </a>
+
+  {/* Botón Inglés */}
+  <a
+    href="/en/tours-guanajuato" // <--- Pon la URL de tu página en inglés
+    style={{
+      color: 'rgba(255,255,255,0.7)',
+      textDecoration: 'none',
+      fontFamily: 'var(--font-heading)',
+      fontWeight: 'bold',
+      fontSize: '0.85rem',
+      padding: '0.4rem 0.8rem',
+      borderRadius: '4px',
+      border: '1px solid rgba(255,255,255,0.2)',
+      background: 'rgba(0,0,0,0.3)',
+      transition: 'all 0.3s ease'
+    }}
+  >
+    EN
+  </a>
+</div>
 
           <div style={{
   position: 'relative',
