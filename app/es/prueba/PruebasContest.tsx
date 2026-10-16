@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Navbares from '@/components/Navbares'
 import Footer from '@/components/Footer'
 
-export default function PruebaContent() {
+export default function PruebasContest() {
   const { lang } = useLang()
 
   const [form, setForm] = useState({ name: '', email: '', message: '' })
