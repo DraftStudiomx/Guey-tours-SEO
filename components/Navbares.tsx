@@ -45,13 +45,13 @@ function YouTubeIcon({ size = 18 }: { size?: number }) {
   )
 }
 
-// Definimos las propiedades que aceptará tu menú para las URLs personalizadas
-interface NavbarProps {
+// Definimos las propiedades que aceptará tu menú duplicado
+interface NavbaresProps {
   esHref?: string;
   enHref?: string;
 }
 
-export default function Navbar({ esHref = '#', enHref = '#' }: NavbarProps) {
+export default function Navbares({ esHref = '#', enHref = '#' }: NavbaresProps) {
   const { lang, t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -114,11 +114,11 @@ export default function Navbar({ esHref = '#', enHref = '#' }: NavbarProps) {
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // APARTADO DINÁMICO PARA CAMBIAR DE IDIOMA CON URLS PERSONALIZADAS POR PÁGINA
+  // APARTADO DINÁMICO PARA CAMBIAR DE IDIOMA CON URLS PERSONALIZADAS
   function CustomLangSlot() {
     return (
-      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-        {/* Botón EN (Inglés) */}
+      <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
+        {/* Botón Inglés (EN) */}
         <a
           href={enHref}
           style={{
@@ -128,18 +128,18 @@ export default function Navbar({ esHref = '#', enHref = '#' }: NavbarProps) {
             fontWeight: 700,
             fontSize: '0.85rem',
             padding: '0.3rem 0.6rem',
-            border: '1px solid rgba(255,255,255,0.2)',
+            border: '1px solid rgba(255,255,255,0.25)',
             borderRadius: '4px',
             background: 'rgba(0,0,0,0.3)',
             transition: 'all 0.2s ease',
           }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--orange)'; (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.25)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
         >
           EN
         </a>
 
-        {/* Botón ES (Español) */}
+        {/* Botón Español (ES) */}
         <a
           href={esHref}
           style={{
@@ -149,13 +149,13 @@ export default function Navbar({ esHref = '#', enHref = '#' }: NavbarProps) {
             fontWeight: 700,
             fontSize: '0.85rem',
             padding: '0.3rem 0.6rem',
-            border: '1px solid rgba(255,255,255,0.2)',
+            border: '1px solid rgba(255,255,255,0.25)',
             borderRadius: '4px',
             background: 'rgba(0,0,0,0.3)',
             transition: 'all 0.2s ease',
           }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--orange)'; (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.25)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
         >
           ES
         </a>
