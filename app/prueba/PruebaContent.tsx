@@ -28,8 +28,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   <>
     {/* AQUÍ LE PASAMOS LAS URLS DIRECTAMENTE AL MENÚ */}
     <Navbares 
-      esHref="/es/tours-guanajuato" 
-      enHref="/tours-guanajuato" 
+      esHref="/es/prueba" 
+      enHref="/prueba" 
     />
 
     <main style={{
