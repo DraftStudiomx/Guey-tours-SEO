@@ -45,7 +45,13 @@ function YouTubeIcon({ size = 18 }: { size?: number }) {
   )
 }
 
-export default function Navbar() {
+// Definimos las propiedades que aceptará tu menú para las URLs personalizadas
+interface NavbarProps {
+  esHref?: string;
+  enHref?: string;
+}
+
+export default function Navbar({ esHref = '#', enHref = '#' }: NavbarProps) {
   const { lang, t } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -108,12 +114,51 @@ export default function Navbar() {
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // ESPACIO RESERVADO (SLOT VACÍO) PARA TU PRUEBA DE URLs
-  // Aquí mantienes el hueco exacto donde después pondrás tus enlaces o componentes personalizados
+  // APARTADO DINÁMICO PARA CAMBIAR DE IDIOMA CON URLS PERSONALIZADAS POR PÁGINA
   function CustomLangSlot() {
     return (
-      <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', minWidth: '70px', minHeight: '32px' }}>
-        {/* Espacio reservado para tu prueba */}
+      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+        {/* Botón EN (Inglés) */}
+        <a
+          href={enHref}
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-heading)',
+            fontWeight: 700,
+            fontSize: '0.85rem',
+            padding: '0.3rem 0.6rem',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: '4px',
+            background: 'rgba(0,0,0,0.3)',
+            transition: 'all 0.2s ease',
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--orange)'; (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
+        >
+          EN
+        </a>
+
+        {/* Botón ES (Español) */}
+        <a
+          href={esHref}
+          style={{
+            color: 'white',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-heading)',
+            fontWeight: 700,
+            fontSize: '0.85rem',
+            padding: '0.3rem 0.6rem',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: '4px',
+            background: 'rgba(0,0,0,0.3)',
+            transition: 'all 0.2s ease',
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--orange)'; (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.2)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
+        >
+          ES
+        </a>
       </div>
     )
   }
