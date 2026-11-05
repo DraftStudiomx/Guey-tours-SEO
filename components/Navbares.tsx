@@ -96,7 +96,7 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
     { label: isEs ? 'GALERÍA' : t('nav.gallery'), href: `${p}/gallery` },
     { label: isEs ? 'TESTIMONIOS' : t('nav.testimonials'), href: `${p}/#testimonials` },
     { label: isEs ? 'BLOG' : t('nav.blog'), href: `${p}/blog` },
-    { label: isEs ? 'PREGUNTAS FRECUENTES' : 'FAQS', href: `${p}/#faqs` },
+    { label: 'FAQS', href: `${p}/#faqs` }, // <-- FAQS fijo sin traducir
     { label: isEs ? 'CONTACTO' : t('nav.contact'), href: `${p}/contact` },
   ]
 
@@ -105,7 +105,7 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
     textDecoration: 'none',
     fontFamily: 'var(--font-inter, var(--font-heading))',
     fontWeight: 700,
-    fontSize: '0.95rem',
+    fontSize: '0.9rem', // Tamaño equilibrado para que no se mueva
     letterSpacing: '0.08em',
     opacity: 0.85,
     transition: 'color 0.2s, opacity 0.2s',
@@ -349,11 +349,11 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: '2rem',
+          gap: '1.5rem',
         }}
         className="hidden-mobile"
       >
-        <a href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
+        <Link href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
           <Image
             src="/guey-logo.png"
             alt="Guey Tours"
@@ -361,9 +361,9 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
             height={logoHeight}
             style={{ objectFit: 'contain' }}
           />
-        </a>
+        </Link>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
           ))}
@@ -378,7 +378,7 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
         style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}
         className="show-mobile"
       >
-        <a href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
+        <Link href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
           <Image
             src="/guey-logo.png"
             alt="Guey Tours"
@@ -386,7 +386,7 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
             height={mobileLogoH}
             style={{ objectFit: 'contain' }}
           />
-        </a>
+        </Link>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
           <LangToggle />
