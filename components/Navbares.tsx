@@ -55,7 +55,6 @@ interface NavbaresProps {
 export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
   const { lang, setLang, t } = useLang()
   
-  // Determinamos el idioma activo combinando la prop y el contexto original
   const currentLang = forceLang || lang || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es') ? 'es' : 'en');
   const isEs = currentLang === 'es';
 
@@ -101,13 +100,13 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
     { label: isEs ? 'CONTACTO' : t('nav.contact'), href: `${p}/contact` },
   ]
 
-  // Fuente optimizada (0.85rem) para que los textos largos en español no empujen ni desacomoden el menú
+  // Tamaño de fuente optimizado (0.88rem) para mantener la estética original exacta
   const linkStyle: React.CSSProperties = {
     color: 'white',
     textDecoration: 'none',
     fontFamily: 'var(--font-inter, var(--font-heading))',
     fontWeight: 700,
-    fontSize: '0.85rem',
+    fontSize: '0.88rem',
     letterSpacing: '0.05em',
     opacity: 0.85,
     transition: 'color 0.2s, opacity 0.2s',
@@ -123,7 +122,6 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // Tu toggle original de banderas circulares con flagcdn y soporte para rutas
   function LangToggle() {
     return (
       <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', background: 'rgba(0,0,0,0.3)', padding: '0.25rem 0.35rem', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20 }}>
@@ -366,8 +364,8 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
           />
         </Link>
 
-        {/* Contenedor con espacio optimizado (gap 1.1rem) para que quepan perfectamente los textos en español sin desacomodar */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
+        {/* Contenedor restaurado con el gap original de 1.5rem */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
           ))}
