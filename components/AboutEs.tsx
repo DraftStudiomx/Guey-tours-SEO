@@ -30,6 +30,7 @@ export default function AboutEs() {
             <img
               src='/images/guey-atv-tours-about.jpg'
               alt="Aventura en Cuatrimoto en San Miguel de Allende"
+              title="Aventura en Cuatrimoto en San Miguel de Allende"
               style={{
                 width: '100%',
                 height: '380px',
