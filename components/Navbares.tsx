@@ -52,7 +52,7 @@ interface NavbaresProps {
   lang?: 'en' | 'es';
 }
 
-export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
+export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
   const { lang, setLang, t } = useLang()
   
   const currentLang = forceLang || lang || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es') ? 'es' : 'en');
@@ -82,11 +82,11 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
   const toursChildren = [
     { label: isEs ? 'Renta de ATV' : 'ATV Rentals', href: `${p}/atv-rentals` },
     { label: isEs ? 'San Miguel de Allende' : 'San Miguel de Allende', href: `${p}/san-miguel-de-allende-tours` },
-    { label: isEs ? 'Renta de RZR' : 'RZR Rentals', href: `${p}/rsz-rentals` },
+    { label: isEs ? 'Rentas de RZR' : 'RZR Rentals', href: `${p}/rsz-rentals` },
     { label: isEs ? 'Aventura todoterreno en Guanajuato' : 'Off-road adventure in Guanajuato', href: `${p}/off-road` },
     { label: isEs ? 'Tours Guanajuato' : 'Tours Guanajuato', href: `${p}/tours-guanajuato` },
     { label: isEs ? 'UTV' : 'UTV', href: `${p}/utv` },
-    { label: isEs ? 'Tours en cuatrimoto' : 'ATV tours', href: `${p}/tours-in-cuatrimoto` },
+    { label: isEs ? 'Tours in cuatrimoto' : 'ATV tours', href: `${p}/tours-in-cuatrimoto` },
   ]
 
   const allNavLinks = [
@@ -100,14 +100,13 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
     { label: isEs ? 'CONTACTO' : t('nav.contact'), href: `${p}/contact` },
   ]
 
-  // Tamaño de fuente optimizado (0.88rem) para mantener la estética original exacta
   const linkStyle: React.CSSProperties = {
     color: 'white',
     textDecoration: 'none',
     fontFamily: 'var(--font-inter, var(--font-heading))',
     fontWeight: 700,
-    fontSize: '0.88rem',
-    letterSpacing: '0.05em',
+    fontSize: '0.95rem',
+    letterSpacing: '0.08em',
     opacity: 0.85,
     transition: 'color 0.2s, opacity 0.2s',
   }
@@ -204,16 +203,16 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
     return (
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
         <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <FacebookIcon size={18} />
+          <FacebookIcon size={20} />
         </a>
         <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <InstagramIcon size={18} />
+          <InstagramIcon size={20} />
         </a>
         <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <YouTubeIcon size={20} />
+          <YouTubeIcon size={22} />
         </a>
         <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
-          <TikTokIcon size={16} />
+          <TikTokIcon size={18} />
         </a>
       </div>
     )
@@ -225,14 +224,14 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
 
     if (!hasChildren) {
       return (
-        <Link
+        <a
           href={link.href}
           style={linkStyle}
           onMouseEnter={e => { (e.target as HTMLElement).style.color = 'var(--orange)'; (e.target as HTMLElement).style.opacity = '1' }}
           onMouseLeave={e => { (e.target as HTMLElement).style.color = 'white'; (e.target as HTMLElement).style.opacity = '0.85' }}
         >
           {link.label}
-        </Link>
+        </a>
       )
     }
 
@@ -242,14 +241,14 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
         onMouseEnter={openDropdown}
         onMouseLeave={closeDropdown}
       >
-        <Link
+        <a
           href={link.href}
           style={linkStyle}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; (e.currentTarget as HTMLElement).style.opacity = '1' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'white'; (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
         >
           {link.label}
-        </Link>
+        </a>
         <button
           aria-label="Toggle tours menu"
           aria-expanded={isOpen}
@@ -290,7 +289,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
             }}
           >
             {link.children!.map(child => (
-              <Link
+              <a
                 key={child.href}
                 href={child.href}
                 style={{
@@ -318,7 +317,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
                 }}
               >
                 {child.label}
-              </Link>
+              </a>
             ))}
           </div>
         )}
@@ -350,11 +349,11 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: '1.5rem',
+          gap: '2rem',
         }}
         className="hidden-mobile"
       >
-        <Link href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
+        <a href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
           <Image
             src="/guey-logo.png"
             alt="Guey Tours"
@@ -362,14 +361,13 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
             height={logoHeight}
             style={{ objectFit: 'contain' }}
           />
-        </Link>
+        </a>
 
-        {/* Contenedor restaurado con el gap original de 1.5rem */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
           ))}
-          <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.2)', margin: '0 0.1rem' }} />
+          <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.2)', margin: '0 0.2rem' }} />
           <LangToggle />
           <SocialIcons />
         </div>
@@ -380,7 +378,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
         style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}
         className="show-mobile"
       >
-        <Link href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
+        <a href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
           <Image
             src="/guey-logo.png"
             alt="Guey Tours"
@@ -388,7 +386,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
             height={mobileLogoH}
             style={{ objectFit: 'contain' }}
           />
-        </Link>
+        </a>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
           <LangToggle />
@@ -419,7 +417,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
 
             return (
               <div key={link.href} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <Link
+                <a
                   href={link.href}
                   onClick={() => {
                     if (!hasChildren) setMobileOpen(false)
@@ -434,7 +432,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
                   }}
                 >
                   {link.label}
-                </Link>
+                </a>
 
                 {hasChildren && (
                   <div style={{
@@ -448,7 +446,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
                     marginBottom: '0.3rem'
                   }}>
                     {link.children!.map(child => (
-                      <Link
+                      <a
                         key={child.href}
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
@@ -462,7 +460,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
                         }}
                       >
                         {child.label}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 )}
