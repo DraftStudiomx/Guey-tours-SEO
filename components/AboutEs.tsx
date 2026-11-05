@@ -1,11 +1,9 @@
 'use client'
 
-import { useLang } from '@/lib/i18n'
 import { useScrollReveal } from '@/lib/useScrollReveal'
 import { CheckCircle2 } from 'lucide-react'
 
-export default function About() {
-  const { t } = useLang()
+export default function AboutEs() {
   useScrollReveal()
 
   return (
@@ -31,7 +29,7 @@ export default function About() {
           <div className="reveal-left" style={{ position: 'relative' }}>
             <img
               src='/images/guey-atv-tours-about.jpg'
-              alt="ATV Adventure in San Miguel de Allende"
+              alt="Aventura en Cuatrimoto en San Miguel de Allende"
               style={{
                 width: '100%',
                 height: '380px',
@@ -42,25 +40,28 @@ export default function About() {
               }}
             />
             {/* Insignia de Google */}
-            <div style={{
-              position: 'absolute',
-              bottom: '-1.5rem',
-              right: '-1.5rem',
-              zIndex: 2,
-              background: 'white',
-              borderRadius: '8px',
-              padding: '6px',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-            }}>
+            <div 
+              className="google-badge-container"
+              style={{
+                position: 'absolute',
+                bottom: '-1.5rem',
+                right: '-1.5rem',
+                zIndex: 2,
+                background: 'white',
+                borderRadius: '8px',
+                padding: '6px',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
+              }}
+            >
               <img
                 src="/images/google-reviews.png"
-                alt="150+ 5-Star Google Reviews"
+                alt="Más de 150 reseñas de 5 estrellas en Google"
                 style={{ width: '140px', display: 'block' }}
               />
             </div>
           </div>
 
-          {/* Columna Derecha: Títulos, tu información real y botón */}
+          {/* Columna Derecha: Títulos, información real y botón */}
           <div className="reveal-right" style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
             <h2 style={{
               fontFamily: 'var(--font-heading)',
@@ -68,9 +69,9 @@ export default function About() {
               fontWeight: 800,
               letterSpacing: '0.05em',
               color: 'white',
-              lineHeight: 1.15,
+              lineHeight: '1.15',
             }}>
-              <span style={{ color: 'var(--orange)' }}>{t('about.title1')}</span> {t('about.title2')}
+              <span style={{ color: 'var(--orange)' }}>AVENTURAS EN CUATRIMOTO</span> EN SAN MIGUEL DE ALLENDE
             </h2>
 
             <p style={{
@@ -79,7 +80,7 @@ export default function About() {
               lineHeight: '1.7',
               margin: 0,
             }}>
-              {t('about.p1')}
+              En Guey Tours, nos especializamos en tours en cuatrimoto llenos de acción y experiencias todoterreno que te permiten vivir los Tours en San Miguel de Allende desde una perspectiva totalmente nueva.
             </p>
 
             <p style={{
@@ -88,28 +89,29 @@ export default function About() {
               lineHeight: '1.7',
               margin: 0,
             }}>
-              {t('about.p2')}
+              Nuestros tours en ATV en San Miguel de Allende combinan la profunda cultura local con rutas llenas de adrenalina.
             </p>
 
             {/* Viñetas con tus puntos clave */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', margin: '0.4rem 0' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'white', fontSize: '0.9rem' }}>
-                <CheckCircle2 size={18} color="var(--orange)" />
-                <span>{t('about.bullet1')}</span>
+                <CheckCircle2 size={18} color="var(--orange)" style={{ flexShrink: 0 }} />
+                <span><strong>Guías Expertos:</strong> Profesionales certificados liderando cada viaje.</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'white', fontSize: '0.9rem' }}>
-                <CheckCircle2 size={18} color="var(--orange)" />
-                <span>{t('about.bullet2')}</span>
+                <CheckCircle2 size={18} color="var(--orange)" style={{ flexShrink: 0 }} />
+                <span><strong>Flota de Primera:</strong> Modelos de ATV premium mantenidos para un rendimiento óptimo.</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'white', fontSize: '0.9rem' }}>
-                <CheckCircle2 size={18} color="var(--orange)" />
-                <span>{t('about.bullet3')}</span>
+                <CheckCircle2 size={18} color="var(--orange)" style={{ flexShrink: 0 }} />
+                <span><strong>Tranquilidad Total:</strong> Seguro médico completo incluido en cada recorrido.</span>
               </div>
             </div>
 
             <div style={{ marginTop: '0.5rem' }}>
               <a
                 href="https://www.gueytours.com/contact"
+                className="about-btn-cta"
                 style={{
                   display: 'inline-block',
                   border: '2px solid var(--orange)',
@@ -129,7 +131,7 @@ export default function About() {
                   e.currentTarget.style.background = 'transparent'
                 }}
               >
-                {t('about.button')}
+                CONTÁCTANOS
               </a>
             </div>
           </div>
@@ -140,7 +142,22 @@ export default function About() {
         @media (max-width: 768px) {
           .about-grid {
             grid-template-columns: 1fr !important;
-            gap: 3rem !important;
+            gap: 2.5rem !important;
+          }
+          /* Ajuste responsivo para móvil: evita que la insignia de Google estorbe o rompa el diseño lateral */
+          .google-badge-container {
+            bottom: -1rem !important;
+            right: 1rem !important;
+            padding: 4px !important;
+          }
+          .google-badge-container img {
+            width: 110px !important;
+          }
+          /* Centrar el botón de contacto en dispositivos móviles para mejor estética */
+          .about-btn-cta {
+            width: 100% !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
           }
         }
       `}</style>
