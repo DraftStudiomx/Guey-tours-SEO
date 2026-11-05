@@ -3,7 +3,7 @@ import Navbares from '@/components/Navbares'
 import HeroEs from '@/components/HeroEs'
 import AboutEs from '@/components/AboutEs'
 import ToursEs from '@/components/ToursEs' // <--- Cambiado de Tours a ToursEs
-import Vehicles from '@/components/Vehicles'
+import VehiclesEs from '@/components/VehiclesEs'
 import WhyChooseUsEs from '@/components/WhyChooseUsEs'
 import MediaTabsViewer from '@/components/MediaTabsViewer'
 import TourMapFAQEs from '@/components/TourMapFAQEs'
@@ -109,7 +109,7 @@ export default async function EspanolHomePage() {
         <HeroEs />
         <AboutEs />
         <ToursEs />
-        <Vehicles />
+        <VehiclesEs />
         <WhyChooseUsEs />
         <Testimonials testimonials={testimonials} />
         <MediaTabsViewer videos={videos} images={images} />
