@@ -28,9 +28,10 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   <>
     {/* AQUÍ LE PASAMOS LAS URLS DIRECTAMENTE AL MENÚ */}
     <Navbares 
-      esHref="/es/prueba" 
-      enHref="/prueba" 
-    />
+  esHref="/es/prueba" 
+  enHref="/prueba" 
+  lang="es" 
+/>
 
     <main style={{
       background: 'var(--dark, #0b0b0b)',
