@@ -121,8 +121,7 @@ interface NavbaresProps {
 export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
   const { lang: contextLang } = useLang()
   
-  const currentLang = forceLang || contextLang || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es') ? 'es' : 'en');
-  const isEs = currentLang === 'es';
+  const isEs = forceLang === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
 
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
