@@ -46,72 +46,6 @@ function YouTubeIcon({ size = 18 }: { size?: number }) {
   )
 }
 
-// Iconos SVG circulares de las banderas exactamente como el diseño
-function USAFlagIcon({ active }: { active: boolean }) {
-  return (
-    <div style={{
-      width: '24px',
-      height: '24px',
-      borderRadius: '50%',
-      overflow: 'hidden',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      border: active ? '2px solid var(--orange, #d97736)' : '2px solid transparent',
-      boxShadow: active ? '0 0 8px rgba(217, 119, 54, 0.6)' : 'none',
-      transition: 'all 0.2s ease',
-      cursor: 'pointer'
-    }}>
-      <svg viewBox="0 0 640 480" width="100%" height="100%" style={{ objectFit: 'cover' }}>
-        <path fill="#bd3d44" d="M0 0h640v480H0z"/>
-        <path stroke="#fff" strokeWidth="37" d="M0 55.4h640M0 129.2h640M0 203h640M0 276.9h640M0 350.8h640M0 424.6h640"/>
-        <path fill="#192f5d" d="M0 0h285.7v258.5H0z"/>
-        <g fill="#fff">
-          <g id="s">
-            <g id="f">
-              <path id="t" d="M23.8 19.3l-5.6 17.3 14.8-10.7H14.6l14.8 10.7z"/>
-              <use href="#t" x="47.6"/>
-              <use href="#t" x="95.2"/>
-              <use href="#t" x="142.8"/>
-              <use href="#t" x="190.4"/>
-            </g>
-            <use href="#f" y="43"/>
-            <use href="#f" y="86"/>
-            <use href="#f" y="129"/>
-            <use href="#f" y="172"/>
-          </g>
-          <use href="#s" x="23.8" y="21.5"/>
-        </g>
-      </svg>
-    </div>
-  )
-}
-
-function MexicoFlagIcon({ active }: { active: boolean }) {
-  return (
-    <div style={{
-      width: '24px',
-      height: '24px',
-      borderRadius: '50%',
-      overflow: 'hidden',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      border: active ? '2px solid var(--orange, #d97736)' : '2px solid transparent',
-      boxShadow: active ? '0 0 8px rgba(217, 119, 54, 0.6)' : 'none',
-      transition: 'all 0.2s ease',
-      cursor: 'pointer'
-    }}>
-      <svg viewBox="0 0 640 480" width="100%" height="100%" style={{ objectFit: 'cover' }}>
-        <path fill="#006847" d="M0 0h213.3v480H0z"/>
-        <path fill="#fff" d="M213.3 0h213.4v480H213.3z"/>
-        <path fill="#ce1126" d="M426.7 0H640v480H426.7z"/>
-        <circle cx="320" cy="240" r="30" fill="#a05a2c"/>
-      </svg>
-    </div>
-  )
-}
-
 interface NavbaresProps {
   esHref?: string;
   enHref?: string;
@@ -119,9 +53,11 @@ interface NavbaresProps {
 }
 
 export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
-  const { lang: contextLang } = useLang()
+  const { lang, setLang, t } = useLang()
   
-  const isEs = forceLang === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
+  // Determinamos el idioma activo combinando la prop y el contexto original
+  const currentLang = forceLang || lang || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es') ? 'es' : 'en');
+  const isEs = currentLang === 'es';
 
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -155,23 +91,24 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
   ]
 
   const allNavLinks = [
-    { label: isEs ? 'TOURS' : 'TOURS', href: `${p}/#tours`, children: toursChildren },
+    { label: isEs ? 'TOURS' : t('nav.tours'), href: `${p}/#tours`, children: toursChildren },
     { label: isEs ? 'EXPERIENCIAS PRIVADAS' : 'PRIVATE EXPERIENCES', href: `${p}/#private-experiences` },
-    { label: isEs ? 'NOSOTROS' : 'ABOUT US', href: `${p}/#about` },
-    { label: isEs ? 'GALERÍA' : 'GALLERY', href: `${p}/gallery` },
-    { label: isEs ? 'TESTIMONIOS' : 'TESTIMONIALS', href: `${p}/#testimonials` },
-    { label: isEs ? 'BLOG' : 'BLOG', href: `${p}/blog` },
+    { label: isEs ? 'NOSOTROS' : t('nav.about'), href: `${p}/#about` },
+    { label: isEs ? 'GALERÍA' : t('nav.gallery'), href: `${p}/gallery` },
+    { label: isEs ? 'TESTIMONIOS' : t('nav.testimonials'), href: `${p}/#testimonials` },
+    { label: isEs ? 'BLOG' : t('nav.blog'), href: `${p}/blog` },
     { label: isEs ? 'PREGUNTAS FRECUENTES' : 'FAQS', href: `${p}/#faqs` },
-    { label: isEs ? 'CONTACTO' : 'CONTACT', href: `${p}/contact` },
+    { label: isEs ? 'CONTACTO' : t('nav.contact'), href: `${p}/contact` },
   ]
 
+  // Fuente optimizada (0.85rem) para que los textos largos en español no empujen ni desacomoden el menú
   const linkStyle: React.CSSProperties = {
     color: 'white',
     textDecoration: 'none',
     fontFamily: 'var(--font-inter, var(--font-heading))',
     fontWeight: 700,
-    fontSize: '0.92rem',
-    letterSpacing: '0.08em',
+    fontSize: '0.85rem',
+    letterSpacing: '0.05em',
     opacity: 0.85,
     transition: 'color 0.2s, opacity 0.2s',
   }
@@ -186,25 +123,62 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
   const mobileLogoW = 120
   const mobileLogoH = 94
 
-  // CÁPSULA DE TOGGLE EXACTA A LA IMAGEN (DOS BANDERAS CIRCULARES INTERACTIVAS)
-  function CustomLangSlot() {
+  // Tu toggle original de banderas circulares con flagcdn y soporte para rutas
+  function LangToggle() {
     return (
-      <div 
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          background: 'rgba(0, 0, 0, 0.6)',
-          border: '1px solid rgba(255, 255, 255, 0.25)',
-          borderRadius: '25px',
-          padding: '3px 5px',
-          gap: '6px',
-        }}
-      >
-        <Link href={enHref} title="English" style={{ display: 'flex', alignItems: 'center' }}>
-          <USAFlagIcon active={!isEs} />
+      <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', background: 'rgba(0,0,0,0.3)', padding: '0.25rem 0.35rem', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 20 }}>
+        <Link
+          href={enHref}
+          onClick={() => { if (setLang) setLang('en'); }}
+          title="English"
+          style={{
+            background: 'none',
+            border: !isEs ? '2px solid var(--orange)' : '2px solid transparent',
+            borderRadius: '50%',
+            width: '28px',
+            height: '28px',
+            padding: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            overflow: 'hidden',
+            transition: 'all 0.2s ease',
+            opacity: !isEs ? 1 : 0.6,
+          }}
+        >
+          <img 
+            src="https://flagcdn.com/w40/us.png" 
+            alt="English" 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
+          />
         </Link>
-        <Link href={esHref} title="Español" style={{ display: 'flex', alignItems: 'center' }}>
-          <MexicoFlagIcon active={isEs} />
+
+        <Link
+          href={esHref}
+          onClick={() => { if (setLang) setLang('es'); }}
+          title="Español"
+          style={{
+            background: 'none',
+            border: isEs ? '2px solid var(--orange)' : '2px solid transparent',
+            borderRadius: '50%',
+            width: '28px',
+            height: '28px',
+            padding: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            overflow: 'hidden',
+            transition: 'all 0.2s ease',
+            opacity: isEs ? 1 : 0.6,
+          }}
+        >
+          <img 
+            src="https://flagcdn.com/w40/mx.png" 
+            alt="Español" 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} 
+          />
         </Link>
       </div>
     )
@@ -212,19 +186,37 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
 
   function SocialIcons() {
     const iconStyle: React.CSSProperties = {
-      color: 'var(--orange, #d97736)',
+      color: 'var(--orange)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       transition: 'transform 0.2s, opacity 0.2s',
       opacity: 0.9,
     }
+    const hover = (e: React.MouseEvent) => {
+      const el = e.currentTarget as HTMLElement
+      el.style.opacity = '1'
+      el.style.transform = 'translateY(-2px)'
+    }
+    const out = (e: React.MouseEvent) => {
+      const el = e.currentTarget as HTMLElement
+      el.style.opacity = '0.9'
+      el.style.transform = 'translateY(0)'
+    }
     return (
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-        <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={iconStyle}><FacebookIcon size={18} /></a>
-        <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={iconStyle}><InstagramIcon size={18} /></a>
-        <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={iconStyle}><YouTubeIcon size={20} /></a>
-        <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" style={iconStyle}><TikTokIcon size={16} /></a>
+        <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
+          <FacebookIcon size={18} />
+        </a>
+        <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
+          <InstagramIcon size={18} />
+        </a>
+        <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
+          <YouTubeIcon size={20} />
+        </a>
+        <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" style={iconStyle} onMouseEnter={hover} onMouseLeave={out}>
+          <TikTokIcon size={16} />
+        </a>
       </div>
     )
   }
@@ -238,7 +230,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
         <Link
           href={link.href}
           style={linkStyle}
-          onMouseEnter={e => { (e.target as HTMLElement).style.color = 'var(--orange, #d97736)'; (e.target as HTMLElement).style.opacity = '1' }}
+          onMouseEnter={e => { (e.target as HTMLElement).style.color = 'var(--orange)'; (e.target as HTMLElement).style.opacity = '1' }}
           onMouseLeave={e => { (e.target as HTMLElement).style.color = 'white'; (e.target as HTMLElement).style.opacity = '0.85' }}
         >
           {link.label}
@@ -255,7 +247,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
         <Link
           href={link.href}
           style={linkStyle}
-          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--orange, #d97736)'; (e.currentTarget as HTMLElement).style.opacity = '1' }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; (e.currentTarget as HTMLElement).style.opacity = '1' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'white'; (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
         >
           {link.label}
@@ -276,6 +268,8 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
             transition: 'transform 0.2s, color 0.2s, opacity 0.2s',
             transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
           }}
+          onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--orange)'; (e.currentTarget as HTMLElement).style.opacity = '1' }}
+          onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'white'; (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
         >
           <ChevronDown size={13} strokeWidth={2.5} />
         </button>
@@ -311,7 +305,18 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
                   fontSize: '0.9rem',
                   letterSpacing: '0.08em',
                   opacity: 0.85,
+                  transition: 'color 0.2s, opacity 0.2s, background 0.2s',
                   whiteSpace: 'nowrap',
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.color = 'var(--orange)';
+                  (e.currentTarget as HTMLElement).style.opacity = '1';
+                  (e.currentTarget as HTMLElement).style.background = 'rgba(107,191,46,0.08)'
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.color = 'white';
+                  (e.currentTarget as HTMLElement).style.opacity = '0.85';
+                  (e.currentTarget as HTMLElement).style.background = 'transparent'
                 }}
               >
                 {child.label}
@@ -324,29 +329,76 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
   }
 
   return (
-    <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, background: navBackground, backdropFilter: navBackdrop, borderBottom: navBorder, padding: navPadding }}>
+    <nav
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100,
+        transition: 'all 0.3s ease',
+        background: navBackground,
+        backdropFilter: navBackdrop,
+        borderBottom: navBorder,
+        padding: navPadding,
+      }}
+    >
       {/* Desktop Layout */}
-      <div style={{ maxWidth: '1650px', margin: '0 auto', padding: '0 3rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem' }} className="hidden-mobile">
+      <div
+        style={{
+          maxWidth: '1650px',
+          margin: '0 auto',
+          padding: '0 3rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '1.5rem',
+        }}
+        className="hidden-mobile"
+      >
         <Link href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
-          <Image src="/guey-logo.png" alt="Guey Tours" width={logoWidth} height={logoHeight} style={{ objectFit: 'contain' }} />
+          <Image
+            src="/guey-logo.png"
+            alt="Guey Tours"
+            width={logoWidth}
+            height={logoHeight}
+            style={{ objectFit: 'contain' }}
+          />
         </Link>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-          {allNavLinks.map(link => (<DesktopNavLink key={link.href} link={link} />))}
-          <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.2)', margin: '0 0.2rem' }} />
-          <CustomLangSlot />
+        {/* Contenedor con espacio optimizado (gap 1.1rem) para que quepan perfectamente los textos en español sin desacomodar */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.1rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
+          {allNavLinks.map(link => (
+            <DesktopNavLink key={link.href} link={link} />
+          ))}
+          <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.2)', margin: '0 0.1rem' }} />
+          <LangToggle />
           <SocialIcons />
         </div>
       </div>
 
-      {/* Mobile header */}
-      <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }} className="show-mobile">
+      {/* Mobile header row */}
+      <div
+        style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}
+        className="show-mobile"
+      >
         <Link href={isEs ? '/es' : '/'} style={{ textDecoration: 'none', flexShrink: 0 }}>
-          <Image src="/guey-logo.png" alt="Guey Tours" width={mobileLogoW} height={mobileLogoH} style={{ objectFit: 'contain' }} />
+          <Image
+            src="/guey-logo.png"
+            alt="Guey Tours"
+            width={mobileLogoW}
+            height={mobileLogoH}
+            style={{ objectFit: 'contain' }}
+          />
         </Link>
+
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: 'auto' }}>
-          <CustomLangSlot />
-          <button onClick={() => setMobileOpen(!mobileOpen)} style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '0.5rem' }}>
+          <LangToggle />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', padding: '0.5rem' }}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -354,18 +406,63 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div style={{ background: 'rgba(20,20,20,0.98)', padding: '1.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '1px solid rgba(107,191,46,0.3)', maxHeight: 'calc(100vh - 80px)', overflowY: 'auto' }}>
+        <div style={{
+          background: 'rgba(20,20,20,0.98)',
+          padding: '1.5rem 2rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          borderTop: '1px solid rgba(107,191,46,0.3)',
+          maxHeight: 'calc(100vh - 80px)',
+          overflowY: 'auto',
+        }}>
           {allNavLinks.map(link => {
             const hasChildren = 'children' in link && link.children && link.children.length > 0
+
             return (
               <div key={link.href} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <Link href={link.href} onClick={() => { if (!hasChildren) setMobileOpen(false) }} style={{ color: 'white', textDecoration: 'none', fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.1rem' }}>
+                <Link
+                  href={link.href}
+                  onClick={() => {
+                    if (!hasChildren) setMobileOpen(false)
+                  }}
+                  style={{
+                    color: 'white',
+                    textDecoration: 'none',
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 700,
+                    fontSize: '1.1rem',
+                    letterSpacing: '0.08em',
+                  }}
+                >
                   {link.label}
                 </Link>
+
                 {hasChildren && (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingLeft: '1rem', borderLeft: '2px solid rgba(107,191,46,0.3)' }}>
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.5rem',
+                    paddingLeft: '1rem',
+                    borderLeft: '2px solid rgba(107,191,46,0.3)',
+                    marginLeft: '0.2rem',
+                    marginTop: '0.2rem',
+                    marginBottom: '0.3rem'
+                  }}>
                     {link.children!.map(child => (
-                      <Link key={child.href} href={child.href} onClick={() => setMobileOpen(false)} style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', fontSize: '0.95rem' }}>
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        onClick={() => setMobileOpen(false)}
+                        style={{
+                          color: 'rgba(255,255,255,0.75)',
+                          textDecoration: 'none',
+                          fontFamily: 'var(--font-inter, var(--font-heading))',
+                          fontWeight: 400,
+                          fontSize: '0.95rem',
+                          letterSpacing: '0.05em',
+                        }}
+                      >
                         {child.label}
                       </Link>
                     ))}
@@ -374,6 +471,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
               </div>
             )
           })}
+
           <div style={{ paddingTop: '0.5rem', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'center' }}>
             <SocialIcons />
           </div>
