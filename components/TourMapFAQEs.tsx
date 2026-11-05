@@ -1,50 +1,52 @@
 'use client'
 
 import { useState } from 'react'
-import { useLang } from '@/lib/i18n'
 import { useScrollReveal } from '@/lib/useScrollReveal'
 
-const FAQS = [
+const FAQS_ES = [
   {
-    q_en: 'Where can I rent an ATV or RZR in San Miguel de Allende?',
-    q_es: '¿Dónde puedo rentar una cuatrimoto o RZR en San Miguel de Allende?',
-    a_en: 'At Guey Tours, we offer ATV and RZR rentals and guided tours in San Miguel de Allende. We provide off-road routes, scenic rides, and adventure experiences.',
-    a_es: 'En Guey Tours ofrecemos renta y tours guiados en cuatrimotos, ATV y RZR en San Miguel de Allende. Contamos con rutas off-road y recorridos panorámicos.',
+    q: '¿Dónde puedo rentar una cuatrimoto o RZR en San Miguel de Allende?',
+    a: 'En Guey Tours ofrecemos renta y tours guiados en cuatrimotos, ATV y RZR en San Miguel de Allende. Contamos con rutas off-road y recorridos panorámicos.',
   },
   {
-    q_en: 'How much does an ATV tour cost in San Miguel de Allende?',
-    q_es: '¿Cuánto cuesta un tour en cuatrimoto en San Miguel de Allende?',
-    a_en: 'Prices start around $625 MXN per person depending on the vehicle and duration. We offer short adventures, sunset routes, and private experiences.',
-    a_es: 'Los precios comienzan desde $625 MXN por persona según el vehículo y duración. Ofrecemos tours cortos, rutas al atardecer y experiencias privadas.',
+    q: '¿Cuánto cuesta un tour en cuatrimoto en San Miguel de Allende?',
+    a: 'Los precios comienzan desde $625 MXN por persona según el vehículo y duración. Ofrecemos tours cortos, rutas al atardecer y experiencias privadas.',
   },
   {
-    q_en: 'What is included in Guey Tours experiences?',
-    q_es: '¿Qué incluyen las experiencias de Guey Tours?',
-    a_en: 'Our tours include the ATV or RZR, a professional guide, safety equipment, scenic stops, and photos or social media content.',
-    a_es: 'Nuestros tours incluyen la cuatrimoto, guía profesional, equipo de seguridad, paradas panorámicas y fotos o contenido para redes sociales.',
+    q: '¿Qué incluyen las experiencias de Guey Tours?',
+    a: 'Nuestros tours incluyen la cuatrimoto, guía profesional, equipo de seguridad, paradas panorámicas y fotos o contenido para redes sociales.',
   },
   {
-    q_en: 'Do I need a drivers license to operate an ATV or RZR?',
-    q_es: '¿Se necesita licencia para manejar una cuatrimoto o RZR?',
-    a_en: 'Yes, we recommend bringing a valid ID or drivers license. Knowing how to operate an automatic vehicle and following guide instructions is essential.',
-    a_es: 'Sí, recomendamos traer identificación oficial o licencia. Es esencial saber manejar vehículos automáticos y seguir las instrucciones del guía.',
+    q: '¿Se necesita licencia para manejar una cuatrimoto o RZR?',
+    a: 'Sí, recomendamos traer identificación oficial o licencia. Es esencial saber manejar vehículos automáticos y seguir las instrucciones del guía.',
   },
   {
-    q_en: 'What are the best ATV tours in San Miguel de Allende?',
-    q_es: '¿Cuáles son los mejores tours en cuatrimoto en San Miguel de Allende?',
-    a_en: 'Popular routes include off-road trails through mesquite trees, garambullo cactus, natural viewpoints, and fun dirt-road adventures.',
-    a_es: 'Las rutas populares incluyen caminos off-road entre mezquites, cactus de garambullo, miradores naturales y aventuras en terracería.',
+    q: '¿Cuáles son los mejores tours en cuatrimoto en San Miguel de Allende?',
+    a: 'Las rutas populares incluyen caminos off-road entre mezquites, cactus de garambullo, miradores naturales y aventuras en terracería.',
   },
   {
-    q_en: 'Is it safe to drive an ATV or RZR during the tours?',
-    q_es: '¿Es seguro manejar ATV o RZR durante los tours?',
-    a_en: 'Yes, safety is our priority. We provide driving instructions, safety gear, and a professional guide accompanies you at all times.',
-    a_es: 'Sí, la seguridad es nuestra prioridad. Damos instrucciones de manejo, equipo de protección y un guía profesional te acompaña todo el tiempo.',
+    q: '¿Es seguro manejar ATV o RZR durante los tours?',
+    a: 'Sí, la seguridad es nuestra prioridad. Damos instrucciones de manejo, equipo de protección y un guía profesional te acompaña todo el tiempo.',
+  },
+  {
+    q: '¿Dónde puedo reservar tours en cuatrimoto en San Miguel de Allende?',
+    a: 'En Guey Tours puedes solicitar información y reservar tours en cuatrimoto para explorar los paisajes y atractivos de San Miguel de Allende. Consulta las opciones disponibles, horarios y requisitos para elegir la experiencia que mejor se adapte a ti.',
+  },
+  {
+    q: '¿Cuánto cuesta un tour en cuatrimoto?',
+    a: 'El precio de un tour en cuatrimoto depende de la duración del recorrido, la ruta y el tipo de experiencia. En Guey Tours puedes consultar las opciones disponibles y solicitar información para conocer el costo de tu recorrido.',
+  },
+  {
+    q: '¿Qué incluyen los tours de aventura?',
+    a: 'Los tours en cuatrimoto pueden incluir el uso de la unidad, recorrido guiado y recomendaciones de seguridad antes de comenzar. Los servicios específicos varían según la experiencia contratada, por lo que conviene confirmar qué contempla cada recorrido.',
+  },
+  {
+    q: '¿Necesito experiencia previa para manejar una cuatrimoto?',
+    a: 'No necesariamente. Algunas experiencias están diseñadas para principiantes e incluyen indicaciones básicas antes del recorrido. En Guey Tours puedes consultar los requisitos de edad, conducción y seguridad para participar en los tours en cuatrimoto.',
   },
 ]
 
-export default function TourMapFAQ() {
-  const { lang } = useLang()
+export default function TourMapFAQEs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   useScrollReveal()
 
@@ -81,7 +83,7 @@ export default function TourMapFAQ() {
                 margin: 0,
               }}
             >
-              {lang === 'es' ? 'A DÓNDE LLEVAN NUESTROS TOURS' : 'WHERE OUR ATV TOURS TAKE YOU'}
+              A DÓNDE LLEVAN NUESTROS TOURS
             </h2>
 
             <div
@@ -102,9 +104,7 @@ export default function TourMapFAQ() {
                 whiteSpace: 'pre-line',
               }}
             >
-              {lang === 'es'
-                ? 'Nuestros viajes comienzan aquí mismo en San Miguel de Allende, ramificándose a través de diversos ecosistemas locales y senderos montañosos.'
-                : 'Our journeys start right here in San Miguel de Allende, branching out across diverse local ecosystems and mountain trails.'}
+              Nuestros viajes comienzan aquí mismo en San Miguel de Allende, ramificándose a través de diversos ecosistemas locales y senderos montañosos.
             </p>
 
             <div
@@ -140,11 +140,11 @@ export default function TourMapFAQ() {
                 margin: '0 0 1rem 0',
               }}
             >
-              {lang === 'es' ? 'PREGUNTAS FRECUENTES' : 'ATV TOURS FAQ'}
+              PREGUNTAS FRECUENTES
             </h2>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {FAQS.map((faq, i) => {
+              {FAQS_ES.map((faq, i) => {
                 const isOpen = openIndex === i
                 return (
                   <div
@@ -178,7 +178,7 @@ export default function TourMapFAQ() {
                           color: isOpen ? 'var(--orange, #e8541a)' : 'white',
                         }}
                       >
-                        {lang === 'es' ? faq.q_es : faq.q_en}
+                        {faq.q}
                       </span>
                       <span
                         style={{
@@ -202,7 +202,7 @@ export default function TourMapFAQ() {
                             margin: 0,
                           }}
                         >
-                          {lang === 'es' ? faq.a_es : faq.a_en}
+                          {faq.a}
                         </p>
                       </div>
                     )}
