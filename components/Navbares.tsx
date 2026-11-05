@@ -367,7 +367,7 @@ export default function Navbares({ esHref = '#', enHref = '#', lang: forceLang }
         </Link>
 
         {/* Contenedor con espacio optimizado (gap 1.1rem) para que quepan perfectamente los textos en español sin desacomodar */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.1rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.75rem', flexWrap: 'nowrap', justifyContent: 'flex-end' }}>
           {allNavLinks.map(link => (
             <DesktopNavLink key={link.href} link={link} />
           ))}
