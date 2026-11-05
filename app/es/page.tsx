@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Navbares from '@/components/Navbares'
 import HeroEs from '@/components/HeroEs'
 import AboutEs from '@/components/AboutEs'
-import Tours from '@/components/Tours'
+import Tours from '@/components/ToursEs'
 import Vehicles from '@/components/Vehicles'
 import WhyChooseUsEs from '@/components/WhyChooseUsEs'
 import MediaTabsViewer from '@/components/MediaTabsViewer'
@@ -108,7 +108,7 @@ export default async function EspanolHomePage() {
       <main>
         <HeroEs />
         <AboutEs />
-        <Tours />
+        <ToursEs />
         <Vehicles />
         <WhyChooseUsEs />
         <Testimonials testimonials={testimonials} />
