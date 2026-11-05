@@ -109,7 +109,7 @@ export default function HeroEs() {
           marginBottom: '1.2rem',
           textTransform: 'uppercase',
         }}>
-          Tours en cuatrimoto en San Miguel de Allende
+          SAN MIGUEL DE ALLENDE · MEXICO
         </div>
 
         {/* H1 SEO en Español (¡Aquí cambias el título principal!) */}
@@ -125,8 +125,8 @@ export default function HeroEs() {
           marginBottom: '1.5rem',
           textShadow: '0 4px 30px rgba(0,0,0,0.5)',
         }}>
-          TOURS EN CUATRIMOTO <br />
-          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>Y AVENTURAS OFF-ROAD EN RZR</span>
+          Tours en cuatrimoto en <br />
+          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>San Miguel de Allende</span>
         </h1>
 
         {/* Párrafo en Español */}
