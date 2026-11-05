@@ -1,48 +1,34 @@
 'use client'
 
-import { useLang } from '@/lib/i18n'
 import { useScrollReveal } from '@/lib/useScrollReveal'
 import { ShieldCheck, Users, Bike } from 'lucide-react'
 
-export default function WhyChooseUs() {
-  const { lang } = useLang()
-  useScrollReveal()
+type FeatureItem = {
+  icon: React.ReactNode
+  title: string
+  desc: string
+}
 
-  const features = [
-    {
-      icon: <ShieldCheck size={32} color="white" />,
-      title: {
-        en: 'Safety First',
-        es: 'Seguridad Ante Todo'
-      },
-      desc: {
-        en: 'We supply professional-grade helmets and safety gear with every booking. Our vehicles undergo strict daily maintenance checks, and our team provides thorough pre-ride instructions to guarantee a secure, well-organized trip.',
-        es: 'Proporcionamos cascos y equipo de seguridad de calidad profesional con cada reserva. Nuestros vehículos se someten a estrictas revisiones de mantenimiento diario y nuestro equipo ofrece instrucciones previas detalladas para garantizar un viaje seguro y bien organizado.'
-      }
-    },
-    {
-      icon: <Users size={32} color="white" />,
-      title: {
-        en: 'Bilingual Guides',
-        es: 'Guías Bilingües'
-      },
-      desc: {
-        en: 'Enjoy clear communication throughout your excursion. Our team is fluent in English and Spanish, offering deep local insights and continuous support from start to finish.',
-        es: 'Disfruta de una comunicación clara durante toda tu excursión. Nuestro equipo domina el inglés y el español, ofreciendo un profundo conocimiento local y apoyo continuo de principio a fin.'
-      }
-    },
-    {
-      icon: <Bike size={32} color="white" />,
-      title: {
-        en: 'Latest Model ATVs',
-        es: 'ATVs de Último Modelo'
-      },
-      desc: {
-        en: 'Ride with confidence on our modern fleet. We constantly renew our vehicles to ensure optimal comfort, responsive handling, and dependable engine performance on every trail.',
-        es: 'Conduce con confianza en nuestra flota moderna. Renovamos constantemente nuestros vehículos para garantizar un confort óptimo, un manejo receptivo y un rendimiento de motor confiable en cada sendero.'
-      }
-    }
-  ]
+const featuresEs: FeatureItem[] = [
+  {
+    icon: <ShieldCheck size={32} color="white" />,
+    title: 'Seguridad ante todo',
+    desc: 'Proporcionamos cascos y equipo de seguridad de calidad profesional con cada reserva. Nuestros vehículos se someten a estrictas revisiones de mantenimiento diario y nuestro equipo ofrece instrucciones previas detalladas para garantizar un viaje seguro y bien organizado.',
+  },
+  {
+    icon: <Users size={32} color="white" />,
+    title: 'Guías bilingües',
+    desc: 'Disfruta de una comunicación clara durante toda tu excursión. Nuestro equipo domina el inglés y el español, ofreciendo un profundo conocimiento local y apoyo continuo de principio a fin.',
+  },
+  {
+    icon: <Bike size={32} color="white" />,
+    title: 'Cuatrimotos de último modelo',
+    desc: 'Conduce con confianza en nuestra flota moderna. Renovamos constantemente nuestros vehículos para garantizar un confort óptimo, un manejo receptivo y un rendimiento de motor confiable en cada sendero.',
+  },
+]
+
+export default function WhyChooseUsEs() {
+  useScrollReveal()
 
   return (
     <section
@@ -66,11 +52,9 @@ export default function WhyChooseUs() {
             color: 'white',
             margin: 0,
           }}>
-            {lang === 'es' 
-              ? '¿Por qué elegir Guey Tours para tu aventura en ATV?' 
-              : 'Why Choose Guey Tours for Your ATV Adventure?'}
+            ¿Por qué elegir Guey Tours para tu aventura en cuatrimoto?
           </h2>
-          <div className="section-divider" style={{ marginTop: '0.8rem' }} />
+          <div className="section-divider" style={{ marginTop: '0.8rem', marginInline: 'auto' }} />
         </div>
 
         {/* Grid horizontal estilo fila */}
@@ -80,7 +64,7 @@ export default function WhyChooseUs() {
           gap: '2.5rem',
           alignItems: 'start',
         }}>
-          {features.map((item, i) => (
+          {featuresEs.map((item, i) => (
             <div
               key={i}
               className="reveal"
@@ -117,7 +101,7 @@ export default function WhyChooseUs() {
                   margin: 0,
                   textTransform: 'uppercase',
                 }}>
-                  {lang === 'es' ? item.title.es : item.title.en}
+                  {item.title}
                 </h3>
                 <p style={{
                   fontFamily: 'var(--font-body)',
@@ -126,7 +110,7 @@ export default function WhyChooseUs() {
                   lineHeight: 1.5,
                   margin: 0,
                 }}>
-                  {lang === 'es' ? item.desc.es : item.desc.en}
+                  {item.desc}
                 </p>
               </div>
             </div>
