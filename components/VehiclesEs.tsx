@@ -30,7 +30,7 @@ const manualVehiclesEs: VehicleCard[] = [
     videoTitle: 'Cuatrimoto Roja para tours en cuatrimoto por Guey Tours',
   },
   {
-    slug: 'rzr',
+    slug: 'rzr-rental',
     video_url: 'images/SEO-ES/RZR para cuatro personas que se usa en Tours de cuatrimoto.mp4',
     name: 'RZR',
     price: '$2,950 MXN por hora',
