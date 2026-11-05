@@ -17,53 +17,53 @@ type TourCard = {
 const manualToursEs: TourCard[] = [
   {
     id: 'city-tour',
-    title: 'City Tour',
+    title: 'Tour por el Centro histórico',
     description: 'Descubre el corazón histórico y las afueras vibrantes de la ciudad en una ruta accesible que combina la cultura local con un manejo ligero y panorámico. Perfecto para una introducción al aire libre rápida y envolvente.',
     duration: '1.5 HRS',
     url: 'https://www.gueytours.com/tours/tour-el-centro-san-miguel',
-    image: '/images/SEO/Guey Tours Combine ATV Tours with a Fun City Tour Adventure.webp',
-    imgTitle: 'Guey Tours Combine ATV Tours with a Fun City Tour Adventure',
-    imgAlt: 'Two women in goggles enjoying a Guey Tours City Tour on an ATV, blending thrills with an ATV Tours experience.',
+    image: '/images/SEO-ES/Guey Tours combina tours en cuatrimoto con una divertida aventura de tour por la Ciudad.webp',
+    imgTitle: 'Guey Tours combina tours en cuatrimoto con una divertida aventura de tour por la Ciudad',
+    imgAlt: 'Dos mujeres con gafas disfrutando de un tour por la ciudad de Guey Tours en un cuatrimoto por San Miguel de Allende.',
   },
   {
     id: 'san-miguel-buggy-tour',
-    title: 'San Miguel Buggy Tour',
+    title: 'Tour en cuatrimoto por San Miguel de Allende',
     description: 'Experimenta la emoción de un recorrido en buggy por senderos abiertos. Este tour ofrece una forma cómoda pero atrevida de navegar por caminos polvorientos y espacios panorámicos abiertos.',
     duration: '2 HRS',
     url: 'https://www.gueytours.com/tours/san-miguel-viejo',
-    image: '/images/SEO/Guey Tours Discover History on ATV Tours & San Miguel Buggy Tour.webp',
-    imgTitle: 'Guey Tours: Discover History on ATV Tours & San Miguel Buggy Tour',
-    imgAlt: 'Two women posing in an ancient stone archway during their Guey Tours ATV Tours and San Miguel Buggy Tour adventure.',
+    image: '/images/SEO-ES/Guey Tours - Descubre la historia en tours en cuatrimoto y tours en Buggy por San Miguel.webp',
+    imgTitle: 'Guey Tours: Descubre la historia en tours en cuatrimoto y tours en Buggy por San Miguel',
+    imgAlt: 'Dos mujeres posando en un antiguo arco de piedra durante su aventura de Guey Tours con tours en cuatrimoto y San Miguel Buggy tour.',
   },
   {
     id: 'atotonilco',
-    title: 'Atotonilco ATV Tour',
+    title: 'Tour en cuatrimoto en Atotonilco',
     description: 'Cabalga hacia el icónico santuario de Atotonilco. Esta ruta ofrece una combinación única de monumentos históricos y terreno dinámico que mantiene tu energía al máximo.',
     duration: '2 HRS',
     url: 'https://www.gueytours.com/tours/atotonilco',
-    image: '/images/SEO/Guey Tours Atotonilco Sightseeing on UTV & ATV Tours.webp',
-    imgTitle: 'Guey Tours: Atotonilco Sightseeing on UTV & ATV Tours',
-    imgAlt: 'A gray Can-Am UTV, part of the Guey Tours ATV Tours fleet, parked in front of the historic Atotonilco church.',
+    image: '/images/SEO-ES/Guey Tours - Tours en cuatrimoto por Atotonilco en UTV.webp',
+    imgTitle: 'Guey Tours: Tours en cuatrimoto por Atotonilco en UTV',
+    imgAlt: 'Un UTV gris Can-Am, parte de la flota de Tours en cuatrimoto de Guey Tours, estacionado frente a la histórica iglesia de Atotonilco.',
   },
   {
     id: 'atascadero',
-    title: 'Atascadero ATV Tour',
+    title: 'Tour en cuatrimoto en Atascadero',
     description: 'Navega a través de encantadoras calles históricas y caminos empedrados tradicionales. Esta ruta combina la arquitectura colonial local con un paseo atractivo y dinámico a través de pintorescos vecindarios urbanos.',
     duration: '2 HRS',
     url: 'https://www.gueytours.com/tours/atascadero',
-    image: '/images/SEO/Guey Tours ATV Tours and Convoy Riding through Atascadero.webp',
-    imgTitle: 'Guey Tours: ATV Tours and Convoy Riding through Atascadero',
-    imgAlt: 'A caravan of ATVs driving down a cobblestone street in Atascadero during a Guey Tours ATV Tours excursion.',
+    image: '/images/SEO-ES/Guey Tours - Tours en cuatrimoto y Paseos en Convoy por Atascadero.webp',
+    imgTitle: ' Guey Tours: Tours en cuatrimoto y Paseos en Convoy por Atascadero',
+    imgAlt: 'Una caravana de ATVs conduciendo por una calle empedrada en Atascadero durante una excursión de Guey Tours.',
   },
   {
     id: 'agua-espinoza',
-    title: 'Agua Espinosa ATV Tour',
+    title: 'Tour en cuatrimoto en Agua Espinosa',
     description: 'Sumérgete en paisajes exuberantes esculpidos por el agua. Este sendero panorámico te obsequia diversos terrenos, vegetación rica y gratificantes miradores naturales.',
     duration: '2 HRS',
     url: 'https://www.gueytours.com/tours/agua-espinoza',
-    image: '/images/SEO/Guey Tours Exploring Agua Espinoza on Exciting ATV Tours.webp',
-    imgTitle: 'Guey Tours Exploring Agua Espinoza on Exciting ATV Tours',
-    imgAlt: 'A group of riders on red ATVs, led by Guey Tours, on a dusty trail through the arid landscape of Agua Espinosa.',
+    image: '/images/SEO-ES/Guey Tours Explorando Agua Espinoza en Emocionantes Tours en cuatrimoto.webp',
+    imgTitle: 'Guey Tours Explorando Agua Espinoza en Emocionantes Tours en cuatrimoto',
+    imgAlt: 'Un grupo de motociclistas en tours en cuatrimoto, liderados por Guey Tours, en un sendero polvoriento a través del árido paisaje de Agua Espinoza.',
   },
 ]
 
@@ -100,7 +100,7 @@ export default function ToursEs() {
             textTransform: 'uppercase',
             marginBottom: '1rem',
           }}>
-            Explora Nuestros Tours en Cuatrimoto en San Miguel de Allende
+            Explora nuestros tours en cuatrimoto en San Miguel de Allende
           </h2>
           <p style={{
             color: 'rgba(255,255,255,0.75)',
@@ -190,7 +190,7 @@ export default function ToursEs() {
                   </p>
                 </div>
 
-                {/* Book Now Button (Mantiene el link intacto a la pasarela original) */}
+                {/* Book Now Button */}
                 <div style={{ paddingTop: '0.8rem' }}>
                   <a
                     href={tour.url}
