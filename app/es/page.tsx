@@ -108,8 +108,8 @@ export default async function EspanolHomePage() {
       <main>
         <HeroEs />
         <AboutEs />
-        <Tours tours={tours} />
-        <Vehicles vehicles={vehicles} />
+        <Tours />
+        <Vehicles />
         <WhyChooseUsEs />
         <Testimonials testimonials={testimonials} />
         <MediaTabsViewer videos={videos} images={images} />
