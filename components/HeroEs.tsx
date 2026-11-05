@@ -1,10 +1,8 @@
 'use client'
 
-import { useLang } from '@/lib/i18n'
 import { useEffect, useRef } from 'react'
 
-export default function Hero() {
-  const { t } = useLang()
+export default function HeroEs() {
   const textRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -100,7 +98,7 @@ export default function Hero() {
           marginTop: '190px',
         }}
       >
-        {/* Badge traducible */}
+        {/* Badge traducido */}
         <div style={{
           display: 'inline-block',
           color: 'var(--orange)',
@@ -111,10 +109,10 @@ export default function Hero() {
           marginBottom: '1.2rem',
           textTransform: 'uppercase',
         }}>
-          {t('hero.location')}
+          Tours en cuatrimoto en San Miguel de Allende
         </div>
 
-        {/* H1 SEO Traducible */}
+        {/* H1 SEO en Español (¡Aquí cambias el título principal!) */}
         <h1 style={{
           fontFamily: '"cheddar-gothic-rough", sans-serif',
           fontWeight: 400,
@@ -127,11 +125,11 @@ export default function Hero() {
           marginBottom: '1.5rem',
           textShadow: '0 4px 30px rgba(0,0,0,0.5)',
         }}>
-          {t('hero.title_part1')} <br />
-          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>{t('hero.title_part2')}</span>
+          TOURS EN CUATRIMOTO <br />
+          <span style={{ color: 'var(--orange)', fontSize: '0.8em' }}>Y AVENTURAS OFF-ROAD EN RZR</span>
         </h1>
 
-        {/* Párrafo Traducible */}
+        {/* Párrafo en Español */}
         <p style={{
           fontFamily: 'var(--font-body)',
           fontWeight: 300,
@@ -141,18 +139,18 @@ export default function Hero() {
           maxWidth: '640px',
           lineHeight: 1.6,
         }}>
-          {t('hero.paragraph1')}
+          ¿Listo para explorar San Miguel de Allende más allá de las típicas calles empedradas? En Guey Tours, te ofrecemos emocionantes tours en cuatrimoto y tours de aventura todoterreno inolvidables diseñados para la máxima emoción y seguridad.
           <br /><br />
-          {t('hero.paragraph2')}
+          Ya sea que quieras tours guiados en cuatrimoto o tours privados personalizados, descubre la región con nosotros hoy mismo.
         </p>
 
-        {/* Botones traducibles */}
+        {/* Botones traducidos */}
         <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap' }}>
           <a href="#tours" className="hero-btn-primary">
-            {t('hero.cta1')}
+            Ver todos los tours
           </a>
           <a href="https://www.gueytours.com/contact" className="hero-btn-outline">
-            {t('hero.cta2')}
+             Solicitar una cotización
           </a>
         </div>
       </div>
@@ -186,17 +184,17 @@ export default function Hero() {
           <span style={{ marginLeft: '4px', fontWeight: 500 }}>Google</span>
         </div>
         <div style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: '1.9rem', color: '#00e676', lineHeight: 1.2, margin: '2px 0' }}>
-          {t('hero.google_count')}
+          +500
         </div>
         <div style={{ fontFamily: 'sans-serif', fontSize: '0.95rem', fontWeight: 700, color: '#111', letterSpacing: '0.01em', marginBottom: '4px' }}>
-          {t('hero.google_text')}
+          RESEÑAS DE 5 ESTRELLAS
         </div>
         <div style={{ color: '#FBBC05', fontSize: '1.1rem', letterSpacing: '3px', lineHeight: 1 }}>
           ★★★★★
         </div>
       </div>
 
-      {/* Estilos CSS adaptados para móvil y escritorio */}
+      {/* Estilos CSS */}
       <style jsx>{`
         .hero-btn-primary, .hero-btn-outline {
           padding: 0.9rem 2.2rem;
@@ -221,16 +219,16 @@ export default function Hero() {
           .hero-content-box {
             padding: 0 1.5rem 3rem 1.5rem !important;
             text-align: left !important;
-            margin-top: 130px !important; /* Baja el contenido para despegarlo del logo de arriba */
+            margin-top: 130px !important;
           }
           .hero-content-box h1 {
-            font-size: 2.4rem !important; /* Evita que el título se sature en pantallas chicas */
+            font-size: 2.4rem !important;
           }
           .hero-content-box div[style*="display: 'flex'"] {
             justify-content: flex-start !important;
           }
           .hidden-mobile {
-            display: none !important; /* Oculta la caja estorbosa de Google en móviles */
+            display: none !important;
           }
         }
       `}</style>
