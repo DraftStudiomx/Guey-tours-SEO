@@ -28,7 +28,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     <>
       <Navbares 
         esHref="/es/renta-de-rzr" 
-        enHref="/rzr-rental" 
+        enHref="/rsz-rentals" 
         lang="es"
       />
       <main style={{
@@ -936,7 +936,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     {/* Etiqueta img SEO oculta */}
     <img 
-      src="/images/SEO-ES/happy-child-on-atv-rzr-rentals.webp" 
+      src="/images/happy-child-on-atv-rzr-rentals.webp" 
       alt="Niño feliz usando casco y gafas multicolores en una cuatrimoto ATV roja, sonriendo y saludando en una calle colonial." 
       title="Experiencia de aventura familiar con renta de RZR y paseo en ATV."
       style={{ display: 'none' }}
