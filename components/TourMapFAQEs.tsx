@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useScrollReveal } from '@/lib/useScrollReveal'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const FAQS_ES = [
   {
@@ -30,28 +31,32 @@ const FAQS_ES = [
   },
   {
     q: '¿Dónde puedo reservar tours en cuatrimoto en San Miguel de Allende?',
-    a: 'En Guey Tours puedes solicitar información y reservar tours en cuatrimoto para explorar los paisajes y atractivos de San Miguel de Allende. Consulta las opciones disponibles, horarios y requisitos para elegir la experiencia que mejor se adapte a ti.',
+    a: 'En Guey Tours puedes solicitar información y reservar tours en cuatrimoto para explorar los paisajes y atractivos de San Miguel de Allende.',
   },
   {
     q: '¿Cuánto cuesta un tour en cuatrimoto?',
-    a: 'El precio de un tour en cuatrimoto depende de la duración del recorrido, la ruta y el tipo de experiencia. En Guey Tours puedes consultar las opciones disponibles y solicitar información para conocer el costo de tu recorrido.',
+    a: 'El precio de un tour en cuatrimoto depende de la duración del recorrido, la ruta y el tipo de experiencia.',
   },
   {
     q: '¿Qué incluyen los tours de aventura?',
-    a: 'Los tours en cuatrimoto pueden incluir el uso de la unidad, recorrido guiado y recomendaciones de seguridad antes de comenzar. Los servicios específicos varían según la experiencia contratada, por lo que conviene confirmar qué contempla cada recorrido.',
+    a: 'Los tours en cuatrimoto pueden incluir el uso de la unidad, recorrido guiado y recomendaciones de seguridad antes de comenzar.',
   },
   {
     q: '¿Necesito experiencia previa para manejar una cuatrimoto?',
-    a: 'No necesariamente. Algunas experiencias están diseñadas para principiantes e incluyen indicaciones básicas antes del recorrido. En Guey Tours puedes consultar los requisitos de edad, conducción y seguridad para participar en los tours en cuatrimoto.',
+    a: 'No necesariamente. Algunas experiencias están diseñadas para principiantes e incluyen indicaciones básicas antes del recorrido.',
   },
 ]
 
 export default function TourMapFAQEs() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
   useScrollReveal()
 
-  const toggle = (i: number) => {
-    setOpenIndex(prev => (prev === i ? null : i))
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? FAQS_ES.length - 1 : prev - 1))
+  }
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === FAQS_ES.length - 1 ? 0 : prev + 1))
   }
 
   return (
@@ -101,7 +106,6 @@ export default function TourMapFAQEs() {
                 fontSize: '1rem',
                 lineHeight: 1.7,
                 margin: 0,
-                whiteSpace: 'pre-line',
               }}
             >
               Nuestros viajes comienzan aquí mismo en San Miguel de Allende, ramificándose a través de diversos ecosistemas locales y senderos montañosos.
@@ -129,86 +133,142 @@ export default function TourMapFAQEs() {
             </div>
           </div>
 
-          {/* Columna Derecha: Preguntas Frecuentes */}
-          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {/* Columna Derecha: Carrusel de Preguntas */}
+          <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
                 fontSize: '2rem',
                 color: 'white',
                 textTransform: 'uppercase',
-                margin: '0 0 1rem 0',
+                margin: 0,
               }}
             >
               PREGUNTAS FRECUENTES
             </h2>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              {FAQS_ES.map((faq, i) => {
-                const isOpen = openIndex === i
-                return (
-                  <div
-                    key={i}
-                    style={{
-                      background: isOpen ? 'rgba(232,84,26,0.06)' : 'rgba(255,255,255,0.03)',
-                      border: `1px solid ${isOpen ? 'rgba(232,84,26,0.35)' : 'rgba(255,255,255,0.07)'}`,
-                      borderRadius: '6px',
-                    }}
-                  >
+            {/* Tarjeta del Carrusel */}
+            <div
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(232,84,26,0.3)',
+                borderRadius: '12px',
+                padding: '2rem',
+                minHeight: '260px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                position: 'relative',
+              }}
+            >
+              <div>
+                <span
+                  style={{
+                    color: 'var(--orange, #e8541a)',
+                    fontSize: '0.8rem',
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 700,
+                    letterSpacing: '0.1em',
+                  }}
+                >
+                  PREGUNTA {currentIndex + 1} DE {FAQS_ES.length}
+                </span>
+
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.15rem',
+                    color: 'white',
+                    marginTop: '0.6rem',
+                    marginBottom: '1rem',
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {FAQS_ES[currentIndex].q}
+                </h3>
+
+                <p
+                  style={{
+                    color: 'rgba(255,255,255,0.75)',
+                    fontSize: '0.92rem',
+                    lineHeight: 1.6,
+                    margin: 0,
+                  }}
+                >
+                  {FAQS_ES[currentIndex].a}
+                </p>
+              </div>
+
+              {/* Controles de Navegación (Flechas y Puntos) */}
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginTop: '1.5rem',
+                  paddingTop: '1rem',
+                  borderTop: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                {/* Indicadores de Puntos */}
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  {FAQS_ES.map((_, dotIdx) => (
                     <button
-                      onClick={() => toggle(i)}
+                      key={dotIdx}
+                      onClick={() => setCurrentIndex(dotIdx)}
                       style={{
-                        width: '100%',
-                        background: 'none',
+                        width: dotIdx === currentIndex ? '18px' : '6px',
+                        height: '6px',
+                        borderRadius: '3px',
+                        background: dotIdx === currentIndex ? 'var(--orange, #e8541a)' : 'rgba(255,255,255,0.2)',
                         border: 'none',
                         cursor: 'pointer',
-                        padding: '1.2rem 1.5rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: '1rem',
-                        textAlign: 'left',
+                        transition: 'all 0.3s ease',
                       }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: 'var(--font-heading)',
-                          fontWeight: 700,
-                          fontSize: '0.95rem',
-                          color: isOpen ? 'var(--orange, #e8541a)' : 'white',
-                        }}
-                      >
-                        {faq.q}
-                      </span>
-                      <span
-                        style={{
-                          color: isOpen ? 'var(--orange, #e8541a)' : 'rgba(255,255,255,0.5)',
-                          transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
-                          transition: 'transform 0.3s',
-                          fontSize: '1.2rem',
-                        }}
-                      >
-                        +
-                      </span>
-                    </button>
+                    />
+                  ))}
+                </div>
 
-                    {isOpen && (
-                      <div style={{ padding: '0 1.5rem 1.2rem' }}>
-                        <p
-                          style={{
-                            color: 'rgba(255,255,255,0.7)',
-                            fontSize: '0.9rem',
-                            lineHeight: 1.7,
-                            margin: 0,
-                          }}
-                        >
-                          {faq.a}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )
-              })}
+                {/* Botones Flecha */}
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <button
+                    onClick={prevSlide}
+                    aria-label="Anterior"
+                    style={{
+                      background: 'rgba(255,255,255,0.08)',
+                      border: 'none',
+                      borderRadius: '50%',
+                      width: '36px',
+                      height: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    aria-label="Siguiente"
+                    style={{
+                      background: 'var(--orange, #e8541a)',
+                      border: 'none',
+                      borderRadius: '50%',
+                      width: '36px',
+                      height: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
