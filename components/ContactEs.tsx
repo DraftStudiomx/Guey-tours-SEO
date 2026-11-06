@@ -68,7 +68,7 @@ export default function ContactEs() {
               {[
                 {
                   icon: MapPin,
-                  label: 'San Miguel de Allende, Guanajuato, México',
+                  label: 'Calle Refugio Sur #52, Colonia San Antonio, San Miguel de Allende, Guanajuato, Mexico',
                 },
                 {
                   icon: Mail,
