@@ -9,7 +9,7 @@ import About from '@/components/About'
 import Testimonials from '@/components/Testimonials'
 import Gallery from '@/components/Gallery'
 import Contact from '@/components/Contact'
-import FooterEs from '@/components/FooterEs' // <-- NUEVO: Footer en español
+import Footer from '@/components/Footer' // <-- NUEVO: Footer en español
 import Chatbot from '@/components/ChatWidget'
 import { client } from '@/lib/sanity'
 import VideoGallery from '@/components/VideoGallery'
