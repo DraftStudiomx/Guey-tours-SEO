@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Renta un RZR en San Miguel de Allende y explora senderos todoterreno, caminos rurales y paisajes naturales. Reserva tu aventura en RZR con Guey Tours.',
   keywords: ['renta de rzr'],
   alternates: {
-    canonical: 'https://gueytours.com/es/rzr-rental',
+    canonical: 'https://gueytours.com/es/renta-de-rzr',
     languages: {
       'en': 'https://gueytours.com/rzr-rental',
       'es': 'https://gueytours.com/es/renta-de-rzr',
