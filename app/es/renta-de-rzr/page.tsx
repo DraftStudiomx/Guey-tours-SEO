@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://gueytours.com/es/renta-de-rzr',
     languages: {
-      'en': 'https://gueytours.com/rzr-rental',
+      'en': 'https://gueytours.com/rsz-rentals',
       'es': 'https://gueytours.com/es/renta-de-rzr',
-      'x-default': 'https://gueytours.com/renta-de-rzr',
+      'x-default': 'https://gueytours.com/rsz-rentals',
     },
   },
   openGraph: {
