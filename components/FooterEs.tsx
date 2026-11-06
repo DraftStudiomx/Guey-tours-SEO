@@ -1,6 +1,5 @@
 'use client'
 
-import { useLang } from '@/lib/i18n'
 import Image from 'next/image'
 
 const FacebookIcon = () => (
@@ -46,9 +45,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   )
 }
 
-export default function Footer() {
-  const { t, lang } = useLang()
-
+export default function FooterEs() {
   return (
     <footer style={{
       background: '#0a0a0a',
@@ -75,15 +72,15 @@ export default function Footer() {
 
         {/* Centre links */}
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
-        
-          <FooterLink href="/privacy">
-            {lang === 'es' ? 'Privacidad' : 'Privacy Policy'}
+          
+          <FooterLink href="/es/privacy">
+            Privacidad
           </FooterLink>
-          <FooterLink href="/terms">
-            {lang === 'es' ? 'Términos' : 'Terms & Conditions'}
+          <FooterLink href="/es/terms">
+            Términos
           </FooterLink>
           <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.8rem' }}>
-            {t('footer.rights')}
+            © {new Date().getFullYear()} Guey Tours. Todos los derechos reservados.
           </span>
         </div>
 
