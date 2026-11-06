@@ -53,7 +53,7 @@ interface NavbaresProps {
 }
 
 export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
-  const { lang, setLang, t } = useLang()
+  const { lang, setLang } = useLang()
   
   const currentLang = forceLang || lang || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es') ? 'es' : 'en');
   const isEs = currentLang === 'es';
@@ -80,24 +80,24 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
   const p = isEs ? '/es' : '';
 
   const toursChildren = [
-    { label: isEs ? 'Renta de ATV' : 'ATV Rentals', href: `${p}/atv-rentals` },
-    { label: isEs ? 'San Miguel de Allende' : 'San Miguel de Allende', href: `${p}/san-miguel-de-allende-tours` },
-    { label: isEs ? 'Rentas de RZR' : 'RZR Rentals', href: `${p}/rsz-rentals` },
-    { label: isEs ? 'Aventura todoterreno en Guanajuato' : 'Off-road adventure in Guanajuato', href: `${p}/off-road` },
-    { label: isEs ? 'Tours Guanajuato' : 'Tours Guanajuato', href: `${p}/tours-guanajuato` },
-    { label: isEs ? 'UTV' : 'UTV', href: `${p}/utv` },
-    { label: isEs ? 'Tours in cuatrimoto' : 'ATV tours', href: `${p}/tours-in-cuatrimoto` },
+    { label: 'Renta de ATV', href: `${p}/atv-rentals` },
+    { label: 'San Miguel de Allende', href: `${p}/tours-en-san-miguel-de-allende` },
+    { label: 'Rentas de RZR', href: `${p}/renta-de-rzr` },
+    { label: 'Aventura todoterreno en Guanajuato', href: `${p}/off-road` },
+    { label: 'Tours Guanajuato', href: `${p}/tours-guanajuato` },
+    { label: 'UTV', href: `${p}/utv` },
+    { label: 'Tours en cuatrimoto', href: `${p}/tours-en-cuatrimoto` },
   ]
 
   const allNavLinks = [
-    { label: isEs ? 'TOURS' : t('nav.tours'), href: `${p}/#tours`, children: toursChildren },
-    { label: isEs ? 'PRIVATE EXPERIENCES' : 'PRIVATE EXPERIENCES', href: `${p}/#private-experiences` },
-    { label: isEs ? 'NOSOTROS' : t('nav.about'), href: `${p}/#about` },
-    { label: isEs ? 'GALERÍA' : t('nav.gallery'), href: `${p}/gallery` },
-    { label: isEs ? 'TESTIMONIOS' : t('nav.testimonials'), href: `${p}/#testimonials` },
-    { label: isEs ? 'BLOG' : t('nav.blog'), href: `${p}/blog` },
-    { label: isEs ? 'FAQS' : 'FAQS', href: `${p}/#faqs` },
-    { label: isEs ? 'CONTACTO' : t('nav.contact'), href: `${p}/contact` },
+    { label: 'TOURS', href: `${p}/#tours`, children: toursChildren },
+    { label: 'EXPERIENCIAS PRIVADAS', href: `${p}/#private-experiences` },
+    { label: 'NOSOTROS', href: `${p}/#about` },
+    { label: 'GALERÍA', href: `${p}/gallery` },
+    { label: 'TESTIMONIOS', href: `${p}/#testimonials` },
+    { label: 'BLOG', href: `${p}/blog` },
+    { label: 'FAQS', href: `${p}/#faqs` },
+    { label: 'CONTACTO', href: `${p}/contact` },
   ]
 
   const linkStyle: React.CSSProperties = {
