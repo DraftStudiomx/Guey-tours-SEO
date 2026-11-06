@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_MX',
-    url: 'https://www.gueytours.com/es/rzr-rental',
+    url: 'https://www.gueytours.com/es/renta-de-rzr',
     siteName: 'Guey Tours',
     title: 'Renta de RZR en San Miguel de Allende | Guey Tours',
     description: 'Renta un RZR en San Miguel de Allende y explora caminos off-road, rutas rurales y paisajes naturales. ¡Reserva tu aventura!',
