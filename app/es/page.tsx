@@ -7,7 +7,7 @@ import VehiclesEs from '@/components/VehiclesEs'
 import WhyChooseUsEs from '@/components/WhyChooseUsEs'
 import MediaTabsViewer from '@/components/MediaTabsViewer'
 import TourMapFAQEs from '@/components/TourMapFAQEs'
-import Testimonials from '@/components/Testimonials'
+import TestimonialsEs from '@/components/TestimonialsEs'
 import ContactEs from '@/components/ContactEs'
 import FooterEs from '@/components/FooterEs'
 import Chatbot from '@/components/ChatWidget'
@@ -111,7 +111,7 @@ export default async function EspanolHomePage() {
         <ToursEs />
         <VehiclesEs />
         <WhyChooseUsEs />
-        <Testimonials testimonials={testimonials} />
+        <TestimonialsEs testimonials={testimonials} />
         <MediaTabsViewer videos={videos} images={images} />
         <TourMapFAQEs />
         <ContactEs />
