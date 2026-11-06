@@ -228,7 +228,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
         {/* Inicio de section tres */}
 <section style={{
-  padding: '6rem 2rem 6rem 2rem',
+  padding: 'clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 2rem)',
   marginTop: '3rem',
   background: 'linear-gradient(180deg, #0b0b0b 0%, rgba(217, 119, 54, 0.04) 100%)',
   color: '#fff',
@@ -240,20 +240,18 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     margin: '0 auto'
   }}>
     
-    {/* Título H2 en color naranja cobrizo exacto */}
-    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+    {/* Encabezado H2 */}
+    <div style={{ textAlign: 'center', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
       <h2 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+        fontSize: 'clamp(1.8rem, 4vw, 3rem)',
         color: 'var(--orange, #d97736)',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         margin: '0 0 1rem 0',
         lineHeight: 1.2
       }}>
-        {lang === 'es' 
-          ? 'Explora los senderos todoterreno de San Miguel en RZR' 
-          : "Explore San Miguel's Off-Road Trails by RZR"}
+        Explora los senderos todoterreno de San Miguel en RZR
       </h2>
       <div style={{
         width: '80px',
@@ -264,89 +262,73 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }} />
     </div>
 
-    {/* Párrafo introductorio con bloque destacado */}
+    {/* Bloque introductorio destacado */}
     <div style={{
       background: 'rgba(255, 255, 255, 0.02)',
       borderLeft: '4px solid var(--orange, #d97736)',
       borderRadius: '0 16px 16px 0',
-      padding: '2.5rem 3rem',
+      padding: 'clamp(1.5rem, 4vw, 2.5rem) clamp(1.2rem, 4vw, 3rem)',
       marginBottom: '3.5rem',
       boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
       backdropFilter: 'blur(10px)'
     }}>
       <p style={{
         fontFamily: 'sans-serif',
-        fontStyle: 'normal',
         fontWeight: '400',
         color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
+        fontSize: 'clamp(1rem, 2.5vw, 1.125rem)',
         lineHeight: 1.8,
         margin: '0 0 1.5rem 0'
       }}>
-        {lang === 'es'
-          ? 'Una renta de RZR te da la oportunidad de dejar atrás las rutas turísticas tradicionales y explorar caminos rurales, paisajes naturales y terrenos todoterreno alrededor de San Miguel de Allende.'
-          : 'A RZR rental gives you the opportunity to leave the traditional tourist routes behind and explore rural roads, natural landscapes and off-road terrain around San Miguel de Allende.'}
+        Una renta de RZR te da la oportunidad de dejar atrás las rutas turísticas tradicionales y explorar caminos rurales, paisajes naturales y terrenos todoterreno alrededor de San Miguel de Allende.
       </p>
       <p style={{
         fontFamily: 'sans-serif',
-        fontStyle: 'normal',
         fontWeight: '400',
         color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
+        fontSize: 'clamp(1rem, 2.5vw, 1.125rem)',
         lineHeight: 1.8,
         margin: 0
       }}>
-        {lang === 'es'
-          ? 'En lugar de pasar todo tu viaje en la ciudad, puedes experimentar la región circundante desde el asiento del conductor.'
-          : 'Instead of spending your entire trip in the city, you can experience the surrounding region from behind the wheel.'}
+        En lugar de pasar todo tu viaje en la ciudad, puedes experimentar la región circundante desde el asiento del conductor.
       </p>
     </div>
 
-    {/* Subtítulo para la sección de ideales */}
+    {/* Subtítulo H3 */}
     <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
       <h3 style={{
         fontFamily: 'var(--font-heading)',
-        fontSize: '1.4rem',
+        fontSize: 'clamp(1.2rem, 3vw, 1.4rem)',
         color: 'rgba(255, 255, 255, 0.9)',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         margin: 0
       }}>
-        {lang === 'es' ? 'Las aventuras en RZR son ideales para:' : 'RZR adventures are ideal for:'}
+        Las aventuras en RZR son ideales para
       </h3>
     </div>
 
-    {/* Cuadrícula de tarjetas con las 5 opciones (primeras 3 en diseño normal) */}
+    {/* Primeras 3 tarjetas de la lista */}
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
       gap: '1.5rem',
       marginBottom: '1.5rem'
     }}>
       {[
-        {
-          es: 'Parejas que buscan una experiencia al aire libre',
-          en: 'Couples looking for an outdoor experience.'
-        },
-        {
-          es: 'Familias que quieren explorar juntas',
-          en: 'Families who want to explore together.'
-        },
-        {
-          es: 'Grupos de amigos que buscan aventura',
-          en: 'Groups of friends seeking adventure.'
-        }
+        'Parejas que buscan una experiencia al aire libre',
+        'Familias que quieren explorar juntas',
+        'Grupos de amigos que buscan aventura'
       ].map((item, index) => (
         <div key={index} style={{
           background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.03) 100%)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
           borderRadius: '14px',
-          padding: '2rem 1.8rem',
+          padding: 'clamp(1.2rem, 3vw, 2rem) clamp(1rem, 3vw, 1.8rem)',
           boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
           display: 'flex',
           alignItems: 'center',
-          gap: '1.2rem',
-          transition: 'transform 0.3s ease, border-color 0.3s ease'
+          gap: '1.2rem'
         }}>
           <div style={{
             minWidth: '38px',
@@ -365,22 +347,21 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
           <span style={{
             fontFamily: 'sans-serif',
-            fontStyle: 'normal',
             fontWeight: '400',
             color: 'rgba(255, 255, 255, 0.85)',
-            fontSize: '18px',
+            fontSize: 'clamp(0.95rem, 2vw, 1.125rem)',
             lineHeight: 1.4
           }}>
-            {lang === 'es' ? item.es : item.en}
+            {item}
           </span>
         </div>
       ))}
     </div>
 
-    {/* Cuadrícula inferior para las últimas 2 tarjetas centradas automáticamente */}
+    {/* Últimas 2 tarjetas centradas */}
     <div style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
       gap: '1.5rem',
       marginBottom: '3.5rem',
       justifyContent: 'center',
@@ -388,25 +369,18 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       marginInline: 'auto'
     }}>
       {[
-        {
-          es: 'Viajeros interesados en la conducción todoterreno',
-          en: 'Travelers interested in off-road driving.'
-        },
-        {
-          es: 'Visitantes que quieren descubrir paisajes más allá del centro histórico',
-          en: 'Visitors who want to discover landscapes beyond the historic center.'
-        }
+        'Viajeros interesados en la conducción todoterreno',
+        'Visitantes que quieren descubrir paisajes más allá del centro histórico'
       ].map((item, index) => (
         <div key={index + 3} style={{
           background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(217, 119, 54, 0.03) 100%)',
           border: '1px solid rgba(217, 119, 54, 0.25)',
           borderRadius: '14px',
-          padding: '2rem 1.8rem',
+          padding: 'clamp(1.2rem, 3vw, 2rem) clamp(1rem, 3vw, 1.8rem)',
           boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
           display: 'flex',
           alignItems: 'center',
-          gap: '1.2rem',
-          transition: 'transform 0.3s ease, border-color 0.3s ease'
+          gap: '1.2rem'
         }}>
           <div style={{
             minWidth: '38px',
@@ -425,33 +399,31 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           </div>
           <span style={{
             fontFamily: 'sans-serif',
-            fontStyle: 'normal',
             fontWeight: '400',
             color: 'rgba(255, 255, 255, 0.85)',
-            fontSize: '18px',
+            fontSize: 'clamp(0.95rem, 2vw, 1.125rem)',
             lineHeight: 1.4
           }}>
-            {lang === 'es' ? item.es : item.en}
+            {item}
           </span>
         </div>
       ))}
     </div>
 
-    {/* Tarjeta de cierre sobre la ventaja de Guey Tours */}
+    {/* Tarjeta de La ventaja de Guey Tours */}
     <div style={{
       background: 'rgba(217, 119, 54, 0.07)',
       border: '1px solid rgba(217, 119, 54, 0.4)',
       borderRadius: '16px',
-      padding: '2.5rem 3rem',
+      padding: 'clamp(1.5rem, 4vw, 2.5rem) clamp(1.2rem, 4vw, 3rem)',
       boxShadow: '0 15px 35px rgba(0,0,0,0.5)',
       textAlign: 'center'
     }}>
       <p style={{
         fontFamily: 'sans-serif',
-        fontStyle: 'normal',
         fontWeight: '400',
         color: 'rgba(255, 255, 255, 0.85)',
-        fontSize: '18px',
+        fontSize: 'clamp(1rem, 2.5vw, 1.125rem)',
         lineHeight: 1.8,
         margin: 0
       }}>
@@ -463,11 +435,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           letterSpacing: '0.08em', 
           fontSize: '0.95rem' 
         }}>
-          {lang === 'es' ? 'La Ventaja de Guey Tours' : 'The Guey Tours Advantage'}
+          La ventaja de Guey Tours
         </strong>
-        {lang === 'es'
-          ? 'Una de las ventajas de elegir a Guey Tours es el conocimiento local de la zona. Comprender los caminos y los paisajes circundantes puede ayudar a que tu experiencia todoterreno sea más agradable y memorable.'
-          : 'One of the advantages of choosing Guey Tours is the local knowledge of the area. Understanding the roads and surrounding landscapes can help make your off-road experience more enjoyable and memorable.'}
+        Una de las ventajas de elegir a Guey Tours es el conocimiento local de la zona. Comprender los caminos y los paisajes circundantes puede ayudar a que tu experiencia todoterreno sea más agradable y memorable.
       </p>
     </div>
 
