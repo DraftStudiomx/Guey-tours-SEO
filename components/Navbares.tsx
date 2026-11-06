@@ -53,7 +53,7 @@ interface NavbaresProps {
 }
 
 export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: NavbaresProps) {
-  const { lang, setLang } = useLang()
+  const { lang, setLang, t } = useLang()
   
   const currentLang = forceLang || lang || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es') ? 'es' : 'en');
   const isEs = currentLang === 'es';
@@ -80,24 +80,24 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
   const p = isEs ? '/es' : '';
 
   const toursChildren = [
-    { label: 'Renta de ATV', href: `${p}/atv-rentals` },
-    { label: 'San Miguel de Allende', href: `${p}/tours-en-san-miguel-de-allende` },
-    { label: 'Rentas de RZR', href: `${p}/renta-de-rzr` },
-    { label: 'Aventura todoterreno en Guanajuato', href: `${p}/off-road` },
+    { label: isEs ? 'Renta de ATV' : 'ATV Rentals', href: `${p}${isEs ? '/atv-rentals' : '/atv-rentals'}` },
+    { label: isEs ? 'San Miguel de Allende' : 'San Miguel de Allende', href: `${p}${isEs ? '/tours-en-san-miguel-de-allende' : '/san-miguel-de-allende-tours'}` },
+    { label: isEs ? 'Rentas de RZR' : 'RZR Rentals', href: `${p}${isEs ? '/renta-de-rzr' : '/rsz-rentals'}` },
+    { label: 'Aventura todoterreno', href: `${p}/off-road` },
     { label: 'Tours Guanajuato', href: `${p}/tours-guanajuato` },
     { label: 'UTV', href: `${p}/utv` },
     { label: 'Tours en cuatrimoto', href: `${p}/tours-en-cuatrimoto` },
   ]
 
   const allNavLinks = [
-    { label: 'TOURS', href: `${p}/#tours`, children: toursChildren },
-    { label: 'EXPERIENCIAS PRIVADAS', href: `${p}/#private-experiences` },
-    { label: 'NOSOTROS', href: `${p}/#about` },
-    { label: 'GALERÍA', href: `${p}/gallery` },
+    { label: isEs ? 'TOURS' : t('nav.tours'), href: `${p}/#tours`, children: toursChildren },
+    { label: isEs ? 'EXPERIENCIAS PRIVADAS' : 'PRIVATE EXPERIENCES', href: `${p}/#private-experiences` },
+    { label: isEs ? 'NOSOTROS' : t('nav.about'), href: `${p}/#about` },
+    { label: isEs ? 'GALERÍA' : t('nav.gallery'), href: `${p}/gallery` },
     { label: 'TESTIMONIOS', href: `${p}/#testimonials` },
     { label: 'BLOG', href: `${p}/blog` },
     { label: 'FAQS', href: `${p}/#faqs` },
-    { label: 'CONTACTO', href: `${p}/contact` },
+    { label: isEs ? 'CONTACTO' : t('nav.contact'), href: `${p}/contact` },
   ]
 
   const linkStyle: React.CSSProperties = {
