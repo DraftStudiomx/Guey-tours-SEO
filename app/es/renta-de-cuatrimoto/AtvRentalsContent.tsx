@@ -887,12 +887,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     }} />
   </div>
 
-  {/* Contenedor Grid optimizado para mobile y escritorio */}
-  <div style={{
+  {/* Contenedor Grid con clase única para forzar 2 columnas en escritorio */}
+  <div className="include-grid-cards" style={{
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
     gap: '1.5rem',
-    maxWidth: '1200px',
+    maxWidth: '900px',
     margin: '0 auto'
   }}>
     
@@ -1174,6 +1173,18 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   </div>
 
+  {/* Estilos exclusivos y aislados para esta sección */}
+  <style jsx>{`
+    .include-grid-cards {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .include-grid-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+  `}</style>
+
 </div>
 {/* --- FIN DE LA QUINTA SECCIÓN --- */}
 
@@ -1248,10 +1259,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         }} />
       </div>
 
-      {/* Grid de Requisitos adaptado para mobile (1 columna) y escritorio (2 columnas) */}
-      <div style={{
+      {/* Grid de Requisitos con clase única para forzar rigurosamente 2x2 en escritorio */}
+      <div className="requirements-grid-section" style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
         gap: '1.5rem',
         maxWidth: '900px',
         margin: '0 auto'
@@ -1368,6 +1378,18 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   </div>
 
+  {/* Estilos exclusivos y aislados para asegurar el formato 2x2 en escritorio */}
+  <style jsx>{`
+    .requirements-grid-section {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .requirements-grid-section {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+  `}</style>
+
 </div>
 {/* --- FIN DE LA SEXTA SECCIÓN --- */}
 
@@ -1438,10 +1460,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       }} />
     </div>
 
-    {/* Grid de 3 columnas para los 5 Beneficios */}
-    <div style={{
+    {/* Grid de Beneficios con clase única para controlar distribución simétrica */}
+    <div className="why-choose-grid-section" style={{
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
       gap: '1.5rem',
       marginBottom: '3.5rem'
     }}>
@@ -1498,7 +1519,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </div>
 
       {/* Beneficio 4 */}
-      <div style={{
+      <div className="benefit-item-4" style={{
         background: 'rgba(15, 15, 15, 0.8)',
         border: '1px solid rgba(217, 119, 54, 0.25)',
         borderRadius: '16px',
@@ -1515,16 +1536,12 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       </div>
 
       {/* Beneficio 5 */}
-      <div style={{
+      <div className="benefit-item-5" style={{
         background: 'rgba(15, 15, 15, 0.8)',
         border: '1px solid rgba(217, 119, 54, 0.25)',
         borderRadius: '16px',
         padding: '2rem 1.5rem',
         transition: 'transform 0.3s ease, border-color 0.3s ease',
-        gridColumn: '1 / -1',
-        maxWidth: '450px',
-        width: '100%',
-        margin: '0 auto',
       }}>
         <span style={{ color: 'var(--orange, #d97736)', fontSize: '1.5rem', fontWeight: 'bold', display: 'block', marginBottom: '0.8rem', fontFamily: 'var(--font-heading)' }}>05</span>
         <h3 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.1rem', marginBottom: '0.6rem', textTransform: 'uppercase' }}>
@@ -1603,6 +1620,24 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
     </div>
 
   </div>
+
+  {/* Estilos aislados para distribución perfecta: 3 arriba y 2 abajo centradas en escritorio */}
+  <style jsx>{`
+    .why-choose-grid-section {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .why-choose-grid-section {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+      .benefit-item-4 {
+        grid-column: 1 / 2;
+      }
+      .benefit-item-5 {
+        grid-column: 2 / 3;
+      }
+    }
+  `}</style>
 
 </div>
 {/* --- FIN DE LA SÉPTIMA SECCIÓN --- */}
