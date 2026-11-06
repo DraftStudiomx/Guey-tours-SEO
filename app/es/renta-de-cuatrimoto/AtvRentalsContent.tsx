@@ -27,8 +27,8 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   return (
     <>
       <Navbares 
-        esHref="/es/tours-en-san-miguel-de-allende" 
-        enHref="/san-miguel-de-allende-tours" 
+        esHref="/es/renta-de-cuatrimoto" 
+        enHref="/atv-rentals" 
         lang="es"
       />
       <main style={{
