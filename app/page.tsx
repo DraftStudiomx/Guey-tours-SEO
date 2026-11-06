@@ -104,7 +104,7 @@ export default async function HomePage() {
        {/* <FAQ /> */}
         <Contact />
       </main>
-      <FooterEs />
+      <Footer />
       <Chatbot />
     </>
   )
