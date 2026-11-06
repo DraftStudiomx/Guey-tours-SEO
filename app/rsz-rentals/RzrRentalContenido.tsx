@@ -29,7 +29,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       <Navbares 
         esHref="/es/renta-de-rzr" 
         enHref="/rsz-rentals" 
-        lang="es"
+        lang="en"
       />
       <main style={{
         background: 'var(--dark, #0b0b0b)',
