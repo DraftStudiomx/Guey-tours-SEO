@@ -20,9 +20,9 @@ export const revalidate = 0
 // 🚀 METADATOS Y OPEN GRAPH ESPECÍFICOS PARA ESPAÑOL
 // ==========================================
 export const metadata: Metadata = {
-  title: 'Tours en Cuatrimoto y RZR en San Miguel de Allende | Guey Tours',
-  description: 'Descubre los mejores tours en cuatrimotos, ATV y UTV en San Miguel de Allende y Guanajuato. ¡Reserva tu aventura off-road con Guey Tours!',
-  keywords: ['Tours Guanajuato', 'Renta de cuatrimotos San Miguel de Allende', 'Tours RZR Guanajuato', 'Guey Tours'],
+  title: 'Tours en cuatrimoto en San Miguel de Allende | Guey Tours',
+  description: 'Tours en cuatrimoto: Explora San Miguel de Allende en RZR y motos todoterreno. Experiencias privadas con guías bilingües. ¡Contáctanos!',
+  keywords: ['tours en cuatrimoto '],
   alternates: {
     canonical: 'https://gueytours.com/es',
     languages: {
