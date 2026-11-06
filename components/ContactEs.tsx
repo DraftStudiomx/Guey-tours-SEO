@@ -1,12 +1,10 @@
 'use client'
 
-import { useLang } from '@/lib/i18n'
 import { useState } from 'react'
-import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react'
+import { MapPin, Mail, Phone } from 'lucide-react'
 import { useScrollReveal } from '@/lib/useScrollReveal'
 
-export default function Contact() {
-  const { t } = useLang()
+export default function ContactEs() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
   useScrollReveal()
@@ -52,7 +50,7 @@ export default function Contact() {
       <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 2rem' }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="reveal">
-          <h2 className="section-heading">{t('contact.title')}</h2>
+          <h2 className="section-heading">CONTÁCTANOS</h2>
           <div className="section-divider" style={{ marginTop: '1rem' }} />
         </div>
 
@@ -70,7 +68,7 @@ export default function Contact() {
               {[
                 {
                   icon: MapPin,
-                  label: t('contact.address'),
+                  label: 'San Miguel de Allende, Guanajuato, México',
                 },
                 {
                   icon: Mail,
@@ -125,17 +123,6 @@ export default function Contact() {
                   </div>
                 )
               })}
-
-              {/* <a
-              
-                href="https://goo.gl/maps/7suNDjfq9fHgryVM8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline"
-                style={{ marginTop: '1rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', width: 'fit-content' }}
-              >
-                {t('contact.maps')} <ExternalLink size={14} />
-              </a> */}
             </div>
           </div>
 
@@ -148,14 +135,14 @@ export default function Contact() {
                 padding: '2rem',
                 textAlign: 'center',
               }}>
-                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', marginBottom: '0.5rem' }}>✓ Message sent!</div>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>We'll get back to you within 24 hours.</p>
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', marginBottom: '0.5rem' }}>✓ ¡Mensaje enviado!</div>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Te responderemos dentro de las próximas 24 horas.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                 <input
                   type="text"
-                  placeholder={t('contact.name')}
+                  placeholder="Tu Nombre"
                   value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
                   required
@@ -165,7 +152,7 @@ export default function Contact() {
                 />
                 <input
                   type="email"
-                  placeholder={t('contact.email')}
+                  placeholder="Tu Correo Electrónico"
                   value={form.email}
                   onChange={e => setForm({ ...form, email: e.target.value })}
                   required
@@ -174,7 +161,7 @@ export default function Contact() {
                   onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
                 />
                 <textarea
-                  placeholder={t('contact.message')}
+                  placeholder="Escribe tu mensaje aquí..."
                   value={form.message}
                   onChange={e => setForm({ ...form, message: e.target.value })}
                   required
@@ -184,7 +171,7 @@ export default function Contact() {
                   onBlur={e => { (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.1)' }}
                 />
                 <button type="submit" className="btn-orange" style={{ cursor: 'pointer', border: 'none', width: '100%', textAlign: 'center' }}>
-                  {t('contact.send')}
+                  Enviar Mensaje
                 </button>
               </form>
             )}
