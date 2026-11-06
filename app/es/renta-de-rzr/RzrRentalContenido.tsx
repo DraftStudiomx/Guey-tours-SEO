@@ -29,7 +29,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       <Navbares 
         esHref="/es/renta-de-rzr" 
         enHref="/rzr-rental" 
-        lang={lang || 'es'} 
+        lang="es"
       />
       <main style={{
         background: 'var(--dark, #0b0b0b)',
@@ -214,7 +214,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
     }}>
       <Image
-        src="/images/SE-ES/Cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende.webp" 
+        src="/images/SEO-ES/Cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende.webp" 
         alt=" Fotografía de una persona sobre una cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende"
         title="Cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende"
         fill
