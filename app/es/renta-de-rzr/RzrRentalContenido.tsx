@@ -4,8 +4,8 @@ import { useLang } from '@/lib/i18n'
 import { useState } from 'react'
 import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import Navbares from '@/components/Navbares'   // <-- NUEVO: Menú multilenguaje
+import FooterEs from '@/components/FooterEs' // <-- NUEVO: Footer en español
 
 export default function RzrRentalContenido() {
   const { lang } = useLang()
@@ -26,7 +26,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   
   return (
     <>
-      <Navbar />
+      <Navbares 
+        esHref="/es/renta-de-rzr" 
+        enHref="/rzr-rental" 
+        lang={lang || 'es'} 
+      />
       <main style={{
         background: 'var(--dark, #0b0b0b)',
         minHeight: '100vh',
@@ -56,9 +60,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   overflow: 'hidden'
 }}>
   <img 
-    src="/images/SEO/rzr-rentals-mexico-colonial-street.webp" 
-    alt="Front view of a gray UTV Rzr rentals vehicle driving up a narrow cobblestone street flanked by colorful pastel colonial buildings in a historic Mexican town." 
-    title="Touring the historic cobblestone streets of Mexico with Rzr rentals."
+    src="/images/SEO-ES/Recorrido por las históricas calles empedradas de México con renta de Rzr..webp" 
+    alt="Vehículo de renta Rzr gris conduciendo por una estrecha calle empedrada flanqueada por coloridos edificios coloniales." 
+    title="Recorrido por las históricas calles empedradas de México con renta de Rzr."
     style={{
       position: 'absolute',
       top: 0,
@@ -89,7 +93,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               textTransform: 'uppercase',
               marginBottom: '0.5rem'
             }}>
-              --- {lang === 'es' ? 'AVENTURA SOBRE RUEDAS' : 'OFF-ROAD EXPERIENCE'} ---
+             --- AVENTURA SOBRE RUEDAS ---
             </div>
             
             <h1 style={{
@@ -100,7 +104,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               color: '#fff',
               margin: '0 0 0.8rem 0',
             }}>
-              {lang === 'es' ? 'Alquiler de RZR en San Miguel de Allende' : 'RZR Rentals in San Miguel de Allende'}
+             Renta de RZR en San Miguel de Allende
             </h1>
 
             <div style={{
@@ -115,19 +119,13 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           {/* Primera sección de texto */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', lineHeight: 1.7, fontSize: '1.1rem', color: 'rgba(255,255,255,0.85)' }}>
             <p style={{ margin: 0 }}>
-              {lang === 'es' ? (
-                <>Explora San Miguel de Allende más allá del centro de la ciudad con la renta de un RZR de Guey Tours. Disfruta de senderos todoterreno, caminos rurales y paisajes naturales mientras experimentas la libertad de conducir un potente vehículo utilitario (UTV).</>
-              ) : (
-                <>Explore San Miguel de Allende beyond the city center with a RZR rental from Guey Tours. Experience off-road trails, rural roads and natural landscapes while enjoying the freedom of driving a powerful side-by-side vehicle.</>
-              )}
+              Explora San Miguel de Allende más allá del centro de la ciudad con la renta de RZR de Guey Tours. Disfruta de senderos todoterreno, caminos rurales y paisajes naturales mientras experimentas la libertad de conducir un potente vehículo utilitario (UTV). 
+              San Miguel de Allende es famoso por su arquitectura colonial, sus calles históricas y su vibrante cultura, pero la región también ofrece emocionantes experiencias al aire libre. 
+
             </p>
 
             <p style={{ margin: 0 }}>
-              {lang === 'es' ? (
-                <>San Miguel de Allende es famoso por su arquitectura colonial, sus calles históricas y su vibrante cultura, pero la región también ofrece emocionantes experiencias al aire libre. Con la renta de RZR en San Miguel de Allende, puedes descubrir una faceta diferente del destino y disfrutar de una aventura con tu pareja, familia o grupo de amigos.</>
-              ) : (
-                <>San Miguel de Allende is famous for its colonial architecture, historic streets and vibrant culture, but the region also offers exciting outdoor experiences. With RZR rentals in San Miguel de Allende, you can discover a different side of the destination and enjoy an adventure with your partner, family or group of friends.</>
-              )}
+              Con la renta de RZR en San Miguel de Allende, puedes descubrir una faceta diferente del destino y disfrutar de una aventura con tu pareja, familia o grupo de amigos.
             </p>
           </div>
 
@@ -158,7 +156,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                 e.currentTarget.style.color = 'var(--orange, #d97736)';
               }}
             >
-              {lang === 'es' ? 'Contáctanos' : 'Contact Us'}
+              Contáctanos
             </a>
           </div>
 
@@ -171,52 +169,44 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   flexDirection: 'row',
   flexWrap: 'wrap',
   alignItems: 'center',
-  gap: '3rem',
-  marginTop: '5rem',
+  gap: '2rem',
+  marginTop: '3.5rem',
   background: 'rgba(255, 255, 255, 0.02)',
-  padding: '3rem',
+  padding: 'clamp(1.5rem, 4vw, 3rem)',
   borderRadius: '16px',
   border: '1px solid rgba(255, 255, 255, 0.08)'
 }}>
   {/* Columna de Texto H2 */}
-  <div style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+  <div style={{ flex: '1 1 280px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
     <h2 style={{
       fontFamily: 'var(--font-heading)',
-      fontSize: '1.8rem',
+      fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
       color: 'var(--orange, #d97736)',
       textTransform: 'uppercase',
       letterSpacing: '0.05em',
       margin: 0
     }}>
-      {lang === 'es' ? 'Renta de RZR en San Miguel de Allende' : 'RZR Rental in San Miguel de Allende'}
+      Renta de RZR en San Miguel de Allende
     </h2>
 
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
-      {lang === 'es' 
-        ? 'Un RZR es un tipo de vehículo utilitario (UTV) diseñado para la conducción todoterreno. A diferencia de un auto tradicional, un RZR está construido para soportar terrenos irregulares, caminos de terracería y senderos al aire libre, ofreciendo una experiencia de manejo lado a lado.'
-        : 'A RZR is a type of UTV (Utility Terrain Vehicle) designed for off-road driving. Unlike a traditional car, a RZR is built to handle uneven terrain, dirt roads and outdoor trails while providing a side-by-side driving experience.'}
+      Un RZR es un tipo de vehículo utilitario (UTV) diseñado para la conducción todoterreno. A diferencia de un auto tradicional, un RZR está construido para soportar terrenos irregulares, caminos de terracería y senderos al aire libre, ofreciendo una experiencia de manejo lado a lado.
     </p>
 
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
-      {lang === 'es' ? (
-        <>Guey Tours ofrece rentas de RZR para viajeros que quieren explorar los alrededores de <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende</a> a su propio ritmo.</>
-      ) : (
-        <>Guey Tours offers RZR rentals for travelers who want to explore the surroundings of <a href="https://www.gueytours.com/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none !important', fontWeight: 'bold' }}>San Miguel de Allende</a> at their own pace.</>
-      )}
+      Guey Tours ofrece alquiler de RZR para viajeros que quieren explorar los alrededores de <a href="https://www.gueytours.com/es/san-miguel-de-allende-tours" style={{ color: 'var(--orange)', textDecoration: 'none', fontWeight: 'bold' }}>San Miguel de Allende</a> a su propio ritmo.
     </p>
 
     <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem' }}>
-      {lang === 'es'
-        ? 'El proceso de renta está diseñado para que tu experiencia sea sencilla. Antes de conducir, puedes recibir información sobre el vehículo, instrucciones básicas de operación, recomendaciones de seguridad y las condiciones de renta.'
-        : 'The rental process is designed to make your experience simple. Before driving, you can receive information about the vehicle, basic operating instructions, safety recommendations and the rental conditions.'}
+      El proceso de renta está diseñado para que tu experiencia sea sencilla. Antes de conducir, puedes recibir información sobre el vehículo, instrucciones básicas de operación, recomendaciones de seguridad y las condiciones de renta.
     </p>
   </div>
 
   {/* Columna de la Imagen */}
-  <div style={{ flex: '1', minWidth: '300px' }}>
+  <div style={{ flex: '1 1 280px', width: '100%', minWidth: 0 }}>
     <div style={{
       width: '100%',
-      height: '320px',
+      height: 'clamp(220px, 35vw, 320px)',
       position: 'relative',
       borderRadius: '12px',
       overflow: 'hidden',
@@ -224,9 +214,9 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       boxShadow: '0 8px 24px rgba(0,0,0,0.5)'
     }}>
       <Image
-        src="/images/atv-tour-magic-town-CONTACT-GUEY-TOURS.webp" 
-        alt="RZR tour adventure in the magic town of San Miguel de Allende with Guey Tours."
-        title="RZR Rentals in San Miguel de Allende - Guey Tours"
+        src="/images/SE-ES/Cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende.webp" 
+        alt=" Fotografía de una persona sobre una cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende"
+        title="Cuatrimoto de la renta de RZR de Guey Tours por San Miguel de Allende"
         fill
         style={{ objectFit: 'cover' }}
       />
@@ -1716,7 +1706,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
           
         </div>
       </main>
-      <Footer />
+      <FooterEs />
     </>
   )
 }
