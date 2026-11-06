@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://gueytours.com/san-miguel-de-allende-tours',
       'es': 'https://gueytours.com/es/tours-en-san-miguel-de-allende',
-      'x-default': 'https://gueytours.com/san-miguel-de-allende-tours',
+      'x-default': 'https://gueytours.com/tours-en-san-miguel-de-allende',
     },
   },
   openGraph: {
