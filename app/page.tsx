@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar'
+import Navbares from '@/components/Navbares'   // <-- NUEVO: Menú multilenguaje
 import Hero from '@/components/Hero'
 import Tours from '@/components/Tours'
 import Vehicles from '@/components/Vehicles'
@@ -9,7 +9,7 @@ import About from '@/components/About'
 import Testimonials from '@/components/Testimonials'
 import Gallery from '@/components/Gallery'
 import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import FooterEs from '@/components/FooterEs' // <-- NUEVO: Footer en español
 import Chatbot from '@/components/ChatWidget'
 import { client } from '@/lib/sanity'
 import VideoGallery from '@/components/VideoGallery'
@@ -88,7 +88,8 @@ export default async function HomePage() {
           }),
         }}
       />
-      <Navbar />
+     <Navbares enHref="/" esHref="/es" lang="en" />
+      
       <main>
         <Hero />
         <About /> {/* <--- Este debe ser el segundo elemento */}
@@ -103,7 +104,7 @@ export default async function HomePage() {
        {/* <FAQ /> */}
         <Contact />
       </main>
-      <Footer />
+      <FooterEs />
       <Chatbot />
     </>
   )
