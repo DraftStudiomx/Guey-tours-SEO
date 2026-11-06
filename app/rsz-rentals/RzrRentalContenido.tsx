@@ -4,7 +4,7 @@ import { useLang } from '@/lib/i18n'
 import { useState } from 'react'
 import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
-import Navbar from '@/components/Navbar'
+import Navbares from '@/components/Navbares'   // <-- NUEVO: Menú multilenguaje
 import Footer from '@/components/Footer'
 
 export default function RzrRentalContenido() {
@@ -26,7 +26,11 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
   
   return (
     <>
-      <Navbar />
+      <Navbares 
+        esHref="/es/renta-de-rzr" 
+        enHref="/rsz-rentals" 
+        lang="es"
+      />
       <main style={{
         background: 'var(--dark, #0b0b0b)',
         minHeight: '100vh',
