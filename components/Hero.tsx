@@ -186,7 +186,7 @@ export default function Hero() {
           <span style={{ marginLeft: '4px', fontWeight: 500 }}>Google</span>
         </div>
         <div style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: '1.9rem', color: '#00e676', lineHeight: 1.2, margin: '2px 0' }}>
-          {t('hero.google_count')}
+          300+
         </div>
         <div style={{ fontFamily: 'sans-serif', fontSize: '0.95rem', fontWeight: 700, color: '#111', letterSpacing: '0.01em', marginBottom: '4px' }}>
           {t('hero.google_text')}
