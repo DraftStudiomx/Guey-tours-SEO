@@ -107,12 +107,12 @@ export default function Navbar({ esHref = '#', enHref = '#', lang: forceLang }: 
     { label: 'FAQS', href: '/es/#faqs' },
     { label: 'CONTACTO', href: '/es/contact' },
   ] : [
-    { label: t('nav.tours'), href: '/#tours', children: toursChildren },
-    { label: 'PRIVATE EXPERIENCES', href: '/#private-experiences' },
+    { label: t('nav.tours'), href: '/#tours' },
+    //{ label: 'PRIVATE EXPERIENCES', href: '/#private-experiences' },
     { label: 'ABOUT', href: '/#about' },
     { label: t('nav.gallery'), href: '/gallery' },
     { label: t('nav.testimonials'), href: '/#testimonials' },
-    { label: 'BLOG', href: '/blog' },
+    { label: 'BLOG', href: '/blog', children: toursChildren },
     { label: 'FAQS', href: '/#faqs' },
     { label: t('nav.contact'), href: '/contact' },
   ]
