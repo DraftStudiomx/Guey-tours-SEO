@@ -877,7 +877,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
       <p style={{ margin: 0, lineHeight: 1.7, color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
         {lang === 'es' 
           ? 'Si buscas específicamente opciones de renta de vehículos, explora las rentas de RZR disponibles en San Miguel de Allende.'
-          : 'If you are specifically looking for vehicle rental options, explore the RZR rentals available in San Miguel de Allende.'}
+          : 'If you are specifically looking for vehicle rental options, explore the RZR tours available in San Miguel de Allende.'}
       </p>
       
       {/* Botón de RZR Rentals */}
