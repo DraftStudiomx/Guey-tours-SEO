@@ -11,7 +11,7 @@ const FAQS_ES = [
   },
   {
     q: '¿Cuánto cuesta un tour en cuatrimoto en San Miguel de Allende?',
-    a: 'Los precios comienzan desde $625 MXN por persona según el vehículo y duración. Ofrecemos tours cortos, rutas al atardecer y experiencias privadas.',
+    a: 'Los precios comienzan desde $750 MXN por persona según el vehículo y duración. Ofrecemos tours cortos, rutas al atardecer y experiencias privadas.',
   },
   {
     q: '¿Qué incluyen las experiencias de Guey Tours?',
