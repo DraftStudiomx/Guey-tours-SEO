@@ -29,14 +29,7 @@ const manualVehiclesEs: VehicleCard[] = [
     description: 'Elige nuestro excelente ATV Yamaha al mejor precio. Por dos personas. Este vehículo es muy cómodo. Es perfecto para explorar la ciudad como una pareja o solo.',
     videoTitle: 'Cuatrimoto Roja para tours en cuatrimoto por Guey Tours',
   },
-  {
-    slug: 'rzr-rental',
-    video_url: 'images/SEO-ES/RZR para cuatro personas que se usa en Tours de cuatrimoto.mp4',
-    name: 'RZR',
-    price: '$2,950 MXN por hora',
-    description: 'En el paso 3 del proceso de reserva, podrás elegir nuestro emocionante y divertido vehículo RZR para 4 pasajeros. ¡Es muy divertido! Recibirás instrucciones completas para conducirlo antes de partir.',
-    videoTitle: 'RZR para cuatro personas que se usa en Tours de cuatrimoto',
-  },
+  
   {
     slug: 'defender',
     video_url: 'images/SEO-ES/Guey Tours-Can-Am Defender Verde para Tours en cuatrimoto en Grupo.mp4',
