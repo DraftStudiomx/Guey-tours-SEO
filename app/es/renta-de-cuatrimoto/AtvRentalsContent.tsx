@@ -779,7 +779,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
                 e.currentTarget.style.background = 'var(--orange, #d97736)';
                 e.currentTarget.style.color = '#fff';
                 const content = container?.querySelector('.tab-content-defender');
-                if (content) content.textContent = '$1,900 MXN por hora (Sujeto a disponibilidad).';
+                if (content) content.textContent = '$2,000 MXN por hora (Sujeto a disponibilidad).';
               }}
               style={{ background: 'transparent', color: 'rgba(255,255,255,0.7)', border: 'none', padding: '0.4rem 0', fontSize: '0.7rem', fontWeight: 'bold', borderRadius: '6px', cursor: 'pointer', fontFamily: 'var(--font-heading)' }}
             >
