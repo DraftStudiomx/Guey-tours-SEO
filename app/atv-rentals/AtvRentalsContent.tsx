@@ -1379,7 +1379,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
         <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>
           {lang === 'es' ? 'Motos (2 pax), Cuatrimotos (2 pax) y Defender (6 pax). Alineamos estándares con proveedores confiables como' : 'Motorbikes (2 pax), Quads (2 pax), and Defender (6 pax). We align standards with trusted providers like'}{' '}
           <a 
-            href="https://www.gueytours.com/rsz-rentals/" 
+            href="https://www.gueytours.com/#tours" 
             style={{ 
               color: 'var(--orange, #d97736)', 
               textDecoration: 'none', 
