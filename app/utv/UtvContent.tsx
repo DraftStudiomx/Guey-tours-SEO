@@ -1467,7 +1467,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null)
               {
                 q_en: 'Do I need a valid driver’s license to drive a UTV on your tours?',
                 q_es: '¿Necesito una licencia de conducir vigente para manejar un UTV en sus tours?',
-                a_en: 'Yes, all drivers must present a valid driver’s license to operate a UTV or take advantage of our RSZ rentals. Passengers of all ages are welcome to join the ride!',
+                a_en: 'Yes, all drivers must present a valid driver’s license to operate a UTV or take advantage of our RSZ tours. Passengers of all ages are welcome to join the ride!',
                 a_es: 'Sí, todos los conductores deben presentar una licencia de conducir vigente para operar un UTV o aprovechar nuestros alquileres de RZR. ¡Los pasajeros de todas las edades son bienvenidos a unirse al viaje!',
               },
               {
